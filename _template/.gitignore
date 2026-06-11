@@ -1,0 +1,11 @@
+﻿data/raw/
+data/processed/
+models/
+outputs/logs/
+outputs/submissions/*.csv
+*.pkl
+*.joblib
+*.parquet
+*.feather
+__pycache__/
+.ipynb_checkpoints/
