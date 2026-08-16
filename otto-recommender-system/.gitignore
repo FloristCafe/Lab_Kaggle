@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Local environments
+.venv/
+venv/
+.env
+
+# OTTO data and heavy artifacts
+data/raw/
+data/interim/
+data/processed/
+data/external/
+artifacts/features/
+artifacts/candidates/
+artifacts/models/
+kaggle_working/
+logs/
+
+# Keep lightweight examples and final submission CSVs manageable.
+!data/sample/
+!data/sample/.gitkeep
+!artifacts/submissions/
+!artifacts/submissions/.gitkeep
+!artifacts/reports/
+!artifacts/reports/.gitkeep
+
+# Common large local files
+*.parquet
+*.feather
+*.pkl
+*.joblib
+*.npy
+*.npz
+*.csv
+*.zip
+*.7z
+*.tar
+*.gz
+
+# Allow tiny documented examples if needed.
+!data/sample/*.csv
+!docs/*.csv

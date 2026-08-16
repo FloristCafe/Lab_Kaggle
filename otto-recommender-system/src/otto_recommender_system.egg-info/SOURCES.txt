@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+src/otto_recommender/__init__.py
+src/otto_recommender/candidates.py
+src/otto_recommender/io.py
+src/otto_recommender/metrics.py
+src/otto_recommender/sampling.py
+src/otto_recommender/schema.py
+src/otto_recommender/submission.py
+src/otto_recommender/toy_data.py
+src/otto_recommender_system.egg-info/PKG-INFO
+src/otto_recommender_system.egg-info/SOURCES.txt
+src/otto_recommender_system.egg-info/dependency_links.txt
+src/otto_recommender_system.egg-info/requires.txt
+src/otto_recommender_system.egg-info/top_level.txt
+tests/test_candidates_and_metrics.py
