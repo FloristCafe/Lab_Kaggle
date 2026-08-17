@@ -133,3 +133,68 @@ Per-type Recall@20:
    - reward: click/cart/order weighted feedback
    - policy: slate recommendation policy
    - evaluation: off-policy 或 logged bandit evaluation
+
+## Stage 2 Update: Heuristic Co-visitation
+
+新增阶段二多规则共现图：
+
+- `click_to_click`
+  - source: click
+  - target: click
+  - window: 24h
+  - decay: exponential half-life, half-life = 6h
+- `cart_order_to_cart_order`
+  - source: cart/order
+  - target: cart/order
+  - clicks are strictly filtered out
+  - window: 14 days
+  - decay: soft long-tail decay
+- `click_to_cart_order`
+  - source: click
+  - target: cart/order
+  - window: 7 days
+  - decay: conversion half-life, half-life = 2 days
+
+新增文件：
+
+- `src/otto_recommender/heuristic_covisitation.py`
+- `scripts/build_heuristic_covisitation.py`
+- `scripts/run_heuristic_retrieval.py`
+- `docs/stage2_heuristic_covisitation.md`
+- `tests/test_heuristic_covisitation.py`
+
+Smoke 版运行结果：
+
+- command: `python scripts\build_heuristic_covisitation.py --n-buckets 2`
+- command: `python scripts\run_heuristic_retrieval.py --graphs-dir artifacts\candidates\heuristic_covisitation_smoke --recommendations-output artifacts\candidates\heuristic_recommendations_smoke.parquet --metrics-output artifacts\reports\heuristic_graph_metrics_smoke.csv`
+- recommendations: `28,447,120`
+- weighted Recall@20: `0.761238`
+
+Click-to-Click 当前时间衰减与流行度惩罚公式：
+
+```text
+w(A -> B) = 21600 / (t + 21600) * 1 / (N(A) * N(B)) ^ 0.5
+```
+
+其中 `t` 是两次点击相隔秒数，只保留 `0 < t <= 86400` 的点击对。
+
+2026-08-17 晚间公式修正：
+
+- 移除指数衰减中的 `exp`，改用 Polars/Rust 向量化除法 `c / (t + c)`。
+- 引入 degree penalty，也就是 `1 / (N(A) * N(B)) ^ alpha`。
+- 默认 `alpha = 0.5`，等价于根号惩罚。
+- 脚本参数：`python scripts\build_heuristic_covisitation.py --n-buckets 16 --degree-alpha 0.5`
+
+Degree penalty 全量运行结果：
+
+| model | clicks recall | carts recall | orders recall | weighted Recall@20 |
+| --- | ---: | ---: | ---: | ---: |
+| single graph baseline | 0.37989303 | 0.816651 | 0.7791729 | 0.7504884 |
+| stage2 heuristic before degree penalty | 0.38281518 | 0.8372323 | 0.7862274 | 0.7611877 |
+| stage2 heuristic with degree penalty | 0.36344126 | 0.88442516 | 0.89528185 | 0.83884084 |
+
+观察：
+
+- Click recall 下降，但 carts/orders recall 大幅提升。
+- OTTO 评估权重更偏向 orders 和 carts，因此总分显著提升。
+- Degree penalty 有效压制了爆款 hub item 的泛化噪声，让高意图转化图更加锋利。

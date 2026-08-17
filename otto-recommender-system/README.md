@@ -71,6 +71,9 @@ otto-recommender-system/
 - `scripts/build_covisitation_edges.py`: 构建并合并高价值 Top-K 共现边。
 - `scripts/run_graph_baseline.py`: 用紧凑共现边生成本地 Top-20 召回并评估。
 - `docs/local_graph_sandbox.md`: 本地图召回沙盒说明和 PyCharm 命令。
+- `src/otto_recommender/heuristic_covisitation.py`: 阶段二多规则共现图，包含 Click-to-Click、Cart/Order-to-Cart/Order、Click-to-Cart/Order。
+- `scripts/build_heuristic_covisitation.py`: 分块构建三路 Top-20 heuristic co-visitation 图。
+- `scripts/run_heuristic_retrieval.py`: 聚合三路图生成最终 Top-20 候选集并评估。
 
 ## Commands
 
