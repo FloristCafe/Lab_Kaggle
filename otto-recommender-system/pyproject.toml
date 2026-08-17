@@ -6,6 +6,8 @@ requires-python = ">=3.10"
 dependencies = [
   "pandas>=2.0",
   "numpy>=1.24",
+  "polars>=1.0",
+  "pyarrow>=15.0",
 ]
 
 [project.optional-dependencies]

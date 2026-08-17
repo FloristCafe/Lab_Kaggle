@@ -66,6 +66,11 @@ otto-recommender-system/
 - `scripts/run_baseline.py`: 从事件文件直接生成一个 baseline submission。
 - `notebooks/kaggle/otto_baseline_template.py`: Kaggle Notebook 可复制/改造的起步模板。
 - `docs/function_reference.md`: 当前函数用途和常用命令速查。
+- `src/otto_recommender/polars_graph.py`: Polars 边表/COO 图召回、分块构建、早截断、Recall 评估。
+- `scripts/split_local.py`: 把本地 parquet 切成训练事件和验证标签。
+- `scripts/build_covisitation_edges.py`: 构建并合并高价值 Top-K 共现边。
+- `scripts/run_graph_baseline.py`: 用紧凑共现边生成本地 Top-20 召回并评估。
+- `docs/local_graph_sandbox.md`: 本地图召回沙盒说明和 PyCharm 命令。
 
 ## Commands
 

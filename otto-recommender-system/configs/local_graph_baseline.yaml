@@ -1,0 +1,30 @@
+project:
+  name: otto-recommender-system
+  mode: local_graph_baseline
+
+environment:
+  python: C:\Users\lenovo\miniconda3\envs\kg_env\python.exe
+
+paths:
+  input_events: data/test.parquet
+  train_events: data/processed/local_train.parquet
+  valid_labels: data/processed/local_valid_labels.parquet
+  edge_parts: artifacts/candidates/edge_parts
+  final_edges: artifacts/candidates/top20_edges.parquet
+  recommendations: artifacts/candidates/local_recommendations.parquet
+  edge_stats: artifacts/reports/edge_build_stats.csv
+  metrics: artifacts/reports/local_graph_metrics.csv
+
+split:
+  valid_events_per_session: 1
+  min_session_length: 2
+
+graph:
+  n_buckets: 16
+  max_events_per_session: 30
+  topk_per_chunk: 80
+  final_topk_per_source: 20
+
+retrieval:
+  topk: 20
+  max_seed_items: 20
