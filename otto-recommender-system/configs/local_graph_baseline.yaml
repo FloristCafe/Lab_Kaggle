@@ -12,6 +12,7 @@ paths:
   edge_parts: artifacts/candidates/edge_parts
   final_edges: artifacts/candidates/top20_edges.parquet
   recommendations: artifacts/candidates/local_recommendations.parquet
+  heuristic_candidates: artifacts/candidates/heuristic_candidates_top100.parquet
   edge_stats: artifacts/reports/edge_build_stats.csv
   metrics: artifacts/reports/local_graph_metrics.csv
 
@@ -26,5 +27,6 @@ graph:
   final_topk_per_source: 20
 
 retrieval:
-  topk: 20
+  candidate_topk: 100
+  eval_topk: 20
   max_seed_items: 20

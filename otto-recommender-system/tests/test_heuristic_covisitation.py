@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import math
+
 import polars as pl
 
 from otto_recommender.heuristic_covisitation import (
@@ -9,8 +11,12 @@ from otto_recommender.heuristic_covisitation import (
     CLICK_TO_CLICK,
     CoVisitationRule,
     GRAPH,
+    ITEM_FREQ,
     WEIGHT,
+    attach_degree_penalty,
     build_rule_edges,
+    item_frequency,
+    popular_fallback_items,
     recommend_from_heuristic_graphs,
 )
 
@@ -56,6 +62,32 @@ def test_degree_penalty_reduces_hub_edges() -> None:
     assert penalized.filter(edge_filter).select(WEIGHT).item() < unpenalized.filter(edge_filter).select(WEIGHT).item()
 
 
+def test_item_frequency_reads_aid_counts() -> None:
+    freq = item_frequency(toy_events_ms())
+
+    assert {"aid", ITEM_FREQ}.issubset(freq.columns)
+    assert freq.filter(pl.col("aid") == 10).select(ITEM_FREQ).item() == 2
+
+
+def test_attach_degree_penalty_after_pair_generation() -> None:
+    pairs = pl.DataFrame(
+        {
+            "session": [1],
+            "aid_x": [10],
+            "aid_y": [11],
+            "ts_x": [0],
+            "ts_y": [3_600_000],
+            "type_x": [0],
+            "type_y": [0],
+            "dt_seconds": [3600.0],
+        }
+    )
+    freq = pl.DataFrame({"aid": [10, 11], ITEM_FREQ: [4, 9]})
+    joined = attach_degree_penalty(pairs, freq, CLICK_TO_CLICK)
+
+    assert math.isclose(joined.select("_degree_penalty").item(), 1.0 / 6.0, rel_tol=1e-6)
+
+
 def test_click_to_cart_order_filters_source_and_target_types() -> None:
     edges = build_rule_edges(toy_events_ms(), CLICK_TO_CART_ORDER)
 
@@ -69,7 +101,22 @@ def test_recommend_from_three_graph_shape() -> None:
         build_rule_edges(events, CLICK_TO_CLICK),
         build_rule_edges(events, CLICK_TO_CART_ORDER),
     ]
-    recs = recommend_from_heuristic_graphs(events, edge_frames, topk=3)
+    recs = recommend_from_heuristic_graphs(events, edge_frames, topk=5)
 
     assert {"session", "aid", "score", "rank"}.issubset(recs.columns)
-    assert recs.group_by("session").agg(pl.len().alias("n")).select(pl.col("n").max()).item() <= 3
+    assert recs.group_by("session").agg(pl.len().alias("n")).select(pl.col("n").max()).item() <= 5
+
+
+def test_recommend_can_fill_with_popular_fallback() -> None:
+    events = toy_events_ms()
+    fallback = popular_fallback_items(events, topk=5)
+    recs = recommend_from_heuristic_graphs(
+        events,
+        edge_frames=[build_rule_edges(events, CLICK_TO_CLICK)],
+        topk=5,
+        min_candidates=5,
+        popular_fallback=fallback,
+    )
+
+    counts = recs.group_by("session").agg(pl.len().alias("n"))
+    assert counts.select(pl.col("n").min()).item() == 5

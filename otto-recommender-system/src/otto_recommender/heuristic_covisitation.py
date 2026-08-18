@@ -111,13 +111,31 @@ def degree_penalty_expr(rule: CoVisitationRule) -> pl.Expr:
     return (1.0 / ((nx * ny) ** rule.degree_alpha)).cast(pl.Float32)
 
 
+def attach_degree_penalty(
+    pairs: pl.DataFrame,
+    frequencies: pl.DataFrame,
+    rule: CoVisitationRule,
+) -> pl.DataFrame:
+    """Hash-join global item frequencies after pair generation."""
+    return (
+        pairs.join(frequencies, left_on=AID_X, right_on=AID, how="left")
+        .rename({ITEM_FREQ: ITEM_FREQ_X})
+        .join(frequencies, left_on=AID_Y, right_on=AID, how="left")
+        .rename({ITEM_FREQ: ITEM_FREQ_Y})
+        .with_columns(
+            pl.col(ITEM_FREQ_X).fill_null(1),
+            pl.col(ITEM_FREQ_Y).fill_null(1),
+        )
+        .with_columns(degree_penalty_expr(rule).alias("_degree_penalty"))
+    )
+
+
 def item_frequency(events: pl.DataFrame | pl.LazyFrame) -> pl.DataFrame:
     """Count global item interaction frequency for degree penalty."""
     frequency_frame = (
-        cast_events(events)
+        events.select(pl.col(AID).cast(pl.Int32))
         .group_by(AID)
         .agg(pl.len().cast(pl.UInt32).alias(ITEM_FREQ))
-        .select(pl.col(AID).cast(pl.Int32), pl.col(ITEM_FREQ))
     )
     if isinstance(frequency_frame, pl.LazyFrame):
         return frequency_frame.collect()
@@ -148,24 +166,20 @@ def build_rule_edges(
     frequencies = item_frequency(events) if frequencies is None else frequencies
     sources = (
         recent.filter(pl.col(TYPE).is_in(rule.source_types))
-        .join(frequencies, on=AID, how="left")
         .select(
             pl.col(SESSION),
             pl.col(AID).alias(AID_X),
             pl.col(TS).alias("ts_x"),
             pl.col(TYPE).alias("type_x"),
-            pl.col(ITEM_FREQ).fill_null(1).alias(ITEM_FREQ_X),
         )
     )
     targets = (
         recent.filter(pl.col(TYPE).is_in(rule.target_types))
-        .join(frequencies, on=AID, how="left")
         .select(
             pl.col(SESSION),
             pl.col(AID).alias(AID_Y),
             pl.col(TS).alias("ts_y"),
             pl.col(TYPE).alias("type_y"),
-            pl.col(ITEM_FREQ).fill_null(1).alias(ITEM_FREQ_Y),
         )
     )
     if sources.is_empty() or targets.is_empty():
@@ -186,11 +200,14 @@ def build_rule_edges(
             & (pl.col("dt_seconds") > 0)
             & (pl.col("dt_seconds") <= rule.max_time_delta_seconds)
         )
+    )
+    pairs = (
+        attach_degree_penalty(pairs, frequencies, rule)
         .with_columns(
             (
                 target_value_expr("type_y")
                 * time_decay_expr(rule, "dt_seconds")
-                * degree_penalty_expr(rule)
+                * pl.col("_degree_penalty")
                 * pl.lit(rule.graph_weight, dtype=pl.Float32)
             )
             .cast(pl.Float32)
@@ -329,8 +346,10 @@ def recommend_from_heuristic_graphs(
     events: pl.DataFrame,
     edge_frames: Iterable[pl.DataFrame],
     topk: int = 20,
+    min_candidates: int = 20,
     max_seed_items: int = 20,
     recent_weight: float = 60.0,
+    popular_fallback: pl.DataFrame | None = None,
 ) -> pl.DataFrame:
     """Aggregate recent-item and multi-rule graph retrieval into session candidates."""
     edges = pl.concat(list(edge_frames), how="vertical").select(
@@ -362,10 +381,40 @@ def recommend_from_heuristic_graphs(
             pl.col(GRAPH),
         )
     )
-    return (
+    candidate_scores = (
         pl.concat([recent_candidates, graph_candidates], how="vertical")
         .group_by([SESSION, AID])
         .agg(pl.col(SCORE).sum().cast(pl.Float32).alias(SCORE))
+    )
+    if popular_fallback is not None and min_candidates > 0:
+        sparse_sessions = (
+            candidate_scores.with_columns(
+                pl.col(SCORE)
+                .rank(method="ordinal", descending=True)
+                .over(SESSION)
+                .cast(pl.UInt32)
+                .alias(RANK)
+            )
+            .filter(pl.col(RANK) <= topk)
+            .group_by(SESSION)
+            .agg(pl.len().alias("_candidate_count"))
+            .filter(pl.col("_candidate_count") < min_candidates)
+            .select(SESSION)
+        )
+        if not sparse_sessions.is_empty():
+            fallback = popular_fallback.head(topk).with_columns(
+                (pl.lit(recent_weight * 0.01) / pl.col(RANK).cast(pl.Float32)).alias(SCORE),
+                pl.lit("popular_fallback").alias(GRAPH),
+            )
+            fallback_candidates = sparse_sessions.join(fallback, how="cross").select(SESSION, AID, SCORE)
+            candidate_scores = (
+                pl.concat([candidate_scores, fallback_candidates], how="vertical")
+                .group_by([SESSION, AID])
+                .agg(pl.col(SCORE).sum().cast(pl.Float32).alias(SCORE))
+            )
+
+    return (
+        candidate_scores
         .with_columns(
             pl.col(SCORE)
             .rank(method="ordinal", descending=True)
@@ -381,6 +430,35 @@ def recommend_from_heuristic_graphs(
             pl.col(SCORE).cast(pl.Float32),
             pl.col(RANK).cast(pl.UInt32),
         )
+    )
+
+
+def popular_fallback_items(events: pl.DataFrame, topk: int = 100) -> pl.DataFrame:
+    """Return globally popular items for filling sparse candidate pools."""
+    return (
+        cast_events(events)
+        .with_columns(
+            pl.when(pl.col(TYPE) == 0)
+            .then(1.0)
+            .when(pl.col(TYPE) == 1)
+            .then(3.0)
+            .when(pl.col(TYPE) == 2)
+            .then(6.0)
+            .otherwise(1.0)
+            .cast(pl.Float32)
+            .alias(SCORE)
+        )
+        .group_by(AID)
+        .agg(pl.col(SCORE).sum().cast(pl.Float32).alias(SCORE))
+        .with_columns(
+            pl.col(SCORE)
+            .rank(method="ordinal", descending=True)
+            .cast(pl.UInt32)
+            .alias(RANK)
+        )
+        .filter(pl.col(RANK) <= topk)
+        .sort(RANK)
+        .select(pl.col(AID).cast(pl.Int32), pl.col(SCORE), pl.col(RANK))
     )
 
 

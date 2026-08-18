@@ -74,6 +74,7 @@ otto-recommender-system/
 - `src/otto_recommender/heuristic_covisitation.py`: 阶段二多规则共现图，包含 Click-to-Click、Cart/Order-to-Cart/Order、Click-to-Cart/Order。
 - `scripts/build_heuristic_covisitation.py`: 分块构建三路 Top-20 heuristic co-visitation 图。
 - `scripts/run_heuristic_retrieval.py`: 聚合三路图生成最终 Top-20 候选集并评估。
+- `scripts/run_heuristic_retrieval_bucketed.py`: 分块生成每个 session 的 Top-100 候选池，更适合 Kaggle 大数据。
 
 ## Commands
 

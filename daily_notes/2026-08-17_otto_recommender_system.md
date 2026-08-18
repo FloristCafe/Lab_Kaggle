@@ -184,6 +184,8 @@ w(A -> B) = 21600 / (t + 21600) * 1 / (N(A) * N(B)) ^ 0.5
 - 引入 degree penalty，也就是 `1 / (N(A) * N(B)) ^ alpha`。
 - 默认 `alpha = 0.5`，等价于根号惩罚。
 - 脚本参数：`python scripts\build_heuristic_covisitation.py --n-buckets 16 --degree-alpha 0.5`
+- 召回收尾：最终候选池默认改为每个 session `Top-100`，评估仍看 `Recall@20`。
+- 召回输出：`artifacts/candidates/heuristic_candidates_top100.parquet`
 
 Degree penalty 全量运行结果：
 

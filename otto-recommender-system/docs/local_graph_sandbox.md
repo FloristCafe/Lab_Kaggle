@@ -53,6 +53,7 @@ python -m pip install -e .
 python scripts\split_local.py
 python scripts\build_covisitation_edges.py --n-buckets 16 --topk-per-chunk 80 --final-topk-per-source 20
 python scripts\run_graph_baseline.py
+python scripts\run_heuristic_retrieval.py --candidate-topk 100 --eval-topk 20
 python -m pytest -q
 ```
 
@@ -66,6 +67,7 @@ python -m pip install -e .
 python scripts\split_local.py
 python scripts\build_covisitation_edges.py --n-buckets 16 --topk-per-chunk 80 --final-topk-per-source 20
 python scripts\run_graph_baseline.py
+python scripts\run_heuristic_retrieval.py --candidate-topk 100 --eval-topk 20
 python -m pytest -q
 ```
 

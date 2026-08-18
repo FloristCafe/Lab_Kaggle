@@ -1,6 +1,6 @@
 # Stage 2: Heuristic Co-visitation
 
-阶段二目标是构建三路工业级启发式共现图，并用列式边表管理召回资产。
+阶段二目标是构建三路工业级启发式共现图，并用列式边表管理召回资产。最终输出不只是 Top-20 评估结果，而是每个 session 的 50-100 个候选商品池，供后续 ranker 使用。
 
 ## Graph Outputs
 
@@ -126,8 +126,14 @@ conda activate kg_env
 cd D:\Python\Kaggle\otto-recommender-system
 python -m pip install -e .
 python scripts\build_heuristic_covisitation.py --n-buckets 16 --degree-alpha 0.5
-python scripts\run_heuristic_retrieval.py
+python scripts\run_heuristic_retrieval.py --candidate-topk 100 --eval-topk 20
 python -m pytest -q
+```
+
+内存更稳的候选池生成方式：
+
+```powershell
+python scripts\run_heuristic_retrieval_bucketed.py --n-buckets 16 --candidate-topk 100 --min-candidates 50 --eval-topk 20
 ```
 
 Kaggle 大数据时，如果内存紧张：
@@ -145,3 +151,13 @@ python scripts\build_heuristic_covisitation.py --n-buckets 64
 recommendations=28,447,120
 weighted_recall@20=0.761238
 ```
+
+## Stage-2 Closing Criteria
+
+阶段二闭环产物：
+
+- 三路图各自产出 Top-20 边表。
+- 三路图合并后为每个 session 生成 `50-100` 个 candidate items。
+- 评估仍然使用 Kaggle 风格 weighted Recall@20。
+- 后续排序阶段使用 `heuristic_candidates_top100.parquet`，而不是只使用 Top-20 recommendation。
+- 如果全量候选池单文件生成较慢，使用 `heuristic_candidates_top100_parts/` 作为正式候选数据集目录。
