@@ -75,6 +75,9 @@ otto-recommender-system/
 - `scripts/build_heuristic_covisitation.py`: 分块构建三路 Top-20 heuristic co-visitation 图。
 - `scripts/run_heuristic_retrieval.py`: 聚合三路图生成最终 Top-20 候选集并评估。
 - `scripts/run_heuristic_retrieval_bucketed.py`: 分块生成每个 session 的 Top-100 候选池，更适合 Kaggle 大数据。
+- `src/otto_recommender/feature_engineering.py`: item/user 静态特征的 Polars 惰性流水线。
+- `scripts/build_item_features.py`: 生成 `item_features.parquet`。
+- `scripts/build_user_features.py`: 生成 `user_features.parquet`。
 
 ## Commands
 
