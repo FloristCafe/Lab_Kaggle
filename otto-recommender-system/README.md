@@ -78,6 +78,10 @@ otto-recommender-system/
 - `src/otto_recommender/feature_engineering.py`: item/user 静态特征的 Polars 惰性流水线。
 - `scripts/build_item_features.py`: 生成 `item_features.parquet`。
 - `scripts/build_user_features.py`: 生成 `user_features.parquet`。
+- `src/otto_recommender/interaction_features.py`: candidate-level 局部交互、时间差和图信号特征。
+- `scripts/build_interaction_features_bucketed.py`: 分块生成交互特征，避免 Kaggle 内存爆炸。
+- `scripts/build_interaction_features_candidate_chunks.py`: 候选集内层 10-20 chunk 分治版交互特征生成。
+- `docs/stage3_interaction_features.md`: 交互特征定义、缺失值消融策略和运行命令。
 
 ## Commands
 

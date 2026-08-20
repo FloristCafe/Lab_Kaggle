@@ -14,6 +14,7 @@ CART_TYPE = 1
 ORDER_TYPE = 2
 SECONDS_PER_HOUR = 3_600
 SECONDS_PER_DAY = 86_400
+CONVERSION_PRIOR_STRENGTH = 50.0
 
 
 def _lazy_events(input_path: str | Path) -> pl.LazyFrame:
@@ -45,10 +46,20 @@ def build_item_features(input_path: str | Path, output_path: str | Path) -> None
         (pl.col(TYPE) == ORDER_TYPE).sum().cast(pl.UInt32).alias("order_count"),
     )
 
-    max_ts = events.select(pl.max(TS).alias("_max_ts"))
+    global_stats = events.select(
+        pl.len().cast(pl.Float32).alias("_total_interactions"),
+        (pl.col(TYPE) == CLICK_TYPE).sum().cast(pl.Float32).alias("_click_count"),
+        (pl.col(TYPE) == CART_TYPE).sum().cast(pl.Float32).alias("_cart_count"),
+        (pl.col(TYPE) == ORDER_TYPE).sum().cast(pl.Float32).alias("_order_count"),
+    ).collect()
+    global_click_count = max(global_stats.item(0, "_click_count"), 1.0)
+    global_conversion_rate = (
+        global_stats.item(0, "_cart_count") + global_stats.item(0, "_order_count")
+    ) / global_click_count
+
+    max_ts = events.select(pl.max(TS).alias("_max_ts")).collect().item(0, 0)
     recent_24h = (
-        events.join(max_ts, how="cross")
-        .filter(pl.col(TS) >= pl.col("_max_ts") - SECONDS_PER_DAY * 1_000)
+        events.filter(pl.col(TS) >= pl.lit(max_ts - SECONDS_PER_DAY * 1_000))
         .group_by(AID)
         .agg(pl.len().cast(pl.UInt32).alias("recent_24h_interactions"))
     )
@@ -57,7 +68,14 @@ def build_item_features(input_path: str | Path, output_path: str | Path) -> None
         item_counts.join(recent_24h, on=AID, how="left")
         .with_columns(
             pl.col("recent_24h_interactions").fill_null(0).cast(pl.UInt32),
-            ((pl.col("cart_count") + pl.col("order_count")) / (pl.col("click_count") + 1))
+            (
+                (
+                    pl.col("cart_count").cast(pl.Float32)
+                    + pl.col("order_count").cast(pl.Float32)
+                    + pl.lit(CONVERSION_PRIOR_STRENGTH * global_conversion_rate, dtype=pl.Float32)
+                )
+                / (pl.col("click_count").cast(pl.Float32) + pl.lit(CONVERSION_PRIOR_STRENGTH, dtype=pl.Float32))
+            )
             .cast(pl.Float32)
             .alias("conversion_rate"),
         )
@@ -73,7 +91,7 @@ def build_item_features(input_path: str | Path, output_path: str | Path) -> None
         .sort(AID)
     )
     _clean_sink(item_features, output_path)
-    del events, item_counts, max_ts, recent_24h, item_features
+    del events, global_stats, item_counts, max_ts, recent_24h, item_features
     gc.collect()
 
 
@@ -115,4 +133,3 @@ def build_user_features(input_path: str | Path, output_path: str | Path) -> None
     _clean_sink(session_features, output_path)
     del events, session_features
     gc.collect()
-

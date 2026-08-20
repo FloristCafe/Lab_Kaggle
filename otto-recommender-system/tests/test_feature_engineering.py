@@ -10,10 +10,10 @@ from otto_recommender.feature_engineering import build_item_features, build_user
 def toy_events() -> pl.DataFrame:
     return pl.DataFrame(
         {
-            "session": [1, 1, 1, 2, 2, 3],
-            "aid": [10, 10, 11, 10, 12, 13],
-            "ts": [1_000, 2_000, 3_000, 4_000, 5_000, 6_000],
-            "type": [0, 1, 2, 0, 0, 1],
+            "session": [1, 1, 1, 2, 2, 3, 3, 3],
+            "aid": [10, 10, 10, 11, 12, 12, 12, 12],
+            "ts": [1_000, 2_000, 3_000, 4_000, 5_000, 6_000, 7_000, 8_000],
+            "type": [0, 0, 0, 0, 0, 1, 1, 2],
         }
     )
 
@@ -28,6 +28,7 @@ def test_build_item_features(tmp_path: Path) -> None:
 
     assert {"aid", "total_interactions", "click_count", "cart_count", "order_count", "recent_24h_interactions", "conversion_rate"}.issubset(df.columns)
     assert df.filter(pl.col("aid") == 10).select("total_interactions").item() == 3
+    assert df.filter(pl.col("aid") == 11).select("conversion_rate").item() < 1.0
 
 
 def test_build_user_features(tmp_path: Path) -> None:
