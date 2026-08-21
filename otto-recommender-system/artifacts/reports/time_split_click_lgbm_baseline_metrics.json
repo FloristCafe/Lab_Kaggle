@@ -1,0 +1,30 @@
+[
+  {
+    "variant": "delta_t_nan",
+    "train_rows": 375427,
+    "train_positive_rows": 17954,
+    "train_negative_rows": 357473,
+    "model_path": "artifacts\\models\\time_split_click_lgbm_baseline\\click_lgbm_delta_t_nan.txt",
+    "feature_importance_path": "artifacts\\reports\\time_split_click_lgbm_delta_t_nan_feature_importance.csv",
+    "eval_rows": 13373605,
+    "eval_sessions": 142902,
+    "eval_positive_rows": 1946,
+    "top20_rows": 2858040,
+    "top20_hits": 1610,
+    "recall_at_20": 0.8273381294964028
+  },
+  {
+    "variant": "delta_t_filled",
+    "train_rows": 375427,
+    "train_positive_rows": 17954,
+    "train_negative_rows": 357473,
+    "model_path": "artifacts\\models\\time_split_click_lgbm_baseline\\click_lgbm_delta_t_filled.txt",
+    "feature_importance_path": "artifacts\\reports\\time_split_click_lgbm_delta_t_filled_feature_importance.csv",
+    "eval_rows": 13373605,
+    "eval_sessions": 142902,
+    "eval_positive_rows": 1946,
+    "top20_rows": 2858040,
+    "top20_hits": 1612,
+    "recall_at_20": 0.828365878725591
+  }
+]
