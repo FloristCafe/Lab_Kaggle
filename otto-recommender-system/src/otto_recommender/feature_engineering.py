@@ -36,7 +36,7 @@ def _clean_sink(target: pl.LazyFrame, output_path: str | Path) -> None:
 
 
 def build_item_features(input_path: str | Path, output_path: str | Path) -> None:
-    """Create item_features.parquet with absolute counts, conversion rate, and recent activity."""
+    """Create item_features.parquet with counts, smoothed funnel rates, and recent activity."""
     events = _lazy_events(input_path)
 
     item_counts = events.group_by(AID).agg(
@@ -53,9 +53,13 @@ def build_item_features(input_path: str | Path, output_path: str | Path) -> None
         (pl.col(TYPE) == ORDER_TYPE).sum().cast(pl.Float32).alias("_order_count"),
     ).collect()
     global_click_count = max(global_stats.item(0, "_click_count"), 1.0)
+    global_cart_count = max(global_stats.item(0, "_cart_count"), 1.0)
     global_conversion_rate = (
         global_stats.item(0, "_cart_count") + global_stats.item(0, "_order_count")
     ) / global_click_count
+    global_cart_conversion_rate = global_stats.item(0, "_cart_count") / global_click_count
+    global_buy_conversion_rate = global_stats.item(0, "_order_count") / global_click_count
+    global_cart_to_order_rate = global_stats.item(0, "_order_count") / global_cart_count
 
     max_ts = events.select(pl.max(TS).alias("_max_ts")).collect().item(0, 0)
     recent_24h = (
@@ -78,6 +82,39 @@ def build_item_features(input_path: str | Path, output_path: str | Path) -> None
             )
             .cast(pl.Float32)
             .alias("conversion_rate"),
+            (
+                (
+                    pl.col("cart_count").cast(pl.Float32)
+                    + pl.lit(CONVERSION_PRIOR_STRENGTH * global_cart_conversion_rate, dtype=pl.Float32)
+                )
+                / (pl.col("click_count").cast(pl.Float32) + pl.lit(CONVERSION_PRIOR_STRENGTH, dtype=pl.Float32))
+            )
+            .cast(pl.Float32)
+            .alias("item_cart_conversion_rate"),
+            (
+                (
+                    pl.col("order_count").cast(pl.Float32)
+                    + pl.lit(CONVERSION_PRIOR_STRENGTH * global_buy_conversion_rate, dtype=pl.Float32)
+                )
+                / (pl.col("click_count").cast(pl.Float32) + pl.lit(CONVERSION_PRIOR_STRENGTH, dtype=pl.Float32))
+            )
+            .cast(pl.Float32)
+            .alias("item_buy_conversion_rate"),
+            (
+                (
+                    pl.col("order_count").cast(pl.Float32)
+                    + pl.lit(CONVERSION_PRIOR_STRENGTH * global_cart_to_order_rate, dtype=pl.Float32)
+                )
+                / (pl.col("cart_count").cast(pl.Float32) + pl.lit(CONVERSION_PRIOR_STRENGTH, dtype=pl.Float32))
+            )
+            .cast(pl.Float32)
+            .alias("item_cart_to_order_rate"),
+        )
+        .with_columns(
+            (1.0 - pl.col("item_cart_to_order_rate"))
+            .clip(0.0, 1.0)
+            .cast(pl.Float32)
+            .alias("item_funnel_dropoff_rate")
         )
         .select(
             pl.col(AID).cast(pl.Int32),
@@ -87,6 +124,10 @@ def build_item_features(input_path: str | Path, output_path: str | Path) -> None
             pl.col("order_count").cast(pl.UInt32),
             pl.col("recent_24h_interactions").cast(pl.UInt32),
             pl.col("conversion_rate").cast(pl.Float32),
+            pl.col("item_cart_conversion_rate").cast(pl.Float32),
+            pl.col("item_buy_conversion_rate").cast(pl.Float32),
+            pl.col("item_cart_to_order_rate").cast(pl.Float32),
+            pl.col("item_funnel_dropoff_rate").cast(pl.Float32),
         )
         .sort(AID)
     )
