@@ -12,6 +12,7 @@ import polars as pl
 from .schema import AID, SESSION
 
 HASH_DENOMINATOR = 1_000_000
+NEGATIVE_BUCKETS = ("hard_click", "hard_graph", "random")
 
 ITEM_FEATURE_COLUMNS = (
     "total_interactions",
@@ -96,8 +97,12 @@ def bucket_counts(
     )
 
 
-def sampling_thresholds(counts: pl.DataFrame, config: HardNegativeConfig) -> dict[str, int]:
-    """Translate per-bucket quotas into deterministic hash thresholds."""
+def sampling_plan(counts: pl.DataFrame, config: HardNegativeConfig) -> tuple[dict[str, int], pl.DataFrame]:
+    """Translate quotas into thresholds with explicit bucket-exhaustion fallback.
+
+    Quotas are global, not per-session. Sparse order sessions are therefore allowed to
+    contribute fewer hard negatives without duplication or pipeline failure.
+    """
     count_by_bucket = {
         row["negative_bucket"]: int(row["available_rows"])
         for row in counts.select("negative_bucket", "available_rows").iter_rows(named=True)
@@ -106,16 +111,55 @@ def sampling_thresholds(counts: pl.DataFrame, config: HardNegativeConfig) -> dic
     if positives <= 0:
         raise ValueError(f"No positives found for {config.target_col}")
 
-    quotas = {
+    requested = {
         "hard_click": int(positives * config.hard_click_neg_per_pos),
         "hard_graph": int(positives * config.hard_graph_neg_per_pos),
         "random": int(positives * config.random_neg_per_pos),
     }
+    available = {bucket: count_by_bucket.get(bucket, 0) for bucket in NEGATIVE_BUCKETS}
+    planned = {bucket: min(requested[bucket], available[bucket]) for bucket in NEGATIVE_BUCKETS}
+
+    remaining_shortfall = sum(requested.values()) - sum(planned.values())
+    if remaining_shortfall > 0:
+        for bucket in ("random", "hard_graph", "hard_click"):
+            capacity = available[bucket] - planned[bucket]
+            extra = min(remaining_shortfall, max(capacity, 0))
+            planned[bucket] += extra
+            remaining_shortfall -= extra
+            if remaining_shortfall <= 0:
+                break
+
     thresholds: dict[str, int] = {}
-    for bucket, quota in quotas.items():
-        available = count_by_bucket.get(bucket, 0)
-        fraction = min(1.0, quota / max(available, 1))
+    audit_rows: list[dict[str, int | str]] = []
+    for bucket in NEGATIVE_BUCKETS:
+        fraction = min(1.0, planned[bucket] / max(available[bucket], 1))
         thresholds[bucket] = int(fraction * HASH_DENOMINATOR)
+        audit_rows.append(
+            {
+                "bucket": bucket,
+                "requested_rows": requested[bucket],
+                "available_rows": available[bucket],
+                "planned_rows": planned[bucket],
+                "direct_shortfall_rows": max(requested[bucket] - available[bucket], 0),
+                "threshold": thresholds[bucket],
+            }
+        )
+    audit_rows.append(
+        {
+            "bucket": "__ALL_NEGATIVES__",
+            "requested_rows": sum(requested.values()),
+            "available_rows": sum(available.values()),
+            "planned_rows": sum(planned.values()),
+            "direct_shortfall_rows": remaining_shortfall,
+            "threshold": 0,
+        }
+    )
+    return thresholds, pl.DataFrame(audit_rows)
+
+
+def sampling_thresholds(counts: pl.DataFrame, config: HardNegativeConfig) -> dict[str, int]:
+    """Backward-compatible threshold helper."""
+    thresholds, _ = sampling_plan(counts, config)
     return thresholds
 
 
@@ -173,7 +217,7 @@ def write_hard_negative_parts(
 
     graph_threshold = graph_weight_threshold(paths, config.target_col, config.graph_col, config.graph_quantile)
     counts = bucket_counts(paths, config, graph_threshold)
-    thresholds = sampling_thresholds(counts, config)
+    thresholds, plan = sampling_plan(counts, config)
 
     stats: list[dict[str, float | int | str]] = []
     for path in paths:
@@ -210,6 +254,10 @@ def write_hard_negative_parts(
         gc.collect()
 
     stats_frame = pl.DataFrame(stats)
+    plan_lookup = {
+        row["bucket"]: row
+        for row in plan.iter_rows(named=True)
+    }
     totals = stats_frame.select(
         pl.lit("__TOTAL__").alias("part"),
         pl.first("graph_threshold").alias("graph_threshold"),
@@ -223,7 +271,21 @@ def write_hard_negative_parts(
         pl.sum("random_rows").alias("random_rows"),
         pl.sum("rows").alias("rows"),
         pl.sum("negative_rows").alias("negative_rows"),
-    ).with_columns((pl.col("negative_rows") / pl.col("positive_rows")).alias("neg_pos_ratio"))
+    ).with_columns(
+        (pl.col("negative_rows") / pl.col("positive_rows")).alias("neg_pos_ratio"),
+        pl.lit(plan_lookup["hard_click"]["requested_rows"]).alias("requested_hard_click_rows"),
+        pl.lit(plan_lookup["hard_click"]["available_rows"]).alias("available_hard_click_rows"),
+        pl.lit(plan_lookup["hard_click"]["planned_rows"]).alias("planned_hard_click_rows"),
+        pl.lit(plan_lookup["hard_graph"]["requested_rows"]).alias("requested_hard_graph_rows"),
+        pl.lit(plan_lookup["hard_graph"]["available_rows"]).alias("available_hard_graph_rows"),
+        pl.lit(plan_lookup["hard_graph"]["planned_rows"]).alias("planned_hard_graph_rows"),
+        pl.lit(plan_lookup["random"]["requested_rows"]).alias("requested_random_rows"),
+        pl.lit(plan_lookup["random"]["available_rows"]).alias("available_random_rows"),
+        pl.lit(plan_lookup["random"]["planned_rows"]).alias("planned_random_rows"),
+        pl.lit(plan_lookup["__ALL_NEGATIVES__"]["requested_rows"]).alias("requested_negative_rows"),
+        pl.lit(plan_lookup["__ALL_NEGATIVES__"]["planned_rows"]).alias("planned_negative_rows"),
+        pl.lit(plan_lookup["__ALL_NEGATIVES__"]["direct_shortfall_rows"]).alias("unfilled_shortfall_rows"),
+    )
     result = pl.concat([stats_frame.with_columns((pl.col("negative_rows") / pl.col("positive_rows")).alias("neg_pos_ratio")), totals], how="diagonal")
     result.write_csv(stats_output)
     return result

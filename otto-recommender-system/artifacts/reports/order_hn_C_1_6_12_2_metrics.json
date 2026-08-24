@@ -1,0 +1,17 @@
+{
+  "experiment": "order_hn_C_1_6_12_2",
+  "train_rows": 6374,
+  "train_positive_rows": 307,
+  "train_negative_rows": 6067,
+  "model_path": "artifacts\\models\\time_split_order_lgbm_ablation\\order_hn_C_1_6_12_2_lgbm.txt",
+  "feature_importance_path": "artifacts\\reports\\order_hn_C_1_6_12_2_feature_importance.csv",
+  "label_sessions": 4411,
+  "hit_sessions": 227,
+  "dcg": 203.56886125503863,
+  "idcg": 5962.29747865126,
+  "ndcg_at_k": 0.03414268777831734,
+  "eval_rows": 133769637,
+  "eval_positive_rows_in_candidates": 307,
+  "topk_rows": 28580400,
+  "topk_hits": 307
+}
