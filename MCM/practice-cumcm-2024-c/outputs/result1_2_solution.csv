@@ -1,0 +1,815 @@
+﻿plot,crop,year,season,area_mu
+A1,Corn,2024,1,80.0
+A1,Corn,2026,1,60.75
+A1,Corn,2028,1,60.75
+A1,Corn,2030,1,60.75
+A1,Mung Bean,2026,1,7.55
+A1,Mung Bean,2028,1,16.1
+A1,Mung Bean,2030,1,16.1
+A1,Pumpkin,2026,1,11.7
+A1,Sweet Potato,2028,1,3.15
+A1,Sweet Potato,2030,1,3.15
+A1,Wheat,2025,1,80.0
+A1,Wheat,2027,1,80.0
+A1,Wheat,2029,1,80.0
+A2,Corn,2025,1,55.0
+A2,Corn,2027,1,8.915789473684207
+A2,Corn,2029,1,20.61578947368421
+A2,Mung Bean,2027,1,34.38421052631579
+A2,Mung Bean,2029,1,34.38421052631579
+A2,Pumpkin,2027,1,11.7
+A2,Wheat,2024,1,55.0
+A2,Wheat,2026,1,55.0
+A2,Wheat,2028,1,55.0
+A2,Wheat,2030,1,55.0
+A3,Corn,2025,1,18.636363636363637
+A3,Corn,2027,1,18.636363636363637
+A3,Corn,2029,1,18.636363636363637
+A3,Mung Bean,2024,1,31.85
+A3,Mung Bean,2026,1,31.85
+A3,Mung Bean,2028,1,23.3
+A3,Mung Bean,2030,1,23.3
+A3,Pumpkin,2028,1,11.7
+A3,Pumpkin,2030,1,11.7
+A3,Sweet Potato,2025,1,16.363636363636363
+A3,Sweet Potato,2027,1,16.363636363636363
+A3,Sweet Potato,2029,1,16.363636363636363
+A3,Wheat,2024,1,3.15
+A3,Wheat,2026,1,3.15
+A4,Corn,2024,1,52.75
+A4,Corn,2026,1,72.0
+A4,Corn,2028,1,72.0
+A4,Corn,2030,1,72.0
+A4,Mung Bean,2024,1,19.25
+A4,Pumpkin,2025,1,11.7
+A4,Wheat,2025,1,60.3
+A4,Wheat,2027,1,72.0
+A4,Wheat,2029,1,72.0
+A5,Corn,2025,1,33.61578947368421
+A5,Corn,2027,1,68.0
+A5,Corn,2029,1,56.3
+A5,Mung Bean,2025,1,34.38421052631579
+A5,Pumpkin,2029,1,11.7
+A5,Sweet Potato,2024,1,16.363636363636363
+A5,Sweet Potato,2026,1,16.363636363636363
+A5,Sweet Potato,2028,1,13.213636363636365
+A5,Sweet Potato,2030,1,13.213636363636365
+A5,Wheat,2024,1,51.63636363636364
+A5,Wheat,2026,1,51.63636363636364
+A5,Wheat,2028,1,54.78636363636363
+A5,Wheat,2030,1,54.78636363636363
+A6,Corn,2025,1,25.49784688995216
+A6,Corn,2027,1,37.19784688995215
+A6,Corn,2029,1,37.19784688995215
+A6,Mung Bean,2024,1,43.3
+A6,Mung Bean,2026,1,55.0
+A6,Mung Bean,2028,1,55.0
+A6,Mung Bean,2030,1,55.0
+A6,Pumpkin,2024,1,11.7
+A6,Wheat,2025,1,29.50215311004784
+A6,Wheat,2027,1,17.802153110047847
+A6,Wheat,2029,1,17.802153110047847
+B1,Black Bean,2026,1,25.0
+B1,Black Bean,2028,1,25.88038277511961
+B1,Buckwheat,2025,1,27.10752958952404
+B1,Buckwheat,2027,1,60.0
+B1,Buckwheat,2029,1,51.949634852681946
+B1,Climbing Bean,2026,1,25.0
+B1,Foxtail Millet,2024,1,10.0
+B1,Millet,2025,1,32.89247041047596
+B1,Millet,2028,1,24.11961722488039
+B1,Millet,2030,1,60.0
+B1,Oat,2029,1,7.0
+B1,Sorghum,2024,1,50.0
+B1,Sorghum,2026,1,10.0
+B1,Sorghum,2028,1,10.0
+B1,Wheat,2029,1,1.0503651473180549
+B10,Black Bean,2029,1,8.157894736842106
+B10,Climbing Bean,2024,1,1.05263157894737
+B10,Climbing Bean,2029,1,16.842105263157894
+B10,Millet,2026,1,25.0
+B10,Red Bean,2024,1,23.94736842105263
+B10,Red Bean,2027,1,3.0
+B10,Sorghum,2027,1,22.0
+B10,Sorghum,2030,1,25.0
+B10,Wheat,2025,1,25.0
+B10,Wheat,2028,1,25.0
+B11,Black Bean,2027,1,11.0
+B11,Buckwheat,2024,1,60.0
+B11,Buckwheat,2029,1,60.0
+B11,Climbing Bean,2028,1,25.0
+B11,Millet,2025,1,60.0
+B11,Millet,2027,1,49.0
+B11,Oat,2026,1,35.0
+B11,Oat,2028,1,35.0
+B11,Red Bean,2026,1,25.0
+B11,Wheat,2030,1,60.0
+B12,Black Bean,2025,1,2.0
+B12,Buckwheat,2025,1,43.0
+B12,Climbing Bean,2030,1,11.880382775119621
+B12,Millet,2024,1,45.0
+B12,Millet,2027,1,18.945101989423307
+B12,Millet,2029,1,45.0
+B12,Oat,2027,1,26.054898010576693
+B12,Red Bean,2028,1,45.0
+B12,Wheat,2026,1,45.0
+B12,Wheat,2030,1,33.11961722488038
+B13,Black Bean,2025,1,35.0
+B13,Black Bean,2027,1,35.0
+B13,Millet,2026,1,35.0
+B13,Millet,2029,1,35.0
+B13,Oat,2030,1,35.0
+B13,Red Bean,2024,1,35.0
+B13,Wheat,2028,1,35.0
+B14,Climbing Bean,2025,1,20.0
+B14,Millet,2028,1,20.0
+B14,Red Bean,2027,1,20.0
+B14,Sorghum,2030,1,20.0
+B14,Wheat,2024,1,20.0
+B14,Wheat,2026,1,20.0
+B14,Wheat,2029,1,20.0
+B2,Black Bean,2029,1,37.8421052631579
+B2,Buckwheat,2024,1,7.35526315789474
+B2,Buckwheat,2027,1,37.05489801057669
+B2,Buckwheat,2029,1,8.157894736842103
+B2,Foxtail Millet,2024,1,0.75
+B2,Millet,2024,1,37.89473684210526
+B2,Millet,2026,1,46.0
+B2,Millet,2028,1,46.0
+B2,Millet,2030,1,46.0
+B2,Oat,2027,1,8.945101989423305
+B2,Red Bean,2025,1,46.0
+B3,Black Bean,2030,1,11.93301435406699
+B3,Buckwheat,2027,1,4.05263157894737
+B3,Climbing Bean,2024,1,4.999999999999996
+B3,Climbing Bean,2030,1,13.119617224880379
+B3,Millet,2025,1,18.949634852681935
+B3,Millet,2029,1,40.0
+B3,Oat,2024,1,35.0
+B3,Red Bean,2027,1,35.94736842105263
+B3,Red Bean,2030,1,14.947368421052632
+B3,Sorghum,2026,1,40.0
+B3,Sorghum,2028,1,40.0
+B3,Wheat,2025,1,21.050365147318065
+B4,Black Bean,2026,1,6.157894736842106
+B4,Millet,2025,1,28.0
+B4,Millet,2028,1,22.775119617224874
+B4,Millet,2030,1,11.894736842105264
+B4,Oat,2029,1,28.0
+B4,Red Bean,2026,1,21.842105263157894
+B4,Sorghum,2027,1,28.0
+B4,Wheat,2024,1,28.0
+B4,Wheat,2028,1,5.224880382775126
+B4,Wheat,2030,1,16.105263157894736
+B5,Black Bean,2024,1,7.775119617224885
+B5,Black Bean,2026,1,4.066985645933007
+B5,Buckwheat,2026,1,10.183014354066993
+B5,Foxtail Millet,2026,1,10.75
+B5,Millet,2025,1,25.0
+B5,Millet,2028,1,25.0
+B5,Millet,2030,1,20.0
+B5,Sorghum,2030,1,5.0
+B5,Wheat,2024,1,17.224880382775115
+B5,Wheat,2027,1,25.0
+B5,Wheat,2029,1,25.0
+B6,Black Bean,2024,1,38.22488038277512
+B6,Black Bean,2028,1,20.11961722488039
+B6,Black Bean,2030,1,34.06698564593301
+B6,Buckwheat,2024,1,28.827751196172258
+B6,Buckwheat,2026,1,86.0
+B6,Buckwheat,2028,1,55.130382775119614
+B6,Buckwheat,2030,1,41.18301435406699
+B6,Climbing Bean,2024,1,18.94736842105263
+B6,Climbing Bean,2029,1,8.157894736842106
+B6,Foxtail Millet,2028,1,10.75
+B6,Foxtail Millet,2030,1,10.75
+B6,Millet,2025,1,23.05263157894737
+B6,Millet,2027,1,64.94963485268195
+B6,Millet,2029,1,18.894736842105264
+B6,Red Bean,2025,1,12.947368421052632
+B6,Red Bean,2029,1,58.94736842105263
+B6,Sorghum,2025,1,50.0
+B6,Wheat,2027,1,21.050365147318054
+B7,Black Bean,2026,1,10.775119617224888
+B7,Buckwheat,2025,1,50.0
+B7,Buckwheat,2028,1,41.05263157894737
+B7,Buckwheat,2030,1,55.0
+B7,Climbing Bean,2025,1,5.0
+B7,Millet,2024,1,55.0
+B7,Millet,2027,1,55.0
+B7,Millet,2029,1,5.0
+B7,Red Bean,2028,1,13.947368421052632
+B7,Sorghum,2029,1,50.0
+B7,Wheat,2026,1,44.22488038277512
+B8,Black Bean,2025,1,9.0
+B8,Buckwheat,2027,1,44.0
+B8,Millet,2026,1,44.0
+B8,Millet,2029,1,44.0
+B8,Oat,2025,1,35.0
+B8,Red Bean,2030,1,44.0
+B8,Wheat,2024,1,44.0
+B8,Wheat,2028,1,44.0
+B9,Buckwheat,2025,1,50.0
+B9,Buckwheat,2027,1,25.0
+B9,Buckwheat,2029,1,50.0
+B9,Climbing Bean,2027,1,25.0
+B9,Millet,2024,1,50.0
+B9,Millet,2026,1,37.89473684210526
+B9,Millet,2028,1,50.0
+B9,Millet,2030,1,50.0
+B9,Red Bean,2026,1,12.10526315789474
+C1,Buckwheat,2025,1,15.0
+C1,Buckwheat,2027,1,15.0
+C1,Buckwheat,2029,1,15.0
+C1,Foxtail Millet,2024,1,15.0
+C1,Foxtail Millet,2026,1,15.0
+C1,Foxtail Millet,2028,1,15.0
+C1,Foxtail Millet,2030,1,15.0
+C2,Buckwheat,2024,1,13.0
+C2,Buckwheat,2026,1,13.0
+C2,Buckwheat,2028,1,13.0
+C2,Buckwheat,2030,1,13.0
+C2,Foxtail Millet,2025,1,13.0
+C2,Foxtail Millet,2029,1,13.0
+C2,Mung Bean,2027,1,13.0
+C3,Buckwheat,2024,1,15.0
+C3,Buckwheat,2026,1,15.0
+C3,Buckwheat,2028,1,15.0
+C3,Buckwheat,2030,1,15.0
+C3,Foxtail Millet,2029,1,13.31578947368421
+C3,Mung Bean,2025,1,15.0
+C3,Mung Bean,2027,1,15.0
+C3,Mung Bean,2029,1,1.6842105263157894
+C4,Buckwheat,2024,1,18.0
+C4,Buckwheat,2026,1,18.0
+C4,Buckwheat,2028,1,18.0
+C4,Buckwheat,2030,1,18.0
+C4,Mung Bean,2025,1,18.0
+C4,Mung Bean,2027,1,18.0
+C4,Mung Bean,2029,1,18.0
+C5,Buckwheat,2024,1,27.0
+C5,Buckwheat,2026,1,27.0
+C5,Buckwheat,2028,1,27.0
+C5,Buckwheat,2030,1,27.0
+C5,Foxtail Millet,2027,1,26.31578947368421
+C5,Mung Bean,2025,1,27.0
+C5,Mung Bean,2027,1,0.6842105263157912
+C5,Mung Bean,2029,1,27.0
+C6,Buckwheat,2024,1,20.0
+C6,Buckwheat,2026,1,20.0
+C6,Buckwheat,2028,1,20.0
+C6,Buckwheat,2030,1,20.0
+C6,Foxtail Millet,2025,1,13.31578947368421
+C6,Mung Bean,2025,1,6.684210526315789
+C6,Mung Bean,2027,1,20.0
+C6,Mung Bean,2029,1,20.0
+D1,Cucumber,2024,1,15.0
+D1,Cucumber,2026,1,15.0
+D1,Cucumber,2028,1,15.0
+D1,Cucumber,2030,1,15.0
+D1,Water Spinach,2025,1,15.0
+D1,Water Spinach,2027,1,15.0
+D1,Water Spinach,2029,1,15.0
+D1,White Radish,2024,2,15.0
+D1,White Radish,2025,2,15.0
+D1,White Radish,2026,2,15.0
+D1,White Radish,2027,2,15.0
+D1,White Radish,2028,2,15.0
+D1,White Radish,2029,2,15.0
+D1,White Radish,2030,2,15.0
+D2,Cowpea,2025,1,4.460000000000001
+D2,Cowpea,2027,1,4.460000000000001
+D2,Cowpea,2029,1,4.460000000000001
+D2,Cucumber,2024,1,10.0
+D2,Cucumber,2026,1,10.0
+D2,Cucumber,2028,1,10.0
+D2,Cucumber,2030,1,10.0
+D2,Water Spinach,2025,1,5.539999999999999
+D2,Water Spinach,2027,1,5.539999999999999
+D2,Water Spinach,2029,1,5.539999999999999
+D2,White Radish,2024,2,10.0
+D2,White Radish,2025,2,10.0
+D2,White Radish,2026,2,10.0
+D2,White Radish,2027,2,10.0
+D2,White Radish,2028,2,10.0
+D2,White Radish,2029,2,10.0
+D2,White Radish,2030,2,10.0
+D3,Cucumber,2024,1,14.0
+D3,Cucumber,2026,1,14.0
+D3,Cucumber,2028,1,14.0
+D3,Cucumber,2030,1,14.0
+D3,Water Spinach,2025,1,14.0
+D3,Water Spinach,2027,1,14.0
+D3,Water Spinach,2029,1,14.0
+D3,White Radish,2024,2,14.0
+D3,White Radish,2025,2,14.0
+D3,White Radish,2026,2,14.0
+D3,White Radish,2027,2,14.0
+D3,White Radish,2028,2,14.0
+D3,White Radish,2029,2,14.0
+D3,White Radish,2030,2,14.0
+D4,Cucumber,2024,1,6.0
+D4,Cucumber,2026,1,6.0
+D4,Cucumber,2028,1,6.0
+D4,Cucumber,2030,1,6.0
+D4,Water Spinach,2025,1,6.0
+D4,Water Spinach,2027,1,6.0
+D4,Water Spinach,2029,1,6.0
+D4,White Radish,2024,2,6.0
+D4,White Radish,2025,2,6.0
+D4,White Radish,2026,2,6.0
+D4,White Radish,2027,2,6.0
+D4,White Radish,2028,2,6.0
+D4,White Radish,2029,2,6.0
+D4,White Radish,2030,2,6.0
+D5,Cowpea,2025,1,4.460000000000001
+D5,Cowpea,2027,1,4.460000000000001
+D5,Cowpea,2029,1,4.460000000000001
+D5,Cucumber,2024,1,10.0
+D5,Cucumber,2026,1,10.0
+D5,Cucumber,2028,1,10.0
+D5,Cucumber,2030,1,10.0
+D5,Water Spinach,2025,1,5.539999999999999
+D5,Water Spinach,2027,1,5.539999999999999
+D5,Water Spinach,2029,1,5.539999999999999
+D5,White Radish,2024,2,10.0
+D5,White Radish,2025,2,10.0
+D5,White Radish,2026,2,10.0
+D5,White Radish,2027,2,10.0
+D5,White Radish,2028,2,10.0
+D5,White Radish,2029,2,10.0
+D5,White Radish,2030,2,10.0
+D6,Cucumber,2024,1,12.0
+D6,Cucumber,2026,1,12.0
+D6,Cucumber,2028,1,12.0
+D6,Cucumber,2030,1,12.0
+D6,Water Spinach,2025,1,12.0
+D6,Water Spinach,2027,1,12.0
+D6,Water Spinach,2029,1,12.0
+D6,White Radish,2024,2,12.0
+D6,White Radish,2025,2,12.0
+D6,White Radish,2026,2,12.0
+D6,White Radish,2027,2,12.0
+D6,White Radish,2028,2,12.0
+D6,White Radish,2029,2,12.0
+D6,White Radish,2030,2,12.0
+D7,Cucumber,2024,1,22.0
+D7,Cucumber,2026,1,22.0
+D7,Cucumber,2028,1,22.0
+D7,Cucumber,2030,1,22.0
+D7,Water Spinach,2025,1,22.0
+D7,Water Spinach,2027,1,22.0
+D7,Water Spinach,2029,1,22.0
+D7,White Radish,2024,2,22.0
+D7,White Radish,2025,2,22.0
+D7,White Radish,2026,2,22.0
+D7,White Radish,2027,2,22.0
+D7,White Radish,2028,2,22.0
+D7,White Radish,2029,2,22.0
+D7,White Radish,2030,2,22.0
+D8,Cucumber,2024,1,20.0
+D8,Cucumber,2026,1,20.0
+D8,Cucumber,2028,1,20.0
+D8,Cucumber,2030,1,20.0
+D8,Water Spinach,2025,1,20.0
+D8,Water Spinach,2027,1,20.0
+D8,Water Spinach,2029,1,20.0
+D8,White Radish,2024,2,20.0
+D8,White Radish,2025,2,20.0
+D8,White Radish,2026,2,20.0
+D8,White Radish,2027,2,20.0
+D8,White Radish,2028,2,20.0
+D8,White Radish,2029,2,20.0
+D8,White Radish,2030,2,20.0
+E1,Cabbage,2025,1,0.04
+E1,Cabbage,2027,1,0.04
+E1,Cabbage,2029,1,0.04
+E1,Cowpea,2025,1,0.1399999999999999
+E1,Cowpea,2027,1,0.1399999999999999
+E1,Cowpea,2029,1,0.1399999999999999
+E1,Cucumber,2024,1,0.6
+E1,Cucumber,2026,1,0.6
+E1,Cucumber,2028,1,0.6
+E1,Cucumber,2030,1,0.6
+E1,Eggplant,2025,1,0.36
+E1,Eggplant,2027,1,0.36
+E1,Eggplant,2029,1,0.36
+E1,Golden Oyster Mushroom,2024,2,0.6
+E1,Golden Oyster Mushroom,2025,2,0.6
+E1,Golden Oyster Mushroom,2026,2,0.6
+E1,Golden Oyster Mushroom,2027,2,0.6
+E1,Golden Oyster Mushroom,2028,2,0.6
+E1,Golden Oyster Mushroom,2029,2,0.6
+E1,Golden Oyster Mushroom,2030,2,0.6
+E1,Lettuce,2025,1,0.02
+E1,Lettuce,2027,1,0.02
+E1,Lettuce,2029,1,0.02
+E1,Tatsoi,2025,1,0.04
+E1,Tatsoi,2027,1,0.04
+E1,Tatsoi,2029,1,0.04
+E10,Cabbage,2025,1,0.04
+E10,Cabbage,2027,1,0.04
+E10,Cabbage,2029,1,0.04
+E10,Cowpea,2025,1,0.1399999999999999
+E10,Cowpea,2027,1,0.1399999999999999
+E10,Cowpea,2029,1,0.1399999999999999
+E10,Cucumber,2024,1,0.6
+E10,Cucumber,2026,1,0.6
+E10,Cucumber,2028,1,0.6
+E10,Cucumber,2030,1,0.6
+E10,Eggplant,2025,1,0.36
+E10,Eggplant,2027,1,0.36
+E10,Eggplant,2029,1,0.36
+E10,Golden Oyster Mushroom,2024,2,0.6
+E10,Golden Oyster Mushroom,2025,2,0.6
+E10,Golden Oyster Mushroom,2026,2,0.6
+E10,Golden Oyster Mushroom,2027,2,0.6
+E10,Golden Oyster Mushroom,2028,2,0.6
+E10,Golden Oyster Mushroom,2029,2,0.6
+E10,Golden Oyster Mushroom,2030,2,0.6
+E10,Lettuce,2025,1,0.02
+E10,Lettuce,2027,1,0.02
+E10,Lettuce,2029,1,0.02
+E10,Tatsoi,2025,1,0.04
+E10,Tatsoi,2027,1,0.04
+E10,Tatsoi,2029,1,0.04
+E11,Cabbage,2025,1,0.04
+E11,Cabbage,2027,1,0.04
+E11,Cabbage,2029,1,0.04
+E11,Cowpea,2025,1,0.1399999999999999
+E11,Cowpea,2027,1,0.1399999999999999
+E11,Cowpea,2029,1,0.1399999999999999
+E11,Cucumber,2024,1,0.6
+E11,Cucumber,2026,1,0.6
+E11,Cucumber,2028,1,0.6
+E11,Cucumber,2030,1,0.6
+E11,Eggplant,2025,1,0.36
+E11,Eggplant,2027,1,0.36
+E11,Eggplant,2029,1,0.36
+E11,Golden Oyster Mushroom,2024,2,0.6
+E11,Golden Oyster Mushroom,2025,2,0.6
+E11,Golden Oyster Mushroom,2026,2,0.6
+E11,Golden Oyster Mushroom,2027,2,0.6
+E11,Golden Oyster Mushroom,2028,2,0.6
+E11,Golden Oyster Mushroom,2029,2,0.6
+E11,Golden Oyster Mushroom,2030,2,0.6
+E11,Lettuce,2025,1,0.02
+E11,Lettuce,2027,1,0.02
+E11,Lettuce,2029,1,0.02
+E11,Tatsoi,2025,1,0.04
+E11,Tatsoi,2027,1,0.04
+E11,Tatsoi,2029,1,0.04
+E12,Cabbage,2025,1,0.04
+E12,Cabbage,2027,1,0.04
+E12,Cabbage,2029,1,0.04
+E12,Cowpea,2025,1,0.1399999999999999
+E12,Cowpea,2027,1,0.1399999999999999
+E12,Cowpea,2029,1,0.1399999999999999
+E12,Cucumber,2024,1,0.6
+E12,Cucumber,2026,1,0.6
+E12,Cucumber,2028,1,0.6
+E12,Cucumber,2030,1,0.6
+E12,Eggplant,2025,1,0.36
+E12,Eggplant,2027,1,0.36
+E12,Eggplant,2029,1,0.36
+E12,Golden Oyster Mushroom,2024,2,0.6
+E12,Golden Oyster Mushroom,2025,2,0.6
+E12,Golden Oyster Mushroom,2026,2,0.6
+E12,Golden Oyster Mushroom,2027,2,0.6
+E12,Golden Oyster Mushroom,2028,2,0.6
+E12,Golden Oyster Mushroom,2029,2,0.6
+E12,Golden Oyster Mushroom,2030,2,0.6
+E12,Lettuce,2025,1,0.02
+E12,Lettuce,2027,1,0.02
+E12,Lettuce,2029,1,0.02
+E12,Tatsoi,2025,1,0.04
+E12,Tatsoi,2027,1,0.04
+E12,Tatsoi,2029,1,0.04
+E13,Cabbage,2025,1,0.04
+E13,Cabbage,2027,1,0.04
+E13,Cabbage,2029,1,0.04
+E13,Cowpea,2025,1,0.1399999999999999
+E13,Cowpea,2027,1,0.1399999999999999
+E13,Cowpea,2029,1,0.1399999999999999
+E13,Cucumber,2024,1,0.6
+E13,Cucumber,2026,1,0.6
+E13,Cucumber,2028,1,0.6
+E13,Cucumber,2030,1,0.6
+E13,Eggplant,2025,1,0.36
+E13,Eggplant,2027,1,0.36
+E13,Eggplant,2029,1,0.36
+E13,Golden Oyster Mushroom,2024,2,0.6
+E13,Golden Oyster Mushroom,2025,2,0.6
+E13,Golden Oyster Mushroom,2026,2,0.6
+E13,Golden Oyster Mushroom,2027,2,0.6
+E13,Golden Oyster Mushroom,2028,2,0.6
+E13,Golden Oyster Mushroom,2029,2,0.6
+E13,Golden Oyster Mushroom,2030,2,0.6
+E13,Lettuce,2025,1,0.02
+E13,Lettuce,2027,1,0.02
+E13,Lettuce,2029,1,0.02
+E13,Tatsoi,2025,1,0.04
+E13,Tatsoi,2027,1,0.04
+E13,Tatsoi,2029,1,0.04
+E14,Cucumber,2025,1,0.6
+E14,Cucumber,2027,1,0.6
+E14,Cucumber,2029,1,0.6
+E14,Eggplant,2024,1,0.6
+E14,Eggplant,2026,1,0.6
+E14,Eggplant,2028,1,0.6
+E14,Eggplant,2030,1,0.6
+E14,Golden Oyster Mushroom,2024,2,0.6
+E14,Golden Oyster Mushroom,2025,2,0.6
+E14,Golden Oyster Mushroom,2026,2,0.6
+E14,Golden Oyster Mushroom,2027,2,0.6
+E14,Golden Oyster Mushroom,2028,2,0.6
+E14,Golden Oyster Mushroom,2029,2,0.6
+E14,Golden Oyster Mushroom,2030,2,0.6
+E15,Cabbage,2025,1,0.04
+E15,Cabbage,2027,1,0.04
+E15,Cabbage,2029,1,0.04
+E15,Cowpea,2025,1,0.1399999999999999
+E15,Cowpea,2027,1,0.1399999999999999
+E15,Cowpea,2029,1,0.1399999999999999
+E15,Cucumber,2024,1,0.6
+E15,Cucumber,2026,1,0.6
+E15,Cucumber,2028,1,0.6
+E15,Cucumber,2030,1,0.6
+E15,Eggplant,2025,1,0.36
+E15,Eggplant,2027,1,0.36
+E15,Eggplant,2029,1,0.36
+E15,Golden Oyster Mushroom,2024,2,0.6
+E15,Golden Oyster Mushroom,2025,2,0.6
+E15,Golden Oyster Mushroom,2026,2,0.6
+E15,Golden Oyster Mushroom,2027,2,0.6
+E15,Golden Oyster Mushroom,2028,2,0.6
+E15,Golden Oyster Mushroom,2029,2,0.6
+E15,Golden Oyster Mushroom,2030,2,0.6
+E15,Lettuce,2025,1,0.02
+E15,Lettuce,2027,1,0.02
+E15,Lettuce,2029,1,0.02
+E15,Tatsoi,2025,1,0.04
+E15,Tatsoi,2027,1,0.04
+E15,Tatsoi,2029,1,0.04
+E16,Cabbage,2025,1,0.04
+E16,Cabbage,2027,1,0.04
+E16,Cabbage,2029,1,0.04
+E16,Cowpea,2025,1,0.1399999999999999
+E16,Cowpea,2027,1,0.1399999999999999
+E16,Cowpea,2029,1,0.1399999999999999
+E16,Cucumber,2024,1,0.6
+E16,Cucumber,2026,1,0.6
+E16,Cucumber,2028,1,0.6
+E16,Cucumber,2030,1,0.6
+E16,Eggplant,2025,1,0.36
+E16,Eggplant,2027,1,0.36
+E16,Eggplant,2029,1,0.36
+E16,Golden Oyster Mushroom,2024,2,0.6
+E16,Golden Oyster Mushroom,2025,2,0.6
+E16,Golden Oyster Mushroom,2026,2,0.6
+E16,Golden Oyster Mushroom,2027,2,0.6
+E16,Golden Oyster Mushroom,2028,2,0.6
+E16,Golden Oyster Mushroom,2029,2,0.6
+E16,Golden Oyster Mushroom,2030,2,0.6
+E16,Lettuce,2025,1,0.02
+E16,Lettuce,2027,1,0.02
+E16,Lettuce,2029,1,0.02
+E16,Tatsoi,2025,1,0.04
+E16,Tatsoi,2027,1,0.04
+E16,Tatsoi,2029,1,0.04
+E2,Cabbage,2025,1,0.04
+E2,Cabbage,2027,1,0.04
+E2,Cabbage,2029,1,0.04
+E2,Cowpea,2025,1,0.1399999999999999
+E2,Cowpea,2027,1,0.1399999999999999
+E2,Cowpea,2029,1,0.1399999999999999
+E2,Cucumber,2024,1,0.6
+E2,Cucumber,2026,1,0.6
+E2,Cucumber,2028,1,0.6
+E2,Cucumber,2030,1,0.6
+E2,Eggplant,2025,1,0.36
+E2,Eggplant,2027,1,0.36
+E2,Eggplant,2029,1,0.36
+E2,Golden Oyster Mushroom,2024,2,0.6
+E2,Golden Oyster Mushroom,2025,2,0.6
+E2,Golden Oyster Mushroom,2026,2,0.6
+E2,Golden Oyster Mushroom,2027,2,0.6
+E2,Golden Oyster Mushroom,2028,2,0.6
+E2,Golden Oyster Mushroom,2029,2,0.6
+E2,Golden Oyster Mushroom,2030,2,0.6
+E2,Lettuce,2025,1,0.02
+E2,Lettuce,2027,1,0.02
+E2,Lettuce,2029,1,0.02
+E2,Tatsoi,2025,1,0.04
+E2,Tatsoi,2027,1,0.04
+E2,Tatsoi,2029,1,0.04
+E3,Cabbage,2025,1,0.04
+E3,Cabbage,2027,1,0.04
+E3,Cabbage,2029,1,0.04
+E3,Cowpea,2025,1,0.1399999999999999
+E3,Cowpea,2027,1,0.1399999999999999
+E3,Cowpea,2029,1,0.1399999999999999
+E3,Cucumber,2024,1,0.6
+E3,Cucumber,2026,1,0.6
+E3,Cucumber,2028,1,0.6
+E3,Cucumber,2030,1,0.6
+E3,Eggplant,2025,1,0.36
+E3,Eggplant,2027,1,0.36
+E3,Eggplant,2029,1,0.36
+E3,Golden Oyster Mushroom,2024,2,0.6
+E3,Golden Oyster Mushroom,2025,2,0.6
+E3,Golden Oyster Mushroom,2026,2,0.6
+E3,Golden Oyster Mushroom,2027,2,0.6
+E3,Golden Oyster Mushroom,2028,2,0.6
+E3,Golden Oyster Mushroom,2029,2,0.6
+E3,Golden Oyster Mushroom,2030,2,0.6
+E3,Lettuce,2025,1,0.02
+E3,Lettuce,2027,1,0.02
+E3,Lettuce,2029,1,0.02
+E3,Tatsoi,2025,1,0.04
+E3,Tatsoi,2027,1,0.04
+E3,Tatsoi,2029,1,0.04
+E4,Cabbage,2025,1,0.04
+E4,Cabbage,2027,1,0.04
+E4,Cabbage,2029,1,0.04
+E4,Cowpea,2025,1,0.1399999999999999
+E4,Cowpea,2027,1,0.1399999999999999
+E4,Cowpea,2029,1,0.1399999999999999
+E4,Cucumber,2024,1,0.6
+E4,Cucumber,2026,1,0.6
+E4,Cucumber,2028,1,0.6
+E4,Cucumber,2030,1,0.6
+E4,Eggplant,2025,1,0.36
+E4,Eggplant,2027,1,0.36
+E4,Eggplant,2029,1,0.36
+E4,Golden Oyster Mushroom,2024,2,0.6
+E4,Golden Oyster Mushroom,2025,2,0.6
+E4,Golden Oyster Mushroom,2026,2,0.6
+E4,Golden Oyster Mushroom,2027,2,0.6
+E4,Golden Oyster Mushroom,2028,2,0.6
+E4,Golden Oyster Mushroom,2029,2,0.6
+E4,Golden Oyster Mushroom,2030,2,0.6
+E4,Lettuce,2025,1,0.02
+E4,Lettuce,2027,1,0.02
+E4,Lettuce,2029,1,0.02
+E4,Tatsoi,2025,1,0.04
+E4,Tatsoi,2027,1,0.04
+E4,Tatsoi,2029,1,0.04
+E5,Cabbage,2025,1,0.04
+E5,Cabbage,2027,1,0.04
+E5,Cabbage,2029,1,0.04
+E5,Cowpea,2025,1,0.1399999999999999
+E5,Cowpea,2027,1,0.1399999999999999
+E5,Cowpea,2029,1,0.1399999999999999
+E5,Cucumber,2024,1,0.6
+E5,Cucumber,2026,1,0.6
+E5,Cucumber,2028,1,0.6
+E5,Cucumber,2030,1,0.6
+E5,Eggplant,2025,1,0.36
+E5,Eggplant,2027,1,0.36
+E5,Eggplant,2029,1,0.36
+E5,Golden Oyster Mushroom,2024,2,0.6
+E5,Golden Oyster Mushroom,2025,2,0.6
+E5,Golden Oyster Mushroom,2026,2,0.6
+E5,Golden Oyster Mushroom,2027,2,0.6
+E5,Golden Oyster Mushroom,2028,2,0.6
+E5,Golden Oyster Mushroom,2029,2,0.6
+E5,Golden Oyster Mushroom,2030,2,0.6
+E5,Lettuce,2025,1,0.02
+E5,Lettuce,2027,1,0.02
+E5,Lettuce,2029,1,0.02
+E5,Tatsoi,2025,1,0.04
+E5,Tatsoi,2027,1,0.04
+E5,Tatsoi,2029,1,0.04
+E6,Cabbage,2025,1,0.04
+E6,Cabbage,2027,1,0.04
+E6,Cabbage,2029,1,0.04
+E6,Cowpea,2025,1,0.1399999999999999
+E6,Cowpea,2027,1,0.1399999999999999
+E6,Cowpea,2029,1,0.1399999999999999
+E6,Cucumber,2024,1,0.6
+E6,Cucumber,2026,1,0.6
+E6,Cucumber,2028,1,0.6
+E6,Cucumber,2030,1,0.6
+E6,Eggplant,2025,1,0.36
+E6,Eggplant,2027,1,0.36
+E6,Eggplant,2029,1,0.36
+E6,Golden Oyster Mushroom,2024,2,0.6
+E6,Golden Oyster Mushroom,2025,2,0.6
+E6,Golden Oyster Mushroom,2026,2,0.6
+E6,Golden Oyster Mushroom,2027,2,0.6
+E6,Golden Oyster Mushroom,2028,2,0.6
+E6,Golden Oyster Mushroom,2029,2,0.6
+E6,Golden Oyster Mushroom,2030,2,0.6
+E6,Lettuce,2025,1,0.02
+E6,Lettuce,2027,1,0.02
+E6,Lettuce,2029,1,0.02
+E6,Tatsoi,2025,1,0.04
+E6,Tatsoi,2027,1,0.04
+E6,Tatsoi,2029,1,0.04
+E7,Cabbage,2025,1,0.04
+E7,Cabbage,2027,1,0.04
+E7,Cabbage,2029,1,0.04
+E7,Cowpea,2025,1,0.1399999999999999
+E7,Cowpea,2027,1,0.1399999999999999
+E7,Cowpea,2029,1,0.1399999999999999
+E7,Cucumber,2024,1,0.6
+E7,Cucumber,2026,1,0.6
+E7,Cucumber,2028,1,0.6
+E7,Cucumber,2030,1,0.6
+E7,Eggplant,2025,1,0.36
+E7,Eggplant,2027,1,0.36
+E7,Eggplant,2029,1,0.36
+E7,Golden Oyster Mushroom,2024,2,0.6
+E7,Golden Oyster Mushroom,2025,2,0.6
+E7,Golden Oyster Mushroom,2026,2,0.6
+E7,Golden Oyster Mushroom,2027,2,0.6
+E7,Golden Oyster Mushroom,2028,2,0.6
+E7,Golden Oyster Mushroom,2029,2,0.6
+E7,Golden Oyster Mushroom,2030,2,0.6
+E7,Lettuce,2025,1,0.02
+E7,Lettuce,2027,1,0.02
+E7,Lettuce,2029,1,0.02
+E7,Tatsoi,2025,1,0.04
+E7,Tatsoi,2027,1,0.04
+E7,Tatsoi,2029,1,0.04
+E8,Cabbage,2025,1,0.04
+E8,Cabbage,2027,1,0.04
+E8,Cabbage,2029,1,0.04
+E8,Cowpea,2025,1,0.1399999999999999
+E8,Cowpea,2027,1,0.1399999999999999
+E8,Cowpea,2029,1,0.1399999999999999
+E8,Cucumber,2024,1,0.6
+E8,Cucumber,2026,1,0.6
+E8,Cucumber,2028,1,0.6
+E8,Cucumber,2030,1,0.6
+E8,Eggplant,2025,1,0.36
+E8,Eggplant,2027,1,0.36
+E8,Eggplant,2029,1,0.36
+E8,Golden Oyster Mushroom,2024,2,0.6
+E8,Golden Oyster Mushroom,2025,2,0.6
+E8,Golden Oyster Mushroom,2026,2,0.6
+E8,Golden Oyster Mushroom,2027,2,0.6
+E8,Golden Oyster Mushroom,2028,2,0.6
+E8,Golden Oyster Mushroom,2029,2,0.6
+E8,Golden Oyster Mushroom,2030,2,0.6
+E8,Lettuce,2025,1,0.02
+E8,Lettuce,2027,1,0.02
+E8,Lettuce,2029,1,0.02
+E8,Tatsoi,2025,1,0.04
+E8,Tatsoi,2027,1,0.04
+E8,Tatsoi,2029,1,0.04
+E9,Cabbage,2025,1,0.04
+E9,Cabbage,2027,1,0.04
+E9,Cabbage,2029,1,0.04
+E9,Cowpea,2025,1,0.1399999999999999
+E9,Cowpea,2027,1,0.1399999999999999
+E9,Cowpea,2029,1,0.1399999999999999
+E9,Cucumber,2024,1,0.6
+E9,Cucumber,2026,1,0.6
+E9,Cucumber,2028,1,0.6
+E9,Cucumber,2030,1,0.6
+E9,Eggplant,2025,1,0.36
+E9,Eggplant,2027,1,0.36
+E9,Eggplant,2029,1,0.36
+E9,Golden Oyster Mushroom,2024,2,0.6
+E9,Golden Oyster Mushroom,2025,2,0.6
+E9,Golden Oyster Mushroom,2026,2,0.6
+E9,Golden Oyster Mushroom,2027,2,0.6
+E9,Golden Oyster Mushroom,2028,2,0.6
+E9,Golden Oyster Mushroom,2029,2,0.6
+E9,Golden Oyster Mushroom,2030,2,0.6
+E9,Lettuce,2025,1,0.02
+E9,Lettuce,2027,1,0.02
+E9,Lettuce,2029,1,0.02
+E9,Tatsoi,2025,1,0.04
+E9,Tatsoi,2027,1,0.04
+E9,Tatsoi,2029,1,0.04
+F1,Cucumber,2024,2,0.6
+F1,Cucumber,2025,2,0.6
+F1,Cucumber,2026,2,0.6
+F1,Cucumber,2027,2,0.6
+F1,Cucumber,2028,2,0.6
+F1,Cucumber,2029,2,0.6
+F1,Cucumber,2030,2,0.6
+F2,Cucumber,2024,2,0.6
+F2,Cucumber,2025,2,0.6
+F2,Cucumber,2026,2,0.6
+F2,Cucumber,2027,2,0.6
+F2,Cucumber,2028,2,0.6
+F2,Cucumber,2029,2,0.6
+F2,Cucumber,2030,2,0.6
+F3,Cucumber,2024,2,0.6
+F3,Cucumber,2025,2,0.6
+F3,Cucumber,2026,2,0.6
+F3,Cucumber,2027,2,0.6
+F3,Cucumber,2028,2,0.6
+F3,Cucumber,2029,2,0.6
+F3,Cucumber,2030,2,0.6
+F4,Cucumber,2024,2,0.6
+F4,Cucumber,2025,2,0.6
+F4,Cucumber,2026,2,0.6
+F4,Cucumber,2027,2,0.6
+F4,Cucumber,2028,2,0.6
+F4,Cucumber,2029,2,0.6
+F4,Cucumber,2030,2,0.6
