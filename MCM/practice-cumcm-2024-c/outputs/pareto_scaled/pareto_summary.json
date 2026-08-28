@@ -1,0 +1,16 @@
+{
+  "base_scenario": "p2",
+  "samples": 1000,
+  "seed": 2024,
+  "lambda_values": [
+    0.0,
+    10.0,
+    50.0,
+    100.0,
+    200.0,
+    500.0,
+    1000.0
+  ],
+  "frontier_csv": "outputs\\pareto_scaled\\pareto_frontier.csv",
+  "frontier_png": "outputs\\pareto_scaled\\pareto_frontier.png"
+}

@@ -11,7 +11,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from cumcm2024c.config import DEFAULT_DATA_DIR, DEFAULT_OUTPUT_DIR
 from cumcm2024c.data import CropPlanningData, build_crop_planning_data
 from cumcm2024c.model import solve_crop_plan, total_crop_area
-from cumcm2024c.rolling import solve_crop_plan_rolling
 
 
 def solve_model(
@@ -23,14 +22,12 @@ def solve_model(
     excess_price_factor: float = 0.5,
     time_limit: float | None = None,
     mip_gap: float | None = 0.01,
-    rolling: bool = False,
 ) -> tuple[float, float]:
     modifiers = {
         (crop, 0): price_modifier
         for crop in target_crops
     }
-    solver = solve_crop_plan_rolling if rolling else solve_crop_plan
-    result = solver(
+    result = solve_crop_plan(
         data,
         excess_price_factor=excess_price_factor,
         time_limit=time_limit,
@@ -52,7 +49,6 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--excess-price-factor", type=float, default=0.5)
     parser.add_argument("--time-limit", type=float, default=None)
     parser.add_argument("--mip-gap", type=float, default=0.01)
-    parser.add_argument("--rolling", action="store_true")
     return parser.parse_args()
 
 
@@ -72,7 +68,6 @@ def main() -> None:
             excess_price_factor=args.excess_price_factor,
             time_limit=args.time_limit,
             mip_gap=args.mip_gap,
-            rolling=args.rolling,
         )
         records.append(
             {

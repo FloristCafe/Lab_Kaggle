@@ -1,0 +1,13 @@
+{
+  "scenario": "p2",
+  "status": "gaplimit",
+  "status_name": "GAPLIMIT",
+  "objective_value": 61009169.14475525,
+  "nonzero_planting_decisions": 756,
+  "csv_output": "outputs\\result2_solution.csv",
+  "xlsx_output": "outputs\\result2.xlsx",
+  "log_dir": "D:\\Python\\Kaggle\\MCM\\practice-cumcm-2024-c\\outputs\\scip_logs",
+  "metadata": {
+    "log_file": "D:\\Python\\Kaggle\\MCM\\practice-cumcm-2024-c\\outputs\\scip_logs\\result2_solution.log"
+  }
+}

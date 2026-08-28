@@ -1,0 +1,51 @@
+presolving:
+(round 1, fast)       228 del vars, 395 del conss, 0 add conss, 7837 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 5894 clqs, 0 implints
+(round 2, fast)       344 del vars, 564 del conss, 0 add conss, 7888 chg bounds, 98 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 5894 clqs, 0 implints
+(round 3, exhaustive) 344 del vars, 564 del conss, 0 add conss, 7888 chg bounds, 98 chg sides, 0 chg coeffs, 20024 upgd conss, 0 impls, 5894 clqs, 0 implints
+(round 4, exhaustive) 344 del vars, 656 del conss, 0 add conss, 7888 chg bounds, 98 chg sides, 0 chg coeffs, 20024 upgd conss, 13768 impls, 5894 clqs, 0 implints
+   (1.0s) probing: 1000/6884 (14.5%) - 0 fixings, 0 aggregations, 1252 implications, 0 bound changes
+   (1.0s) probing: 1001/6884 (14.5%) - 0 fixings, 0 aggregations, 1253 implications, 0 bound changes
+   (1.0s) probing aborted: 1000/1000 successive useless probings
+   (1.0s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (1.0s) symmetry computation finished: 46 generators found (max: 1500, log10 of symmetry group size: 22.83) (symcode time: 0.00)
+dynamic symmetry handling statistics:
+   orbitopal reduction:        1 components: 252x3
+   orbital reduction:         no components
+   lexicographic reduction:   10 permutations with support sizes 504, 36, 36, 36, 36, 36, 36, 500, 500, 504
+handled 13 out of 13 symmetry components
+(round 5, exhaustive) 344 del vars, 656 del conss, 260 add conss, 7888 chg bounds, 98 chg sides, 0 chg coeffs, 20024 upgd conss, 15021 impls, 5894 clqs, 0 implints
+presolving (6 rounds: 6 fast, 4 medium, 4 exhaustive):
+ 680 deleted vars, 1196 deleted constraints, 260 added constraints, 7888 tightened bounds, 0 added holes, 98 changed sides, 0 changed coefficients
+ 15021 implications, 5750 cliques, 0 implied integral variables (0 bin, 0 int, 0 cont)
+presolved problem has 13754 variables (6716 bin, 0 int, 7038 cont) and 20408 constraints
+  13432 constraints of type <varbound>
+   5750 constraints of type <setppc>
+    956 constraints of type <linear>
+    270 constraints of type <logicor>
+Presolving Time: 0.00
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+p 2.0s|     1 |     0 |  2758 |     - |  clique|   0 |  13k|  20k|  20k|   0 |  0 |   0 |   0 | 4.061846e+08 | 4.897040e+07 | 729.45%| unknown
+p 2.0s|     1 |     0 |  5503 |     - | vbounds|   0 |  13k|  20k|  20k|   0 |  0 |   0 |   0 | 4.061846e+08 | 4.907472e+07 | 727.69%| unknown
+  3.0s|     1 |     0 | 19590 |     - |   248M |   0 |  13k|  20k|  20k|   0 |  0 |   0 |   0 | 6.203469e+07 | 4.907472e+07 |  26.41%| unknown
+  3.0s|     1 |     0 | 20691 |     - |   258M |   0 |  13k|  20k|  20k| 120 |  1 |   0 |   0 | 6.203468e+07 | 4.907472e+07 |  26.41%| unknown
+  4.0s|     1 |     0 | 22264 |     - |   261M |   0 |  13k|  20k|  20k| 270 |  2 |   0 |   0 | 6.203456e+07 | 4.907472e+07 |  26.41%| unknown
+  5.0s|     1 |     0 | 23720 |     - |   264M |   0 |  13k|  20k|  20k| 386 |  3 |   0 |   0 | 6.203431e+07 | 4.907472e+07 |  26.41%| unknown
+  6.0s|     1 |     0 | 24756 |     - |   267M |   0 |  13k|  20k|  20k| 493 |  4 |   0 |   0 | 6.203399e+07 | 4.907472e+07 |  26.41%| unknown
+  6.0s|     1 |     0 | 26245 |     - |   271M |   0 |  13k|  20k|  20k| 598 |  5 |   0 |   0 | 6.203377e+07 | 4.907472e+07 |  26.41%| unknown
+  7.0s|     1 |     0 | 27841 |     - |   275M |   0 |  13k|  20k|  20k| 714 |  6 |   0 |   0 | 6.203360e+07 | 4.907472e+07 |  26.41%| unknown
+  8.0s|     1 |     0 | 29367 |     - |   280M |   0 |  13k|  20k|  20k| 847 |  7 |   0 |   0 | 6.203328e+07 | 4.907472e+07 |  26.41%| unknown
+  9.0s|     1 |     0 | 31274 |     - |   284M |   0 |  13k|  20k|  21k| 989 |  8 |   0 |   0 | 6.203301e+07 | 4.907472e+07 |  26.41%| unknown
+ 10.0s|     1 |     0 | 32839 |     - |   289M |   0 |  13k|  20k|  21k|1132 |  9 |   0 |   0 | 6.203291e+07 | 4.907472e+07 |  26.41%| unknown
+ 10.0s|     1 |     0 | 34306 |     - |   294M |   0 |  13k|  20k|  21k|1270 | 10 |   0 |   0 | 6.203273e+07 | 4.907472e+07 |  26.40%| unknown
+ 11.0s|     1 |     0 | 35428 |     - |   299M |   0 |  13k|  20k|  21k|1415 | 11 |   0 |   0 | 6.203264e+07 | 4.907472e+07 |  26.40%| unknown
+o14.0s|     1 |     0 | 54876 |     - |feaspump|   0 |  13k|  20k|  21k|1415 | 11 |   0 |   0 | 6.203264e+07 | 6.034529e+07 |   2.80%| unknown
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+L16.0s|     1 |     0 | 54876 |     - |    rens|   0 |  13k|  20k|  21k|1415 | 11 |   0 |   0 | 6.203264e+07 | 6.186430e+07 |   0.27%| unknown
+
+SCIP Status        : solving was interrupted [gap limit reached]
+Solving Time (sec) : 16.00
+Solving Nodes      : 1
+Primal Bound       : +6.18642987369740e+07 (4 solutions)
+Dual Bound         : +6.20326362284608e+07
+Gap                : 0.27 %
