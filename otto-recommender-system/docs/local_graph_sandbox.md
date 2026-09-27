@@ -41,34 +41,17 @@
    - 输出：`artifacts/reports/local_graph_metrics.csv`
    - 逻辑：用最近交互商品做 seed，经共现边扩展，再按 session 聚合分数取 Top-20。
 
-## PyCharm Terminal Commands
+## WSL Terminal Commands
 
-PowerShell:
-
-```powershell
-conda activate kg_env
-cd D:\Python\Kaggle\otto-recommender-system
-$env:PYTHONPATH="D:\Python\Kaggle\otto-recommender-system\src"
-python -m pip install -e .
-python scripts\split_local.py
-python scripts\build_covisitation_edges.py --n-buckets 16 --topk-per-chunk 80 --final-topk-per-source 20
-python scripts\run_graph_baseline.py
-python scripts\run_heuristic_retrieval.py --candidate-topk 100 --eval-topk 20
-python -m pytest -q
-```
-
-cmd:
-
-```cmd
-conda activate kg_env
-cd /d D:\Python\Kaggle\otto-recommender-system
-set PYTHONPATH=D:\Python\Kaggle\otto-recommender-system\src
-python -m pip install -e .
-python scripts\split_local.py
-python scripts\build_covisitation_edges.py --n-buckets 16 --topk-per-chunk 80 --final-topk-per-source 20
-python scripts\run_graph_baseline.py
-python scripts\run_heuristic_retrieval.py --candidate-topk 100 --eval-topk 20
-python -m pytest -q
+```bash
+# [WSL Bash]
+cd /home/issue/Kaggle/Lab_Kaggle/otto-recommender-system
+uv pip install --python /home/issue/ml-workspace/.venv/bin/python -e '.[dev,ranker]'
+/home/issue/ml-workspace/.venv/bin/python scripts/split_local.py
+/home/issue/ml-workspace/.venv/bin/python scripts/build_covisitation_edges.py --n-buckets 16 --topk-per-chunk 80 --final-topk-per-source 20
+/home/issue/ml-workspace/.venv/bin/python scripts/run_graph_baseline.py
+/home/issue/ml-workspace/.venv/bin/python scripts/run_heuristic_retrieval.py --candidate-topk 100 --eval-topk 20
+/home/issue/ml-workspace/.venv/bin/python -m pytest -q
 ```
 
 ## Memory Strategy

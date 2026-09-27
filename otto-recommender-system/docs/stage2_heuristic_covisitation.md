@@ -119,28 +119,30 @@ w(A -> C) = target_value(type_y) * c / (t + c) * 1 / (N(A) * N(C)) ^ alpha * gra
 
 ## Build Commands
 
-PowerShell:
+WSL:
 
-```powershell
-conda activate kg_env
-cd D:\Python\Kaggle\otto-recommender-system
-python -m pip install -e .
-python scripts\build_heuristic_covisitation.py --n-buckets 16 --degree-alpha 0.5
-python scripts\run_heuristic_retrieval.py --candidate-topk 100 --eval-topk 20
-python -m pytest -q
+```bash
+# [WSL Bash]
+cd /home/issue/Kaggle/Lab_Kaggle/otto-recommender-system
+uv pip install --python /home/issue/ml-workspace/.venv/bin/python -e '.[dev,ranker]'
+/home/issue/ml-workspace/.venv/bin/python scripts/build_heuristic_covisitation.py --n-buckets 16 --degree-alpha 0.5
+/home/issue/ml-workspace/.venv/bin/python scripts/run_heuristic_retrieval.py --candidate-topk 100 --eval-topk 20
+/home/issue/ml-workspace/.venv/bin/python -m pytest -q
 ```
 
 内存更稳的候选池生成方式：
 
-```powershell
-python scripts\run_heuristic_retrieval_bucketed.py --n-buckets 16 --candidate-topk 100 --min-candidates 50 --eval-topk 20
+```bash
+# [WSL Bash]
+/home/issue/ml-workspace/.venv/bin/python scripts/run_heuristic_retrieval_bucketed.py --n-buckets 16 --candidate-topk 100 --min-candidates 50 --eval-topk 20
 ```
 
 Kaggle 大数据时，如果内存紧张：
 
-```powershell
-python scripts\build_heuristic_covisitation.py --n-buckets 32
-python scripts\build_heuristic_covisitation.py --n-buckets 64
+```bash
+# [WSL Bash]
+/home/issue/ml-workspace/.venv/bin/python scripts/build_heuristic_covisitation.py --n-buckets 32
+/home/issue/ml-workspace/.venv/bin/python scripts/build_heuristic_covisitation.py --n-buckets 64
 ```
 
 ## Smoke Result

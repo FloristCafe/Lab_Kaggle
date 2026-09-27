@@ -87,20 +87,23 @@ delta_t = session_last_ts - item_last_ts
 
 Smoke:
 
-```powershell
-python scripts\build_interaction_features_bucketed.py --bucket-start 0 --bucket-end 1 --output-dir artifacts\features\interaction_features_parts_smoke --stats-output artifacts\reports\interaction_features_stats_smoke.csv
+```bash
+# [WSL Bash]
+/home/issue/ml-workspace/.venv/bin/python scripts/build_interaction_features_bucketed.py --bucket-start 0 --bucket-end 1 --output-dir artifacts/features/interaction_features_parts_smoke --stats-output artifacts/reports/interaction_features_stats_smoke.csv
 ```
 
 Full:
 
-```powershell
-python scripts\build_interaction_features_bucketed.py --n-buckets 16 --output-dir artifacts\features\interaction_features_parts --stats-output artifacts\reports\interaction_features_stats.csv
+```bash
+# [WSL Bash]
+/home/issue/ml-workspace/.venv/bin/python scripts/build_interaction_features_bucketed.py --n-buckets 16 --output-dir artifacts/features/interaction_features_parts --stats-output artifacts/reports/interaction_features_stats.csv
 ```
 
 Strict candidate chunking:
 
-```powershell
-python scripts\build_interaction_features_candidate_chunks.py --n-buckets 16 --candidate-chunks 10 --output-dir artifacts\features\interaction_features_candidate_chunks --stats-output artifacts\reports\interaction_features_candidate_chunks_stats.csv
+```bash
+# [WSL Bash]
+/home/issue/ml-workspace/.venv/bin/python scripts/build_interaction_features_candidate_chunks.py --n-buckets 16 --candidate-chunks 10 --output-dir artifacts/features/interaction_features_candidate_chunks --stats-output artifacts/reports/interaction_features_candidate_chunks_stats.csv
 ```
 
 这条路径会把每个 bucket 内的千万级候选再次均分为 `10` 个 chunk。每个 chunk 会：

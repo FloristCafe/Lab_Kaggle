@@ -3,7 +3,7 @@ project:
   mode: local_graph_baseline
 
 environment:
-  python: C:\Users\lenovo\miniconda3\envs\kg_env\python.exe
+  python: /home/issue/ml-workspace/.venv/bin/python
 
 paths:
   input_events: data/test.parquet

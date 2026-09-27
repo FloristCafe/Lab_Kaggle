@@ -33,10 +33,11 @@
 
 ## Useful Commands
 
-```powershell
-cd D:\Python\Kaggle\otto-recommender-system
-.venv\Scripts\python.exe sandbox\micro_runs\demo_local_pipeline.py
-.venv\Scripts\python.exe -m pytest -q
-.venv\Scripts\python.exe scripts\make_sample.py --input data\raw\train.jsonl --output data\sample\train_sample.jsonl --n-sessions 10000
-.venv\Scripts\python.exe scripts\run_baseline.py --events data\sample\train_sample.jsonl --output artifacts\submissions\baseline_submission.csv
+```bash
+# [WSL Bash]
+cd /home/issue/Kaggle/Lab_Kaggle/otto-recommender-system
+/home/issue/ml-workspace/.venv/bin/python sandbox/micro_runs/demo_local_pipeline.py
+/home/issue/ml-workspace/.venv/bin/python -m pytest -q
+/home/issue/ml-workspace/.venv/bin/python scripts/make_sample.py --input data/raw/train.jsonl --output data/sample/train_sample.jsonl --n-sessions 10000
+/home/issue/ml-workspace/.venv/bin/python scripts/run_baseline.py --events data/sample/train_sample.jsonl --output artifacts/submissions/baseline_submission.csv
 ```

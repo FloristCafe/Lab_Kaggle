@@ -85,15 +85,17 @@ otto-recommender-system/
 
 ## Commands
 
-```powershell
-cd D:\Python\Kaggle\otto-recommender-system
-python -m pip install -e .[dev]
-python sandbox\micro_runs\demo_local_pipeline.py
-pytest
+```bash
+# [WSL Bash]
+cd /home/issue/Kaggle/Lab_Kaggle/otto-recommender-system
+uv pip install --python /home/issue/ml-workspace/.venv/bin/python -e '.[dev,ranker]'
+/home/issue/ml-workspace/.venv/bin/python sandbox/micro_runs/demo_local_pipeline.py
+/home/issue/ml-workspace/.venv/bin/python -m pytest -q
 ```
 
 真实数据在 Kaggle notebook 上时，可以先把同名模块复制进 notebook，或在 notebook 中用 `sys.path.append('/kaggle/input/your-code/src')` 这类方式导入。等本地有原始 JSONL 后，可用：
 
-```powershell
-python scripts\make_sample.py --input data\raw\train.jsonl --output data\sample\train_sample.jsonl --n-sessions 10000
+```bash
+# [WSL Bash]
+/home/issue/ml-workspace/.venv/bin/python scripts/make_sample.py --input data/raw/train.jsonl --output data/sample/train_sample.jsonl --n-sessions 10000
 ```
