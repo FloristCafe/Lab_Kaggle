@@ -1,8 +1,0 @@
-﻿risk_lambda,status,status_name,objective_value,expected_profit,portfolio_risk,nonzero_planting_decisions,log_file
-0.0,gaplimit,GAPLIMIT,61009169.14475525,61009169.144755244,20538.2957479332,756,outputs\pareto_scaled\scip_logs\miqp_lambda_0.00.log
-10.0,gaplimit,GAPLIMIT,60910439.858326845,61116008.96474315,20556.91064163305,752,outputs\pareto_scaled\scip_logs\miqp_lambda_10.00.log
-50.0,gaplimit,GAPLIMIT,60070208.30131995,61098201.72651366,20559.86850387419,761,outputs\pareto_scaled\scip_logs\miqp_lambda_50.00.log
-100.0,gaplimit,GAPLIMIT,58992936.20537273,61048483.161984846,20555.4695661218,766,outputs\pareto_scaled\scip_logs\miqp_lambda_100.00.log
-200.0,gaplimit,GAPLIMIT,56885047.51660126,60984403.86899769,20496.78176198234,764,outputs\pareto_scaled\scip_logs\miqp_lambda_200.00.log
-500.0,gaplimit,GAPLIMIT,51296571.045027934,59004336.65908169,15415.53122810762,747,outputs\pareto_scaled\scip_logs\miqp_lambda_500.00.log
-1000.0,gaplimit,GAPLIMIT,46291167.19159755,53142664.11215809,6851.4969205605985,667,outputs\pareto_scaled\scip_logs\miqp_lambda_1000.00.log
