@@ -18,6 +18,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output-dir", default="artifacts/ranker/time_split/labeled_features_parts")
     parser.add_argument("--stats-output", default="artifacts/reports/time_split_labeled_features_stats.csv")
     parser.add_argument("--pattern", default="*.parquet")
+    parser.add_argument("--recursive", action="store_true", help="Match feature files in nested bucket directories.")
     return parser.parse_args()
 
 
@@ -26,7 +27,7 @@ def main() -> None:
     features_dir = Path(args.features_dir)
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
-    paths = sorted(features_dir.glob(args.pattern))
+    paths = sorted(features_dir.rglob(args.pattern) if args.recursive else features_dir.glob(args.pattern))
     if not paths:
         raise FileNotFoundError(f"No feature parts matched {features_dir / args.pattern}")
 
@@ -37,7 +38,8 @@ def main() -> None:
     )
     stats: list[dict[str, int | str]] = []
     for path in paths:
-        output_path = output_dir / path.name
+        output_name = "__".join(path.relative_to(features_dir).parts) if args.recursive else path.name
+        output_path = output_dir / output_name
         labeled = (
             pl.scan_parquet(path)
             .join(targets, on=[SESSION, AID], how="left")
