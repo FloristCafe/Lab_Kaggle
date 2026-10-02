@@ -21,6 +21,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output-dir", default="artifacts/candidates/heuristic_candidates_top100_parts")
     parser.add_argument("--stats-output", default="artifacts/reports/heuristic_candidates_top100_stats.csv")
     parser.add_argument("--metrics-output", default="artifacts/reports/heuristic_candidates_top100_metrics.csv")
+    parser.add_argument("--fallback-events", default=None, help="Optional event table used to build the popular fallback pool.")
     parser.add_argument("--n-buckets", type=int, default=16)
     parser.add_argument("--candidate-topk", type=int, default=100)
     parser.add_argument("--min-candidates", type=int, default=50)
@@ -68,7 +69,8 @@ def main() -> None:
     all_events = pl.scan_parquet(args.events)
     popular_fallback = None
     if not args.disable_popular_fallback:
-        popular_fallback = popular_fallback_items(all_events.collect(), topk=args.candidate_topk)
+        fallback_events = pl.scan_parquet(args.fallback_events) if args.fallback_events else all_events
+        popular_fallback = popular_fallback_items(fallback_events.collect(), topk=args.candidate_topk)
 
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)

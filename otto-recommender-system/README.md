@@ -93,6 +93,19 @@ uv pip install --python /home/issue/ml-workspace/.venv/bin/python -e '.[dev,rank
 /home/issue/ml-workspace/.venv/bin/python -m pytest -q
 ```
 
+### Session-tail and SASRec pipeline
+
+验证数据使用每个 session 的前缀/后缀切分；候选、静态特征、神经网络分数和 ranker 数据均以 Parquet 作为脚本边界。先运行 `split_session_tail.py` 和现有候选/特征脚本，再执行 SASRec smoke：
+
+```bash
+# [WSL Bash]
+/home/issue/ml-workspace/.venv/bin/python scripts/split_session_tail.py --input data/test.parquet --output-dir data/processed/session_tail_split
+/home/issue/ml-workspace/.venv/bin/python scripts/run_sasrec_features.py --mode train --prefix data/processed/session_tail_split/valid_prefix.parquet --checkpoint artifacts/models/session_tail_sasrec.pt --max-sessions 5000 --epochs 1 --batch-size 128 --device auto
+/home/issue/ml-workspace/.venv/bin/python scripts/run_sasrec_features.py --mode score --prefix data/processed/session_tail_split/valid_prefix.parquet --candidates-dir artifacts/features/session_tail_candidates_static_parts --output-dir artifacts/features/session_tail_nn_parts --checkpoint artifacts/models/session_tail_sasrec.pt --device auto
+```
+
+完整训练前应先用 `--max-sessions` 和 `--max-candidate-rows` 完成 smoke，再移除这两个限制。8GB GPU 建议从 `--batch-size 128` 开始，并保留 checkpoint 与运行报告。
+
 真实数据在 Kaggle notebook 上时，可以先把同名模块复制进 notebook，或在 notebook 中用 `sys.path.append('/kaggle/input/your-code/src')` 这类方式导入。等本地有原始 JSONL 后，可用：
 
 ```bash

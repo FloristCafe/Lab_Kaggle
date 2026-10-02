@@ -22,6 +22,7 @@ artifacts/candidates/
 artifacts/models/
 kaggle_working/
 logs/
+artifacts/mlruns/
 
 # Keep lightweight examples and final submission CSVs manageable.
 !data/sample/
