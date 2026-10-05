@@ -39,6 +39,6 @@ def test_build_user_features(tmp_path: Path) -> None:
     build_user_features(input_path, output_path)
     df = pl.read_parquet(output_path)
 
-    assert {"session", "session_length", "unique_items", "duration", "cart_count", "order_count", "is_window_shopping"}.issubset(df.columns)
+    assert {"session", "session_length", "unique_items", "duration", "cart_count", "order_count"}.issubset(df.columns)
     assert df.filter(pl.col("session") == 1).select("session_length").item() == 3
     assert df.filter(pl.col("session") == 2).select("duration").item() == 1_000

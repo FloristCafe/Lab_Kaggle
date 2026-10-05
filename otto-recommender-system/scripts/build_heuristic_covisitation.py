@@ -11,8 +11,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--events", default="data/processed/local_train.parquet")
     parser.add_argument("--output-dir", default="artifacts/candidates/heuristic_covisitation")
     parser.add_argument("--stats-output", default="artifacts/reports/heuristic_covisitation_stats.csv")
-    parser.add_argument("--n-buckets", type=int, default=16)
+    parser.add_argument("--n-buckets", type=int, default=256)
     parser.add_argument("--degree-alpha", type=float, default=0.5)
+    parser.add_argument("--merge-buckets", type=int, default=256)
     return parser.parse_args()
 
 
@@ -23,6 +24,7 @@ def main() -> None:
         output_dir=args.output_dir,
         n_buckets=args.n_buckets,
         degree_alpha=args.degree_alpha,
+        merge_buckets=args.merge_buckets,
     )
     stats_path = Path(args.stats_output)
     stats_path.parent.mkdir(parents=True, exist_ok=True)

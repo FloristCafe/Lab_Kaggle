@@ -70,7 +70,17 @@ def graph_signal_features(
     )
     seeds = recent_seed_items(events, max_seed_items=max_seed_items)
     if seeds.is_empty() or edges.is_empty():
-        return pl.DataFrame(schema={SESSION: pl.Int32, AID: pl.Int32})
+        return pl.DataFrame(
+            schema={
+                SESSION: pl.Int32,
+                AID: pl.Int32,
+                "graph_weight_sum": pl.Float32,
+                "graph_weight_max": pl.Float32,
+                "graph_source_count": pl.UInt8,
+                **{column_name: pl.Float32 for column_name in GRAPH_COLUMNS.values()},
+                "dominant_graph_source": pl.Int8,
+            }
+        )
 
     joined = (
         seeds.join(edges, on=AID_X, how="inner")

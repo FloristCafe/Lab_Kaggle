@@ -124,3 +124,13 @@ SASRec 特征已经进入有效决策路径：`nn_global_score` gain 为 5,281.8
 ## 当前结论与下一步
 
 当前可复现的本地验证策略为：Click=B、Cart=B、Order=C，按目标类型独立输出 Top-20。该结论只适用于当前 session-tail 验证切分和候选池，不能直接外推 Kaggle 测试集。下一轮策略研究应先完成 SASRec ID 修复、多随机种子重复、候选数分布和资源峰值记录，再研究召回通道或特征组消融。
+
+## 第五阶段实施记录
+
+已在代码层完成三项改造：
+
+1. SASRec 内部词表将原始 `aid` 映射为 `aid + 1`，索引 `0` 专用于 padding；候选表和标签仍保留原始 ID，提交格式化时由流式脚本执行 `aid - 1`。
+2. 从用户特征提取、共享 schema、session-tail 排序特征列表和静态 Join 中移除 `session_is_window_shopping`。旧 checkpoint 若仍声明该列，流式推理脚本会临时补零以保持兼容；正式重训后该列不再进入模型。
+3. 新增 `stream_session_tail_submission.py`，按候选 Parquet 分块依次运行 Click、Cart、Order 模型，按 session 取 Top-20 后立即追加 `session_type,labels`，并释放当前分块内存。
+
+本阶段尚未对 Kaggle `test` 原始 JSONL 完成端到端候选生成和正式提交验证：[待补充: Kaggle test 候选生成产物、分块 session 数、完整流式推理耗时和峰值内存]。

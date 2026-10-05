@@ -137,7 +137,7 @@ def build_item_features(input_path: str | Path, output_path: str | Path) -> None
 
 
 def build_user_features(input_path: str | Path, output_path: str | Path) -> None:
-    """Create user_features.parquet with session-level activity and window-shopping flag."""
+    """Create user_features.parquet with session-level activity features."""
     events = _lazy_events(input_path)
 
     session_features = (
@@ -152,11 +152,6 @@ def build_user_features(input_path: str | Path, output_path: str | Path) -> None
         )
         .with_columns(
             (pl.col("last_ts") - pl.col("first_ts")).cast(pl.Int64).alias("duration"),
-            (
-                ((pl.col("session_length") >= 50) & (pl.col("cart_count") == 0) & (pl.col("order_count") == 0))
-                .cast(pl.Int8)
-                .alias("is_window_shopping")
-            ),
         )
         .select(
             pl.col(SESSION).cast(pl.Int32),
@@ -167,7 +162,6 @@ def build_user_features(input_path: str | Path, output_path: str | Path) -> None
             pl.col("duration").cast(pl.Int64),
             pl.col("cart_count").cast(pl.UInt32),
             pl.col("order_count").cast(pl.UInt32),
-            pl.col("is_window_shopping").cast(pl.Int8),
         )
         .sort(SESSION)
     )

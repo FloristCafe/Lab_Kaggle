@@ -21,7 +21,7 @@ FEATURES = [
     "recent_24h_interactions", "conversion_rate", "item_cart_conversion_rate",
     "item_buy_conversion_rate", "item_cart_to_order_rate", "item_funnel_dropoff_rate",
     "session_length", "session_unique_items", "session_duration", "session_cart_count",
-    "session_order_count", "session_is_window_shopping", "nn_global_score", "nn_explore_score",
+    "session_order_count", "nn_global_score", "nn_explore_score",
 ]
 
 

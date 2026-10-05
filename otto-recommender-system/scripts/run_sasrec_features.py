@@ -65,14 +65,17 @@ def load_sequences(path: str, max_len: int, max_sessions: int, seed: int, includ
     history: dict[int, np.ndarray] = {}
     session_ids: list[int] = []
     for row in groups.iter_rows(named=True):
-        aids = [int(x) for x in row["aids"]]
+        raw_aids = [int(x) for x in row["aids"]]
+        aids = [x + 1 for x in raw_aids]
         ty = [int(x) for x in row["types"]]
         if len(aids) < 1 or (len(aids) < 2 and not include_singletons):
             continue
         positives.append(aids[-1] if len(aids) > 1 else 0)
         session_id = int(row["session"])
         session_ids.append(session_id)
-        history[session_id] = np.asarray(list(set(aids)), dtype=np.int64)
+        # Keep raw IDs for candidate seen-item filtering; only the model input
+        # and supervised positive use the shifted vocabulary IDs.
+        history[session_id] = np.asarray(list(set(raw_aids)), dtype=np.int64)
         if len(aids) > 1:
             aids, ty = aids[:-1][-max_len:], ty[:-1][-max_len:]
         else:
@@ -97,7 +100,8 @@ def train(a: argparse.Namespace, device: str) -> None:
     if candidate_paths:
         candidate_max = pl.scan_parquet([str(path) for path in candidate_paths]).select(pl.col("aid").max()).collect().item()
         max_aid = max(max_aid, int(candidate_max))
-    n_items = max_aid
+    # Index 0 is reserved for padding; raw aid max needs one extra vocabulary slot.
+    n_items = max_aid + 1
     config = SASRecConfig(n_items=n_items, d_model=a.d_model, n_heads=a.heads, n_layers=a.layers, max_len=a.max_len)
     model = SASRecEncoder(config).to(device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=a.learning_rate)
@@ -128,7 +132,7 @@ def score(a: argparse.Namespace, device: str) -> None:
     model.load_state_dict(checkpoint["state_dict"])
     model.eval()
     item_ids, type_ids, _, history, session_ids = load_sequences(a.prefix, a.max_len, a.max_sessions, a.seed, include_singletons=True)
-    observed_max = int(pl.scan_parquet(a.prefix).select(pl.col("aid").max()).collect().item())
+    observed_max = int(pl.scan_parquet(a.prefix).select(pl.col("aid").max()).collect().item()) + 1
     if observed_max > config.n_items:
         raise ValueError(
             f"checkpoint vocabulary n_items={config.n_items} is smaller than prefix max aid={observed_max}; retrain checkpoint"
@@ -146,8 +150,8 @@ def score(a: argparse.Namespace, device: str) -> None:
     paths = sorted(Path(a.candidates_dir).glob("*.parquet"))
     if not paths:
         raise FileNotFoundError(a.candidates_dir)
-    candidate_max = pl.scan_parquet([str(path) for path in paths]).select(pl.col("aid").max()).collect().item()
-    if int(candidate_max) > config.n_items:
+    candidate_max = int(pl.scan_parquet([str(path) for path in paths]).select(pl.col("aid").max()).collect().item()) + 1
+    if candidate_max > config.n_items:
         raise ValueError(
             f"checkpoint vocabulary n_items={config.n_items} is smaller than candidate max aid={candidate_max}; retrain checkpoint"
         )
@@ -157,11 +161,12 @@ def score(a: argparse.Namespace, device: str) -> None:
             frame = frame.head(a.max_candidate_rows)
         keys = frame.select("session", "aid")
         session_array = keys.get_column("session").to_numpy()
-        aid_array = keys.get_column("aid").to_numpy().astype(np.int64)
+        raw_aid_array = keys.get_column("aid").to_numpy().astype(np.int64)
+        aid_array = raw_aid_array + 1
         vectors = torch.from_numpy(np.stack([
             session_vecs.get(int(s), torch.zeros(config.d_model)).numpy() for s in session_array
         ])).to(device)
-        valid = (aid_array >= 0) & (aid_array <= config.n_items)
+        valid = (aid_array >= 1) & (aid_array <= config.n_items)
         # Sessions with a single prefix event cannot provide a supervised
         # training target and therefore have no learned vector.  Use a neutral
         # zero score for those rows so the feature contract never emits NaN.

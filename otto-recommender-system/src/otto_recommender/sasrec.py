@@ -38,7 +38,6 @@ class SASRecEncoder(nn.Module):
         )
         self.encoder = nn.TransformerEncoder(layer, num_layers=config.n_layers)
         self.norm = nn.LayerNorm(config.d_model)
-
     def forward(self, item_ids: Tensor, type_ids: Tensor) -> Tensor:
         if item_ids.ndim != 2 or item_ids.shape[1] != self.config.max_len:
             raise ValueError("item_ids must have shape [batch, max_len]")
@@ -49,6 +48,11 @@ class SASRecEncoder(nn.Module):
         x = self.encoder(x, mask=causal, src_key_padding_mask=padding)
         lengths = (~padding).sum(dim=1).clamp_min(1) - 1
         return self.norm(x[torch.arange(x.shape[0], device=x.device), lengths])
+
+
+def encode_aids(aids: Tensor) -> Tensor:
+    """Reserve vocabulary index 0 for padding; raw OTTO aids are zero-based."""
+    return aids + 1
 
 
 def masked_in_batch_nce(session_vec: Tensor, positive_ids: Tensor, item_embedding: nn.Embedding, temperature: float = 0.07) -> Tensor:

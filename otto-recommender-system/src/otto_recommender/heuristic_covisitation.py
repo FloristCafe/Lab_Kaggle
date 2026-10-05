@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import gc
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
@@ -138,7 +139,7 @@ def item_frequency(events: pl.DataFrame | pl.LazyFrame) -> pl.DataFrame:
         .agg(pl.len().cast(pl.UInt32).alias(ITEM_FREQ))
     )
     if isinstance(frequency_frame, pl.LazyFrame):
-        return frequency_frame.collect()
+        return frequency_frame.collect(engine="streaming")
     return frequency_frame
 
 
@@ -249,11 +250,12 @@ def build_pruned_rule_parts(
     frequencies = item_frequency(pl.scan_parquet(input_path)) if frequencies is None else frequencies
 
     stats: list[dict[str, int | str]] = []
+    event_scan = cast_events(pl.scan_parquet(input_path))
     for bucket in range(n_buckets):
         events = (
-            cast_events(pl.scan_parquet(input_path))
+            event_scan
             .filter((pl.col(SESSION) % n_buckets) == bucket)
-            .collect()
+            .collect(engine="streaming")
         )
         edges = build_rule_edges(events, rule, frequencies=frequencies)
         pruned = prune_topk(edges, AID_X, WEIGHT, rule.topk_per_chunk)
@@ -270,6 +272,8 @@ def build_pruned_rule_parts(
                 "path": str(part_path),
             }
         )
+        del events, edges, pruned
+        gc.collect()
     return pl.DataFrame(stats)
 
 
@@ -277,25 +281,39 @@ def merge_rule_parts(
     part_paths: Iterable[str | Path],
     output_path: str | Path,
     final_topk_per_source: int,
+    merge_buckets: int = 256,
 ) -> pl.DataFrame:
-    """Merge and re-prune one rule's edge parts."""
+    """Merge and re-prune edge parts without materializing the full merge."""
     paths = [str(Path(path)) for path in part_paths]
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     if not paths:
         raise ValueError(f"No edge parts found for {output_path}")
-    merged = (
-        pl.scan_parquet(paths)
-        .group_by([AID_X, AID_Y, GRAPH])
-        .agg(pl.col(WEIGHT).sum().cast(pl.Float32).alias(WEIGHT))
-        .collect()
-    )
-    final_edges = prune_topk(merged, AID_X, WEIGHT, final_topk_per_source).sort(
-        [AID_X, WEIGHT],
-        descending=[False, True],
-    )
-    final_edges.write_parquet(output_path)
-    return final_edges
+    if merge_buckets < 1:
+        raise ValueError("merge_buckets must be positive")
+    temp_dir = output_path.parent / f".{output_path.stem}_parts"
+    temp_dir.mkdir(parents=True, exist_ok=True)
+    final_paths: list[str] = []
+    stats: list[dict[str, int | str]] = []
+    for bucket in range(merge_buckets):
+        merged = (
+            pl.scan_parquet(paths)
+            .filter((pl.col(AID_X) % merge_buckets) == bucket)
+            .group_by([AID_X, AID_Y, GRAPH])
+            .agg(pl.col(WEIGHT).sum().cast(pl.Float32).alias(WEIGHT))
+            .collect(engine="streaming")
+        )
+        final_edges = prune_topk(merged, AID_X, WEIGHT, final_topk_per_source).sort(
+            [AID_X, WEIGHT], descending=[False, True]
+        )
+        part_path = temp_dir / f"part_{bucket:04d}.parquet"
+        final_edges.write_parquet(part_path)
+        final_paths.append(str(part_path))
+        stats.append({"bucket": bucket, "merged_rows": merged.height, "output_rows": final_edges.height})
+        del merged, final_edges
+        gc.collect()
+    pl.concat([pl.scan_parquet(path) for path in final_paths], how="vertical").sink_parquet(output_path)
+    return pl.DataFrame(stats)
 
 
 def build_all_rule_graphs(
@@ -304,6 +322,7 @@ def build_all_rule_graphs(
     n_buckets: int = 16,
     rules: Iterable[CoVisitationRule] = DEFAULT_RULES,
     degree_alpha: float | None = None,
+    merge_buckets: int = 256,
 ) -> pl.DataFrame:
     """Build all heuristic graphs and return build statistics."""
     output_dir = Path(output_dir)
@@ -337,8 +356,11 @@ def build_all_rule_graphs(
             part_paths=part_paths,
             output_path=output_dir / f"{rule.name}_top20.parquet",
             final_topk_per_source=rule.final_topk_per_source,
+            merge_buckets=merge_buckets,
         )
         stats.append(rule_stats)
+        del rule_stats, part_paths
+        gc.collect()
     return pl.concat(stats, how="vertical")
 
 

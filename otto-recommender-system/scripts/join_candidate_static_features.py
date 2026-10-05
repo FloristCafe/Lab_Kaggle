@@ -40,7 +40,6 @@ def main() -> None:
             "duration": "session_duration",
             "cart_count": "session_cart_count",
             "order_count": "session_order_count",
-            "is_window_shopping": "session_is_window_shopping",
         }
     )
     rows: list[dict[str, int | float | str]] = []

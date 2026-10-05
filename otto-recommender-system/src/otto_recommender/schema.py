@@ -24,7 +24,7 @@ ITEM_FEATURES = (
 )
 SESSION_FEATURES = (
     "session_length", "session_unique_items", "session_first_ts", "session_last_ts",
-    "session_duration", "session_cart_count", "session_order_count", "session_is_window_shopping",
+    "session_duration", "session_cart_count", "session_order_count",
 )
 CROSS_FEATURES = (
     "local_interaction_count", "local_click_count", "local_cart_count", "local_order_count",
