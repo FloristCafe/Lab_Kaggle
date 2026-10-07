@@ -3,6 +3,9 @@ from typing import Dict
 import sys
 from argparse import Namespace
 import os
+import io
+import re
+import struct
 import numpy as np
 
 from agent import Agent
@@ -33,6 +36,17 @@ def agent_fn(observation, configurations):
 
     agent = agent_dict[player]
     actions = agent.act(step, from_json(obs), remainingOverageTime)
+    trace_dir = os.environ.get("LUX_V1_TRACE_DIR")
+    if trace_dir and agent.last_trace is not None:
+        os.makedirs(trace_dir, exist_ok=True)
+        tag = re.sub(r"[^A-Za-z0-9_.-]", "_", os.environ.get("LUX_V1_TRACE_TAG", "run"))
+        path = os.path.join(trace_dir, f"{tag}_{player}_{os.getpid()}.frames")
+        frame = io.BytesIO()
+        np.savez_compressed(frame, **agent.last_trace)
+        payload = frame.getvalue()
+        with open(path, "ab") as trace:
+            trace.write(struct.pack("<I", len(payload)))
+            trace.write(payload)
     return dict(action=actions.tolist())
 if __name__ == "__main__":
     
