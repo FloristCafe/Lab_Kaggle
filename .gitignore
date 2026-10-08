@@ -1,0 +1,45 @@
+# Datasets and derived data stay local in every project.
+**/data/
+
+# Python environments and generated caches.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+*.egg-info/
+
+# Credentials and local configuration.
+.env
+.env.*
+!.env.example
+kaggle.json
+.kaggle/
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local experiment state and bulky model outputs.
+mlruns/
+wandb/
+lightning_logs/
+checkpoints/
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+*.onnx
+*.sqlite
+*.sqlite3
+*.db
+
+# Platform metadata and temporary downloads.
+*:Zone.Identifier
+.DS_Store
+Thumbs.db
+*.part
+*.tmp
