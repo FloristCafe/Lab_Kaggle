@@ -25,7 +25,10 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from agents.v3.network import Network
+from agents.v3.dataset import LegacyProjectionFrameDataset as UnitFrameDataset
+from agents.v3.dataset import coordinate_planes
+from agents.v3.losses import apply_destination_mask, focal_spatial_loss
+from agents.v3.unet28_network import Network
 
 
 def sha256(path):
@@ -54,66 +57,42 @@ def masked_intent_loss(logits, target, valid):
 
 
 class ReplayFrameDataset(Dataset):
-    """Seeded frame sample across NPZ files; materialize only the selected frames.
-
-    Sampling is without replacement, conditioned only on at least one valid
-    label. No augmentation, side transformation, or train/validation split.
-    """
+    """Seeded fixed frame sample, expanding valid units with temporary anchors."""
 
     def __init__(self, data_dir, size=32, seed=42):
         self.data_dir = Path(data_dir)
         paths = sorted(self.data_dir.glob("*.npz"))
-        if not paths:
-            raise ValueError(f"no NPZ files in {self.data_dir}")
-        references = []
-        self.total_frames = 0
-        for path in paths:
-            with np.load(path, allow_pickle=False) as data:
-                valid = data["intent_valid"]
-                if valid.ndim != 2 or valid.shape[1] != 16 or valid.dtype != np.bool_:
-                    raise ValueError(f"{path}: invalid intent_valid schema")
-                self.total_frames += len(valid)
-                references.extend((path, int(frame))
-                                  for frame in np.flatnonzero(valid.any(axis=1)))
-        self.eligible_frames = len(references)
-        if not 1 <= size <= len(references):
-            raise ValueError(f"size must be in [1, {len(references)}]")
-        selection = np.random.default_rng(seed).choice(len(references), size, replace=False)
-        chosen = [references[int(index)] for index in selection]
-        rows = [None] * size
-        self.records = [None] * size
+        dataset = UnitFrameDataset(paths)
+        self.total_frames = dataset.total_frames
+        self.eligible_frames = len(dataset)
+        if not 1 <= size <= len(dataset):
+            raise ValueError(f"size must be in [1, {len(dataset)}]")
+        selected = np.random.default_rng(seed).choice(len(dataset), size, replace=False)
+        self.records, self.rows = [], []
         self.source_hashes = {path.name: sha256(path) for path in paths}
-        for path in sorted({path for path, _ in chosen}):
-            with np.load(path, allow_pickle=False) as data:
-                features, targets = data["features"], data["intent_target"]
-                valid = data["intent_valid"]
-                if features.shape != (len(valid), 21, 24, 24):
-                    raise ValueError(f"{path}: unexpected feature shape")
-                if targets.shape != (len(valid), 16, 24, 24):
-                    raise ValueError(f"{path}: unexpected intent_target shape")
-                for row, (source, frame) in enumerate(chosen):
-                    if source != path:
-                        continue
-                    x, y, mask = features[frame].copy(), targets[frame].copy(), valid[frame].copy()
-                    if not np.isfinite(x).all():
-                        raise ValueError(f"{path}:{frame}: nonfinite input")
-                    labels = y[mask]
-                    if not np.isin(labels, [0, 1]).all() or not (labels.sum((1, 2)) == 1).all():
-                        raise ValueError(f"{path}:{frame}: valid targets must be one-hot")
-                    rows[row] = (torch.from_numpy(x).float(), torch.from_numpy(y),
-                                 torch.from_numpy(mask))
-                    self.records[row] = {
-                        "npz": path.name, "frame": frame, "step": int(data["steps"][frame]),
-                        "match_step": int(data["match_steps"][frame]),
-                        "valid_units": np.flatnonzero(mask).tolist(),
-                    }
-        self.rows = rows
+        for index in selected:
+            x, labels, _ = dataset[int(index)]
+            y = torch.zeros((len(labels), 1, 24, 24), dtype=torch.uint8)
+            y.flatten(2)[:, 0].scatter_(1, labels[:, None], 1)
+            self.rows.append((x, y, torch.ones((len(labels), 1), dtype=torch.bool)))
+            shard = int(np.searchsorted(dataset.offsets, index, side="right") - 1)
+            frame = int(dataset.frame_ids[shard][index - dataset.offsets[shard]])
+            _, _, valid, _, _ = dataset._load(shard)
+            with np.load(paths[shard], allow_pickle=False) as data:
+                self.records.append({"npz": paths[shard].name, "frame": frame,
+                                     "step": int(data["steps"][frame]),
+                                     "match_step": int(data["match_steps"][frame]),
+                                     "valid_units": np.flatnonzero(valid[frame]).tolist()})
 
     def __len__(self):
         return len(self.rows)
 
     def __getitem__(self, index):
         return self.rows[index]
+
+
+def collate_query_frames(rows):
+    return tuple(torch.cat([row[i] for row in rows]) for i in range(3))
 
 
 def set_seed(seed):
@@ -149,13 +128,12 @@ def batch_audit(features, target, valid):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--data-dir", type=Path, default=ROOT / "data/processed_replays")
+    parser.add_argument("--data-dir", type=Path, default=ROOT / "data/processed_replays_unitcentric25")
     parser.add_argument("--output-dir", type=Path, default=ROOT / "outputs/bc_single_batch")
     parser.add_argument("--batch-size", type=int, default=32)
     parser.add_argument("--epochs", type=int, default=500)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--lr", type=float, default=1e-3)
-    parser.add_argument("--blocks", type=int, choices=(3, 4), default=4)
     parser.add_argument("--device", choices=("cuda", "cpu"), default="cuda")
     parser.add_argument("--precision", choices=("bf16", "fp32"), default="bf16")
     args = parser.parse_args()
@@ -176,7 +154,8 @@ def main():
     torch.set_num_threads(4)
     set_seed(args.seed)
     dataset = ReplayFrameDataset(args.data_dir, args.batch_size, args.seed)
-    loader = DataLoader(dataset, batch_size=args.batch_size, shuffle=False, num_workers=0)
+    loader = DataLoader(dataset, batch_size=args.batch_size, shuffle=False, num_workers=0,
+                        collate_fn=collate_query_frames)
     features, target, valid = next(iter(loader))  # Loaded once, reused for every optimizer step.
     audit = batch_audit(features, target, valid)
     manifest_path = args.data_dir / "manifest.json"
@@ -191,6 +170,7 @@ def main():
         "npz_sha256": dataset.source_hashes,
         "manifest_sha256": sha256(manifest_path) if manifest_path.exists() else None,
         "channel_names": data_manifest.get("channel_names", []),
+        "feature_schema_version": data_manifest.get("schema_version"),
         "label_method": data_manifest.get("intent_label_method", "unverified"),
         "label_horizon": data_manifest.get("intent_horizon"),
         "source_sha256": {str(p.relative_to(ROOT)): sha256(p) for p in (
@@ -200,9 +180,10 @@ def main():
         "runtime": {"python": sys.version, "executable": sys.executable,
                     "torch": torch.__version__, "numpy": np.__version__,
                     "cuda": torch.version.cuda},
-        "feature_cutoff": "public observations <= t; inherited observation memory only",
+        "terrain_geometry_cutoff": data_manifest.get("terrain_geometry_cutoff", "unverified"),
+        "drift_speed_cutoff": data_manifest.get("drift_speed_cutoff", "unverified"),
         "label_cutoff": "future physical positions t+1 onward, horizon=12; heuristic pseudo-labels",
-        "leakage_audit": "parser timing not independently validated by this memorization test",
+        "leakage_audit": "backcast speed is inferred from future public observations; unavailable online before convergence",
         "memory_budget": "~5 MiB parameters/gradients/Adam; <1 GiB estimated activations/workspace, 2 GiB reserve",
     }
     device = torch.device(args.device)
@@ -225,7 +206,9 @@ def main():
     def forward(model, x, y, mask):
         with torch.autocast(device_type=device.type, dtype=torch.bfloat16, enabled=amp_enabled):
             logits = model(x)
-        return logits, masked_intent_loss(logits, y, mask)
+        labels = y.flatten(2)[:, 0].argmax(1)
+        logits, _ = apply_destination_mask(logits, x, labels)
+        return logits, focal_spatial_loss(logits, labels, gamma=2.0)
 
     with tracked_run(args.output_dir.name, experiment_name=experiment, params=config) as run:
         metadata["mlflow_run_id"] = run.info.run_id
@@ -233,11 +216,14 @@ def main():
         metadata["mlflow_artifact_uri"] = run.info.artifact_uri
         # Synthetic one-frame forward/backward before the real batch; no data iteration.
         with cuda_memory_guard("synthetic-smoke"):
-            probe = Network(args.blocks).to(device)
-            probe_x = torch.randn(1, 21, 24, 24, device=device)
-            probe_y = torch.zeros(1, 16, 24, 24, dtype=torch.uint8, device=device)
+            probe = Network().to(device)
+            probe_x = torch.zeros(1, 28, 24, 24, device=device)
+            probe_x[:, 25, 3, 7] = 1
+            probe_x[:, 26:28] = coordinate_planes().to(device)
+            probe_x[:, 14, 3, 7] = 100 / 6400
+            probe_y = torch.zeros(1, 1, 24, 24, dtype=torch.uint8, device=device)
             probe_y[:, :, 3, 7] = 1
-            probe_mask = torch.ones(1, 16, dtype=torch.bool, device=device)
+            probe_mask = torch.ones(1, 1, dtype=torch.bool, device=device)
             _, probe_loss = forward(probe, probe_x, probe_y, probe_mask)
             probe_loss.backward()
             if not torch.isfinite(probe_loss):
@@ -245,7 +231,7 @@ def main():
         del probe, probe_x, probe_y, probe_mask, probe_loss, _
         set_seed(args.seed)
         x, y, mask = (tensor.to(device) for tensor in (features, target, valid))
-        model = Network(args.blocks).to(device)
+        model = Network().to(device)
         metadata["parameters"] = sum(p.numel() for p in model.parameters())
         optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
         rows = []

@@ -10,7 +10,8 @@ from torch import nn
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from agents.v3.network import Network
+from agents.v3.unet28_network import Network
+from scripts.replay_parser import SCHEMA_VERSION, pack_features
 from scripts.train_bc import ReplayFrameDataset, masked_intent_loss
 
 torch.set_num_threads(4)
@@ -19,13 +20,19 @@ torch.set_num_threads(4)
 class BehaviorCloningTests(unittest.TestCase):
     def test_network_preserves_coordinates_and_outputs_logits(self):
         model = Network()
-        self.assertEqual(model(torch.zeros(2, 21, 24, 24)).shape, (2, 16, 24, 24))
+        shapes = []
+        hooks = [layer.register_forward_hook(lambda _m, _x, y: shapes.append(y.shape[-2:]))
+                 for layer in (model.encoder24, model.encoder12, model.bottleneck)]
+        self.assertEqual(model(torch.zeros(2, 28, 24, 24)).shape, (2, 1, 24, 24))
+        for hook in hooks:
+            hook.remove()
+        self.assertEqual(shapes, [torch.Size([24, 24]), torch.Size([12, 12]), torch.Size([6, 6])])
         for layer in model.modules():
-            self.assertNotIsInstance(layer, (nn.MaxPool2d, nn.AvgPool2d, nn.Dropout, nn.Softmax))
-            if isinstance(layer, nn.Conv2d):
-                self.assertEqual(layer.stride, (1, 1))
+            self.assertNotIsInstance(layer, (nn.BatchNorm2d, nn.Dropout, nn.Softmax))
+        self.assertEqual(model.down12.stride, (2, 2))
+        self.assertEqual(model.down6.stride, (2, 2))
         with self.assertRaises(ValueError):
-            model(torch.zeros(1, 22, 24, 24))
+            model(torch.zeros(1, 21, 24, 24))
 
     def test_masked_loss_and_gradient_match_valid_units_only(self):
         logits = torch.randn(2, 3, 4, 5, requires_grad=True)
@@ -52,19 +59,24 @@ class BehaviorCloningTests(unittest.TestCase):
     def test_dataset_is_repeatable_and_rejects_corrupt_valid_label(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "replay_p0.npz"
-            features = np.zeros((4, 21, 24, 24), dtype=np.float32)
+            features = np.zeros((4, 25, 24, 24), dtype=np.float32)
             target = np.zeros((4, 16, 24, 24), dtype=np.uint8)
             valid = np.zeros((4, 16), dtype=bool)
             valid[:3, 0] = True
             target[:3, 0, 4, 7] = 1
-            fields = {"features": features, "intent_target": target, "intent_valid": valid,
+            positions = np.full((4, 16, 2), -1, dtype=np.int16)
+            positions[:3, 0] = (2, 5)
+            fields = {**pack_features(features), "schema_version": np.uint8(SCHEMA_VERSION),
+                      "intent_target": target, "intent_valid": valid, "active": valid.copy(),
+                      "positions": positions,
                       "steps": np.arange(4), "match_steps": np.arange(4)}
             np.savez(path, **fields)
             first = ReplayFrameDataset(directory, size=3, seed=42)
             second = ReplayFrameDataset(directory, size=3, seed=42)
             self.assertEqual(first.records, second.records)
             self.assertEqual({r["frame"] for r in first.records}, {0, 1, 2})
-            self.assertEqual(first[0][0].shape, (21, 24, 24))
+            self.assertEqual(first[0][0].shape, (1, 28, 24, 24))
+            self.assertEqual(first[0][0][0, 25, 2, 5].item(), 1)
             target[0, 0, 5, 7] = 1
             np.savez(path, **fields)
             with self.assertRaisesRegex(ValueError, "one-hot"):
