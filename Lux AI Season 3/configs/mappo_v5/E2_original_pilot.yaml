@@ -1,0 +1,7 @@
+extends: common.yaml
+arm: E2_IL_MAPPO_RMG_original_R_control
+policy:
+  gate: learned
+  r_initialization: original
+ppo:
+  R_lr: 0.00003

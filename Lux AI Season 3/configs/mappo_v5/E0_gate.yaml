@@ -1,0 +1,8 @@
+extends: common.yaml
+arm: E0_Frozen_IL_matched_gate
+games: 0
+policy:
+  gate: deterministic
+  r_initialization: original
+ppo:
+  R_lr: 0.00003

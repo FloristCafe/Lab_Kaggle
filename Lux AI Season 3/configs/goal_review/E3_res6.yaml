@@ -1,0 +1,3 @@
+extends: E1_clean.yaml
+model:
+  architecture: res6

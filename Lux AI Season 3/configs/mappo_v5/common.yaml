@@ -1,0 +1,34 @@
+# Immutable inheritance; resolved config is saved per run. Legacy il/rl/study
+# fields are lineage only. This trainer reads policy/ppo/review/tactical below.
+extends: ../goal_review/E6_candidate.yaml
+il_checkpoint: experiments/goal_review/E6_candidate_seed42/best_model.pth
+il_checkpoint_sha256: 4a356ca463c5beee4acb4949cf93e8b6b453634262167025cd54043d88b2013b
+games: 100
+train_seed_base: 40000000
+opponents: [v2]
+reward: terminal_official_win_margin
+storage:
+  max_rollout_mib: 2048
+  min_free_mib: 4096
+review:
+  max_review_horizon: 8
+  gate_replan_age: 16
+policy:
+  gate: learned
+  r_initialization: neutral
+evaluation:
+  seeds: [17001, 17002, 17003, 17004]
+ppo:
+  gamma: 0.99
+  lambda: 0.95
+  clip: 0.1
+  epochs: 4
+  encoder_lr: 0.00001
+  mode_goal_lr: 0.00003
+  R_lr: 0.0001
+  critic_lr: 0.0001
+  grad_clip: 0.5
+  value_weight: 0.5
+  entropy_weight: 0.001
+  rollout_options: 32
+  minibatch: 4

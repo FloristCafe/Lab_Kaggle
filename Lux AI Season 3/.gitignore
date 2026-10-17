@@ -1,10 +1,64 @@
+# Local environments and third-party environment checkout
 .venv/
-vendor/
-replays/
-artifacts/
-outputs/
+venv/
+/vendor/
+
+# Local datasets, replays, checkpoints and generated output
+/data/
+/replays/
+/artifacts/
+/outputs/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+
+# Experiment runs are local; retain the reviewable research reports.
+/experiments/**
+!/experiments/**/
+!/experiments/**/research_report.md
+!/experiments/**/runbook.md
+!/experiments/strategic_goal_baseline_report/figures/*.png
+!/experiments/goal_review/research_report/audit_overview.png
+
+# Experiment tracking and runtime logs
+mlruns/
+mlartifacts/
+*.log
+*.log.*
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.sqlite3
+*.sqlite3-shm
+*.sqlite3-wal
+
+# Python caches, packaging and coverage
 __pycache__/
 *.py[cod]
 .pytest_cache/
 .ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+*.egg-info/
 
+# Local secrets, editor state and temporary files
+.env
+.env.*
+!.env.example
+!.env.template
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.tmp

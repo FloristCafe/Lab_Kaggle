@@ -1,0 +1,6 @@
+extends: common.yaml
+arm: E0_Frozen_IL_neutral_R
+games: 0
+policy:
+  gate: learned
+  r_initialization: neutral

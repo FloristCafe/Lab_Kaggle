@@ -1,0 +1,5 @@
+extends: common.yaml
+arm: E2_IL_MAPPO_RMG_neutral_R
+policy:
+  gate: learned
+  r_initialization: neutral

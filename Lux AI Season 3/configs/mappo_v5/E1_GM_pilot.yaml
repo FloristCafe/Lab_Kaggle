@@ -1,0 +1,7 @@
+extends: common.yaml
+arm: E1_IL_MAPPO_GM
+policy:
+  gate: deterministic
+  r_initialization: original
+ppo:
+  R_lr: 0.00003

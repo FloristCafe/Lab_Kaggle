@@ -1,0 +1,4 @@
+extends: E4_with_r.yaml
+study:
+  context: corrupted
+  corruption_probability: 0.5

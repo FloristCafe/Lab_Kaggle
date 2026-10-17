@@ -1,0 +1,39 @@
+extends: ../strategic_baseline.yaml
+dataset_version: dataset_v3_goal_review
+label_version: legal_sap_censored_v1
+bridge_max_steps: 6
+review:
+  min_review_steps: 3
+  max_review_horizon: 16
+  max_goal_age: 100
+  blockage_steps: 8
+  severe_threat_steps: 3
+  threat_ratio: 2.0
+  major_score_delta: 3
+  major_information: 3.0
+  major_rank_gain: 2
+model:
+  architecture: current
+  replan: false
+  hysteresis: 0.0
+  hysteresis_cap: 0.5
+  hysteresis_max_age: 80
+  replan_threshold: 0.5
+study:
+  seed: 42
+  epochs: 6
+  patience: 5
+  batch_units: 16
+  updates_per_epoch: 1000
+  frame_stride: 4
+  lr: 0.001
+  weight_decay: 0.0001
+  loss: normal
+  class_weight_cap: 5.0
+  context: scripted
+  corruption_probability: 0.0
+  previous_context_dropout: 0.25
+  label_view: clean
+  scope: goal_frames
+  replan_weight: 1.0
+  max_validation_units: 0

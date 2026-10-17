@@ -1,0 +1,3 @@
+extends: E5_corrupted.yaml
+model:
+  hysteresis: 0.25

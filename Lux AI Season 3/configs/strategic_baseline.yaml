@@ -1,0 +1,102 @@
+dataset_version: dataset_v2_goal
+feature_version: causal_grouped_v2
+seed: 42
+labeler:
+  min_segment_length: 6
+  max_segment_length: 80
+  hysteresis_steps: 6
+  stable_occupancy_steps: 3
+  heading_change_threshold: 1.5707963267948966
+  belief_entropy_threshold: 0.8
+  new_visible_threshold: 5
+  score_onset_threshold: 1
+  engagement_radius: 2
+  neighborhood_radius: 5
+  low_energy: 60
+  energy_transition: 30
+  recharge_gain: 12
+  min_goal_distance: 3
+  intercept_min_approach: 3
+  confidence_threshold: 0.45
+  evidence_margin: 0.12
+  evidence_temperature: 1.0
+  death_anchor_margin: 2
+  anchor_tail_steps: 4
+  event_significance: 1.5
+  event_weights:
+    stable: 1.0
+    heading: 0.5
+    belief: 1.2
+    visibility: 0.5
+    contact: 1.0
+    sap: 0.5
+    score: 1.0
+    energy: 1.0
+  weights:
+    # truth, stable, score, information, new area, approach enemy, contact,
+    # sap, low energy, recharge, positive field, displacement, threat, rank gain
+    SCORE: [3, 1.2, 1, 0, 0, 0, -0.5, 0, -0.3, 0, 0, 0.5, 0, 0]
+    EXPLORE: [0, 0.2, 0, 2, 2, 0, -0.5, 0, 0, 0, 0, 1, 0, 0.5]
+    DEFEND: [1.5, 1.5, 0.2, 0, 0, 0, 0.5, 0.5, -1, 0, 0, 0, 2, 0]
+    INTERCEPT: [-0.5, 0, 0, 0, 0, 2, 2, 1.5, -0.5, 0, 0, 0.5, 0.5, 0]
+    RECHARGE: [0, 0.5, 0, 0, 0, 0, -1, -1, 2, 2, 1.5, 0, -0.5, 0]
+tactical:
+  macro_horizon: 16
+  router_horizon: 10
+  minimum_macro_steps: 3
+  hysteresis_bias: 0.25
+  local_radius: 6
+  support_radius: 4
+  rally_power_ratio: 1.3
+  engage_power_ratio: 1.15
+  rally_timeout: 8
+  recharge_below: 45
+  recharge_target: 90
+  retreat_threat: 2.0
+  safe_energy: 15
+  sap_threshold: 0.25
+  sap_dropoff_lower_bound: 0.25
+  void_upper_bound: 0.375
+  threat_enemy_weight: 0.6
+  threat_sap_weight: 1.0
+  threat_energy_weight: 1.0
+  threat_collision_weight: 1.0
+  threat_support_weight: 0.5
+  escape_cost_weight: 0.2
+  objective_value_weight: 0.2
+  sap_damage_weight: 1.0
+  sap_kill_weight: 2.0
+  sap_cluster_weight: 0.25
+  sap_interrupt_weight: 0.5
+  sap_energy_weight: 0.6
+  sap_survival_weight: 1.0
+il:
+  epochs: 12
+  patience: 5
+  batch_frames: 4
+  lr: 0.001
+  weight_decay: 0.0001
+  frame_stride: 4
+  mode_weight: 1.0
+  goal_weight: 1.0
+  previous_context_dropout: 0.25
+rl:
+  gamma: 0.99
+  gae_lambda: 0.95
+  gae_lambda_timebase: primitive
+  clip_ratio: 0.2
+  entropy_weight: 0.005
+  value_weight: 0.5
+  max_grad_norm: 0.5
+  update_epochs: 3
+  rollout_options: 32
+  lr: 0.0001
+  train_seeds: [16001]
+  evaluation_seeds: [17001]
+  evaluation_sides: [0, 1]
+  win_reward: 1.0
+  point_shaping: 0.01
+  information_shaping: 0.0
+  death_shaping: 0.0
+  energy_waste_shaping: 0.0
+  opponent: v0
