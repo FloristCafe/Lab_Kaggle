@@ -1,0 +1,6 @@
+# Existing WSL interpreter is sufficient; no MLflow/JAX/opponent training dependencies.
+--extra-index-url https://download.pytorch.org/whl/cu130
+torch==2.14.0+cu130
+numpy==2.5.2
+scipy==1.18.1
+pytest==9.1.1

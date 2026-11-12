@@ -1,0 +1,14 @@
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.venv/
+outputs/
+data/
+artifacts/
+checkpoints/
+*.pt
+*.pth
+*.npz
+*.npy
+*.log
+*.db
