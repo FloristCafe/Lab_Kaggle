@@ -1,3 +1,0 @@
-extends: E4_without_r.yaml
-model:
-  replan: true

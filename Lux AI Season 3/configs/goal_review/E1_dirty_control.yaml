@@ -1,3 +1,0 @@
-extends: E1_clean.yaml
-study:
-  label_view: dirty

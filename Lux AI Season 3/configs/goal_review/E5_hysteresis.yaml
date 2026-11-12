@@ -1,3 +1,0 @@
-extends: E4_with_r.yaml
-model:
-  hysteresis: 0.25
