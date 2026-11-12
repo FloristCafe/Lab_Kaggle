@@ -1,0 +1,1148 @@
+{
+  "MLflow_statuses": {
+    "068aed98b3f540fe9153f77a449bceb2": "FINISHED",
+    "2a6d92ef0fe948c8b03707105a5ea610": "FINISHED",
+    "5ba63cbbbfd5429a84d89055c707d428": "FINISHED",
+    "963d72b64def48c9a9e87a08ba305fd6": "FINISHED",
+    "9d5b80f8f37345d7b3ec13c08c52f2da": "FINISHED",
+    "a20a196b2b9149969c7036c5a0f2f420": "FINISHED",
+    "dbc2a3e2737446dc98b4d143644b656d": "FINISHED",
+    "e437671af25848f393da46de05684565": "FINISHED",
+    "ffaac3d39a0142f0a19d1e49f5ae13ef": "FINISHED"
+  },
+  "PPO_updates": 0,
+  "cost": {
+    "evaluation_seconds": 490.0467503770051,
+    "max_cuda_allocated_MiB": 287.59912109375,
+    "node_exposures": 19176552,
+    "output_logical_MiB": 49.28765678405762,
+    "train_seconds": 1759.796235012007,
+    "training_steps": 149832
+  },
+  "data_composition": {
+    "calibration": {
+      "Mode_counts": {
+        "DEFEND": 31052,
+        "EXPLORE": 8129,
+        "INTERCEPT": 13258,
+        "RECHARGE": 0,
+        "SCORE": 920
+      },
+      "changed_nodes": 33693,
+      "maps": 4,
+      "nodes": 53359,
+      "teacher_distance13plus_rate": 0.20410802301392456,
+      "teacher_distance_quantiles": [
+        0.0,
+        0.0,
+        4.0,
+        11.0,
+        23.0,
+        45.0
+      ]
+    },
+    "exploratory": {
+      "Mode_counts": {
+        "DEFEND": 33469,
+        "EXPLORE": 8313,
+        "INTERCEPT": 14106,
+        "RECHARGE": 0,
+        "SCORE": 1242
+      },
+      "changed_nodes": 36863,
+      "maps": 4,
+      "nodes": 57130,
+      "teacher_distance13plus_rate": 0.21724137931034482,
+      "teacher_distance_quantiles": [
+        0.0,
+        0.0,
+        5.0,
+        12.0,
+        21.0,
+        45.0
+      ]
+    },
+    "train": {
+      "Mode_counts": {
+        "DEFEND": 134348,
+        "EXPLORE": 70474,
+        "INTERCEPT": 56943,
+        "RECHARGE": 0,
+        "SCORE": 4576
+      },
+      "changed_nodes": 166959,
+      "maps": 16,
+      "nodes": 266341,
+      "teacher_distance13plus_rate": 0.13697478045062533,
+      "teacher_distance_quantiles": [
+        0.0,
+        0.0,
+        4.0,
+        9.0,
+        18.0,
+        44.0
+      ]
+    }
+  },
+  "environment_starts": 0,
+  "evaluation_sha256": "6a60a370e270e4b86b27030b170eac935c47ca2b6edde76784ace74caaa38463",
+  "independent_reconstruction": {
+    "calibration_checkpoint_reproduction": "PASS",
+    "case_count": 32,
+    "case_counts_and_strata": "EXACT_MATCH",
+    "matched_node_orders": "PASS",
+    "selection_and_budget": "PASS",
+    "unique_cases": 32
+  },
+  "limits": [
+    "all4exploratorymaps previously viewed; not independent confirmation",
+    "onlyS2-300 source policy; 3seeds are decoder-fitting RNGs",
+    "equal exposure does not imply equal compute or optimizer conditioning",
+    "teacher Goal labels are not per-Goal outcome labels",
+    "same-state replay action probes are not student closed-loop trajectories",
+    "zero exact collisions in D02 does not prove sufficient representation",
+    "old400 IL seed provenance missing"
+  ],
+  "method_summaries": {
+    "effective": {
+      "fits": [
+        {
+          "all_update_clip_rate": 0.0001201345506967804,
+          "all_update_mean_preclip_gradient_norm": 2.527901373807196,
+          "calibration_NLL": 3.5436204075813293,
+          "calibration_raw_changed_top1": 0.09484970297201019,
+          "exploratory_NLL": 3.673074245452881,
+          "exploratory_map_equal_action_match_on_teacher_B0_differences": 0.2897882689372503,
+          "exploratory_map_equal_post_changed_top1": 0.06792552874547572,
+          "exploratory_raw_changed_top1": 0.08631221939634441,
+          "fit_seconds": 151.95203177598887,
+          "pooled_executable_rates": {
+            "action_agreement_where_teacher_differs_B0": {
+              "d": 659,
+              "n": 197,
+              "rate": 0.29893778452200304
+            },
+            "adapter_acceptance_rate": {
+              "d": 57130,
+              "n": 42892,
+              "rate": 0.7507789252581831
+            },
+            "effective_change_rate": {
+              "d": 57130,
+              "n": 16802,
+              "rate": 0.2941011727638719
+            },
+            "fallback_rate": {
+              "d": 57130,
+              "n": 14238,
+              "rate": 0.2492210747418169
+            },
+            "post_changed_top1": {
+              "d": 36863,
+              "n": 2733,
+              "rate": 0.07413938095108917
+            },
+            "post_teacher_top1": {
+              "d": 57130,
+              "n": 20784,
+              "rate": 0.36380185541746896
+            },
+            "proposal_legal_rate": {
+              "d": 57130,
+              "n": 57130,
+              "rate": 1.0
+            },
+            "raw_changed_top1": {
+              "d": 36863,
+              "n": 3448,
+              "rate": 0.09353552342457207
+            },
+            "raw_teacher_top1": {
+              "d": 57130,
+              "n": 19149,
+              "rate": 0.33518291615613516
+            },
+            "same_state_teacher_action_agreement": {
+              "d": 3502,
+              "n": 2951,
+              "rate": 0.8426613363792119
+            }
+          },
+          "seed": 3101,
+          "selected_epoch": 6,
+          "train_NLL": 2.8807530850172043,
+          "train_raw_changed_top1": 0.11692561387635811
+        },
+        {
+          "all_update_clip_rate": 0.00018020182604517058,
+          "all_update_mean_preclip_gradient_norm": 2.530418361181367,
+          "calibration_NLL": 3.5444284081459045,
+          "calibration_raw_changed_top1": 0.10030020627779304,
+          "exploratory_NLL": 3.6661954522132874,
+          "exploratory_map_equal_action_match_on_teacher_B0_differences": 0.30122961362350154,
+          "exploratory_map_equal_post_changed_top1": 0.06994349260214708,
+          "exploratory_raw_changed_top1": 0.09071428594587565,
+          "fit_seconds": 150.63250251000863,
+          "pooled_executable_rates": {
+            "action_agreement_where_teacher_differs_B0": {
+              "d": 659,
+              "n": 204,
+              "rate": 0.3095599393019727
+            },
+            "adapter_acceptance_rate": {
+              "d": 57130,
+              "n": 41491,
+              "rate": 0.7262559075792053
+            },
+            "effective_change_rate": {
+              "d": 57130,
+              "n": 16862,
+              "rate": 0.29515140906704007
+            },
+            "fallback_rate": {
+              "d": 57130,
+              "n": 15639,
+              "rate": 0.27374409242079467
+            },
+            "post_changed_top1": {
+              "d": 36863,
+              "n": 2801,
+              "rate": 0.07598404904646935
+            },
+            "post_teacher_top1": {
+              "d": 57130,
+              "n": 20724,
+              "rate": 0.3627516191143007
+            },
+            "proposal_legal_rate": {
+              "d": 57130,
+              "n": 57130,
+              "rate": 1.0
+            },
+            "raw_changed_top1": {
+              "d": 36863,
+              "n": 3598,
+              "rate": 0.09760464422320483
+            },
+            "raw_teacher_top1": {
+              "d": 57130,
+              "n": 18855,
+              "rate": 0.3300367582706109
+            },
+            "same_state_teacher_action_agreement": {
+              "d": 3502,
+              "n": 2959,
+              "rate": 0.8449457452884066
+            }
+          },
+          "seed": 3102,
+          "selected_epoch": 8,
+          "train_NLL": 2.863018423318863,
+          "train_raw_changed_top1": 0.12141826216963562
+        },
+        {
+          "all_update_clip_rate": 0.00018020182604517058,
+          "all_update_mean_preclip_gradient_norm": 2.5248677464902887,
+          "calibration_NLL": 3.56274676322937,
+          "calibration_raw_changed_top1": 0.08920120135559487,
+          "exploratory_NLL": 3.682452440261841,
+          "exploratory_map_equal_action_match_on_teacher_B0_differences": 0.29384089194148616,
+          "exploratory_map_equal_post_changed_top1": 0.06473228243121991,
+          "exploratory_raw_changed_top1": 0.0830539742871441,
+          "fit_seconds": 145.41888260999986,
+          "pooled_executable_rates": {
+            "action_agreement_where_teacher_differs_B0": {
+              "d": 659,
+              "n": 196,
+              "rate": 0.29742033383915023
+            },
+            "adapter_acceptance_rate": {
+              "d": 57130,
+              "n": 42125,
+              "rate": 0.737353404516016
+            },
+            "effective_change_rate": {
+              "d": 57130,
+              "n": 16093,
+              "rate": 0.2816908804481008
+            },
+            "fallback_rate": {
+              "d": 57130,
+              "n": 15005,
+              "rate": 0.2626465954839839
+            },
+            "post_changed_top1": {
+              "d": 36863,
+              "n": 2601,
+              "rate": 0.07055855464829233
+            },
+            "post_teacher_top1": {
+              "d": 57130,
+              "n": 20698,
+              "rate": 0.3622965167162612
+            },
+            "proposal_legal_rate": {
+              "d": 57130,
+              "n": 57130,
+              "rate": 1.0
+            },
+            "raw_changed_top1": {
+              "d": 36863,
+              "n": 3318,
+              "rate": 0.09000895206575699
+            },
+            "raw_teacher_top1": {
+              "d": 57130,
+              "n": 18903,
+              "rate": 0.33087694731314543
+            },
+            "same_state_teacher_action_agreement": {
+              "d": 3502,
+              "n": 2951,
+              "rate": 0.8426613363792119
+            }
+          },
+          "seed": 3103,
+          "selected_epoch": 6,
+          "train_NLL": 2.8761142790317535,
+          "train_raw_changed_top1": 0.11474327987061694
+        }
+      ],
+      "mean": {
+        "all_update_clip_rate": 0.00016017940092904052,
+        "all_update_mean_preclip_gradient_norm": 2.527729160492951,
+        "calibration_NLL": 3.5502651929855347,
+        "calibration_raw_changed_top1": 0.0947837035351327,
+        "exploratory_NLL": 3.673907379309336,
+        "exploratory_map_equal_action_match_on_teacher_B0_differences": 0.29495292483407937,
+        "exploratory_map_equal_post_changed_top1": 0.06753376792628091,
+        "exploratory_raw_changed_top1": 0.08669349320978804,
+        "fit_seconds": 149.3344722986658,
+        "train_NLL": 2.8732952624559402,
+        "train_raw_changed_top1": 0.11769571863887023
+      },
+      "range": {
+        "all_update_clip_rate": [
+          0.0001201345506967804,
+          0.00018020182604517058
+        ],
+        "all_update_mean_preclip_gradient_norm": [
+          2.5248677464902887,
+          2.530418361181367
+        ],
+        "calibration_NLL": [
+          3.5436204075813293,
+          3.56274676322937
+        ],
+        "calibration_raw_changed_top1": [
+          0.08920120135559487,
+          0.10030020627779304
+        ],
+        "exploratory_NLL": [
+          3.6661954522132874,
+          3.682452440261841
+        ],
+        "exploratory_map_equal_action_match_on_teacher_B0_differences": [
+          0.2897882689372503,
+          0.30122961362350154
+        ],
+        "exploratory_map_equal_post_changed_top1": [
+          0.06473228243121991,
+          0.06994349260214708
+        ],
+        "exploratory_raw_changed_top1": [
+          0.0830539742871441,
+          0.09071428594587565
+        ],
+        "fit_seconds": [
+          145.41888260999986,
+          151.95203177598887
+        ],
+        "train_NLL": [
+          2.863018423318863,
+          2.8807530850172043
+        ],
+        "train_raw_changed_top1": [
+          0.11474327987061694,
+          0.12141826216963562
+        ]
+      }
+    },
+    "nonlinear": {
+      "fits": [
+        {
+          "all_update_clip_rate": 0.00594666025949063,
+          "all_update_mean_preclip_gradient_norm": 4.511846533751385,
+          "calibration_NLL": 2.93320095539093,
+          "calibration_raw_changed_top1": 0.13584974276165987,
+          "exploratory_NLL": 3.228824496269226,
+          "exploratory_map_equal_action_match_on_teacher_B0_differences": 0.32266371267856836,
+          "exploratory_map_equal_post_changed_top1": 0.09511092392335498,
+          "exploratory_raw_changed_top1": 0.11174381035612974,
+          "fit_seconds": 260.79480399400927,
+          "pooled_executable_rates": {
+            "action_agreement_where_teacher_differs_B0": {
+              "d": 659,
+              "n": 227,
+              "rate": 0.34446130500758726
+            },
+            "adapter_acceptance_rate": {
+              "d": 57130,
+              "n": 45434,
+              "rate": 0.7952739366357431
+            },
+            "effective_change_rate": {
+              "d": 57130,
+              "n": 18692,
+              "rate": 0.3271836163136706
+            },
+            "fallback_rate": {
+              "d": 57130,
+              "n": 11696,
+              "rate": 0.20472606336425697
+            },
+            "post_changed_top1": {
+              "d": 36863,
+              "n": 3837,
+              "rate": 0.10408811002902639
+            },
+            "post_teacher_top1": {
+              "d": 57130,
+              "n": 21806,
+              "rate": 0.38169088044810084
+            },
+            "proposal_legal_rate": {
+              "d": 57130,
+              "n": 57130,
+              "rate": 1.0
+            },
+            "raw_changed_top1": {
+              "d": 36863,
+              "n": 4481,
+              "rate": 0.12155820199115644
+            },
+            "raw_teacher_top1": {
+              "d": 57130,
+              "n": 20363,
+              "rate": 0.3564326973569053
+            },
+            "same_state_teacher_action_agreement": {
+              "d": 3502,
+              "n": 2961,
+              "rate": 0.8455168475157053
+            }
+          },
+          "seed": 3101,
+          "selected_epoch": 6,
+          "train_NLL": 2.3250143602490425,
+          "train_raw_changed_top1": 0.19208586079009238
+        },
+        {
+          "all_update_clip_rate": 0.005466122056703508,
+          "all_update_mean_preclip_gradient_norm": 4.461794239774539,
+          "calibration_NLL": 2.9523766040802,
+          "calibration_raw_changed_top1": 0.13213808270811797,
+          "exploratory_NLL": 3.2381173372268677,
+          "exploratory_map_equal_action_match_on_teacher_B0_differences": 0.28160317092829823,
+          "exploratory_map_equal_post_changed_top1": 0.09235759421753785,
+          "exploratory_raw_changed_top1": 0.11042449552651118,
+          "fit_seconds": 259.21958042599726,
+          "pooled_executable_rates": {
+            "action_agreement_where_teacher_differs_B0": {
+              "d": 659,
+              "n": 199,
+              "rate": 0.30197268588770865
+            },
+            "adapter_acceptance_rate": {
+              "d": 57130,
+              "n": 46830,
+              "rate": 0.8197094346227901
+            },
+            "effective_change_rate": {
+              "d": 57130,
+              "n": 18093,
+              "rate": 0.3166987572203746
+            },
+            "fallback_rate": {
+              "d": 57130,
+              "n": 10300,
+              "rate": 0.18029056537720986
+            },
+            "post_changed_top1": {
+              "d": 36863,
+              "n": 3725,
+              "rate": 0.10104983316604725
+            },
+            "post_teacher_top1": {
+              "d": 57130,
+              "n": 21781,
+              "rate": 0.3812532819884474
+            },
+            "proposal_legal_rate": {
+              "d": 57130,
+              "n": 57130,
+              "rate": 1.0
+            },
+            "raw_changed_top1": {
+              "d": 36863,
+              "n": 4421,
+              "rate": 0.11993055367170333
+            },
+            "raw_teacher_top1": {
+              "d": 57130,
+              "n": 20619,
+              "rate": 0.36091370558375635
+            },
+            "same_state_teacher_action_agreement": {
+              "d": 3502,
+              "n": 2943,
+              "rate": 0.8403769274700171
+            }
+          },
+          "seed": 3102,
+          "selected_epoch": 7,
+          "train_NLL": 2.278590612113476,
+          "train_raw_changed_top1": 0.1953310055442838
+        },
+        {
+          "all_update_clip_rate": 0.00594666025949063,
+          "all_update_mean_preclip_gradient_norm": 4.490621524195669,
+          "calibration_NLL": 2.9211865067481995,
+          "calibration_raw_changed_top1": 0.142339393817397,
+          "exploratory_NLL": 3.146974205970764,
+          "exploratory_map_equal_action_match_on_teacher_B0_differences": 0.31349091509320715,
+          "exploratory_map_equal_post_changed_top1": 0.09756110152249133,
+          "exploratory_raw_changed_top1": 0.11852112900675539,
+          "fit_seconds": 261.2473480269982,
+          "pooled_executable_rates": {
+            "action_agreement_where_teacher_differs_B0": {
+              "d": 659,
+              "n": 220,
+              "rate": 0.3338391502276176
+            },
+            "adapter_acceptance_rate": {
+              "d": 57130,
+              "n": 44396,
+              "rate": 0.777104848590933
+            },
+            "effective_change_rate": {
+              "d": 57130,
+              "n": 18150,
+              "rate": 0.3176964817083844
+            },
+            "fallback_rate": {
+              "d": 57130,
+              "n": 12734,
+              "rate": 0.22289515140906704
+            },
+            "post_changed_top1": {
+              "d": 36863,
+              "n": 3957,
+              "rate": 0.10734340666793261
+            },
+            "post_teacher_top1": {
+              "d": 57130,
+              "n": 22167,
+              "rate": 0.38800980220549625
+            },
+            "proposal_legal_rate": {
+              "d": 57130,
+              "n": 57130,
+              "rate": 1.0
+            },
+            "raw_changed_top1": {
+              "d": 36863,
+              "n": 4781,
+              "rate": 0.129696443588422
+            },
+            "raw_teacher_top1": {
+              "d": 57130,
+              "n": 20889,
+              "rate": 0.3656397689480133
+            },
+            "same_state_teacher_action_agreement": {
+              "d": 3502,
+              "n": 2994,
+              "rate": 0.8549400342661336
+            }
+          },
+          "seed": 3103,
+          "selected_epoch": 8,
+          "train_NLL": 2.2314396277070045,
+          "train_raw_changed_top1": 0.21081112281326606
+        }
+      ],
+      "mean": {
+        "all_update_clip_rate": 0.005786480858561589,
+        "all_update_mean_preclip_gradient_norm": 4.488087432573864,
+        "calibration_NLL": 2.93558802207311,
+        "calibration_raw_changed_top1": 0.13677573976239163,
+        "exploratory_NLL": 3.204638679822286,
+        "exploratory_map_equal_action_match_on_teacher_B0_differences": 0.3059192662333579,
+        "exploratory_map_equal_post_changed_top1": 0.09500987322112804,
+        "exploratory_raw_changed_top1": 0.11356314496313209,
+        "fit_seconds": 260.4205774823349,
+        "train_NLL": 2.2783482000231743,
+        "train_raw_changed_top1": 0.19940932971588074
+      },
+      "range": {
+        "all_update_clip_rate": [
+          0.005466122056703508,
+          0.00594666025949063
+        ],
+        "all_update_mean_preclip_gradient_norm": [
+          4.461794239774539,
+          4.511846533751385
+        ],
+        "calibration_NLL": [
+          2.9211865067481995,
+          2.9523766040802
+        ],
+        "calibration_raw_changed_top1": [
+          0.13213808270811797,
+          0.142339393817397
+        ],
+        "exploratory_NLL": [
+          3.146974205970764,
+          3.2381173372268677
+        ],
+        "exploratory_map_equal_action_match_on_teacher_B0_differences": [
+          0.28160317092829823,
+          0.32266371267856836
+        ],
+        "exploratory_map_equal_post_changed_top1": [
+          0.09235759421753785,
+          0.09756110152249133
+        ],
+        "exploratory_raw_changed_top1": [
+          0.11042449552651118,
+          0.11852112900675539
+        ],
+        "fit_seconds": [
+          259.21958042599726,
+          261.2473480269982
+        ],
+        "train_NLL": [
+          2.2314396277070045,
+          2.3250143602490425
+        ],
+        "train_raw_changed_top1": [
+          0.19208586079009238,
+          0.21081112281326606
+        ]
+      }
+    },
+    "original": {
+      "fits": [
+        {
+          "all_update_clip_rate": 0.000300336376741951,
+          "all_update_mean_preclip_gradient_norm": 1.7225486763799092,
+          "calibration_NLL": 3.5593048334121704,
+          "calibration_raw_changed_top1": 0.0931037451735728,
+          "exploratory_NLL": 3.6473047137260437,
+          "exploratory_map_equal_action_match_on_teacher_B0_differences": 0.2829065270703641,
+          "exploratory_map_equal_post_changed_top1": 0.06376411997233467,
+          "exploratory_raw_changed_top1": 0.08529411459552227,
+          "fit_seconds": 175.14497934000974,
+          "pooled_executable_rates": {
+            "action_agreement_where_teacher_differs_B0": {
+              "d": 659,
+              "n": 184,
+              "rate": 0.27921092564491656
+            },
+            "adapter_acceptance_rate": {
+              "d": 57130,
+              "n": 41687,
+              "rate": 0.7296866795028881
+            },
+            "effective_change_rate": {
+              "d": 57130,
+              "n": 15778,
+              "rate": 0.2761771398564677
+            },
+            "fallback_rate": {
+              "d": 57130,
+              "n": 15443,
+              "rate": 0.2703133204971119
+            },
+            "post_changed_top1": {
+              "d": 36863,
+              "n": 2548,
+              "rate": 0.06912079863277541
+            },
+            "post_teacher_top1": {
+              "d": 57130,
+              "n": 20688,
+              "rate": 0.3621214773323998
+            },
+            "proposal_legal_rate": {
+              "d": 57130,
+              "n": 57130,
+              "rate": 1.0
+            },
+            "raw_changed_top1": {
+              "d": 36863,
+              "n": 3367,
+              "rate": 0.09133819819331036
+            },
+            "raw_teacher_top1": {
+              "d": 57130,
+              "n": 18987,
+              "rate": 0.33234727813758097
+            },
+            "same_state_teacher_action_agreement": {
+              "d": 3502,
+              "n": 2932,
+              "rate": 0.8372358652198744
+            }
+          },
+          "seed": 3101,
+          "selected_epoch": 6,
+          "train_NLL": 2.9221813678741455,
+          "train_raw_changed_top1": 0.11601139484299029
+        },
+        {
+          "all_update_clip_rate": 0.0001201345506967804,
+          "all_update_mean_preclip_gradient_norm": 1.7355095307266182,
+          "calibration_NLL": 3.5497942566871643,
+          "calibration_raw_changed_top1": 0.09118966734844819,
+          "exploratory_NLL": 3.6475963592529297,
+          "exploratory_map_equal_action_match_on_teacher_B0_differences": 0.27269618939822676,
+          "exploratory_map_equal_post_changed_top1": 0.06380580868367058,
+          "exploratory_raw_changed_top1": 0.08528549337222018,
+          "fit_seconds": 177.0156172519928,
+          "pooled_executable_rates": {
+            "action_agreement_where_teacher_differs_B0": {
+              "d": 659,
+              "n": 183,
+              "rate": 0.27769347496206376
+            },
+            "adapter_acceptance_rate": {
+              "d": 57130,
+              "n": 41390,
+              "rate": 0.7244880098022055
+            },
+            "effective_change_rate": {
+              "d": 57130,
+              "n": 16082,
+              "rate": 0.2814983371258533
+            },
+            "fallback_rate": {
+              "d": 57130,
+              "n": 15740,
+              "rate": 0.2755119901977945
+            },
+            "post_changed_top1": {
+              "d": 36863,
+              "n": 2543,
+              "rate": 0.06898516127282099
+            },
+            "post_teacher_top1": {
+              "d": 57130,
+              "n": 20553,
+              "rate": 0.3597584456502713
+            },
+            "proposal_legal_rate": {
+              "d": 57130,
+              "n": 57130,
+              "rate": 1.0
+            },
+            "raw_changed_top1": {
+              "d": 36863,
+              "n": 3360,
+              "rate": 0.09114830588937417
+            },
+            "raw_teacher_top1": {
+              "d": 57130,
+              "n": 18815,
+              "rate": 0.3293366007351654
+            },
+            "same_state_teacher_action_agreement": {
+              "d": 3502,
+              "n": 2931,
+              "rate": 0.836950314106225
+            }
+          },
+          "seed": 3102,
+          "selected_epoch": 6,
+          "train_NLL": 2.9249085187911987,
+          "train_raw_changed_top1": 0.11490088503995585
+        },
+        {
+          "all_update_clip_rate": 0.00018020182604517058,
+          "all_update_mean_preclip_gradient_norm": 1.729785324578701,
+          "calibration_NLL": 3.5581858158111572,
+          "calibration_raw_changed_top1": 0.08932691610234558,
+          "exploratory_NLL": 3.639340341091156,
+          "exploratory_map_equal_action_match_on_teacher_B0_differences": 0.27092443964260604,
+          "exploratory_map_equal_post_changed_top1": 0.06393418622997919,
+          "exploratory_raw_changed_top1": 0.08492440278182728,
+          "fit_seconds": 178.37048907700228,
+          "pooled_executable_rates": {
+            "action_agreement_where_teacher_differs_B0": {
+              "d": 659,
+              "n": 185,
+              "rate": 0.28072837632776937
+            },
+            "adapter_acceptance_rate": {
+              "d": 57130,
+              "n": 41334,
+              "rate": 0.7235077892525819
+            },
+            "effective_change_rate": {
+              "d": 57130,
+              "n": 15704,
+              "rate": 0.2748818484158936
+            },
+            "fallback_rate": {
+              "d": 57130,
+              "n": 15796,
+              "rate": 0.27649221074741814
+            },
+            "post_changed_top1": {
+              "d": 36863,
+              "n": 2560,
+              "rate": 0.06944632829666604
+            },
+            "post_teacher_top1": {
+              "d": 57130,
+              "n": 20732,
+              "rate": 0.36289165062138984
+            },
+            "proposal_legal_rate": {
+              "d": 57130,
+              "n": 57130,
+              "rate": 1.0
+            },
+            "raw_changed_top1": {
+              "d": 36863,
+              "n": 3361,
+              "rate": 0.09117543336136505
+            },
+            "raw_teacher_top1": {
+              "d": 57130,
+              "n": 18849,
+              "rate": 0.32993173464029407
+            },
+            "same_state_teacher_action_agreement": {
+              "d": 3502,
+              "n": 2939,
+              "rate": 0.8392347230154198
+            }
+          },
+          "seed": 3103,
+          "selected_epoch": 8,
+          "train_NLL": 2.904980391263962,
+          "train_raw_changed_top1": 0.11604148536740713
+        }
+      ],
+      "mean": {
+        "all_update_clip_rate": 0.00020022425116130067,
+        "all_update_mean_preclip_gradient_norm": 1.7292811772284093,
+        "calibration_NLL": 3.5557616353034973,
+        "calibration_raw_changed_top1": 0.09120677620812219,
+        "exploratory_NLL": 3.6447471380233765,
+        "exploratory_map_equal_action_match_on_teacher_B0_differences": 0.2755090520370656,
+        "exploratory_map_equal_post_changed_top1": 0.06383470496199482,
+        "exploratory_raw_changed_top1": 0.08516800358318992,
+        "fit_seconds": 176.84369522300162,
+        "train_NLL": 2.9173567593097687,
+        "train_raw_changed_top1": 0.11565125508345109
+      },
+      "range": {
+        "all_update_clip_rate": [
+          0.0001201345506967804,
+          0.000300336376741951
+        ],
+        "all_update_mean_preclip_gradient_norm": [
+          1.7225486763799092,
+          1.7355095307266182
+        ],
+        "calibration_NLL": [
+          3.5497942566871643,
+          3.5593048334121704
+        ],
+        "calibration_raw_changed_top1": [
+          0.08932691610234558,
+          0.0931037451735728
+        ],
+        "exploratory_NLL": [
+          3.639340341091156,
+          3.6475963592529297
+        ],
+        "exploratory_map_equal_action_match_on_teacher_B0_differences": [
+          0.27092443964260604,
+          0.2829065270703641
+        ],
+        "exploratory_map_equal_post_changed_top1": [
+          0.06376411997233467,
+          0.06393418622997919
+        ],
+        "exploratory_raw_changed_top1": [
+          0.08492440278182728,
+          0.08529411459552227
+        ],
+        "fit_seconds": [
+          175.14497934000974,
+          178.37048907700228
+        ],
+        "train_NLL": [
+          2.904980391263962,
+          2.9249085187911987
+        ],
+        "train_raw_changed_top1": [
+          0.11490088503995585,
+          0.11604148536740713
+        ]
+      }
+    }
+  },
+  "nonlinear_all_three_screen_pass": false,
+  "offline_screens": [
+    {
+      "NLL_reduction_vs_frozen_B0": 0.7069247602359152,
+      "fitting_seed": 3101,
+      "map_equal_post_changed_top1": 0.06792552874547572,
+      "method": "effective",
+      "pass": false
+    },
+    {
+      "NLL_reduction_vs_frozen_B0": 0.707473620357781,
+      "fitting_seed": 3102,
+      "map_equal_post_changed_top1": 0.06994349260214708,
+      "method": "effective",
+      "pass": false
+    },
+    {
+      "NLL_reduction_vs_frozen_B0": 0.7061764724234397,
+      "fitting_seed": 3103,
+      "map_equal_post_changed_top1": 0.06473228243121991,
+      "method": "effective",
+      "pass": false
+    },
+    {
+      "NLL_reduction_vs_frozen_B0": 0.742371525821532,
+      "fitting_seed": 3101,
+      "map_equal_post_changed_top1": 0.09511092392335498,
+      "method": "nonlinear",
+      "pass": false
+    },
+    {
+      "NLL_reduction_vs_frozen_B0": 0.7416300484078582,
+      "fitting_seed": 3102,
+      "map_equal_post_changed_top1": 0.09235759421753785,
+      "method": "nonlinear",
+      "pass": false
+    },
+    {
+      "NLL_reduction_vs_frozen_B0": 0.7489023748735701,
+      "fitting_seed": 3103,
+      "map_equal_post_changed_top1": 0.09756110152249133,
+      "method": "nonlinear",
+      "pass": false
+    },
+    {
+      "NLL_reduction_vs_frozen_B0": 0.7089809157026338,
+      "fitting_seed": 3101,
+      "map_equal_post_changed_top1": 0.06376411997233467,
+      "method": "original",
+      "pass": false
+    },
+    {
+      "NLL_reduction_vs_frozen_B0": 0.7089576452547728,
+      "fitting_seed": 3102,
+      "map_equal_post_changed_top1": 0.06380580868367058,
+      "method": "original",
+      "pass": false
+    },
+    {
+      "NLL_reduction_vs_frozen_B0": 0.7096163943952929,
+      "fitting_seed": 3103,
+      "map_equal_post_changed_top1": 0.06393418622997919,
+      "method": "original",
+      "pass": false
+    }
+  ],
+  "paired_comparisons": {
+    "effective_vs_original": {
+      "NLL": {
+        "map_paired_bootstrap95": [
+          -0.07375633716583252,
+          0.01543585459391276
+        ],
+        "mean": -0.02916024128595988,
+        "per_fit_seed": {
+          "3101": -0.025769531726837158,
+          "3102": -0.018599092960357666,
+          "3103": -0.043112099170684814
+        },
+        "per_map_mean_across_fit_seeds": {
+          "20": 0.03037913640340169,
+          "21": 0.0004925727844238281,
+          "22": -0.08303268750508626,
+          "23": -0.06447998682657878
+        }
+      },
+      "action_disagreements": {
+        "map_paired_bootstrap95": [
+          -0.01430976430976432,
+          0.05319750990379174
+        ],
+        "mean": 0.01944387279701371,
+        "per_fit_seed": {
+          "3101": 0.006881741866886171,
+          "3102": 0.028533424225274835,
+          "3103": 0.022916452298880126
+        },
+        "per_map_mean_across_fit_seeds": {
+          "20": 0.05376344086021506,
+          "21": -0.013468013468013481,
+          "22": -0.015151515151515157,
+          "23": 0.05263157894736842
+        }
+      },
+      "post_changed": {
+        "map_paired_bootstrap95": [
+          0.00033591906116663936,
+          0.007004315586312015
+        ],
+        "mean": 0.003699062964286089,
+        "per_fit_seed": {
+          "3101": 0.004161408773141053,
+          "3102": 0.006137683918476496,
+          "3103": 0.0007980962012407184
+        },
+        "per_map_mean_across_fit_seeds": {
+          "20": 0.002833721283270927,
+          "21": -0.0011121703209405799,
+          "22": 0.008394513687325711,
+          "23": 0.004680187207488297
+        }
+      }
+    },
+    "nonlinear_vs_effective": {
+      "NLL": {
+        "map_paired_bootstrap95": [
+          0.2521638472874959,
+          0.6863735516866047
+        ],
+        "mean": 0.46926869948705036,
+        "per_fit_seed": {
+          "3101": 0.4442497491836548,
+          "3102": 0.4280781149864197,
+          "3103": 0.5354782342910767
+        },
+        "per_map_mean_across_fit_seeds": {
+          "20": 0.23663981755574545,
+          "21": 0.2676878770192464,
+          "22": 0.8245474497477213,
+          "23": 0.5481996536254883
+        }
+      },
+      "action_disagreements": {
+        "map_paired_bootstrap95": [
+          -0.03291688818004607,
+          0.05484957097860324
+        ],
+        "mean": 0.010966341399278589,
+        "per_fit_seed": {
+          "3101": 0.03287544374131811,
+          "3102": -0.0196264426952033,
+          "3103": 0.019650023151720958
+        },
+        "per_map_mean_across_fit_seeds": {
+          "20": 0.03225806451612904,
+          "21": -0.033670033670033656,
+          "22": 0.07744107744107744,
+          "23": -0.03216374269005847
+        }
+      },
+      "post_changed": {
+        "map_paired_bootstrap95": [
+          0.01157720394723809,
+          0.0499343762815702
+        ],
+        "mean": 0.027476105294847147,
+        "per_fit_seed": {
+          "3101": 0.027185395177879247,
+          "3102": 0.02241410161539078,
+          "3103": 0.032828819091271416
+        },
+        "per_map_mean_across_fit_seeds": {
+          "20": 0.02435650912525723,
+          "21": 0.017476962186209092,
+          "22": 0.06075351431335723,
+          "23": 0.007317435554565041
+        }
+      }
+    },
+    "nonlinear_vs_original": {
+      "NLL": {
+        "map_paired_bootstrap95": [
+          0.2675997018814087,
+          0.6231811841328939
+        ],
+        "mean": 0.4401084582010905,
+        "per_fit_seed": {
+          "3101": 0.4184802174568176,
+          "3102": 0.409479022026062,
+          "3103": 0.49236613512039185
+        },
+        "per_map_mean_across_fit_seeds": {
+          "20": 0.26701895395914715,
+          "21": 0.26818044980367023,
+          "22": 0.7415147622426351,
+          "23": 0.4837196667989095
+        }
+      },
+      "action_disagreements": {
+        "map_paired_bootstrap95": [
+          -0.01978114478114478,
+          0.0741555338329532
+        ],
+        "mean": 0.030410214196292303,
+        "per_fit_seed": {
+          "3101": 0.03975718560820428,
+          "3102": 0.008906981530071537,
+          "3103": 0.042566475450601084
+        },
+        "per_map_mean_across_fit_seeds": {
+          "20": 0.0860215053763441,
+          "21": -0.04713804713804714,
+          "22": 0.062289562289562284,
+          "23": 0.02046783625730995
+        }
+      },
+      "post_changed": {
+        "map_paired_bootstrap95": [
+          0.014181207313660925,
+          0.05595221896682934
+        ],
+        "mean": 0.031175168259133235,
+        "per_fit_seed": {
+          "3101": 0.031346803951020304,
+          "3102": 0.028551785533867273,
+          "3103": 0.03362691529251213
+        },
+        "per_map_mean_across_fit_seeds": {
+          "20": 0.027190230408528155,
+          "21": 0.01636479186526851,
+          "22": 0.06914802800068294,
+          "23": 0.011997622762053338
+        }
+      }
+    }
+  },
+  "protected_access": false,
+  "source_sha256": {
+    "research/mappo_v5_2_goal_architecture/__init__.py": "fbd65c2fce332f17f667f1045956c4e33a106850cbd385f0e806e5509fa32ed5",
+    "research/mappo_v5_2_goal_architecture/analyze.py": "93dd8462cbe710d1b389de8015c9db11138e0f710521b67be1aa358239d2ed32",
+    "research/mappo_v5_2_goal_architecture/common.py": "bf61fb083df872a5671ee3ae66c77eb30902c20e5ae1a02844da8adaa1b9b065",
+    "research/mappo_v5_2_goal_architecture/evaluate.py": "a4bd68c07ef3348e0781268470e19f217edbd33f6788306734b9b08b1946380c",
+    "research/mappo_v5_2_goal_architecture/models.py": "d0abba660d8afa7b891213b0908091189979c9ef61f2dd45f61974156df61fa6",
+    "research/mappo_v5_2_goal_architecture/prepare.py": "7f4e7461c9b12534792073ec8e99699dbb2322a0d11827aa59f0bae3ea285ce8",
+    "research/mappo_v5_2_goal_architecture/tests.py": "a197b1745e842274aff40a676f8590a4aed0ecd5bb0a0349a8e917f27384f993",
+    "research/mappo_v5_2_goal_architecture/train.py": "2f8fa7370d8075099ba08ca554286b0a951f0eb13feb8196c3ecddd9ecac76fb"
+  },
+  "status": "COMPLETE_OFFLINE_COMPARISON"
+}

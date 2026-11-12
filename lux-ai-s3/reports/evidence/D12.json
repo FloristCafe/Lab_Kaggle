@@ -1,0 +1,2483 @@
+{
+  "arm_adapter": {
+    "FULL": {
+      "counts": {
+        "A": 167736,
+        "E": 191382,
+        "L": 171941,
+        "P": 191382,
+        "U": 193492,
+        "V": 191382,
+        "X": 88479,
+        "executed_X": 88479
+      },
+      "fallback_first_reasons": {
+        "SCORE_known_zero": 1,
+        "final_target_reserved": 4205,
+        "original_conditional_support": 19440
+      },
+      "n_cases": 48,
+      "overlapping_rejection_reasons": {
+        "SCORE_known_zero": 1,
+        "final_target_reserved": 11948,
+        "original_conditional_support": 19441
+      },
+      "per_mode": {
+        "DEFEND": {
+          "Replan": 129924,
+          "accepted": 116880,
+          "effective": 40198
+        },
+        "EXPLORE": {
+          "Replan": 13034,
+          "accepted": 11029,
+          "effective": 10961
+        },
+        "INTERCEPT": {
+          "Replan": 44174,
+          "accepted": 36556,
+          "effective": 35378
+        },
+        "RECHARGE": {
+          "Replan": 0,
+          "accepted": 0,
+          "effective": 0
+        },
+        "SCORE": {
+          "Replan": 4250,
+          "accepted": 3271,
+          "effective": 1942
+        }
+      },
+      "rates": {
+        "conditional_legality": {
+          "case_equal_mean_nonmissing": 0.8909654655507379,
+          "case_nonmissing_count": 48,
+          "pooled_d": 191382,
+          "pooled_n": 171941,
+          "pooled_rate": 0.8984178240377882
+        },
+        "coordinate_validity": {
+          "case_equal_mean_nonmissing": 1.0,
+          "case_nonmissing_count": 48,
+          "pooled_d": 191382,
+          "pooled_n": 191382,
+          "pooled_rate": 1.0
+        },
+        "effective_fraction_of_acceptance": {
+          "case_equal_mean_nonmissing": 0.5495226668095682,
+          "case_nonmissing_count": 48,
+          "pooled_d": 167736,
+          "pooled_n": 88479,
+          "pooled_rate": 0.5274896265560166
+        },
+        "effective_goal_progress_primitive_units": {
+          "case_equal_mean_nonmissing": 0.42420747156012983,
+          "case_nonmissing_count": 48,
+          "pooled_d": 131923,
+          "pooled_n": 55600,
+          "pooled_rate": 0.42145797169561033
+        },
+        "effective_nontrivial_node_first_arrival": {
+          "case_equal_mean_nonmissing": 0.06565017075629427,
+          "case_nonmissing_count": 48,
+          "pooled_d": 86860,
+          "pooled_n": 5379,
+          "pooled_rate": 0.06192723923555146
+        },
+        "effective_replacement_per_Replan": {
+          "case_equal_mean_nonmissing": 0.4731036538269189,
+          "case_nonmissing_count": 48,
+          "pooled_d": 191382,
+          "pooled_n": 88479,
+          "pooled_rate": 0.46231620528576356
+        },
+        "first_step_override_after_effective_receipt": {
+          "case_equal_mean_nonmissing": 0.41971674011434185,
+          "case_nonmissing_count": 48,
+          "pooled_d": 88479,
+          "pooled_n": 37567,
+          "pooled_rate": 0.42458662507487654
+        },
+        "lifetime_override_after_effective_receipt": {
+          "case_equal_mean_nonmissing": 0.37194048790525464,
+          "case_nonmissing_count": 48,
+          "pooled_d": 143446,
+          "pooled_n": 55165,
+          "pooled_rate": 0.3845698032709173
+        },
+        "proposal_acceptance_per_Replan": {
+          "case_equal_mean_nonmissing": 0.8674149192695774,
+          "case_nonmissing_count": 48,
+          "pooled_d": 191382,
+          "pooled_n": 167736,
+          "pooled_rate": 0.876446060758065
+        },
+        "proposal_acceptance_per_valid_proposal": {
+          "case_equal_mean_nonmissing": 0.8674149192695774,
+          "case_nonmissing_count": 48,
+          "pooled_d": 191382,
+          "pooled_n": 167736,
+          "pooled_rate": 0.876446060758065
+        },
+        "proposal_availability": {
+          "case_equal_mean_nonmissing": 1.0,
+          "case_nonmissing_count": 48,
+          "pooled_d": 191382,
+          "pooled_n": 191382,
+          "pooled_rate": 1.0
+        },
+        "same_state_immediate_action_change": {
+          "case_equal_mean_nonmissing": 0.285346598723162,
+          "case_nonmissing_count": 48,
+          "pooled_d": 88479,
+          "pooled_n": 25428,
+          "pooled_rate": 0.2873902281897399
+        }
+      }
+    },
+    "PUBLIC": {
+      "counts": {
+        "A": 168846,
+        "E": 191999,
+        "L": 173332,
+        "P": 191999,
+        "U": 194402,
+        "V": 191999,
+        "X": 88851,
+        "executed_X": 88851
+      },
+      "fallback_first_reasons": {
+        "SCORE_known_zero": 2,
+        "final_target_reserved": 4486,
+        "original_conditional_support": 18665
+      },
+      "n_cases": 48,
+      "overlapping_rejection_reasons": {
+        "SCORE_known_zero": 2,
+        "final_target_reserved": 12031,
+        "original_conditional_support": 18667
+      },
+      "per_mode": {
+        "DEFEND": {
+          "Replan": 129926,
+          "accepted": 117111,
+          "effective": 39721
+        },
+        "EXPLORE": {
+          "Replan": 13026,
+          "accepted": 11047,
+          "effective": 10986
+        },
+        "INTERCEPT": {
+          "Replan": 44654,
+          "accepted": 37227,
+          "effective": 36018
+        },
+        "RECHARGE": {
+          "Replan": 0,
+          "accepted": 0,
+          "effective": 0
+        },
+        "SCORE": {
+          "Replan": 4393,
+          "accepted": 3461,
+          "effective": 2126
+        }
+      },
+      "rates": {
+        "conditional_legality": {
+          "case_equal_mean_nonmissing": 0.8957633488173471,
+          "case_nonmissing_count": 48,
+          "pooled_d": 191999,
+          "pooled_n": 173332,
+          "pooled_rate": 0.9027755352892463
+        },
+        "coordinate_validity": {
+          "case_equal_mean_nonmissing": 1.0,
+          "case_nonmissing_count": 48,
+          "pooled_d": 191999,
+          "pooled_n": 191999,
+          "pooled_rate": 1.0
+        },
+        "effective_fraction_of_acceptance": {
+          "case_equal_mean_nonmissing": 0.5499263249469731,
+          "case_nonmissing_count": 48,
+          "pooled_d": 168846,
+          "pooled_n": 88851,
+          "pooled_rate": 0.5262250808428982
+        },
+        "effective_goal_progress_primitive_units": {
+          "case_equal_mean_nonmissing": 0.42235223051816684,
+          "case_nonmissing_count": 48,
+          "pooled_d": 132237,
+          "pooled_n": 55492,
+          "pooled_rate": 0.41964049396159925
+        },
+        "effective_nontrivial_node_first_arrival": {
+          "case_equal_mean_nonmissing": 0.05922671527869849,
+          "case_nonmissing_count": 48,
+          "pooled_d": 87369,
+          "pooled_n": 4897,
+          "pooled_rate": 0.056049628586798524
+        },
+        "effective_replacement_per_Replan": {
+          "case_equal_mean_nonmissing": 0.4748999162478899,
+          "case_nonmissing_count": 48,
+          "pooled_d": 191999,
+          "pooled_n": 88851,
+          "pooled_rate": 0.4627680352501836
+        },
+        "first_step_override_after_effective_receipt": {
+          "case_equal_mean_nonmissing": 0.4199447285615783,
+          "case_nonmissing_count": 48,
+          "pooled_d": 88851,
+          "pooled_n": 37869,
+          "pooled_rate": 0.4262079211263801
+        },
+        "lifetime_override_after_effective_receipt": {
+          "case_equal_mean_nonmissing": 0.3710451198127775,
+          "case_nonmissing_count": 48,
+          "pooled_d": 143551,
+          "pooled_n": 55200,
+          "pooled_rate": 0.38453232649023694
+        },
+        "proposal_acceptance_per_Replan": {
+          "case_equal_mean_nonmissing": 0.8710132860877865,
+          "case_nonmissing_count": 48,
+          "pooled_d": 191999,
+          "pooled_n": 168846,
+          "pooled_rate": 0.879410830264741
+        },
+        "proposal_acceptance_per_valid_proposal": {
+          "case_equal_mean_nonmissing": 0.8710132860877865,
+          "case_nonmissing_count": 48,
+          "pooled_d": 191999,
+          "pooled_n": 168846,
+          "pooled_rate": 0.879410830264741
+        },
+        "proposal_availability": {
+          "case_equal_mean_nonmissing": 1.0,
+          "case_nonmissing_count": 48,
+          "pooled_d": 191999,
+          "pooled_n": 191999,
+          "pooled_rate": 1.0
+        },
+        "same_state_immediate_action_change": {
+          "case_equal_mean_nonmissing": 0.27948021448301885,
+          "case_nonmissing_count": 48,
+          "pooled_d": 88851,
+          "pooled_n": 24916,
+          "pooled_rate": 0.28042453095632014
+        }
+      }
+    }
+  },
+  "arm_mean": {
+    "FULL": -1.2083333333333333,
+    "PUBLIC": -1.2083333333333333
+  },
+  "by_side": [
+    -0.08333333333333333,
+    0.08333333333333333
+  ],
+  "cases": 96,
+  "conclusion": "SUPPORT_CRITERION_NOT_MET",
+  "games": [
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 0,
+        "map_rank": 0,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2804229039,
+        "scoring": "FULL",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "81722e2887f58b87d97a2286df092b72c331b68ffc9499fe4258956330be210e",
+      "margin": -5,
+      "official_wins": [
+        0,
+        5
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 1,
+        "map_rank": 0,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2804229039,
+        "scoring": "PUBLIC",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "773c9ab12196e6ccc7cac1a935a533b95ad00e464b6e15cd50d907fa72974784",
+      "margin": -5,
+      "official_wins": [
+        0,
+        5
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 2,
+        "map_rank": 0,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2804229039,
+        "scoring": "PUBLIC",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "330e33c867e37a0afbc89465ecda074f33331262dae9c2fcc059e09555948b38",
+      "margin": -3,
+      "official_wins": [
+        4,
+        1
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 3,
+        "map_rank": 0,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2804229039,
+        "scoring": "FULL",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "1b24750c37250ad9ebc0a151c58452a45b6ea5081d3eea2014a498adf58d9560",
+      "margin": -3,
+      "official_wins": [
+        4,
+        1
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 4,
+        "map_rank": 1,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3816106184,
+        "scoring": "PUBLIC",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "531e345c5970576b41667727778a340ec97dae285ba7704bad601e4a77735ae5",
+      "margin": 1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 5,
+        "map_rank": 1,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3816106184,
+        "scoring": "FULL",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "6adfc7bbf35a44849f9a345b9cdf67d6e983ec7427a9b48b0a9b9b56994f15b1",
+      "margin": 1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 6,
+        "map_rank": 1,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3816106184,
+        "scoring": "FULL",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "a23892cd815179ae92bee0917f56053a26621b80fab2adad7aaac9f80a7faa18",
+      "margin": 1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 7,
+        "map_rank": 1,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3816106184,
+        "scoring": "PUBLIC",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "9a3261110d72cf9f2a5ad1d8d6f1dc922e191ee326355c6872ca6072e0bfd28a",
+      "margin": 1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 8,
+        "map_rank": 2,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3488031746,
+        "scoring": "FULL",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "c77c384b610232b79a51134d7f446580394051c3b0e1c899aecb9a9fe8659472",
+      "margin": -3,
+      "official_wins": [
+        1,
+        4
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 9,
+        "map_rank": 2,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3488031746,
+        "scoring": "PUBLIC",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "0ce6dd48c11f51a6c5582ce8f52f274e827d51a2324ea0aef4d45460b289cd8b",
+      "margin": -3,
+      "official_wins": [
+        1,
+        4
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 10,
+        "map_rank": 2,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3488031746,
+        "scoring": "PUBLIC",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "383e06d230acf9890af2d6464bd8b69bcdd6648edc097904f7f581728acc9cc6",
+      "margin": 1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 11,
+        "map_rank": 2,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3488031746,
+        "scoring": "FULL",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "aae19aa308c7df1e5e3555a4c4f3c7db56938a8da912dac62527c28c22c360a8",
+      "margin": 1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 12,
+        "map_rank": 3,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3936961555,
+        "scoring": "PUBLIC",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "2ec7be40de60278e3376321a186ec4fdfaf0865a36f01418d2c33f18b5767392",
+      "margin": -3,
+      "official_wins": [
+        1,
+        4
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 13,
+        "map_rank": 3,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3936961555,
+        "scoring": "FULL",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "ce0a62109ef4996f1a88b8643cfa9d04885dbe2eab5eaa82bcf68c3103925ad2",
+      "margin": -1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 14,
+        "map_rank": 3,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3936961555,
+        "scoring": "FULL",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "7a7be2517970511f9691c6a84dae7524742b82599f45452ae51ed966ee729c1c",
+      "margin": -5,
+      "official_wins": [
+        5,
+        0
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 15,
+        "map_rank": 3,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3936961555,
+        "scoring": "PUBLIC",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "ad7cd059ed90fd793b1d8f84beacaa9e54be0a11a0471a408778e3126e105898",
+      "margin": -5,
+      "official_wins": [
+        5,
+        0
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 16,
+        "map_rank": 4,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2767768129,
+        "scoring": "FULL",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "94b539c94db5f6c859f7a1630ab0bd2355c8f4a85fbd29b298ed21994cd3787f",
+      "margin": -3,
+      "official_wins": [
+        1,
+        4
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 17,
+        "map_rank": 4,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2767768129,
+        "scoring": "PUBLIC",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "69066d1c930d35ac61049bb48e05afd2fd6349a1bc1732ef2db23ba11631e3a7",
+      "margin": -3,
+      "official_wins": [
+        1,
+        4
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 18,
+        "map_rank": 4,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2767768129,
+        "scoring": "PUBLIC",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "d69322d382fef791bd8a589e013155797d987e3df2e08e99b976e5e35e816703",
+      "margin": -1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 19,
+        "map_rank": 4,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2767768129,
+        "scoring": "FULL",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "b7f6f10321f3e2cc965b5c04675e7df6e4dfad485464495dd006e4da186e1165",
+      "margin": -3,
+      "official_wins": [
+        4,
+        1
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 20,
+        "map_rank": 5,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3693126060,
+        "scoring": "PUBLIC",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "453a39d020741bac77d88c7f1ff0724e7d38c68a5b8de46e23e458bde99e0ccd",
+      "margin": 1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 21,
+        "map_rank": 5,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3693126060,
+        "scoring": "FULL",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "551c722c3d10815372fb70d2989755aca7af51494b3386adff111cd99515fe99",
+      "margin": 1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 22,
+        "map_rank": 5,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3693126060,
+        "scoring": "FULL",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "5562d1dd5f35736f130fcbcf94d1b0a44dcdc04bcbdf9b7a07a15757a9ce2a2c",
+      "margin": 1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 23,
+        "map_rank": 5,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3693126060,
+        "scoring": "PUBLIC",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "e8ff313990530a6a79451d8ed4b2fe4913672a4c4bc282e492f0b34f92e08914",
+      "margin": 1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 24,
+        "map_rank": 6,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 4223482304,
+        "scoring": "FULL",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "9c484a2edc1db1650cebfb196689fd922941362ba88211540dbe214acbc7f12d",
+      "margin": -3,
+      "official_wins": [
+        1,
+        4
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 25,
+        "map_rank": 6,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 4223482304,
+        "scoring": "PUBLIC",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "0e4a9f9745559db31eb03a1ce732562ac13ce9ad2ad14bb89a7855e3c092597b",
+      "margin": -1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 26,
+        "map_rank": 6,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 4223482304,
+        "scoring": "PUBLIC",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "027d5d4ed6264b6716ad0d2f0f03c28117a95e9a6f386f61ec9688de906eab42",
+      "margin": 3,
+      "official_wins": [
+        1,
+        4
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 27,
+        "map_rank": 6,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 4223482304,
+        "scoring": "FULL",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "5814e03dfb3d3a67b9d3368df75dadceb7b4e282c2f40ec96f8e7a31e018030f",
+      "margin": 3,
+      "official_wins": [
+        1,
+        4
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 28,
+        "map_rank": 7,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2180813552,
+        "scoring": "PUBLIC",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "f627cbfc41f4b2d2a4ee9e5e106e8fd832b8928d57398cf7f9c84e66d5046e2b",
+      "margin": -5,
+      "official_wins": [
+        0,
+        5
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 29,
+        "map_rank": 7,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2180813552,
+        "scoring": "FULL",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "042f142d94d23ce948fa9fb2efe9887ba2218987f695a36c4046c457bc18ad69",
+      "margin": -5,
+      "official_wins": [
+        0,
+        5
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 30,
+        "map_rank": 7,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2180813552,
+        "scoring": "FULL",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "e276126290ef3d3cbfce6965b944c06314b88401f54d7ae519699eb6cd31d66e",
+      "margin": -5,
+      "official_wins": [
+        5,
+        0
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 31,
+        "map_rank": 7,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2180813552,
+        "scoring": "PUBLIC",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "168a74a27ee2dbc46fea6acf297b98a1fe4dbd05407ce12c6ad28b2f720e239e",
+      "margin": -3,
+      "official_wins": [
+        4,
+        1
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 32,
+        "map_rank": 8,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 4194294993,
+        "scoring": "FULL",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "d897c8ee62afc575487bde9b6808dda4d6ec220705c458eb905b7f63dcb8619a",
+      "margin": -1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 33,
+        "map_rank": 8,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 4194294993,
+        "scoring": "PUBLIC",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "b349783f63333e5c7fafdee04097377e1e60db5699fc213a408908747bb94b98",
+      "margin": -1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 34,
+        "map_rank": 8,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 4194294993,
+        "scoring": "PUBLIC",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "676dfdc53139f96aa42c135bfdf88a722693e09697663d84d7d55378532df79a",
+      "margin": 1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 35,
+        "map_rank": 8,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 4194294993,
+        "scoring": "FULL",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "3f19bd598bac083d575cec2394cc30791eb29008ae68b796aa8cb9f13b809808",
+      "margin": 1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 36,
+        "map_rank": 9,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3181252173,
+        "scoring": "PUBLIC",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "5f305b302946100359c8e7dc1a32d4c42b52172b4ceface3fa84f030f9b50253",
+      "margin": -1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 37,
+        "map_rank": 9,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3181252173,
+        "scoring": "FULL",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "ed8f6d0debe6e0d8379e9e8ede082cecfbb9b49bf5cf4b1a1bea0f2670d81d27",
+      "margin": -1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 38,
+        "map_rank": 9,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3181252173,
+        "scoring": "FULL",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "fdde5f7817b11ad814f5fdb160326a676970f37ea383820d275385e1e96458c7",
+      "margin": 1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 39,
+        "map_rank": 9,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3181252173,
+        "scoring": "PUBLIC",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "2807bb3c6d5a2d1541bbe61570d8c9fb10306b173ef8ba2095e28ab0f212c7a8",
+      "margin": 1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 40,
+        "map_rank": 10,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3587592323,
+        "scoring": "FULL",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "f9fc69dbb4239174ea6d0f4c41673cbb7b6f89599e750d0cd6b555777bb2c666",
+      "margin": -3,
+      "official_wins": [
+        1,
+        4
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 41,
+        "map_rank": 10,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3587592323,
+        "scoring": "PUBLIC",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "c545bf1162d487b4d112ff7885aa738f535ba47e29b62dd6de0ce2fdb29c68c1",
+      "margin": -3,
+      "official_wins": [
+        1,
+        4
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 42,
+        "map_rank": 10,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3587592323,
+        "scoring": "PUBLIC",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "26ceff3abdf9ffcee0eff1d87db5be2eec7897f84fe77a4247168b6e971fd748",
+      "margin": -1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 43,
+        "map_rank": 10,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3587592323,
+        "scoring": "FULL",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "6188345caa38964ec6f1679e98d9646d179948509666b5a6f14be198679a171d",
+      "margin": -3,
+      "official_wins": [
+        4,
+        1
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 44,
+        "map_rank": 11,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2842142308,
+        "scoring": "PUBLIC",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "8f3b224cad7efb846d5d2199be733025f818d2b7196923f8335588c876ab84c1",
+      "margin": -1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 45,
+        "map_rank": 11,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2842142308,
+        "scoring": "FULL",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "19f15a57e21c013fc17b8fff010dbc8c7bc583083c8050660bff9687e4a2e246",
+      "margin": -1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 46,
+        "map_rank": 11,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2842142308,
+        "scoring": "FULL",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "c8ba6e43af5c9539a261f6f5030f0fbbc289e67923ca3715fd9f4e17e39c74e7",
+      "margin": -1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 47,
+        "map_rank": 11,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2842142308,
+        "scoring": "PUBLIC",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "39477bfa1e196a07856245e521062694619f483d40d227e5802c2193f896b6c5",
+      "margin": -1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 48,
+        "map_rank": 12,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 4063220258,
+        "scoring": "FULL",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "9d4a283985911ce88554730ee98fab9e3c7060e7ec39588bf323cb1e14a28cb9",
+      "margin": -1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 49,
+        "map_rank": 12,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 4063220258,
+        "scoring": "PUBLIC",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "821660445fe919b0294269c3321a8e804a97f1733bd4b03a84f49f20d2d2c1be",
+      "margin": -1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 50,
+        "map_rank": 12,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 4063220258,
+        "scoring": "PUBLIC",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "80f8aedfae906260762a856aa80bf129b34e8d037a32f448b6cc0e6020c2f58d",
+      "margin": -1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 51,
+        "map_rank": 12,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 4063220258,
+        "scoring": "FULL",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "e7417eef4a5dab9ae1eec5215e66399f0560d4eeaabec0a7b3db7f045c71b43e",
+      "margin": -1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 52,
+        "map_rank": 13,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2813970834,
+        "scoring": "PUBLIC",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "f6bfd80a64452af3b31e7892ab506136d08bc2baa47a6f18f4aa7a88387e6a26",
+      "margin": -5,
+      "official_wins": [
+        0,
+        5
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 53,
+        "map_rank": 13,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2813970834,
+        "scoring": "FULL",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "affbfc1e6280ed361b5814dd7866e1239cc62db91079d3530cc69aca6710a37e",
+      "margin": -5,
+      "official_wins": [
+        0,
+        5
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 54,
+        "map_rank": 13,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2813970834,
+        "scoring": "FULL",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "b2ea01e942629c2c789359981844c474cc6960d4e60dbdb1d59401b5d344f6f8",
+      "margin": 1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 55,
+        "map_rank": 13,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2813970834,
+        "scoring": "PUBLIC",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "83ac6b05278e9d5a43ab6225043d85496eabecb7c8d6dbe98021a85727894d4a",
+      "margin": 1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 56,
+        "map_rank": 14,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3938049013,
+        "scoring": "FULL",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "b389d7e0628929d190696b607bc609ed43a9e14f0bc53bed1a989346ac239dd9",
+      "margin": -3,
+      "official_wins": [
+        1,
+        4
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 57,
+        "map_rank": 14,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3938049013,
+        "scoring": "PUBLIC",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "fe53d6c8514a57a886c01cc272fc90e75fbbb9d46903be62729b6d274a0ea645",
+      "margin": -3,
+      "official_wins": [
+        1,
+        4
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 58,
+        "map_rank": 14,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3938049013,
+        "scoring": "PUBLIC",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "9fd9df73be79de181a1ba7568819bf61ec0f7dd5d82c1c5591008ca3e4cb5c24",
+      "margin": -5,
+      "official_wins": [
+        5,
+        0
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 59,
+        "map_rank": 14,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3938049013,
+        "scoring": "FULL",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "e4f8eb279efb74f98b2e498448de31e27f117656d4e38db47e00dd3d105163f2",
+      "margin": -5,
+      "official_wins": [
+        5,
+        0
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 60,
+        "map_rank": 15,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3285874169,
+        "scoring": "PUBLIC",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "320abd9d691256d773d34fcc893835f8a0790827fa7cdcd33a1e8a9cf6fbd9f5",
+      "margin": -1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 61,
+        "map_rank": 15,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3285874169,
+        "scoring": "FULL",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "16e27143dd6890829db3684f4ea04a7491092a5e0a815845bc39d87277943b30",
+      "margin": -1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 62,
+        "map_rank": 15,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3285874169,
+        "scoring": "FULL",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "bb9d632492dcddc9255ffc8811c9859bc927e383616d2769fb56d879e8d1e356",
+      "margin": 3,
+      "official_wins": [
+        1,
+        4
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 63,
+        "map_rank": 15,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3285874169,
+        "scoring": "PUBLIC",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "2b3e2ef6fa75267b1a0116bc8eb3fc6ffc92455e5c2ba20350aac41979ff41e2",
+      "margin": -1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 64,
+        "map_rank": 16,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3976032875,
+        "scoring": "FULL",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "fe4c2a5131144f883a1858baa7089b59ddaeb0634512a3e975f41885e3e9f39c",
+      "margin": -1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 65,
+        "map_rank": 16,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3976032875,
+        "scoring": "PUBLIC",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "245a0125c707d5377252cbecbd36a1c3f35165db505fa31ad7771d24186fc669",
+      "margin": -3,
+      "official_wins": [
+        1,
+        4
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 66,
+        "map_rank": 16,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3976032875,
+        "scoring": "PUBLIC",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "773bf9d6131182adf09dcee72dabe3a1514f3c7bb7279c366ed1f9e0cf0a64d1",
+      "margin": -1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 67,
+        "map_rank": 16,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3976032875,
+        "scoring": "FULL",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "e0a33df5d01f5bb4d351c82b8a7b1914c971fbcd044d1f2a33f0927602d0c778",
+      "margin": -1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 68,
+        "map_rank": 17,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2782918691,
+        "scoring": "PUBLIC",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "002bcf85764956a0fe2ede80ac4e81da14f33eabb5679c713c26fd8fcb1b656f",
+      "margin": 1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 69,
+        "map_rank": 17,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2782918691,
+        "scoring": "FULL",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "6c779a6b82c535686b40fe3bcf892fd86d2ba66f10f031c2bcecb0a1276b5978",
+      "margin": 1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 70,
+        "map_rank": 17,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2782918691,
+        "scoring": "FULL",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "a6833b243bfc0306656475dae7ef8a97a53cfbaf9957426531a5b3ba91de6281",
+      "margin": -3,
+      "official_wins": [
+        4,
+        1
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 71,
+        "map_rank": 17,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2782918691,
+        "scoring": "PUBLIC",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "8424c41def054b795b2b14dfffa8d2cb895b19e0c681acfa5a16d04adf7d02cd",
+      "margin": -3,
+      "official_wins": [
+        4,
+        1
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 72,
+        "map_rank": 18,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 4196366040,
+        "scoring": "FULL",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "1c3ca9222972f8c3b57df2a7fbe81efab4dd6e8ed505bad905f386096d884f1e",
+      "margin": 1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 73,
+        "map_rank": 18,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 4196366040,
+        "scoring": "PUBLIC",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "33d8ebdaf1861a9c4df6b553a795ba3eb6b2d04e88ea11088a4a18243a663211",
+      "margin": 1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 74,
+        "map_rank": 18,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 4196366040,
+        "scoring": "PUBLIC",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "c342528a5bd50766e4d5eee4da957b1989c4a110709f2c294dfeb115b5b69ed2",
+      "margin": -1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 75,
+        "map_rank": 18,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 4196366040,
+        "scoring": "FULL",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "18fe72d4c6cad0bdaedc5a62c9e7a754eee3fcd534a8d5b1345320e27c4699f7",
+      "margin": -1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 76,
+        "map_rank": 19,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3927551097,
+        "scoring": "PUBLIC",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "aaad24815ede45c30ee4de129b1311eced452c50b2ae0aa16da68304d56de206",
+      "margin": -1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 77,
+        "map_rank": 19,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3927551097,
+        "scoring": "FULL",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "7f6fca12ade8fad8f710b0718c12da0c80b1d3629ff331bc648d32fb9ff4e35d",
+      "margin": -1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 78,
+        "map_rank": 19,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3927551097,
+        "scoring": "FULL",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "f86f478a02b1e780ac665e12a8fd9f554ef6233fda2c005534a7cd62d2926d83",
+      "margin": -1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 79,
+        "map_rank": 19,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3927551097,
+        "scoring": "PUBLIC",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "6e017b72522490050b9185f0295c785251c329358b01d1469b564ddbae8587bb",
+      "margin": -3,
+      "official_wins": [
+        4,
+        1
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 80,
+        "map_rank": 20,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3968971887,
+        "scoring": "FULL",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "f769499cae052c31032c09b90d9689b146a72b79391b60b9d0bfd39816d8eb95",
+      "margin": 1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 81,
+        "map_rank": 20,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3968971887,
+        "scoring": "PUBLIC",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "ad8bd74ba77df3b7a43740ab220aa833cf34b3095c1ad02f9432c9b5cf0b1c23",
+      "margin": 1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 82,
+        "map_rank": 20,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3968971887,
+        "scoring": "PUBLIC",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "84d35d653b072150d147c25ef950b497fdca71db8c9c811d64942fcc11ba998b",
+      "margin": 3,
+      "official_wins": [
+        1,
+        4
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 83,
+        "map_rank": 20,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 3968971887,
+        "scoring": "FULL",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "5ce096c4c702fda07f44c15d9d9c8e8e8b5c3f23038331dc90127b695a79a780",
+      "margin": 3,
+      "official_wins": [
+        1,
+        4
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 84,
+        "map_rank": 21,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2998315140,
+        "scoring": "PUBLIC",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "f81707102e75fc2ceee1e7a61b2681f628d8af81f95b086e0b91597c6c43a24c",
+      "margin": 1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 85,
+        "map_rank": 21,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2998315140,
+        "scoring": "FULL",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "5e7d7871a037f1501e0771e57b62a57e7e9bcf1943450426708e63d74eaf75bf",
+      "margin": 1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 86,
+        "map_rank": 21,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2998315140,
+        "scoring": "FULL",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "7a038a49d5934d2c83a56d26ce0ff2f7d3efa8e7d741abc6596f715c10a1453e",
+      "margin": -1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 87,
+        "map_rank": 21,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2998315140,
+        "scoring": "PUBLIC",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "a74fcc423fa7ea0232072d569efc0994998dd34b18dec4ebdc29349ede0ddd72",
+      "margin": 1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 88,
+        "map_rank": 22,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2791231946,
+        "scoring": "FULL",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "800ec80f6d0f8ad7a0789c63745d8319423a559a3f4dc0d58dad036b5926bbb2",
+      "margin": -5,
+      "official_wins": [
+        0,
+        5
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 89,
+        "map_rank": 22,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2791231946,
+        "scoring": "PUBLIC",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "4e6650e3db18850a81a20795132616b4187aa5a16a1975c318e1c6c9cc7c8cbe",
+      "margin": -5,
+      "official_wins": [
+        0,
+        5
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 90,
+        "map_rank": 22,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2791231946,
+        "scoring": "PUBLIC",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "f7dabaa19c10e89ad673f4e731adc1ad4124a5a8e093166cd3801de9f8fb903f",
+      "margin": -1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 91,
+        "map_rank": 22,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2791231946,
+        "scoring": "FULL",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "5d6b4c16680be39984e760b8852b79bd6b4fb1f5d1f6e4574049e5b5f89b6233",
+      "margin": -1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 92,
+        "map_rank": 23,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2198188547,
+        "scoring": "PUBLIC",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "f32d1fb7955a56547b527873d91ebb6238c33beeca6861f6a55559bbe6eac208",
+      "margin": -1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 93,
+        "map_rank": 23,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2198188547,
+        "scoring": "FULL",
+        "side": 0,
+        "steps": 505
+      },
+      "complete_sha256": "7397cb658283299e452d65902395c370594cc045dd2d2e480cee82b804a8596b",
+      "margin": -1,
+      "official_wins": [
+        2,
+        3
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 94,
+        "map_rank": 23,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2198188547,
+        "scoring": "FULL",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "b38be017572ca3a234cde98f602e8a8b93b286a113db009892d75cb78c66d572",
+      "margin": -1,
+      "official_wins": [
+        3,
+        2
+      ]
+    },
+    {
+      "case": {
+        "actor_rng": 42,
+        "arm": "Bprime",
+        "index": 95,
+        "map_rank": 23,
+        "model": "S2",
+        "opponent": "v2",
+        "root": 2198188547,
+        "scoring": "PUBLIC",
+        "side": 1,
+        "steps": 505
+      },
+      "complete_sha256": "b68449550c96a20a64931cb7c79116d48b88f4f149d29fb8289179234782b01e",
+      "margin": -1,
+      "official_wins": [
+        3,
+        2
+      ]
+    }
+  ],
+  "map_bootstrap95": [
+    -0.2916666666666667,
+    0.25
+  ],
+  "map_differences": [
+    0.0,
+    0.0,
+    0.0,
+    -1.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -2.0,
+    -1.0,
+    0.0,
+    0.0,
+    -1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0
+  ],
+  "maps": 24,
+  "point_PUBLIC_minus_FULL": 0.0,
+  "raw_map_side_arm": [
+    [
+      [
+        -5.0,
+        -5.0
+      ],
+      [
+        -3.0,
+        -3.0
+      ]
+    ],
+    [
+      [
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        -3.0,
+        -3.0
+      ],
+      [
+        1.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        -1.0,
+        -3.0
+      ],
+      [
+        -5.0,
+        -5.0
+      ]
+    ],
+    [
+      [
+        -3.0,
+        -3.0
+      ],
+      [
+        -3.0,
+        -1.0
+      ]
+    ],
+    [
+      [
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        -3.0,
+        -1.0
+      ],
+      [
+        3.0,
+        3.0
+      ]
+    ],
+    [
+      [
+        -5.0,
+        -5.0
+      ],
+      [
+        -5.0,
+        -3.0
+      ]
+    ],
+    [
+      [
+        -1.0,
+        -1.0
+      ],
+      [
+        1.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        -1.0,
+        -1.0
+      ],
+      [
+        1.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        -3.0,
+        -3.0
+      ],
+      [
+        -3.0,
+        -1.0
+      ]
+    ],
+    [
+      [
+        -1.0,
+        -1.0
+      ],
+      [
+        -1.0,
+        -1.0
+      ]
+    ],
+    [
+      [
+        -1.0,
+        -1.0
+      ],
+      [
+        -1.0,
+        -1.0
+      ]
+    ],
+    [
+      [
+        -5.0,
+        -5.0
+      ],
+      [
+        1.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        -3.0,
+        -3.0
+      ],
+      [
+        -5.0,
+        -5.0
+      ]
+    ],
+    [
+      [
+        -1.0,
+        -1.0
+      ],
+      [
+        3.0,
+        -1.0
+      ]
+    ],
+    [
+      [
+        -1.0,
+        -3.0
+      ],
+      [
+        -1.0,
+        -1.0
+      ]
+    ],
+    [
+      [
+        1.0,
+        1.0
+      ],
+      [
+        -3.0,
+        -3.0
+      ]
+    ],
+    [
+      [
+        1.0,
+        1.0
+      ],
+      [
+        -1.0,
+        -1.0
+      ]
+    ],
+    [
+      [
+        -1.0,
+        -1.0
+      ],
+      [
+        -1.0,
+        -3.0
+      ]
+    ],
+    [
+      [
+        1.0,
+        1.0
+      ],
+      [
+        3.0,
+        3.0
+      ]
+    ],
+    [
+      [
+        1.0,
+        1.0
+      ],
+      [
+        -1.0,
+        1.0
+      ]
+    ],
+    [
+      [
+        -5.0,
+        -5.0
+      ],
+      [
+        -1.0,
+        -1.0
+      ]
+    ],
+    [
+      [
+        -1.0,
+        -1.0
+      ],
+      [
+        -1.0,
+        -1.0
+      ]
+    ]
+  ],
+  "status": "PASS"
+}

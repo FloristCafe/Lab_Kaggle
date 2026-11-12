@@ -1,0 +1,16 @@
+# Independent Python 3.11 CPU process environment.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.6.0+cpu
+numpy==2.2.6
+scipy==1.15.3
+gym==0.26.2
+einops==0.8.1
+omegaconf==2.3.0
+matplotlib==3.10.8
+jax==0.4.38
+jaxlib==0.4.38
+flax==0.10.2
+gymnax==0.0.8
+tyro==0.9.31
+six==1.17.0
+click==8.1.8

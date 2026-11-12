@@ -1,0 +1,358 @@
+{
+  "equal_policy_margin": 0.25,
+  "equal_policy_margin_bootstrap95": [
+    -0.5,
+    1.375
+  ],
+  "formal_promotion_authorized": false,
+  "maps_independent_units": 4,
+  "policies": {
+    "frozen_gate": {
+      "arms": {
+        "NEW": {
+          "game_wins": 3,
+          "mean_margin": -1.5,
+          "official_submatch_wins": 14
+        },
+        "OLD": {
+          "game_wins": 3,
+          "mean_margin": -1.75,
+          "official_submatch_wins": 13
+        }
+      },
+      "checks": {
+        "global_soft_review_reduction": true,
+        "goal_quality": true,
+        "no_negative_margin": true,
+        "positive_margin": false,
+        "timing": true
+      },
+      "final_numeric_threshold": false,
+      "map_margin_deltas": [
+        0.0,
+        -1.0,
+        2.0,
+        0.0
+      ],
+      "margin_bootstrap95": [
+        -0.75,
+        1.5
+      ],
+      "mean_deltas": {
+        "completion": -0.003322353263203714,
+        "interval": 1.4667625130598685,
+        "margin": 0.25,
+        "soft_only": -1821.875,
+        "soft_only_unchanged": -1787.0,
+        "stall": 0.008445866351572236,
+        "tau": 0.028528914996944155
+      },
+      "new_global_soft_only_young": 0,
+      "old_global_soft_only_young": 20361,
+      "pair_results": [
+        {
+          "deltas": {
+            "completion": 0.003858186419494314,
+            "interval": 2.171376914064078,
+            "margin": 0,
+            "soft_only": -1754,
+            "soft_only_unchanged": -1740,
+            "stall": -0.003872841697595608,
+            "tau": 0.011672791993158294
+          },
+          "different_team_action_steps": 188,
+          "different_uid_action_slots": 613,
+          "first_different_action_step": 188,
+          "map": 17001,
+          "side": 0
+        },
+        {
+          "deltas": {
+            "completion": 0.03244296686919637,
+            "interval": 2.0023013460107792,
+            "margin": 0,
+            "soft_only": -2331,
+            "soft_only_unchanged": -2291,
+            "stall": 0.020988052954472036,
+            "tau": 0.010155244530244634
+          },
+          "different_team_action_steps": 300,
+          "different_uid_action_slots": 1049,
+          "first_different_action_step": 157,
+          "map": 17001,
+          "side": 1
+        },
+        {
+          "deltas": {
+            "completion": 0.009992412906984119,
+            "interval": 0.9593395165625562,
+            "margin": 0,
+            "soft_only": -909,
+            "soft_only_unchanged": -888,
+            "stall": -0.013064893193680593,
+            "tau": 0.002829036558995135
+          },
+          "different_team_action_steps": 155,
+          "different_uid_action_slots": 870,
+          "first_different_action_step": 289,
+          "map": 17002,
+          "side": 0
+        },
+        {
+          "deltas": {
+            "completion": 0.006107573391004845,
+            "interval": 0.8027422883888216,
+            "margin": -2,
+            "soft_only": -812,
+            "soft_only_unchanged": -807,
+            "stall": -0.01966793263195654,
+            "tau": -0.005462441657337225
+          },
+          "different_team_action_steps": 375,
+          "different_uid_action_slots": 1804,
+          "first_different_action_step": 71,
+          "map": 17002,
+          "side": 1
+        },
+        {
+          "deltas": {
+            "completion": 0.06417890373775784,
+            "interval": 2.0043798382507525,
+            "margin": 2,
+            "soft_only": -2306,
+            "soft_only_unchanged": -2282,
+            "stall": 0.011862764419918542,
+            "tau": 0.05621229323894128
+          },
+          "different_team_action_steps": 291,
+          "different_uid_action_slots": 1222,
+          "first_different_action_step": 157,
+          "map": 17003,
+          "side": 0
+        },
+        {
+          "deltas": {
+            "completion": -0.0036676675154878047,
+            "interval": 2.1846745570134876,
+            "margin": 2,
+            "soft_only": -2795,
+            "soft_only_unchanged": -2720,
+            "stall": 0.0007127337165470649,
+            "tau": 0.13994363340487248
+          },
+          "different_team_action_steps": 298,
+          "different_uid_action_slots": 1291,
+          "first_different_action_step": 138,
+          "map": 17003,
+          "side": 1
+        },
+        {
+          "deltas": {
+            "completion": -0.15061442706670922,
+            "interval": 0.6947413632817814,
+            "margin": 0,
+            "soft_only": -2036,
+            "soft_only_unchanged": -1971,
+            "stall": 0.09044775692229234,
+            "tau": -0.03145029452214754
+          },
+          "different_team_action_steps": 314,
+          "different_uid_action_slots": 1292,
+          "first_different_action_step": 41,
+          "map": 17004,
+          "side": 0
+        },
+        {
+          "deltas": {
+            "completion": 0.011123225152129816,
+            "interval": 0.9145442809066908,
+            "margin": 0,
+            "soft_only": -1632,
+            "soft_only_unchanged": -1597,
+            "stall": -0.019838709677419353,
+            "tau": 0.04433105642882618
+          },
+          "different_team_action_steps": 412,
+          "different_uid_action_slots": 1694,
+          "first_different_action_step": 44,
+          "map": 17004,
+          "side": 1
+        }
+      ]
+    },
+    "frozen_r": {
+      "arms": {
+        "NEW": {
+          "game_wins": 2,
+          "mean_margin": -1.75,
+          "official_submatch_wins": 13
+        },
+        "OLD": {
+          "game_wins": 2,
+          "mean_margin": -2.0,
+          "official_submatch_wins": 12
+        }
+      },
+      "checks": {
+        "global_soft_review_reduction": true,
+        "goal_quality": true,
+        "no_negative_margin": true,
+        "positive_margin": false,
+        "timing": true
+      },
+      "final_numeric_threshold": false,
+      "map_margin_deltas": [
+        -1.0,
+        0.0,
+        2.0,
+        0.0
+      ],
+      "margin_bootstrap95": [
+        -0.75,
+        1.5
+      ],
+      "mean_deltas": {
+        "completion": 0.0029575908111624614,
+        "interval": 1.464754084073869,
+        "margin": 0.25,
+        "soft_only": -1899.0,
+        "soft_only_unchanged": -1782.5,
+        "stall": 0.018484518170022845,
+        "tau": 0.044454310896489574
+      },
+      "new_global_soft_only_young": 0,
+      "old_global_soft_only_young": 21571,
+      "pair_results": [
+        {
+          "deltas": {
+            "completion": 0.0006797470922510901,
+            "interval": 2.382041625916827,
+            "margin": 0,
+            "soft_only": -2091,
+            "soft_only_unchanged": -1937,
+            "stall": 0.014668699363418358,
+            "tau": 0.18038491147036173
+          },
+          "different_team_action_steps": 285,
+          "different_uid_action_slots": 1252,
+          "first_different_action_step": 149,
+          "map": 17001,
+          "side": 0
+        },
+        {
+          "deltas": {
+            "completion": 0.007872495602556956,
+            "interval": 1.9284135966264664,
+            "margin": -2,
+            "soft_only": -2286,
+            "soft_only_unchanged": -2199,
+            "stall": -0.010215885305649375,
+            "tau": 0.024721092231702713
+          },
+          "different_team_action_steps": 237,
+          "different_uid_action_slots": 950,
+          "first_different_action_step": 160,
+          "map": 17001,
+          "side": 1
+        },
+        {
+          "deltas": {
+            "completion": -0.005521616541353386,
+            "interval": 0.8387090730244977,
+            "margin": 0,
+            "soft_only": -888,
+            "soft_only_unchanged": -835,
+            "stall": 0.023949566436300307,
+            "tau": -0.0024663501924242492
+          },
+          "different_team_action_steps": 204,
+          "different_uid_action_slots": 1047,
+          "first_different_action_step": 253,
+          "map": 17002,
+          "side": 0
+        },
+        {
+          "deltas": {
+            "completion": -0.0012628199951546445,
+            "interval": 0.8495318775379141,
+            "margin": 0,
+            "soft_only": -776,
+            "soft_only_unchanged": -720,
+            "stall": -0.011621237568780307,
+            "tau": 0.0
+          },
+          "different_team_action_steps": 148,
+          "different_uid_action_slots": 893,
+          "first_different_action_step": 332,
+          "map": 17002,
+          "side": 1
+        },
+        {
+          "deltas": {
+            "completion": 0.03590120544401423,
+            "interval": 1.6829114260407438,
+            "margin": 4,
+            "soft_only": -2676,
+            "soft_only_unchanged": -2548,
+            "stall": 0.077028121932157,
+            "tau": 0.0660513625403758
+          },
+          "different_team_action_steps": 335,
+          "different_uid_action_slots": 1226,
+          "first_different_action_step": 64,
+          "map": 17003,
+          "side": 0
+        },
+        {
+          "deltas": {
+            "completion": 0.039231628372808774,
+            "interval": 2.264284322645826,
+            "margin": 0,
+            "soft_only": -2917,
+            "soft_only_unchanged": -2745,
+            "stall": -0.027153336216496293,
+            "tau": 0.15087387342528524
+          },
+          "different_team_action_steps": 288,
+          "different_uid_action_slots": 1141,
+          "first_different_action_step": 88,
+          "map": 17003,
+          "side": 1
+        },
+        {
+          "deltas": {
+            "completion": -0.05518867816368694,
+            "interval": 0.6251881165306854,
+            "margin": 0,
+            "soft_only": -1934,
+            "soft_only_unchanged": -1741,
+            "stall": 0.05467741935483872,
+            "tau": -0.027831205118737268
+          },
+          "different_team_action_steps": 404,
+          "different_uid_action_slots": 1486,
+          "first_different_action_step": 41,
+          "map": 17004,
+          "side": 0
+        },
+        {
+          "deltas": {
+            "completion": 0.0019487646778636042,
+            "interval": 1.146952634267993,
+            "margin": 0,
+            "soft_only": -1624,
+            "soft_only_unchanged": -1535,
+            "stall": 0.026542797364394355,
+            "tau": -0.03609919718464738
+          },
+          "different_team_action_steps": 350,
+          "different_uid_action_slots": 1329,
+          "first_different_action_step": 40,
+          "map": 17004,
+          "side": 1
+        }
+      ]
+    }
+  },
+  "screen_decision": "NO_GO"
+}

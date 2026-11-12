@@ -1,0 +1,12 @@
+{
+  "schema": "accepted_native_pool_v1",
+  "registry_environment": "LUX_OPPONENT_REGISTRY",
+  "sampler": "35_percent_V2_anchor_plus_65_percent_PFSP_with_10_percent_exploration",
+  "weight": "PFSP=(1-Beta(1,1)_posterior_winrate)^2",
+  "self_play": "not enabled without same acceptance gate",
+  "v2_anchor": 0.35,
+  "pfsp_exploration": 0.1,
+  "pfsp_power": 2.0,
+  "prior_alpha": 1.0,
+  "prior_beta": 1.0
+}

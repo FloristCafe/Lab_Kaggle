@@ -1,0 +1,7 @@
+{
+  "model": "c",
+  "inherits": "../common.json",
+  "initialization": "matching_macro_bc_required",
+  "teacher_kl": false,
+  "opponents": "../opponents/pool.json"
+}

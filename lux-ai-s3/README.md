@@ -1,39 +1,57 @@
-# Lux AI S3 · 精简架构存档
+# Lux AI Season 3：分层强化学习科研复盘与复现框架
 
-本目录由外层Lab_Kaggle仓库统一管理，不包含嵌套Git仓库。已停止训练项目维护，只保留少量可阅读的架构原型与物理代码。
+研究问题：在部分可观测、跨五小局保留地图知识的团队博弈中，宏观Goal策略能否通过模仿学习和MAPPO获得稳定的官方收益？
 
-现有A/B/C确实是轻量原型，不是先前提出的完整高上限架构：A为共享空间Actor（57220参数），B增加有限五小局空间GRU（61956参数），C增加单位Attention和条件前缀分配（63824参数）。保留代码用于结构参考，不宣称已实现完整Physics-first、长期Memory Transformer或反事实舰队学习系统。
+本项目保留完整的科研主线，而不是仅保留网络结构：官方作战环境、V2基线、因果特征、Goal执行链、专家数据审计、BC、MAPPO、恢复、配对评估以及有来源的结果。大量重复实验Runner、失败修复脚本、旧Waypoint策略和中间产物不放回主项目。
 
-## 保留内容
+**真实状态：已有框架与受控实验，不是已战胜V2的高竞争力成品。A/B/C仍是历史轻量原型，不等于先前设想的完整高上限架构。**
 
-- agents/mappo/model_a.py、model_b.py、model_c.py：三个历史Actor原型。
-- agents/mappo/shared/model.py：共享空间编码器、Actor和Critic定义。
-- agents/mappo/shared/policy.py：条件R/Mode/Goal解码与合法支持。
-- agents/mappo/shared/physics.py、features.py、observations.py：确定性物理工具及因果观察组件。
-- agents/v2/：原生V2参考源码，保持不变。
-- tests/test_architecture.py：CPU结构与基本因果边界测试。
+## 先看这四处
 
-训练、BC、评估Runner、对手池、实验配置、历史研究工具、vendor环境和繁杂文档已移出主仓库。这里没有正式训练/评估入口，也不承诺直接端到端运行比赛。测试中的张量schema供阅读与进一步重写时参考。
+1. [研究问题、实验迭代与结论](docs/research_story.md)：为什么做、如何控制变量、哪些结果支持/不支持假设。
+2. [环境、执行器与学习数据流](docs/architecture_and_environment.md)：从公开观察到官方收益的真实调用关系。
+3. [数据与教师监督边界](docs/data_and_teachers.md)：合法历史信息、长期Goal标签与primitive动作标签的区别。
+4. [复现与资产说明](docs/reproduction.md)：无环境核验、原始资产位置、历史CLI和严格的复现边界。
 
-输入约定：grid[batch,19,24,24]、units[batch,16,22]、team[batch,6]、reach[batch,16,5,576]；B另需memory[batch,5,4,24,24]和memory_count。不要将这些轻量原型误当成已经验证的高竞争力Agent。
+## 代码结构
 
-## 结构测试
-
-在WSL Bash中：
-
-```bash
-cd /home/issue/Kaggle/Lab_Kaggle/lux-ai-s3
-/home/issue/ml-workspace/.venv/bin/python -B -m pytest -q -p no:cacheprovider tests
+```text
+lux-ai-s3/
+├── vendor/lux-design-s3/       # 固定官方环境源码、revision、license
+├── agents/v2/                # 原生启发式基线
+├── agents/mappo/             # 因果物理、Actor/Critic、Manager、Controller、Router桥接
+├── training/                 # 数据构建、BC、PPO、checkpoint与统一评估
+├── scripts/                  # 官方CPU环境及外部专家IPC worker
+├── baselines/frozen_v5_2/    # 冻结B0/FULL核心依赖快照，不恢复失败实验入口
+├── tests/                    # 无环境单测
+├── tools/                    # 预检、数据/结果核验、本地路径登记
+├── docs/                     # 科研说明与复现说明
+└── reports/                  # 精选冻结证据、逐局结果摘录、模型索引
 ```
 
-## 仓库外归档
+## 无需训练即可检查
 
-旧工程、数据、原始实验结果和第三方仓库集中移至：
+在项目根目录的WSL Bash中：
 
-/home/issue/ml-workspace/archives/lux-s3-retired-20261112_C01
+```bash
+python -B tools/recompute_results.py
+python -B -m pytest -q -p no:cacheprovider tests
+```
 
-归档保存清理前Git bundle、原始目录、逐文件SHA256、符号链接文本、特殊测试节点元数据及移动日志。RESTORE.md说明原路径映射。原工程可恢复，但不保留散落的训练指令作为当前入口。
+第一条仅用标准库核对证据哈希、地图配对点估计、BC选模和1200局官方胜数记录；第二条执行张量、物理、合法支持与提交恢复测试。均不启动官方环境或训练。
 
-Windows临时工作区另归档至C:\Users\lenovo\Documents\Codex-Archives\lux-s3-retired-20261112_C01。
+## 已保留的主要证据
 
-没有训练、运行环境对战或访问保护集。
+- G05：FULL Goal替换相对旧B0，固定三模型新确认开发地图等权改善+1.792，地图描述区间[+1.375,+2.194]。这是相对B0，不是已经超过完整V2。
+- G06：四臂消融有策略级正向方向，但checkpoint异质性明显，不能把Mode效果作可加的因果贡献。
+- A01/A02、D03–D12、PGC：保留原结论和关键证据；未支持或证据不足的路线不包装成成功，也不恢复其大量尝试代码。
+- 新BC：三架构各8轮，按Calibration选择A/B/C的第7/7/6轮。
+- 新RL：仅A、种子1313969260完成1200局606000步；训练混合对手平均分差-2.41。B/C正式RL未执行，A最终开发集评估也未执行。训练平均分差不是最终checkpoint的泛化指标。
+
+## 资产与GitHub边界
+
+只上传源码、环境、协议、紧凑证据与复算脚本。不上传venv、完整第三方仓库、大模型权重、NPZ、原始轨迹或MLflow数据库。
+
+完整历史项目仍在仓库外归档；必要BC数据、权重和已完成A训练结果已恢复到原来的外部artifact位置，仍不进入Git。对没有公开发布的数据/权重，本仓库提供索引和SHA256，不能承诺仅clone便重现全部历史成绩。
+
+恢复过程中不修改冻结模型、原始日志和实验协议；没有启动训练、对战或访问保护集。

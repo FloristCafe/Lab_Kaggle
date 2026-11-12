@@ -1,0 +1,50 @@
+{
+  "status": "COMPLETE",
+  "model": "A",
+  "seed": 1313969260,
+  "games": 1200,
+  "primitive_steps": 606000,
+  "update_batches": 300,
+  "training_margin": -2.41,
+  "training_hours_from_batches": 19.083896058412208,
+  "by_opponent": {
+    "gregor_v73b": {
+      "games": 168,
+      "wins": 0,
+      "ties": 0,
+      "losses": 168,
+      "mean_margin": -4.988095238095238
+    },
+    "flat_neurons": {
+      "games": 170,
+      "wins": 0,
+      "ties": 0,
+      "losses": 170,
+      "mean_margin": -5.0
+    },
+    "v2": {
+      "games": 531,
+      "wins": 141,
+      "ties": 0,
+      "losses": 390,
+      "mean_margin": -1.6365348399246704
+    },
+    "adg4b_fn": {
+      "games": 178,
+      "wins": 0,
+      "ties": 0,
+      "losses": 178,
+      "mean_margin": -1.0
+    },
+    "adg4b_fp": {
+      "games": 153,
+      "wins": 0,
+      "ties": 0,
+      "losses": 153,
+      "mean_margin": -1.026143790849673
+    }
+  },
+  "interpretation": "Changing training policies and PFSP mixture, not final checkpoint evaluation; no official held-out result exists in this run",
+  "RL_B": "NOT RUN",
+  "RL_C": "NOT RUN"
+}

@@ -1,0 +1,11 @@
+{
+  "epochs": 8,
+  "batch_size": 4,
+  "lr": 0.001,
+  "weight_decay": 0.0,
+  "grad_clip": 1.0,
+  "label_contract": "explicit actual macro R/Mode/Goal only; primitive inverse sets need separate admission",
+  "checkpoint_selection": "calibration_nll_then_earliest_epoch",
+  "primitive_aux_weight": 0.1,
+  "primitive_aux": "Flat Neurons six-way action on known public encoder inputs; auxiliary head discarded at deployment"
+}

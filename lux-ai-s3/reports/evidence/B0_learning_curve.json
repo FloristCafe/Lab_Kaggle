@@ -1,0 +1,4395 @@
+{
+  "arms": {
+    "IL": {
+      "choices": {
+        "forced_replan": 8474,
+        "free_continue": 0,
+        "free_replan": 173490
+      },
+      "draws": 0,
+      "first_arrival": {
+        "definition": "existing first arrival after nontrivial issued intent; not independently validated task completion",
+        "events": 3725,
+        "nontrivial_intents": 25831,
+        "rate": 0.144206573496961
+      },
+      "games": 48,
+      "independent_task_completion": "NOT LOGGED",
+      "losses": 40,
+      "map_bootstrap95_mean_margin": [
+        -3.125,
+        -1.375
+      ],
+      "mean_margin": -2.2916666666666665,
+      "mode": {
+        "MG_decisions": 181964,
+        "actual_EXPLORE_fraction": 0.007133279110153656,
+        "entropy_mean": 0.7506080028713775,
+        "executed_replan_mode_counts": [
+          83530,
+          1298,
+          3217,
+          22871,
+          71048
+        ],
+        "joint_argmax_counts": [
+          83530,
+          1298,
+          3217,
+          22871,
+          71048
+        ],
+        "probability_mean": [
+          0.3638229185451272,
+          0.04865060814068783,
+          0.05536981931635882,
+          0.2422875331436637,
+          0.28986912071512355
+        ],
+        "single_argmax_counts": [
+          77390,
+          0,
+          1931,
+          41276,
+          61367
+        ],
+        "stochastic_sampling_frequency": "NOT RUN: greedy frozen-policy evaluation"
+      },
+      "navigation_stall": {
+        "alive_unit_steps": 297351,
+        "rate": 0.16466734599850008,
+        "steps": 48964
+      },
+      "sides": {
+        "0": {
+          "draws": 0,
+          "games": 24,
+          "losses": 20,
+          "mean_margin": -2.3333333333333335,
+          "wins": 4
+        },
+        "1": {
+          "draws": 0,
+          "games": 24,
+          "losses": 20,
+          "mean_margin": -2.25,
+          "wins": 4
+        }
+      },
+      "wins": 8
+    },
+    "rng1313969260_ep100": {
+      "choices": {
+        "forced_replan": 8526,
+        "free_continue": 0,
+        "free_replan": 192935
+      },
+      "draws": 0,
+      "first_arrival": {
+        "definition": "existing first arrival after nontrivial issued intent; not independently validated task completion",
+        "events": 4823,
+        "nontrivial_intents": 27030,
+        "rate": 0.1784313725490196
+      },
+      "games": 48,
+      "independent_task_completion": "NOT LOGGED",
+      "losses": 46,
+      "map_bootstrap95_mean_margin": [
+        -4.208333333333333,
+        -2.9166666666666665
+      ],
+      "mean_margin": -3.5833333333333335,
+      "mode": {
+        "MG_decisions": 201461,
+        "actual_EXPLORE_fraction": 0.06675237390859769,
+        "entropy_mean": 0.6213767111823285,
+        "executed_replan_mode_counts": [
+          49500,
+          13448,
+          1373,
+          26491,
+          110649
+        ],
+        "joint_argmax_counts": [
+          49500,
+          13448,
+          1373,
+          26491,
+          110649
+        ],
+        "probability_mean": [
+          0.15930463508332038,
+          0.04840667330188557,
+          0.031193410073513277,
+          0.2836843300294272,
+          0.47741095146488244
+        ],
+        "single_argmax_counts": [
+          35064,
+          0,
+          805,
+          62893,
+          102699
+        ],
+        "stochastic_sampling_frequency": "NOT RUN: greedy frozen-policy evaluation"
+      },
+      "navigation_stall": {
+        "alive_unit_steps": 297569,
+        "rate": 0.22832687544737523,
+        "steps": 67943
+      },
+      "sides": {
+        "0": {
+          "draws": 0,
+          "games": 24,
+          "losses": 23,
+          "mean_margin": -3.8333333333333335,
+          "wins": 1
+        },
+        "1": {
+          "draws": 0,
+          "games": 24,
+          "losses": 23,
+          "mean_margin": -3.3333333333333335,
+          "wins": 1
+        }
+      },
+      "wins": 2
+    },
+    "rng1313969260_ep200": {
+      "choices": {
+        "forced_replan": 9529,
+        "free_continue": 0,
+        "free_replan": 191525
+      },
+      "draws": 0,
+      "first_arrival": {
+        "definition": "existing first arrival after nontrivial issued intent; not independently validated task completion",
+        "events": 4198,
+        "nontrivial_intents": 24907,
+        "rate": 0.16854699482073313
+      },
+      "games": 48,
+      "independent_task_completion": "NOT LOGGED",
+      "losses": 44,
+      "map_bootstrap95_mean_margin": [
+        -3.5416666666666665,
+        -1.8333333333333333
+      ],
+      "mean_margin": -2.75,
+      "mode": {
+        "MG_decisions": 201054,
+        "actual_EXPLORE_fraction": 0.0,
+        "entropy_mean": 0.35327561903469207,
+        "executed_replan_mode_counts": [
+          111569,
+          0,
+          77320,
+          255,
+          11910
+        ],
+        "joint_argmax_counts": [
+          111569,
+          0,
+          77320,
+          255,
+          11910
+        ],
+        "probability_mean": [
+          0.5375504045606433,
+          0.004007831271059653,
+          0.3838911120210522,
+          0.01754438686053655,
+          0.057006265132242266
+        ],
+        "single_argmax_counts": [
+          111670,
+          0,
+          78750,
+          713,
+          9921
+        ],
+        "stochastic_sampling_frequency": "NOT RUN: greedy frozen-policy evaluation"
+      },
+      "navigation_stall": {
+        "alive_unit_steps": 297524,
+        "rate": 0.3046107204796924,
+        "steps": 90629
+      },
+      "sides": {
+        "0": {
+          "draws": 0,
+          "games": 24,
+          "losses": 22,
+          "mean_margin": -2.6666666666666665,
+          "wins": 2
+        },
+        "1": {
+          "draws": 0,
+          "games": 24,
+          "losses": 22,
+          "mean_margin": -2.8333333333333335,
+          "wins": 2
+        }
+      },
+      "wins": 4
+    },
+    "rng1313969260_ep300": {
+      "choices": {
+        "forced_replan": 8393,
+        "free_continue": 0,
+        "free_replan": 190203
+      },
+      "draws": 0,
+      "first_arrival": {
+        "definition": "existing first arrival after nontrivial issued intent; not independently validated task completion",
+        "events": 7380,
+        "nontrivial_intents": 35257,
+        "rate": 0.20932013500865077
+      },
+      "games": 48,
+      "independent_task_completion": "NOT LOGGED",
+      "losses": 32,
+      "map_bootstrap95_mean_margin": [
+        -2.2083333333333335,
+        -0.125
+      ],
+      "mean_margin": -1.1666666666666667,
+      "mode": {
+        "MG_decisions": 198596,
+        "actual_EXPLORE_fraction": 0.0,
+        "entropy_mean": 0.3957939638312541,
+        "executed_replan_mode_counts": [
+          86079,
+          0,
+          103667,
+          14,
+          8836
+        ],
+        "joint_argmax_counts": [
+          86079,
+          0,
+          103667,
+          14,
+          8836
+        ],
+        "probability_mean": [
+          0.4224293212434682,
+          0.004976618719353156,
+          0.5048636594726178,
+          0.013439798179940267,
+          0.054290602195678904
+        ],
+        "single_argmax_counts": [
+          87858,
+          0,
+          103977,
+          175,
+          6586
+        ],
+        "stochastic_sampling_frequency": "NOT RUN: greedy frozen-policy evaluation"
+      },
+      "navigation_stall": {
+        "alive_unit_steps": 297382,
+        "rate": 0.2334942935349147,
+        "steps": 69437
+      },
+      "sides": {
+        "0": {
+          "draws": 0,
+          "games": 24,
+          "losses": 20,
+          "mean_margin": -2.0833333333333335,
+          "wins": 4
+        },
+        "1": {
+          "draws": 0,
+          "games": 24,
+          "losses": 12,
+          "mean_margin": -0.25,
+          "wins": 12
+        }
+      },
+      "wins": 16
+    },
+    "rng1383116603_ep100": {
+      "choices": {
+        "forced_replan": 6212,
+        "free_continue": 0,
+        "free_replan": 150548
+      },
+      "draws": 0,
+      "first_arrival": {
+        "definition": "existing first arrival after nontrivial issued intent; not independently validated task completion",
+        "events": 988,
+        "nontrivial_intents": 45833,
+        "rate": 0.021556520411057534
+      },
+      "games": 48,
+      "independent_task_completion": "NOT LOGGED",
+      "losses": 41,
+      "map_bootstrap95_mean_margin": [
+        -4.041666666666667,
+        -2.0833333333333335
+      ],
+      "mean_margin": -3.125,
+      "mode": {
+        "MG_decisions": 156760,
+        "actual_EXPLORE_fraction": 0.0,
+        "entropy_mean": 0.13036833366383307,
+        "executed_replan_mode_counts": [
+          10451,
+          0,
+          469,
+          145220,
+          620
+        ],
+        "joint_argmax_counts": [
+          10451,
+          0,
+          469,
+          145220,
+          620
+        ],
+        "probability_mean": [
+          0.05106777832338401,
+          0.007214995696162543,
+          0.009194088617902023,
+          0.9250143193055926,
+          0.007508818485114045
+        ],
+        "single_argmax_counts": [
+          9321,
+          0,
+          49,
+          147313,
+          77
+        ],
+        "stochastic_sampling_frequency": "NOT RUN: greedy frozen-policy evaluation"
+      },
+      "navigation_stall": {
+        "alive_unit_steps": 296634,
+        "rate": 0.4025802841211729,
+        "steps": 119419
+      },
+      "sides": {
+        "0": {
+          "draws": 0,
+          "games": 24,
+          "losses": 20,
+          "mean_margin": -3.0833333333333335,
+          "wins": 4
+        },
+        "1": {
+          "draws": 0,
+          "games": 24,
+          "losses": 21,
+          "mean_margin": -3.1666666666666665,
+          "wins": 3
+        }
+      },
+      "wins": 7
+    },
+    "rng1383116603_ep200": {
+      "choices": {
+        "forced_replan": 7973,
+        "free_continue": 3944,
+        "free_replan": 167470
+      },
+      "draws": 0,
+      "first_arrival": {
+        "definition": "existing first arrival after nontrivial issued intent; not independently validated task completion",
+        "events": 2602,
+        "nontrivial_intents": 34873,
+        "rate": 0.07461359791242508
+      },
+      "games": 48,
+      "independent_task_completion": "NOT LOGGED",
+      "losses": 40,
+      "map_bootstrap95_mean_margin": [
+        -3.5833333333333335,
+        -1.9166666666666667
+      ],
+      "mean_margin": -2.7916666666666665,
+      "mode": {
+        "MG_decisions": 175443,
+        "actual_EXPLORE_fraction": 4.5598855468727736e-05,
+        "entropy_mean": 0.701516154669312,
+        "executed_replan_mode_counts": [
+          25541,
+          8,
+          81242,
+          67851,
+          801
+        ],
+        "joint_argmax_counts": [
+          25541,
+          8,
+          81242,
+          67851,
+          801
+        ],
+        "probability_mean": [
+          0.12238454738566752,
+          0.06788352598253446,
+          0.45787137139488987,
+          0.3167125428042877,
+          0.03514801218131818
+        ],
+        "single_argmax_counts": [
+          24724,
+          3402,
+          80664,
+          66056,
+          597
+        ],
+        "stochastic_sampling_frequency": "NOT RUN: greedy frozen-policy evaluation"
+      },
+      "navigation_stall": {
+        "alive_unit_steps": 297249,
+        "rate": 0.21325218924201594,
+        "steps": 63389
+      },
+      "sides": {
+        "0": {
+          "draws": 0,
+          "games": 24,
+          "losses": 19,
+          "mean_margin": -2.75,
+          "wins": 5
+        },
+        "1": {
+          "draws": 0,
+          "games": 24,
+          "losses": 21,
+          "mean_margin": -2.8333333333333335,
+          "wins": 3
+        }
+      },
+      "wins": 8
+    },
+    "rng1383116603_ep300": {
+      "choices": {
+        "forced_replan": 6437,
+        "free_continue": 119,
+        "free_replan": 184673
+      },
+      "draws": 0,
+      "first_arrival": {
+        "definition": "existing first arrival after nontrivial issued intent; not independently validated task completion",
+        "events": 12288,
+        "nontrivial_intents": 40382,
+        "rate": 0.3042939923728394
+      },
+      "games": 48,
+      "independent_task_completion": "NOT LOGGED",
+      "losses": 47,
+      "map_bootstrap95_mean_margin": [
+        -4.5,
+        -3.2916666666666665
+      ],
+      "mean_margin": -3.9166666666666665,
+      "mode": {
+        "MG_decisions": 191110,
+        "actual_EXPLORE_fraction": 0.5216210559363718,
+        "entropy_mean": 0.7307807526679584,
+        "executed_replan_mode_counts": [
+          390,
+          99687,
+          52894,
+          38139,
+          0
+        ],
+        "joint_argmax_counts": [
+          390,
+          99687,
+          52894,
+          38139,
+          0
+        ],
+        "probability_mean": [
+          0.009314922467998563,
+          0.3818739148055466,
+          0.3190215651974445,
+          0.28523103505763553,
+          0.004558562457979996
+        ],
+        "single_argmax_counts": [
+          290,
+          99780,
+          53438,
+          37602,
+          0
+        ],
+        "stochastic_sampling_frequency": "NOT RUN: greedy frozen-policy evaluation"
+      },
+      "navigation_stall": {
+        "alive_unit_steps": 297485,
+        "rate": 0.31282249525186145,
+        "steps": 93060
+      },
+      "sides": {
+        "0": {
+          "draws": 0,
+          "games": 24,
+          "losses": 24,
+          "mean_margin": -3.8333333333333335,
+          "wins": 0
+        },
+        "1": {
+          "draws": 0,
+          "games": 24,
+          "losses": 23,
+          "mean_margin": -4.0,
+          "wins": 1
+        }
+      },
+      "wins": 1
+    },
+    "rng257881232_ep100": {
+      "choices": {
+        "forced_replan": 7288,
+        "free_continue": 0,
+        "free_replan": 168277
+      },
+      "draws": 0,
+      "first_arrival": {
+        "definition": "existing first arrival after nontrivial issued intent; not independently validated task completion",
+        "events": 6016,
+        "nontrivial_intents": 44470,
+        "rate": 0.1352822127276816
+      },
+      "games": 48,
+      "independent_task_completion": "NOT LOGGED",
+      "losses": 40,
+      "map_bootstrap95_mean_margin": [
+        -3.9583333333333335,
+        -1.7083333333333333
+      ],
+      "mean_margin": -2.9166666666666665,
+      "mode": {
+        "MG_decisions": 175565,
+        "actual_EXPLORE_fraction": 0.00010822202603024521,
+        "entropy_mean": 0.7767799156266126,
+        "executed_replan_mode_counts": [
+          24825,
+          19,
+          8489,
+          121063,
+          21169
+        ],
+        "joint_argmax_counts": [
+          24825,
+          19,
+          8489,
+          121063,
+          21169
+        ],
+        "probability_mean": [
+          0.08328704565547976,
+          0.08129769926630004,
+          0.0754022816680829,
+          0.6718339205755364,
+          0.08817905252756926
+        ],
+        "single_argmax_counts": [
+          12457,
+          0,
+          3173,
+          144562,
+          15373
+        ],
+        "stochastic_sampling_frequency": "NOT RUN: greedy frozen-policy evaluation"
+      },
+      "navigation_stall": {
+        "alive_unit_steps": 297388,
+        "rate": 0.26157410520935614,
+        "steps": 77789
+      },
+      "sides": {
+        "0": {
+          "draws": 0,
+          "games": 24,
+          "losses": 19,
+          "mean_margin": -2.75,
+          "wins": 5
+        },
+        "1": {
+          "draws": 0,
+          "games": 24,
+          "losses": 21,
+          "mean_margin": -3.0833333333333335,
+          "wins": 3
+        }
+      },
+      "wins": 8
+    },
+    "rng257881232_ep200": {
+      "choices": {
+        "forced_replan": 7948,
+        "free_continue": 0,
+        "free_replan": 185498
+      },
+      "draws": 0,
+      "first_arrival": {
+        "definition": "existing first arrival after nontrivial issued intent; not independently validated task completion",
+        "events": 4146,
+        "nontrivial_intents": 27233,
+        "rate": 0.15224176550508575
+      },
+      "games": 48,
+      "independent_task_completion": "NOT LOGGED",
+      "losses": 40,
+      "map_bootstrap95_mean_margin": [
+        -3.75,
+        -1.7916666666666667
+      ],
+      "mean_margin": -2.8333333333333335,
+      "mode": {
+        "MG_decisions": 193446,
+        "actual_EXPLORE_fraction": 0.0,
+        "entropy_mean": 0.8772717291372755,
+        "executed_replan_mode_counts": [
+          29606,
+          0,
+          133760,
+          7820,
+          22260
+        ],
+        "joint_argmax_counts": [
+          29606,
+          0,
+          133760,
+          7820,
+          22260
+        ],
+        "probability_mean": [
+          0.12576175194444492,
+          0.03240489368617227,
+          0.5693167918835121,
+          0.15415442455638803,
+          0.11836213826558134
+        ],
+        "single_argmax_counts": [
+          28282,
+          0,
+          129676,
+          15731,
+          19757
+        ],
+        "stochastic_sampling_frequency": "NOT RUN: greedy frozen-policy evaluation"
+      },
+      "navigation_stall": {
+        "alive_unit_steps": 297411,
+        "rate": 0.1656361062637226,
+        "steps": 49262
+      },
+      "sides": {
+        "0": {
+          "draws": 0,
+          "games": 24,
+          "losses": 21,
+          "mean_margin": -3.0833333333333335,
+          "wins": 3
+        },
+        "1": {
+          "draws": 0,
+          "games": 24,
+          "losses": 19,
+          "mean_margin": -2.5833333333333335,
+          "wins": 5
+        }
+      },
+      "wins": 8
+    },
+    "rng257881232_ep300": {
+      "choices": {
+        "forced_replan": 6405,
+        "free_continue": 0,
+        "free_replan": 180738
+      },
+      "draws": 0,
+      "first_arrival": {
+        "definition": "existing first arrival after nontrivial issued intent; not independently validated task completion",
+        "events": 3716,
+        "nontrivial_intents": 31542,
+        "rate": 0.11781117240504724
+      },
+      "games": 48,
+      "independent_task_completion": "NOT LOGGED",
+      "losses": 35,
+      "map_bootstrap95_mean_margin": [
+        -3.2083333333333335,
+        -1.0833333333333333
+      ],
+      "mean_margin": -2.2083333333333335,
+      "mode": {
+        "MG_decisions": 187143,
+        "actual_EXPLORE_fraction": 0.0,
+        "entropy_mean": 0.24201437151445637,
+        "executed_replan_mode_counts": [
+          17,
+          0,
+          186813,
+          0,
+          313
+        ],
+        "joint_argmax_counts": [
+          17,
+          0,
+          186813,
+          0,
+          313
+        ],
+        "probability_mean": [
+          0.005260404623078452,
+          0.007019067811521989,
+          0.9367918934997281,
+          0.03381226174033936,
+          0.01711637278141265
+        ],
+        "single_argmax_counts": [
+          0,
+          0,
+          186920,
+          0,
+          223
+        ],
+        "stochastic_sampling_frequency": "NOT RUN: greedy frozen-policy evaluation"
+      },
+      "navigation_stall": {
+        "alive_unit_steps": 297380,
+        "rate": 0.26871679332840137,
+        "steps": 79911
+      },
+      "sides": {
+        "0": {
+          "draws": 0,
+          "games": 24,
+          "losses": 18,
+          "mean_margin": -2.5,
+          "wins": 6
+        },
+        "1": {
+          "draws": 0,
+          "games": 24,
+          "losses": 17,
+          "mean_margin": -1.9166666666666667,
+          "wins": 7
+        }
+      },
+      "wins": 13
+    }
+  },
+  "automatic_continuation": false,
+  "comparisons": {
+    "rng1313969260_ep100-minus-IL": {
+      "map_bootstrap95": [
+        -2.0833333333333335,
+        -0.625
+      ],
+      "map_differences": [
+        {
+          "delta": -1.0,
+          "root": 2893186689
+        },
+        {
+          "delta": 0.0,
+          "root": 4119674628
+        },
+        {
+          "delta": -1.0,
+          "root": 3403761857
+        },
+        {
+          "delta": -2.0,
+          "root": 3574175701
+        },
+        {
+          "delta": -2.0,
+          "root": 2181169562
+        },
+        {
+          "delta": 0.0,
+          "root": 3337603987
+        },
+        {
+          "delta": 2.0,
+          "root": 3245714684
+        },
+        {
+          "delta": -2.0,
+          "root": 3291707049
+        },
+        {
+          "delta": -2.0,
+          "root": 3298475327
+        },
+        {
+          "delta": 1.0,
+          "root": 3337384266
+        },
+        {
+          "delta": -5.0,
+          "root": 2790095679
+        },
+        {
+          "delta": -3.0,
+          "root": 3115361517
+        },
+        {
+          "delta": -1.0,
+          "root": 3571959035
+        },
+        {
+          "delta": -1.0,
+          "root": 3647415428
+        },
+        {
+          "delta": 0.0,
+          "root": 3014468282
+        },
+        {
+          "delta": -2.0,
+          "root": 3647757230
+        },
+        {
+          "delta": -2.0,
+          "root": 3259281293
+        },
+        {
+          "delta": -7.0,
+          "root": 3796223620
+        },
+        {
+          "delta": 0.0,
+          "root": 3667035821
+        },
+        {
+          "delta": -1.0,
+          "root": 2582767628
+        },
+        {
+          "delta": 0.0,
+          "root": 2365828211
+        },
+        {
+          "delta": 0.0,
+          "root": 2357396176
+        },
+        {
+          "delta": -1.0,
+          "root": 2852120528
+        },
+        {
+          "delta": -1.0,
+          "root": 3953988944
+        }
+      ],
+      "maps_improved": 2,
+      "maps_tied": 6,
+      "maps_worse": 16,
+      "mean_paired_margin": -1.2916666666666667,
+      "sides": {
+        "0": {
+          "mean_paired_margin": -1.5
+        },
+        "1": {
+          "mean_paired_margin": -1.0833333333333333
+        }
+      },
+      "status": "secondary exploratory marginal interval"
+    },
+    "rng1313969260_ep200-minus-IL": {
+      "map_bootstrap95": [
+        -1.3333333333333333,
+        0.375
+      ],
+      "map_differences": [
+        {
+          "delta": -1.0,
+          "root": 2893186689
+        },
+        {
+          "delta": 1.0,
+          "root": 4119674628
+        },
+        {
+          "delta": 1.0,
+          "root": 3403761857
+        },
+        {
+          "delta": -2.0,
+          "root": 3574175701
+        },
+        {
+          "delta": 3.0,
+          "root": 2181169562
+        },
+        {
+          "delta": 0.0,
+          "root": 3337603987
+        },
+        {
+          "delta": 2.0,
+          "root": 3245714684
+        },
+        {
+          "delta": -2.0,
+          "root": 3291707049
+        },
+        {
+          "delta": 0.0,
+          "root": 3298475327
+        },
+        {
+          "delta": 2.0,
+          "root": 3337384266
+        },
+        {
+          "delta": -5.0,
+          "root": 2790095679
+        },
+        {
+          "delta": 0.0,
+          "root": 3115361517
+        },
+        {
+          "delta": 0.0,
+          "root": 3571959035
+        },
+        {
+          "delta": -1.0,
+          "root": 3647415428
+        },
+        {
+          "delta": 3.0,
+          "root": 3014468282
+        },
+        {
+          "delta": -2.0,
+          "root": 3647757230
+        },
+        {
+          "delta": 1.0,
+          "root": 3259281293
+        },
+        {
+          "delta": -6.0,
+          "root": 3796223620
+        },
+        {
+          "delta": -1.0,
+          "root": 3667035821
+        },
+        {
+          "delta": -1.0,
+          "root": 2582767628
+        },
+        {
+          "delta": 0.0,
+          "root": 2365828211
+        },
+        {
+          "delta": 0.0,
+          "root": 2357396176
+        },
+        {
+          "delta": -2.0,
+          "root": 2852120528
+        },
+        {
+          "delta": -1.0,
+          "root": 3953988944
+        }
+      ],
+      "maps_improved": 7,
+      "maps_tied": 6,
+      "maps_worse": 11,
+      "mean_paired_margin": -0.4583333333333333,
+      "sides": {
+        "0": {
+          "mean_paired_margin": -0.3333333333333333
+        },
+        "1": {
+          "mean_paired_margin": -0.5833333333333334
+        }
+      },
+      "status": "secondary exploratory marginal interval"
+    },
+    "rng1313969260_ep200-minus-rng1313969260_ep100": {
+      "map_bootstrap95": [
+        0.2916666666666667,
+        1.4583333333333333
+      ],
+      "map_differences": [
+        {
+          "delta": 0.0,
+          "root": 2893186689
+        },
+        {
+          "delta": 1.0,
+          "root": 4119674628
+        },
+        {
+          "delta": 2.0,
+          "root": 3403761857
+        },
+        {
+          "delta": 0.0,
+          "root": 3574175701
+        },
+        {
+          "delta": 5.0,
+          "root": 2181169562
+        },
+        {
+          "delta": 0.0,
+          "root": 3337603987
+        },
+        {
+          "delta": 0.0,
+          "root": 3245714684
+        },
+        {
+          "delta": 0.0,
+          "root": 3291707049
+        },
+        {
+          "delta": 2.0,
+          "root": 3298475327
+        },
+        {
+          "delta": 1.0,
+          "root": 3337384266
+        },
+        {
+          "delta": 0.0,
+          "root": 2790095679
+        },
+        {
+          "delta": 3.0,
+          "root": 3115361517
+        },
+        {
+          "delta": 1.0,
+          "root": 3571959035
+        },
+        {
+          "delta": 0.0,
+          "root": 3647415428
+        },
+        {
+          "delta": 3.0,
+          "root": 3014468282
+        },
+        {
+          "delta": 0.0,
+          "root": 3647757230
+        },
+        {
+          "delta": 3.0,
+          "root": 3259281293
+        },
+        {
+          "delta": 1.0,
+          "root": 3796223620
+        },
+        {
+          "delta": -1.0,
+          "root": 3667035821
+        },
+        {
+          "delta": 0.0,
+          "root": 2582767628
+        },
+        {
+          "delta": 0.0,
+          "root": 2365828211
+        },
+        {
+          "delta": 0.0,
+          "root": 2357396176
+        },
+        {
+          "delta": -1.0,
+          "root": 2852120528
+        },
+        {
+          "delta": 0.0,
+          "root": 3953988944
+        }
+      ],
+      "maps_improved": 10,
+      "maps_tied": 12,
+      "maps_worse": 2,
+      "mean_paired_margin": 0.8333333333333334,
+      "sides": {
+        "0": {
+          "mean_paired_margin": 1.1666666666666667
+        },
+        "1": {
+          "mean_paired_margin": 0.5
+        }
+      },
+      "status": "secondary exploratory marginal interval"
+    },
+    "rng1313969260_ep300-minus-IL": {
+      "map_bootstrap95": [
+        0.2916666666666667,
+        1.9583333333333333
+      ],
+      "map_differences": [
+        {
+          "delta": 2.0,
+          "root": 2893186689
+        },
+        {
+          "delta": 1.0,
+          "root": 4119674628
+        },
+        {
+          "delta": 0.0,
+          "root": 3403761857
+        },
+        {
+          "delta": -2.0,
+          "root": 3574175701
+        },
+        {
+          "delta": 3.0,
+          "root": 2181169562
+        },
+        {
+          "delta": 1.0,
+          "root": 3337603987
+        },
+        {
+          "delta": 2.0,
+          "root": 3245714684
+        },
+        {
+          "delta": 3.0,
+          "root": 3291707049
+        },
+        {
+          "delta": 4.0,
+          "root": 3298475327
+        },
+        {
+          "delta": 4.0,
+          "root": 3337384266
+        },
+        {
+          "delta": 1.0,
+          "root": 2790095679
+        },
+        {
+          "delta": 0.0,
+          "root": 3115361517
+        },
+        {
+          "delta": 2.0,
+          "root": 3571959035
+        },
+        {
+          "delta": 4.0,
+          "root": 3647415428
+        },
+        {
+          "delta": 3.0,
+          "root": 3014468282
+        },
+        {
+          "delta": -2.0,
+          "root": 3647757230
+        },
+        {
+          "delta": 5.0,
+          "root": 3259281293
+        },
+        {
+          "delta": -1.0,
+          "root": 3796223620
+        },
+        {
+          "delta": 1.0,
+          "root": 3667035821
+        },
+        {
+          "delta": -1.0,
+          "root": 2582767628
+        },
+        {
+          "delta": 0.0,
+          "root": 2365828211
+        },
+        {
+          "delta": 0.0,
+          "root": 2357396176
+        },
+        {
+          "delta": -3.0,
+          "root": 2852120528
+        },
+        {
+          "delta": 0.0,
+          "root": 3953988944
+        }
+      ],
+      "maps_improved": 14,
+      "maps_tied": 5,
+      "maps_worse": 5,
+      "mean_paired_margin": 1.125,
+      "sides": {
+        "0": {
+          "mean_paired_margin": 0.25
+        },
+        "1": {
+          "mean_paired_margin": 2.0
+        }
+      },
+      "status": "secondary exploratory marginal interval"
+    },
+    "rng1313969260_ep300-minus-rng1313969260_ep100": {
+      "map_bootstrap95": [
+        1.4583333333333333,
+        3.4166666666666665
+      ],
+      "map_differences": [
+        {
+          "delta": 3.0,
+          "root": 2893186689
+        },
+        {
+          "delta": 1.0,
+          "root": 4119674628
+        },
+        {
+          "delta": 1.0,
+          "root": 3403761857
+        },
+        {
+          "delta": 0.0,
+          "root": 3574175701
+        },
+        {
+          "delta": 5.0,
+          "root": 2181169562
+        },
+        {
+          "delta": 1.0,
+          "root": 3337603987
+        },
+        {
+          "delta": 0.0,
+          "root": 3245714684
+        },
+        {
+          "delta": 5.0,
+          "root": 3291707049
+        },
+        {
+          "delta": 6.0,
+          "root": 3298475327
+        },
+        {
+          "delta": 3.0,
+          "root": 3337384266
+        },
+        {
+          "delta": 6.0,
+          "root": 2790095679
+        },
+        {
+          "delta": 3.0,
+          "root": 3115361517
+        },
+        {
+          "delta": 3.0,
+          "root": 3571959035
+        },
+        {
+          "delta": 5.0,
+          "root": 3647415428
+        },
+        {
+          "delta": 3.0,
+          "root": 3014468282
+        },
+        {
+          "delta": 0.0,
+          "root": 3647757230
+        },
+        {
+          "delta": 7.0,
+          "root": 3259281293
+        },
+        {
+          "delta": 6.0,
+          "root": 3796223620
+        },
+        {
+          "delta": 1.0,
+          "root": 3667035821
+        },
+        {
+          "delta": 0.0,
+          "root": 2582767628
+        },
+        {
+          "delta": 0.0,
+          "root": 2365828211
+        },
+        {
+          "delta": 0.0,
+          "root": 2357396176
+        },
+        {
+          "delta": -2.0,
+          "root": 2852120528
+        },
+        {
+          "delta": 1.0,
+          "root": 3953988944
+        }
+      ],
+      "maps_improved": 17,
+      "maps_tied": 6,
+      "maps_worse": 1,
+      "mean_paired_margin": 2.4166666666666665,
+      "sides": {
+        "0": {
+          "mean_paired_margin": 1.75
+        },
+        "1": {
+          "mean_paired_margin": 3.0833333333333335
+        }
+      },
+      "status": "primary"
+    },
+    "rng1313969260_ep300-minus-rng1313969260_ep200": {
+      "map_bootstrap95": [
+        0.75,
+        2.4583333333333335
+      ],
+      "map_differences": [
+        {
+          "delta": 3.0,
+          "root": 2893186689
+        },
+        {
+          "delta": 0.0,
+          "root": 4119674628
+        },
+        {
+          "delta": -1.0,
+          "root": 3403761857
+        },
+        {
+          "delta": 0.0,
+          "root": 3574175701
+        },
+        {
+          "delta": 0.0,
+          "root": 2181169562
+        },
+        {
+          "delta": 1.0,
+          "root": 3337603987
+        },
+        {
+          "delta": 0.0,
+          "root": 3245714684
+        },
+        {
+          "delta": 5.0,
+          "root": 3291707049
+        },
+        {
+          "delta": 4.0,
+          "root": 3298475327
+        },
+        {
+          "delta": 2.0,
+          "root": 3337384266
+        },
+        {
+          "delta": 6.0,
+          "root": 2790095679
+        },
+        {
+          "delta": 0.0,
+          "root": 3115361517
+        },
+        {
+          "delta": 2.0,
+          "root": 3571959035
+        },
+        {
+          "delta": 5.0,
+          "root": 3647415428
+        },
+        {
+          "delta": 0.0,
+          "root": 3014468282
+        },
+        {
+          "delta": 0.0,
+          "root": 3647757230
+        },
+        {
+          "delta": 4.0,
+          "root": 3259281293
+        },
+        {
+          "delta": 5.0,
+          "root": 3796223620
+        },
+        {
+          "delta": 2.0,
+          "root": 3667035821
+        },
+        {
+          "delta": 0.0,
+          "root": 2582767628
+        },
+        {
+          "delta": 0.0,
+          "root": 2365828211
+        },
+        {
+          "delta": 0.0,
+          "root": 2357396176
+        },
+        {
+          "delta": -1.0,
+          "root": 2852120528
+        },
+        {
+          "delta": 1.0,
+          "root": 3953988944
+        }
+      ],
+      "maps_improved": 12,
+      "maps_tied": 10,
+      "maps_worse": 2,
+      "mean_paired_margin": 1.5833333333333333,
+      "sides": {
+        "0": {
+          "mean_paired_margin": 0.5833333333333334
+        },
+        "1": {
+          "mean_paired_margin": 2.5833333333333335
+        }
+      },
+      "status": "secondary exploratory marginal interval"
+    },
+    "rng1383116603_ep100-minus-IL": {
+      "map_bootstrap95": [
+        -1.75,
+        0.08333333333333333
+      ],
+      "map_differences": [
+        {
+          "delta": -3.0,
+          "root": 2893186689
+        },
+        {
+          "delta": 0.0,
+          "root": 4119674628
+        },
+        {
+          "delta": -1.0,
+          "root": 3403761857
+        },
+        {
+          "delta": -2.0,
+          "root": 3574175701
+        },
+        {
+          "delta": -6.0,
+          "root": 2181169562
+        },
+        {
+          "delta": 0.0,
+          "root": 3337603987
+        },
+        {
+          "delta": -2.0,
+          "root": 3245714684
+        },
+        {
+          "delta": 1.0,
+          "root": 3291707049
+        },
+        {
+          "delta": 5.0,
+          "root": 3298475327
+        },
+        {
+          "delta": 0.0,
+          "root": 3337384266
+        },
+        {
+          "delta": 2.0,
+          "root": 2790095679
+        },
+        {
+          "delta": -1.0,
+          "root": 3115361517
+        },
+        {
+          "delta": -2.0,
+          "root": 3571959035
+        },
+        {
+          "delta": 0.0,
+          "root": 3647415428
+        },
+        {
+          "delta": -3.0,
+          "root": 3014468282
+        },
+        {
+          "delta": -1.0,
+          "root": 3647757230
+        },
+        {
+          "delta": 0.0,
+          "root": 3259281293
+        },
+        {
+          "delta": -5.0,
+          "root": 3796223620
+        },
+        {
+          "delta": -2.0,
+          "root": 3667035821
+        },
+        {
+          "delta": 0.0,
+          "root": 2582767628
+        },
+        {
+          "delta": 1.0,
+          "root": 2365828211
+        },
+        {
+          "delta": 1.0,
+          "root": 2357396176
+        },
+        {
+          "delta": -3.0,
+          "root": 2852120528
+        },
+        {
+          "delta": 1.0,
+          "root": 3953988944
+        }
+      ],
+      "maps_improved": 6,
+      "maps_tied": 6,
+      "maps_worse": 12,
+      "mean_paired_margin": -0.8333333333333334,
+      "sides": {
+        "0": {
+          "mean_paired_margin": -0.75
+        },
+        "1": {
+          "mean_paired_margin": -0.9166666666666666
+        }
+      },
+      "status": "secondary exploratory marginal interval"
+    },
+    "rng1383116603_ep200-minus-IL": {
+      "map_bootstrap95": [
+        -1.209374999999999,
+        0.125
+      ],
+      "map_differences": [
+        {
+          "delta": -2.0,
+          "root": 2893186689
+        },
+        {
+          "delta": 1.0,
+          "root": 4119674628
+        },
+        {
+          "delta": 0.0,
+          "root": 3403761857
+        },
+        {
+          "delta": -1.0,
+          "root": 3574175701
+        },
+        {
+          "delta": -2.0,
+          "root": 2181169562
+        },
+        {
+          "delta": 0.0,
+          "root": 3337603987
+        },
+        {
+          "delta": -2.0,
+          "root": 3245714684
+        },
+        {
+          "delta": -1.0,
+          "root": 3291707049
+        },
+        {
+          "delta": 2.0,
+          "root": 3298475327
+        },
+        {
+          "delta": 0.0,
+          "root": 3337384266
+        },
+        {
+          "delta": 0.0,
+          "root": 2790095679
+        },
+        {
+          "delta": 1.0,
+          "root": 3115361517
+        },
+        {
+          "delta": 1.0,
+          "root": 3571959035
+        },
+        {
+          "delta": 0.0,
+          "root": 3647415428
+        },
+        {
+          "delta": -2.0,
+          "root": 3014468282
+        },
+        {
+          "delta": -2.0,
+          "root": 3647757230
+        },
+        {
+          "delta": 1.0,
+          "root": 3259281293
+        },
+        {
+          "delta": -6.0,
+          "root": 3796223620
+        },
+        {
+          "delta": -1.0,
+          "root": 3667035821
+        },
+        {
+          "delta": 0.0,
+          "root": 2582767628
+        },
+        {
+          "delta": 0.0,
+          "root": 2365828211
+        },
+        {
+          "delta": 2.0,
+          "root": 2357396176
+        },
+        {
+          "delta": -2.0,
+          "root": 2852120528
+        },
+        {
+          "delta": 1.0,
+          "root": 3953988944
+        }
+      ],
+      "maps_improved": 7,
+      "maps_tied": 7,
+      "maps_worse": 10,
+      "mean_paired_margin": -0.5,
+      "sides": {
+        "0": {
+          "mean_paired_margin": -0.4166666666666667
+        },
+        "1": {
+          "mean_paired_margin": -0.5833333333333334
+        }
+      },
+      "status": "secondary exploratory marginal interval"
+    },
+    "rng1383116603_ep200-minus-rng1383116603_ep100": {
+      "map_bootstrap95": [
+        -0.2916666666666667,
+        0.9166666666666666
+      ],
+      "map_differences": [
+        {
+          "delta": 1.0,
+          "root": 2893186689
+        },
+        {
+          "delta": 1.0,
+          "root": 4119674628
+        },
+        {
+          "delta": 1.0,
+          "root": 3403761857
+        },
+        {
+          "delta": 1.0,
+          "root": 3574175701
+        },
+        {
+          "delta": 4.0,
+          "root": 2181169562
+        },
+        {
+          "delta": 0.0,
+          "root": 3337603987
+        },
+        {
+          "delta": 0.0,
+          "root": 3245714684
+        },
+        {
+          "delta": -2.0,
+          "root": 3291707049
+        },
+        {
+          "delta": -3.0,
+          "root": 3298475327
+        },
+        {
+          "delta": 0.0,
+          "root": 3337384266
+        },
+        {
+          "delta": -2.0,
+          "root": 2790095679
+        },
+        {
+          "delta": 2.0,
+          "root": 3115361517
+        },
+        {
+          "delta": 3.0,
+          "root": 3571959035
+        },
+        {
+          "delta": 0.0,
+          "root": 3647415428
+        },
+        {
+          "delta": 1.0,
+          "root": 3014468282
+        },
+        {
+          "delta": -1.0,
+          "root": 3647757230
+        },
+        {
+          "delta": 1.0,
+          "root": 3259281293
+        },
+        {
+          "delta": -1.0,
+          "root": 3796223620
+        },
+        {
+          "delta": 1.0,
+          "root": 3667035821
+        },
+        {
+          "delta": 0.0,
+          "root": 2582767628
+        },
+        {
+          "delta": -1.0,
+          "root": 2365828211
+        },
+        {
+          "delta": 1.0,
+          "root": 2357396176
+        },
+        {
+          "delta": 1.0,
+          "root": 2852120528
+        },
+        {
+          "delta": 0.0,
+          "root": 3953988944
+        }
+      ],
+      "maps_improved": 12,
+      "maps_tied": 6,
+      "maps_worse": 6,
+      "mean_paired_margin": 0.3333333333333333,
+      "sides": {
+        "0": {
+          "mean_paired_margin": 0.3333333333333333
+        },
+        "1": {
+          "mean_paired_margin": 0.3333333333333333
+        }
+      },
+      "status": "secondary exploratory marginal interval"
+    },
+    "rng1383116603_ep300-minus-IL": {
+      "map_bootstrap95": [
+        -2.3333333333333335,
+        -1.0
+      ],
+      "map_differences": [
+        {
+          "delta": -3.0,
+          "root": 2893186689
+        },
+        {
+          "delta": 0.0,
+          "root": 4119674628
+        },
+        {
+          "delta": -1.0,
+          "root": 3403761857
+        },
+        {
+          "delta": -4.0,
+          "root": 3574175701
+        },
+        {
+          "delta": -2.0,
+          "root": 2181169562
+        },
+        {
+          "delta": 0.0,
+          "root": 3337603987
+        },
+        {
+          "delta": -2.0,
+          "root": 3245714684
+        },
+        {
+          "delta": -2.0,
+          "root": 3291707049
+        },
+        {
+          "delta": -2.0,
+          "root": 3298475327
+        },
+        {
+          "delta": 0.0,
+          "root": 3337384266
+        },
+        {
+          "delta": -4.0,
+          "root": 2790095679
+        },
+        {
+          "delta": -3.0,
+          "root": 3115361517
+        },
+        {
+          "delta": 0.0,
+          "root": 3571959035
+        },
+        {
+          "delta": 0.0,
+          "root": 3647415428
+        },
+        {
+          "delta": -3.0,
+          "root": 3014468282
+        },
+        {
+          "delta": -2.0,
+          "root": 3647757230
+        },
+        {
+          "delta": -1.0,
+          "root": 3259281293
+        },
+        {
+          "delta": -7.0,
+          "root": 3796223620
+        },
+        {
+          "delta": -1.0,
+          "root": 3667035821
+        },
+        {
+          "delta": -1.0,
+          "root": 2582767628
+        },
+        {
+          "delta": 0.0,
+          "root": 2365828211
+        },
+        {
+          "delta": 0.0,
+          "root": 2357396176
+        },
+        {
+          "delta": -1.0,
+          "root": 2852120528
+        },
+        {
+          "delta": 0.0,
+          "root": 3953988944
+        }
+      ],
+      "maps_improved": 0,
+      "maps_tied": 8,
+      "maps_worse": 16,
+      "mean_paired_margin": -1.625,
+      "sides": {
+        "0": {
+          "mean_paired_margin": -1.5
+        },
+        "1": {
+          "mean_paired_margin": -1.75
+        }
+      },
+      "status": "secondary exploratory marginal interval"
+    },
+    "rng1383116603_ep300-minus-rng1383116603_ep100": {
+      "map_bootstrap95": [
+        -1.75,
+        0.041666666666666664
+      ],
+      "map_differences": [
+        {
+          "delta": 0.0,
+          "root": 2893186689
+        },
+        {
+          "delta": 0.0,
+          "root": 4119674628
+        },
+        {
+          "delta": 0.0,
+          "root": 3403761857
+        },
+        {
+          "delta": -2.0,
+          "root": 3574175701
+        },
+        {
+          "delta": 4.0,
+          "root": 2181169562
+        },
+        {
+          "delta": 0.0,
+          "root": 3337603987
+        },
+        {
+          "delta": 0.0,
+          "root": 3245714684
+        },
+        {
+          "delta": -3.0,
+          "root": 3291707049
+        },
+        {
+          "delta": -7.0,
+          "root": 3298475327
+        },
+        {
+          "delta": 0.0,
+          "root": 3337384266
+        },
+        {
+          "delta": -6.0,
+          "root": 2790095679
+        },
+        {
+          "delta": -2.0,
+          "root": 3115361517
+        },
+        {
+          "delta": 2.0,
+          "root": 3571959035
+        },
+        {
+          "delta": 0.0,
+          "root": 3647415428
+        },
+        {
+          "delta": 0.0,
+          "root": 3014468282
+        },
+        {
+          "delta": -1.0,
+          "root": 3647757230
+        },
+        {
+          "delta": -1.0,
+          "root": 3259281293
+        },
+        {
+          "delta": -2.0,
+          "root": 3796223620
+        },
+        {
+          "delta": 1.0,
+          "root": 3667035821
+        },
+        {
+          "delta": -1.0,
+          "root": 2582767628
+        },
+        {
+          "delta": -1.0,
+          "root": 2365828211
+        },
+        {
+          "delta": -1.0,
+          "root": 2357396176
+        },
+        {
+          "delta": 2.0,
+          "root": 2852120528
+        },
+        {
+          "delta": -1.0,
+          "root": 3953988944
+        }
+      ],
+      "maps_improved": 4,
+      "maps_tied": 8,
+      "maps_worse": 12,
+      "mean_paired_margin": -0.7916666666666666,
+      "sides": {
+        "0": {
+          "mean_paired_margin": -0.75
+        },
+        "1": {
+          "mean_paired_margin": -0.8333333333333334
+        }
+      },
+      "status": "primary"
+    },
+    "rng1383116603_ep300-minus-rng1383116603_ep200": {
+      "map_bootstrap95": [
+        -1.7083333333333333,
+        -0.625
+      ],
+      "map_differences": [
+        {
+          "delta": -1.0,
+          "root": 2893186689
+        },
+        {
+          "delta": -1.0,
+          "root": 4119674628
+        },
+        {
+          "delta": -1.0,
+          "root": 3403761857
+        },
+        {
+          "delta": -3.0,
+          "root": 3574175701
+        },
+        {
+          "delta": 0.0,
+          "root": 2181169562
+        },
+        {
+          "delta": 0.0,
+          "root": 3337603987
+        },
+        {
+          "delta": 0.0,
+          "root": 3245714684
+        },
+        {
+          "delta": -1.0,
+          "root": 3291707049
+        },
+        {
+          "delta": -4.0,
+          "root": 3298475327
+        },
+        {
+          "delta": 0.0,
+          "root": 3337384266
+        },
+        {
+          "delta": -4.0,
+          "root": 2790095679
+        },
+        {
+          "delta": -4.0,
+          "root": 3115361517
+        },
+        {
+          "delta": -1.0,
+          "root": 3571959035
+        },
+        {
+          "delta": 0.0,
+          "root": 3647415428
+        },
+        {
+          "delta": -1.0,
+          "root": 3014468282
+        },
+        {
+          "delta": 0.0,
+          "root": 3647757230
+        },
+        {
+          "delta": -2.0,
+          "root": 3259281293
+        },
+        {
+          "delta": -1.0,
+          "root": 3796223620
+        },
+        {
+          "delta": 0.0,
+          "root": 3667035821
+        },
+        {
+          "delta": -1.0,
+          "root": 2582767628
+        },
+        {
+          "delta": 0.0,
+          "root": 2365828211
+        },
+        {
+          "delta": -2.0,
+          "root": 2357396176
+        },
+        {
+          "delta": 1.0,
+          "root": 2852120528
+        },
+        {
+          "delta": -1.0,
+          "root": 3953988944
+        }
+      ],
+      "maps_improved": 1,
+      "maps_tied": 8,
+      "maps_worse": 15,
+      "mean_paired_margin": -1.125,
+      "sides": {
+        "0": {
+          "mean_paired_margin": -1.0833333333333333
+        },
+        "1": {
+          "mean_paired_margin": -1.1666666666666667
+        }
+      },
+      "status": "secondary exploratory marginal interval"
+    },
+    "rng257881232_ep100-minus-IL": {
+      "map_bootstrap95": [
+        -1.6666666666666667,
+        0.3333333333333333
+      ],
+      "map_differences": [
+        {
+          "delta": 2.0,
+          "root": 2893186689
+        },
+        {
+          "delta": 0.0,
+          "root": 4119674628
+        },
+        {
+          "delta": -1.0,
+          "root": 3403761857
+        },
+        {
+          "delta": 1.0,
+          "root": 3574175701
+        },
+        {
+          "delta": -6.0,
+          "root": 2181169562
+        },
+        {
+          "delta": 0.0,
+          "root": 3337603987
+        },
+        {
+          "delta": -2.0,
+          "root": 3245714684
+        },
+        {
+          "delta": -2.0,
+          "root": 3291707049
+        },
+        {
+          "delta": 4.0,
+          "root": 3298475327
+        },
+        {
+          "delta": 0.0,
+          "root": 3337384266
+        },
+        {
+          "delta": 3.0,
+          "root": 2790095679
+        },
+        {
+          "delta": 0.0,
+          "root": 3115361517
+        },
+        {
+          "delta": -2.0,
+          "root": 3571959035
+        },
+        {
+          "delta": 1.0,
+          "root": 3647415428
+        },
+        {
+          "delta": -3.0,
+          "root": 3014468282
+        },
+        {
+          "delta": -1.0,
+          "root": 3647757230
+        },
+        {
+          "delta": 1.0,
+          "root": 3259281293
+        },
+        {
+          "delta": -7.0,
+          "root": 3796223620
+        },
+        {
+          "delta": -2.0,
+          "root": 3667035821
+        },
+        {
+          "delta": -1.0,
+          "root": 2582767628
+        },
+        {
+          "delta": 0.0,
+          "root": 2365828211
+        },
+        {
+          "delta": 2.0,
+          "root": 2357396176
+        },
+        {
+          "delta": -3.0,
+          "root": 2852120528
+        },
+        {
+          "delta": 1.0,
+          "root": 3953988944
+        }
+      ],
+      "maps_improved": 8,
+      "maps_tied": 5,
+      "maps_worse": 11,
+      "mean_paired_margin": -0.625,
+      "sides": {
+        "0": {
+          "mean_paired_margin": -0.4166666666666667
+        },
+        "1": {
+          "mean_paired_margin": -0.8333333333333334
+        }
+      },
+      "status": "secondary exploratory marginal interval"
+    },
+    "rng257881232_ep200-minus-IL": {
+      "map_bootstrap95": [
+        -1.375,
+        0.25
+      ],
+      "map_differences": [
+        {
+          "delta": -3.0,
+          "root": 2893186689
+        },
+        {
+          "delta": 0.0,
+          "root": 4119674628
+        },
+        {
+          "delta": -1.0,
+          "root": 3403761857
+        },
+        {
+          "delta": -1.0,
+          "root": 3574175701
+        },
+        {
+          "delta": 0.0,
+          "root": 2181169562
+        },
+        {
+          "delta": 0.0,
+          "root": 3337603987
+        },
+        {
+          "delta": -2.0,
+          "root": 3245714684
+        },
+        {
+          "delta": -2.0,
+          "root": 3291707049
+        },
+        {
+          "delta": 3.0,
+          "root": 3298475327
+        },
+        {
+          "delta": 0.0,
+          "root": 3337384266
+        },
+        {
+          "delta": 2.0,
+          "root": 2790095679
+        },
+        {
+          "delta": -1.0,
+          "root": 3115361517
+        },
+        {
+          "delta": 0.0,
+          "root": 3571959035
+        },
+        {
+          "delta": 2.0,
+          "root": 3647415428
+        },
+        {
+          "delta": -1.0,
+          "root": 3014468282
+        },
+        {
+          "delta": -1.0,
+          "root": 3647757230
+        },
+        {
+          "delta": 2.0,
+          "root": 3259281293
+        },
+        {
+          "delta": -7.0,
+          "root": 3796223620
+        },
+        {
+          "delta": -1.0,
+          "root": 3667035821
+        },
+        {
+          "delta": -1.0,
+          "root": 2582767628
+        },
+        {
+          "delta": 0.0,
+          "root": 2365828211
+        },
+        {
+          "delta": 1.0,
+          "root": 2357396176
+        },
+        {
+          "delta": -3.0,
+          "root": 2852120528
+        },
+        {
+          "delta": 1.0,
+          "root": 3953988944
+        }
+      ],
+      "maps_improved": 6,
+      "maps_tied": 6,
+      "maps_worse": 12,
+      "mean_paired_margin": -0.5416666666666666,
+      "sides": {
+        "0": {
+          "mean_paired_margin": -0.75
+        },
+        "1": {
+          "mean_paired_margin": -0.3333333333333333
+        }
+      },
+      "status": "secondary exploratory marginal interval"
+    },
+    "rng257881232_ep200-minus-rng257881232_ep100": {
+      "map_bootstrap95": [
+        -0.625,
+        0.8333333333333334
+      ],
+      "map_differences": [
+        {
+          "delta": -5.0,
+          "root": 2893186689
+        },
+        {
+          "delta": 0.0,
+          "root": 4119674628
+        },
+        {
+          "delta": 0.0,
+          "root": 3403761857
+        },
+        {
+          "delta": -2.0,
+          "root": 3574175701
+        },
+        {
+          "delta": 6.0,
+          "root": 2181169562
+        },
+        {
+          "delta": 0.0,
+          "root": 3337603987
+        },
+        {
+          "delta": 0.0,
+          "root": 3245714684
+        },
+        {
+          "delta": 0.0,
+          "root": 3291707049
+        },
+        {
+          "delta": -1.0,
+          "root": 3298475327
+        },
+        {
+          "delta": 0.0,
+          "root": 3337384266
+        },
+        {
+          "delta": -1.0,
+          "root": 2790095679
+        },
+        {
+          "delta": -1.0,
+          "root": 3115361517
+        },
+        {
+          "delta": 2.0,
+          "root": 3571959035
+        },
+        {
+          "delta": 1.0,
+          "root": 3647415428
+        },
+        {
+          "delta": 2.0,
+          "root": 3014468282
+        },
+        {
+          "delta": 0.0,
+          "root": 3647757230
+        },
+        {
+          "delta": 1.0,
+          "root": 3259281293
+        },
+        {
+          "delta": 0.0,
+          "root": 3796223620
+        },
+        {
+          "delta": 1.0,
+          "root": 3667035821
+        },
+        {
+          "delta": 0.0,
+          "root": 2582767628
+        },
+        {
+          "delta": 0.0,
+          "root": 2365828211
+        },
+        {
+          "delta": -1.0,
+          "root": 2357396176
+        },
+        {
+          "delta": 0.0,
+          "root": 2852120528
+        },
+        {
+          "delta": 0.0,
+          "root": 3953988944
+        }
+      ],
+      "maps_improved": 6,
+      "maps_tied": 12,
+      "maps_worse": 6,
+      "mean_paired_margin": 0.08333333333333333,
+      "sides": {
+        "0": {
+          "mean_paired_margin": -0.3333333333333333
+        },
+        "1": {
+          "mean_paired_margin": 0.5
+        }
+      },
+      "status": "secondary exploratory marginal interval"
+    },
+    "rng257881232_ep300-minus-IL": {
+      "map_bootstrap95": [
+        -0.75,
+        0.875
+      ],
+      "map_differences": [
+        {
+          "delta": 0.0,
+          "root": 2893186689
+        },
+        {
+          "delta": 0.0,
+          "root": 4119674628
+        },
+        {
+          "delta": -1.0,
+          "root": 3403761857
+        },
+        {
+          "delta": 1.0,
+          "root": 3574175701
+        },
+        {
+          "delta": 0.0,
+          "root": 2181169562
+        },
+        {
+          "delta": 0.0,
+          "root": 3337603987
+        },
+        {
+          "delta": -2.0,
+          "root": 3245714684
+        },
+        {
+          "delta": 0.0,
+          "root": 3291707049
+        },
+        {
+          "delta": 5.0,
+          "root": 3298475327
+        },
+        {
+          "delta": 0.0,
+          "root": 3337384266
+        },
+        {
+          "delta": 1.0,
+          "root": 2790095679
+        },
+        {
+          "delta": 1.0,
+          "root": 3115361517
+        },
+        {
+          "delta": 1.0,
+          "root": 3571959035
+        },
+        {
+          "delta": 1.0,
+          "root": 3647415428
+        },
+        {
+          "delta": -2.0,
+          "root": 3014468282
+        },
+        {
+          "delta": 0.0,
+          "root": 3647757230
+        },
+        {
+          "delta": 4.0,
+          "root": 3259281293
+        },
+        {
+          "delta": -6.0,
+          "root": 3796223620
+        },
+        {
+          "delta": -1.0,
+          "root": 3667035821
+        },
+        {
+          "delta": -1.0,
+          "root": 2582767628
+        },
+        {
+          "delta": 0.0,
+          "root": 2365828211
+        },
+        {
+          "delta": 1.0,
+          "root": 2357396176
+        },
+        {
+          "delta": -2.0,
+          "root": 2852120528
+        },
+        {
+          "delta": 2.0,
+          "root": 3953988944
+        }
+      ],
+      "maps_improved": 9,
+      "maps_tied": 8,
+      "maps_worse": 7,
+      "mean_paired_margin": 0.08333333333333333,
+      "sides": {
+        "0": {
+          "mean_paired_margin": -0.16666666666666666
+        },
+        "1": {
+          "mean_paired_margin": 0.3333333333333333
+        }
+      },
+      "status": "secondary exploratory marginal interval"
+    },
+    "rng257881232_ep300-minus-rng257881232_ep100": {
+      "map_bootstrap95": [
+        0.125,
+        1.3760416666666515
+      ],
+      "map_differences": [
+        {
+          "delta": -2.0,
+          "root": 2893186689
+        },
+        {
+          "delta": 0.0,
+          "root": 4119674628
+        },
+        {
+          "delta": 0.0,
+          "root": 3403761857
+        },
+        {
+          "delta": 0.0,
+          "root": 3574175701
+        },
+        {
+          "delta": 6.0,
+          "root": 2181169562
+        },
+        {
+          "delta": 0.0,
+          "root": 3337603987
+        },
+        {
+          "delta": 0.0,
+          "root": 3245714684
+        },
+        {
+          "delta": 2.0,
+          "root": 3291707049
+        },
+        {
+          "delta": 1.0,
+          "root": 3298475327
+        },
+        {
+          "delta": 0.0,
+          "root": 3337384266
+        },
+        {
+          "delta": -2.0,
+          "root": 2790095679
+        },
+        {
+          "delta": 1.0,
+          "root": 3115361517
+        },
+        {
+          "delta": 3.0,
+          "root": 3571959035
+        },
+        {
+          "delta": 0.0,
+          "root": 3647415428
+        },
+        {
+          "delta": 1.0,
+          "root": 3014468282
+        },
+        {
+          "delta": 1.0,
+          "root": 3647757230
+        },
+        {
+          "delta": 3.0,
+          "root": 3259281293
+        },
+        {
+          "delta": 1.0,
+          "root": 3796223620
+        },
+        {
+          "delta": 1.0,
+          "root": 3667035821
+        },
+        {
+          "delta": 0.0,
+          "root": 2582767628
+        },
+        {
+          "delta": 0.0,
+          "root": 2365828211
+        },
+        {
+          "delta": -1.0,
+          "root": 2357396176
+        },
+        {
+          "delta": 1.0,
+          "root": 2852120528
+        },
+        {
+          "delta": 1.0,
+          "root": 3953988944
+        }
+      ],
+      "maps_improved": 12,
+      "maps_tied": 9,
+      "maps_worse": 3,
+      "mean_paired_margin": 0.7083333333333334,
+      "sides": {
+        "0": {
+          "mean_paired_margin": 0.25
+        },
+        "1": {
+          "mean_paired_margin": 1.1666666666666667
+        }
+      },
+      "status": "primary"
+    },
+    "rng257881232_ep300-minus-rng257881232_ep200": {
+      "map_bootstrap95": [
+        0.20833333333333334,
+        1.0833333333333333
+      ],
+      "map_differences": [
+        {
+          "delta": 3.0,
+          "root": 2893186689
+        },
+        {
+          "delta": 0.0,
+          "root": 4119674628
+        },
+        {
+          "delta": 0.0,
+          "root": 3403761857
+        },
+        {
+          "delta": 2.0,
+          "root": 3574175701
+        },
+        {
+          "delta": 0.0,
+          "root": 2181169562
+        },
+        {
+          "delta": 0.0,
+          "root": 3337603987
+        },
+        {
+          "delta": 0.0,
+          "root": 3245714684
+        },
+        {
+          "delta": 2.0,
+          "root": 3291707049
+        },
+        {
+          "delta": 2.0,
+          "root": 3298475327
+        },
+        {
+          "delta": 0.0,
+          "root": 3337384266
+        },
+        {
+          "delta": -1.0,
+          "root": 2790095679
+        },
+        {
+          "delta": 2.0,
+          "root": 3115361517
+        },
+        {
+          "delta": 1.0,
+          "root": 3571959035
+        },
+        {
+          "delta": -1.0,
+          "root": 3647415428
+        },
+        {
+          "delta": -1.0,
+          "root": 3014468282
+        },
+        {
+          "delta": 1.0,
+          "root": 3647757230
+        },
+        {
+          "delta": 2.0,
+          "root": 3259281293
+        },
+        {
+          "delta": 1.0,
+          "root": 3796223620
+        },
+        {
+          "delta": 0.0,
+          "root": 3667035821
+        },
+        {
+          "delta": 0.0,
+          "root": 2582767628
+        },
+        {
+          "delta": 0.0,
+          "root": 2365828211
+        },
+        {
+          "delta": 0.0,
+          "root": 2357396176
+        },
+        {
+          "delta": 1.0,
+          "root": 2852120528
+        },
+        {
+          "delta": 1.0,
+          "root": 3953988944
+        }
+      ],
+      "maps_improved": 11,
+      "maps_tied": 10,
+      "maps_worse": 3,
+      "mean_paired_margin": 0.625,
+      "sides": {
+        "0": {
+          "mean_paired_margin": 0.5833333333333334
+        },
+        "1": {
+          "mean_paired_margin": 0.6666666666666666
+        }
+      },
+      "status": "secondary exploratory marginal interval"
+    }
+  },
+  "complete_games": 480,
+  "cuda_memory": {
+    "allocated_mib": 52.68115234375,
+    "peak_allocated_mib": 64.12451171875,
+    "peak_fraction": 0.009324509811439395,
+    "peak_reserved_mib": 76.0,
+    "reserved_mib": 76.0,
+    "total_mib": 8150.5625
+  },
+  "decision_rules": {
+    "200_checkpoint": "descriptive only: report200-100 and300-200 signs/intervals; no monotonicity gate or checkpoint selection",
+    "V2_question_separate": "positive300-100 is learning relative to100, not proof of outperforming V2; report d300 and its map interval separately",
+    "mixed_or_wide": "INCONCLUSIVE; no automatic experiment expansion",
+    "no_supported_improvement": "report each seed and pooled conditional map interval; nonpositive curves do not identify a causal algorithm defect",
+    "strong_consistent_learning_signal": "all three mean300-100 differences positive and map-bootstrap CI for their mapwise average entirely positive; descriptive evidence conditional on3 training RNGs"
+  },
+  "evaluation_only": true,
+  "interpretation": "Registered development roots, not final holdout; three training RNGs reported separately; old IL400 roots missing; 480 games form24 map clusters, not480 independent maps",
+  "learning_curves": {
+    "1313969260": {
+      "d100": -3.5833333333333335,
+      "d200": -2.75,
+      "d300": -1.1666666666666667,
+      "delta200_minus100": {
+        "map_bootstrap95": [
+          0.2916666666666667,
+          1.4583333333333333
+        ],
+        "map_differences": [
+          {
+            "delta": 0.0,
+            "root": 2893186689
+          },
+          {
+            "delta": 1.0,
+            "root": 4119674628
+          },
+          {
+            "delta": 2.0,
+            "root": 3403761857
+          },
+          {
+            "delta": 0.0,
+            "root": 3574175701
+          },
+          {
+            "delta": 5.0,
+            "root": 2181169562
+          },
+          {
+            "delta": 0.0,
+            "root": 3337603987
+          },
+          {
+            "delta": 0.0,
+            "root": 3245714684
+          },
+          {
+            "delta": 0.0,
+            "root": 3291707049
+          },
+          {
+            "delta": 2.0,
+            "root": 3298475327
+          },
+          {
+            "delta": 1.0,
+            "root": 3337384266
+          },
+          {
+            "delta": 0.0,
+            "root": 2790095679
+          },
+          {
+            "delta": 3.0,
+            "root": 3115361517
+          },
+          {
+            "delta": 1.0,
+            "root": 3571959035
+          },
+          {
+            "delta": 0.0,
+            "root": 3647415428
+          },
+          {
+            "delta": 3.0,
+            "root": 3014468282
+          },
+          {
+            "delta": 0.0,
+            "root": 3647757230
+          },
+          {
+            "delta": 3.0,
+            "root": 3259281293
+          },
+          {
+            "delta": 1.0,
+            "root": 3796223620
+          },
+          {
+            "delta": -1.0,
+            "root": 3667035821
+          },
+          {
+            "delta": 0.0,
+            "root": 2582767628
+          },
+          {
+            "delta": 0.0,
+            "root": 2365828211
+          },
+          {
+            "delta": 0.0,
+            "root": 2357396176
+          },
+          {
+            "delta": -1.0,
+            "root": 2852120528
+          },
+          {
+            "delta": 0.0,
+            "root": 3953988944
+          }
+        ],
+        "maps_improved": 10,
+        "maps_tied": 12,
+        "maps_worse": 2,
+        "mean_paired_margin": 0.8333333333333334,
+        "sides": {
+          "0": {
+            "mean_paired_margin": 1.1666666666666667
+          },
+          "1": {
+            "mean_paired_margin": 0.5
+          }
+        },
+        "status": "secondary exploratory marginal interval"
+      },
+      "delta300_minus200": {
+        "map_bootstrap95": [
+          0.75,
+          2.4583333333333335
+        ],
+        "map_differences": [
+          {
+            "delta": 3.0,
+            "root": 2893186689
+          },
+          {
+            "delta": 0.0,
+            "root": 4119674628
+          },
+          {
+            "delta": -1.0,
+            "root": 3403761857
+          },
+          {
+            "delta": 0.0,
+            "root": 3574175701
+          },
+          {
+            "delta": 0.0,
+            "root": 2181169562
+          },
+          {
+            "delta": 1.0,
+            "root": 3337603987
+          },
+          {
+            "delta": 0.0,
+            "root": 3245714684
+          },
+          {
+            "delta": 5.0,
+            "root": 3291707049
+          },
+          {
+            "delta": 4.0,
+            "root": 3298475327
+          },
+          {
+            "delta": 2.0,
+            "root": 3337384266
+          },
+          {
+            "delta": 6.0,
+            "root": 2790095679
+          },
+          {
+            "delta": 0.0,
+            "root": 3115361517
+          },
+          {
+            "delta": 2.0,
+            "root": 3571959035
+          },
+          {
+            "delta": 5.0,
+            "root": 3647415428
+          },
+          {
+            "delta": 0.0,
+            "root": 3014468282
+          },
+          {
+            "delta": 0.0,
+            "root": 3647757230
+          },
+          {
+            "delta": 4.0,
+            "root": 3259281293
+          },
+          {
+            "delta": 5.0,
+            "root": 3796223620
+          },
+          {
+            "delta": 2.0,
+            "root": 3667035821
+          },
+          {
+            "delta": 0.0,
+            "root": 2582767628
+          },
+          {
+            "delta": 0.0,
+            "root": 2365828211
+          },
+          {
+            "delta": 0.0,
+            "root": 2357396176
+          },
+          {
+            "delta": -1.0,
+            "root": 2852120528
+          },
+          {
+            "delta": 1.0,
+            "root": 3953988944
+          }
+        ],
+        "maps_improved": 12,
+        "maps_tied": 10,
+        "maps_worse": 2,
+        "mean_paired_margin": 1.5833333333333333,
+        "sides": {
+          "0": {
+            "mean_paired_margin": 0.5833333333333334
+          },
+          "1": {
+            "mean_paired_margin": 2.5833333333333335
+          }
+        },
+        "status": "secondary exploratory marginal interval"
+      },
+      "primary_delta300_minus100": {
+        "map_bootstrap95": [
+          1.4583333333333333,
+          3.4166666666666665
+        ],
+        "map_differences": [
+          {
+            "delta": 3.0,
+            "root": 2893186689
+          },
+          {
+            "delta": 1.0,
+            "root": 4119674628
+          },
+          {
+            "delta": 1.0,
+            "root": 3403761857
+          },
+          {
+            "delta": 0.0,
+            "root": 3574175701
+          },
+          {
+            "delta": 5.0,
+            "root": 2181169562
+          },
+          {
+            "delta": 1.0,
+            "root": 3337603987
+          },
+          {
+            "delta": 0.0,
+            "root": 3245714684
+          },
+          {
+            "delta": 5.0,
+            "root": 3291707049
+          },
+          {
+            "delta": 6.0,
+            "root": 3298475327
+          },
+          {
+            "delta": 3.0,
+            "root": 3337384266
+          },
+          {
+            "delta": 6.0,
+            "root": 2790095679
+          },
+          {
+            "delta": 3.0,
+            "root": 3115361517
+          },
+          {
+            "delta": 3.0,
+            "root": 3571959035
+          },
+          {
+            "delta": 5.0,
+            "root": 3647415428
+          },
+          {
+            "delta": 3.0,
+            "root": 3014468282
+          },
+          {
+            "delta": 0.0,
+            "root": 3647757230
+          },
+          {
+            "delta": 7.0,
+            "root": 3259281293
+          },
+          {
+            "delta": 6.0,
+            "root": 3796223620
+          },
+          {
+            "delta": 1.0,
+            "root": 3667035821
+          },
+          {
+            "delta": 0.0,
+            "root": 2582767628
+          },
+          {
+            "delta": 0.0,
+            "root": 2365828211
+          },
+          {
+            "delta": 0.0,
+            "root": 2357396176
+          },
+          {
+            "delta": -2.0,
+            "root": 2852120528
+          },
+          {
+            "delta": 1.0,
+            "root": 3953988944
+          }
+        ],
+        "maps_improved": 17,
+        "maps_tied": 6,
+        "maps_worse": 1,
+        "mean_paired_margin": 2.4166666666666665,
+        "sides": {
+          "0": {
+            "mean_paired_margin": 1.75
+          },
+          "1": {
+            "mean_paired_margin": 3.0833333333333335
+          }
+        },
+        "status": "primary"
+      }
+    },
+    "1383116603": {
+      "d100": -3.125,
+      "d200": -2.7916666666666665,
+      "d300": -3.9166666666666665,
+      "delta200_minus100": {
+        "map_bootstrap95": [
+          -0.2916666666666667,
+          0.9166666666666666
+        ],
+        "map_differences": [
+          {
+            "delta": 1.0,
+            "root": 2893186689
+          },
+          {
+            "delta": 1.0,
+            "root": 4119674628
+          },
+          {
+            "delta": 1.0,
+            "root": 3403761857
+          },
+          {
+            "delta": 1.0,
+            "root": 3574175701
+          },
+          {
+            "delta": 4.0,
+            "root": 2181169562
+          },
+          {
+            "delta": 0.0,
+            "root": 3337603987
+          },
+          {
+            "delta": 0.0,
+            "root": 3245714684
+          },
+          {
+            "delta": -2.0,
+            "root": 3291707049
+          },
+          {
+            "delta": -3.0,
+            "root": 3298475327
+          },
+          {
+            "delta": 0.0,
+            "root": 3337384266
+          },
+          {
+            "delta": -2.0,
+            "root": 2790095679
+          },
+          {
+            "delta": 2.0,
+            "root": 3115361517
+          },
+          {
+            "delta": 3.0,
+            "root": 3571959035
+          },
+          {
+            "delta": 0.0,
+            "root": 3647415428
+          },
+          {
+            "delta": 1.0,
+            "root": 3014468282
+          },
+          {
+            "delta": -1.0,
+            "root": 3647757230
+          },
+          {
+            "delta": 1.0,
+            "root": 3259281293
+          },
+          {
+            "delta": -1.0,
+            "root": 3796223620
+          },
+          {
+            "delta": 1.0,
+            "root": 3667035821
+          },
+          {
+            "delta": 0.0,
+            "root": 2582767628
+          },
+          {
+            "delta": -1.0,
+            "root": 2365828211
+          },
+          {
+            "delta": 1.0,
+            "root": 2357396176
+          },
+          {
+            "delta": 1.0,
+            "root": 2852120528
+          },
+          {
+            "delta": 0.0,
+            "root": 3953988944
+          }
+        ],
+        "maps_improved": 12,
+        "maps_tied": 6,
+        "maps_worse": 6,
+        "mean_paired_margin": 0.3333333333333333,
+        "sides": {
+          "0": {
+            "mean_paired_margin": 0.3333333333333333
+          },
+          "1": {
+            "mean_paired_margin": 0.3333333333333333
+          }
+        },
+        "status": "secondary exploratory marginal interval"
+      },
+      "delta300_minus200": {
+        "map_bootstrap95": [
+          -1.7083333333333333,
+          -0.625
+        ],
+        "map_differences": [
+          {
+            "delta": -1.0,
+            "root": 2893186689
+          },
+          {
+            "delta": -1.0,
+            "root": 4119674628
+          },
+          {
+            "delta": -1.0,
+            "root": 3403761857
+          },
+          {
+            "delta": -3.0,
+            "root": 3574175701
+          },
+          {
+            "delta": 0.0,
+            "root": 2181169562
+          },
+          {
+            "delta": 0.0,
+            "root": 3337603987
+          },
+          {
+            "delta": 0.0,
+            "root": 3245714684
+          },
+          {
+            "delta": -1.0,
+            "root": 3291707049
+          },
+          {
+            "delta": -4.0,
+            "root": 3298475327
+          },
+          {
+            "delta": 0.0,
+            "root": 3337384266
+          },
+          {
+            "delta": -4.0,
+            "root": 2790095679
+          },
+          {
+            "delta": -4.0,
+            "root": 3115361517
+          },
+          {
+            "delta": -1.0,
+            "root": 3571959035
+          },
+          {
+            "delta": 0.0,
+            "root": 3647415428
+          },
+          {
+            "delta": -1.0,
+            "root": 3014468282
+          },
+          {
+            "delta": 0.0,
+            "root": 3647757230
+          },
+          {
+            "delta": -2.0,
+            "root": 3259281293
+          },
+          {
+            "delta": -1.0,
+            "root": 3796223620
+          },
+          {
+            "delta": 0.0,
+            "root": 3667035821
+          },
+          {
+            "delta": -1.0,
+            "root": 2582767628
+          },
+          {
+            "delta": 0.0,
+            "root": 2365828211
+          },
+          {
+            "delta": -2.0,
+            "root": 2357396176
+          },
+          {
+            "delta": 1.0,
+            "root": 2852120528
+          },
+          {
+            "delta": -1.0,
+            "root": 3953988944
+          }
+        ],
+        "maps_improved": 1,
+        "maps_tied": 8,
+        "maps_worse": 15,
+        "mean_paired_margin": -1.125,
+        "sides": {
+          "0": {
+            "mean_paired_margin": -1.0833333333333333
+          },
+          "1": {
+            "mean_paired_margin": -1.1666666666666667
+          }
+        },
+        "status": "secondary exploratory marginal interval"
+      },
+      "primary_delta300_minus100": {
+        "map_bootstrap95": [
+          -1.75,
+          0.041666666666666664
+        ],
+        "map_differences": [
+          {
+            "delta": 0.0,
+            "root": 2893186689
+          },
+          {
+            "delta": 0.0,
+            "root": 4119674628
+          },
+          {
+            "delta": 0.0,
+            "root": 3403761857
+          },
+          {
+            "delta": -2.0,
+            "root": 3574175701
+          },
+          {
+            "delta": 4.0,
+            "root": 2181169562
+          },
+          {
+            "delta": 0.0,
+            "root": 3337603987
+          },
+          {
+            "delta": 0.0,
+            "root": 3245714684
+          },
+          {
+            "delta": -3.0,
+            "root": 3291707049
+          },
+          {
+            "delta": -7.0,
+            "root": 3298475327
+          },
+          {
+            "delta": 0.0,
+            "root": 3337384266
+          },
+          {
+            "delta": -6.0,
+            "root": 2790095679
+          },
+          {
+            "delta": -2.0,
+            "root": 3115361517
+          },
+          {
+            "delta": 2.0,
+            "root": 3571959035
+          },
+          {
+            "delta": 0.0,
+            "root": 3647415428
+          },
+          {
+            "delta": 0.0,
+            "root": 3014468282
+          },
+          {
+            "delta": -1.0,
+            "root": 3647757230
+          },
+          {
+            "delta": -1.0,
+            "root": 3259281293
+          },
+          {
+            "delta": -2.0,
+            "root": 3796223620
+          },
+          {
+            "delta": 1.0,
+            "root": 3667035821
+          },
+          {
+            "delta": -1.0,
+            "root": 2582767628
+          },
+          {
+            "delta": -1.0,
+            "root": 2365828211
+          },
+          {
+            "delta": -1.0,
+            "root": 2357396176
+          },
+          {
+            "delta": 2.0,
+            "root": 2852120528
+          },
+          {
+            "delta": -1.0,
+            "root": 3953988944
+          }
+        ],
+        "maps_improved": 4,
+        "maps_tied": 8,
+        "maps_worse": 12,
+        "mean_paired_margin": -0.7916666666666666,
+        "sides": {
+          "0": {
+            "mean_paired_margin": -0.75
+          },
+          "1": {
+            "mean_paired_margin": -0.8333333333333334
+          }
+        },
+        "status": "primary"
+      }
+    },
+    "257881232": {
+      "d100": -2.9166666666666665,
+      "d200": -2.8333333333333335,
+      "d300": -2.2083333333333335,
+      "delta200_minus100": {
+        "map_bootstrap95": [
+          -0.625,
+          0.8333333333333334
+        ],
+        "map_differences": [
+          {
+            "delta": -5.0,
+            "root": 2893186689
+          },
+          {
+            "delta": 0.0,
+            "root": 4119674628
+          },
+          {
+            "delta": 0.0,
+            "root": 3403761857
+          },
+          {
+            "delta": -2.0,
+            "root": 3574175701
+          },
+          {
+            "delta": 6.0,
+            "root": 2181169562
+          },
+          {
+            "delta": 0.0,
+            "root": 3337603987
+          },
+          {
+            "delta": 0.0,
+            "root": 3245714684
+          },
+          {
+            "delta": 0.0,
+            "root": 3291707049
+          },
+          {
+            "delta": -1.0,
+            "root": 3298475327
+          },
+          {
+            "delta": 0.0,
+            "root": 3337384266
+          },
+          {
+            "delta": -1.0,
+            "root": 2790095679
+          },
+          {
+            "delta": -1.0,
+            "root": 3115361517
+          },
+          {
+            "delta": 2.0,
+            "root": 3571959035
+          },
+          {
+            "delta": 1.0,
+            "root": 3647415428
+          },
+          {
+            "delta": 2.0,
+            "root": 3014468282
+          },
+          {
+            "delta": 0.0,
+            "root": 3647757230
+          },
+          {
+            "delta": 1.0,
+            "root": 3259281293
+          },
+          {
+            "delta": 0.0,
+            "root": 3796223620
+          },
+          {
+            "delta": 1.0,
+            "root": 3667035821
+          },
+          {
+            "delta": 0.0,
+            "root": 2582767628
+          },
+          {
+            "delta": 0.0,
+            "root": 2365828211
+          },
+          {
+            "delta": -1.0,
+            "root": 2357396176
+          },
+          {
+            "delta": 0.0,
+            "root": 2852120528
+          },
+          {
+            "delta": 0.0,
+            "root": 3953988944
+          }
+        ],
+        "maps_improved": 6,
+        "maps_tied": 12,
+        "maps_worse": 6,
+        "mean_paired_margin": 0.08333333333333333,
+        "sides": {
+          "0": {
+            "mean_paired_margin": -0.3333333333333333
+          },
+          "1": {
+            "mean_paired_margin": 0.5
+          }
+        },
+        "status": "secondary exploratory marginal interval"
+      },
+      "delta300_minus200": {
+        "map_bootstrap95": [
+          0.20833333333333334,
+          1.0833333333333333
+        ],
+        "map_differences": [
+          {
+            "delta": 3.0,
+            "root": 2893186689
+          },
+          {
+            "delta": 0.0,
+            "root": 4119674628
+          },
+          {
+            "delta": 0.0,
+            "root": 3403761857
+          },
+          {
+            "delta": 2.0,
+            "root": 3574175701
+          },
+          {
+            "delta": 0.0,
+            "root": 2181169562
+          },
+          {
+            "delta": 0.0,
+            "root": 3337603987
+          },
+          {
+            "delta": 0.0,
+            "root": 3245714684
+          },
+          {
+            "delta": 2.0,
+            "root": 3291707049
+          },
+          {
+            "delta": 2.0,
+            "root": 3298475327
+          },
+          {
+            "delta": 0.0,
+            "root": 3337384266
+          },
+          {
+            "delta": -1.0,
+            "root": 2790095679
+          },
+          {
+            "delta": 2.0,
+            "root": 3115361517
+          },
+          {
+            "delta": 1.0,
+            "root": 3571959035
+          },
+          {
+            "delta": -1.0,
+            "root": 3647415428
+          },
+          {
+            "delta": -1.0,
+            "root": 3014468282
+          },
+          {
+            "delta": 1.0,
+            "root": 3647757230
+          },
+          {
+            "delta": 2.0,
+            "root": 3259281293
+          },
+          {
+            "delta": 1.0,
+            "root": 3796223620
+          },
+          {
+            "delta": 0.0,
+            "root": 3667035821
+          },
+          {
+            "delta": 0.0,
+            "root": 2582767628
+          },
+          {
+            "delta": 0.0,
+            "root": 2365828211
+          },
+          {
+            "delta": 0.0,
+            "root": 2357396176
+          },
+          {
+            "delta": 1.0,
+            "root": 2852120528
+          },
+          {
+            "delta": 1.0,
+            "root": 3953988944
+          }
+        ],
+        "maps_improved": 11,
+        "maps_tied": 10,
+        "maps_worse": 3,
+        "mean_paired_margin": 0.625,
+        "sides": {
+          "0": {
+            "mean_paired_margin": 0.5833333333333334
+          },
+          "1": {
+            "mean_paired_margin": 0.6666666666666666
+          }
+        },
+        "status": "secondary exploratory marginal interval"
+      },
+      "primary_delta300_minus100": {
+        "map_bootstrap95": [
+          0.125,
+          1.3760416666666515
+        ],
+        "map_differences": [
+          {
+            "delta": -2.0,
+            "root": 2893186689
+          },
+          {
+            "delta": 0.0,
+            "root": 4119674628
+          },
+          {
+            "delta": 0.0,
+            "root": 3403761857
+          },
+          {
+            "delta": 0.0,
+            "root": 3574175701
+          },
+          {
+            "delta": 6.0,
+            "root": 2181169562
+          },
+          {
+            "delta": 0.0,
+            "root": 3337603987
+          },
+          {
+            "delta": 0.0,
+            "root": 3245714684
+          },
+          {
+            "delta": 2.0,
+            "root": 3291707049
+          },
+          {
+            "delta": 1.0,
+            "root": 3298475327
+          },
+          {
+            "delta": 0.0,
+            "root": 3337384266
+          },
+          {
+            "delta": -2.0,
+            "root": 2790095679
+          },
+          {
+            "delta": 1.0,
+            "root": 3115361517
+          },
+          {
+            "delta": 3.0,
+            "root": 3571959035
+          },
+          {
+            "delta": 0.0,
+            "root": 3647415428
+          },
+          {
+            "delta": 1.0,
+            "root": 3014468282
+          },
+          {
+            "delta": 1.0,
+            "root": 3647757230
+          },
+          {
+            "delta": 3.0,
+            "root": 3259281293
+          },
+          {
+            "delta": 1.0,
+            "root": 3796223620
+          },
+          {
+            "delta": 1.0,
+            "root": 3667035821
+          },
+          {
+            "delta": 0.0,
+            "root": 2582767628
+          },
+          {
+            "delta": 0.0,
+            "root": 2365828211
+          },
+          {
+            "delta": -1.0,
+            "root": 2357396176
+          },
+          {
+            "delta": 1.0,
+            "root": 2852120528
+          },
+          {
+            "delta": 1.0,
+            "root": 3953988944
+          }
+        ],
+        "maps_improved": 12,
+        "maps_tied": 9,
+        "maps_worse": 3,
+        "mean_paired_margin": 0.7083333333333334,
+        "sides": {
+          "0": {
+            "mean_paired_margin": 0.25
+          },
+          "1": {
+            "mean_paired_margin": 1.1666666666666667
+          }
+        },
+        "status": "primary"
+      }
+    }
+  },
+  "map_clusters": 24,
+  "map_margins": [
+    {
+      "margins": {
+        "IL": -2.0,
+        "rng1313969260_ep100": -3.0,
+        "rng1313969260_ep200": -3.0,
+        "rng1313969260_ep300": 0.0,
+        "rng1383116603_ep100": -5.0,
+        "rng1383116603_ep200": -4.0,
+        "rng1383116603_ep300": -5.0,
+        "rng257881232_ep100": 0.0,
+        "rng257881232_ep200": -5.0,
+        "rng257881232_ep300": -2.0
+      },
+      "root": 2893186689
+    },
+    {
+      "margins": {
+        "IL": -5.0,
+        "rng1313969260_ep100": -5.0,
+        "rng1313969260_ep200": -4.0,
+        "rng1313969260_ep300": -4.0,
+        "rng1383116603_ep100": -5.0,
+        "rng1383116603_ep200": -4.0,
+        "rng1383116603_ep300": -5.0,
+        "rng257881232_ep100": -5.0,
+        "rng257881232_ep200": -5.0,
+        "rng257881232_ep300": -5.0
+      },
+      "root": 4119674628
+    },
+    {
+      "margins": {
+        "IL": -4.0,
+        "rng1313969260_ep100": -5.0,
+        "rng1313969260_ep200": -3.0,
+        "rng1313969260_ep300": -4.0,
+        "rng1383116603_ep100": -5.0,
+        "rng1383116603_ep200": -4.0,
+        "rng1383116603_ep300": -5.0,
+        "rng257881232_ep100": -5.0,
+        "rng257881232_ep200": -5.0,
+        "rng257881232_ep300": -5.0
+      },
+      "root": 3403761857
+    },
+    {
+      "margins": {
+        "IL": 2.0,
+        "rng1313969260_ep100": 0.0,
+        "rng1313969260_ep200": 0.0,
+        "rng1313969260_ep300": 0.0,
+        "rng1383116603_ep100": 0.0,
+        "rng1383116603_ep200": 1.0,
+        "rng1383116603_ep300": -2.0,
+        "rng257881232_ep100": 3.0,
+        "rng257881232_ep200": 1.0,
+        "rng257881232_ep300": 3.0
+      },
+      "root": 3574175701
+    },
+    {
+      "margins": {
+        "IL": 1.0,
+        "rng1313969260_ep100": -1.0,
+        "rng1313969260_ep200": 4.0,
+        "rng1313969260_ep300": 4.0,
+        "rng1383116603_ep100": -5.0,
+        "rng1383116603_ep200": -1.0,
+        "rng1383116603_ep300": -1.0,
+        "rng257881232_ep100": -5.0,
+        "rng257881232_ep200": 1.0,
+        "rng257881232_ep300": 1.0
+      },
+      "root": 2181169562
+    },
+    {
+      "margins": {
+        "IL": -5.0,
+        "rng1313969260_ep100": -5.0,
+        "rng1313969260_ep200": -5.0,
+        "rng1313969260_ep300": -4.0,
+        "rng1383116603_ep100": -5.0,
+        "rng1383116603_ep200": -5.0,
+        "rng1383116603_ep300": -5.0,
+        "rng257881232_ep100": -5.0,
+        "rng257881232_ep200": -5.0,
+        "rng257881232_ep300": -5.0
+      },
+      "root": 3337603987
+    },
+    {
+      "margins": {
+        "IL": -3.0,
+        "rng1313969260_ep100": -1.0,
+        "rng1313969260_ep200": -1.0,
+        "rng1313969260_ep300": -1.0,
+        "rng1383116603_ep100": -5.0,
+        "rng1383116603_ep200": -5.0,
+        "rng1383116603_ep300": -5.0,
+        "rng257881232_ep100": -5.0,
+        "rng257881232_ep200": -5.0,
+        "rng257881232_ep300": -5.0
+      },
+      "root": 3245714684
+    },
+    {
+      "margins": {
+        "IL": -3.0,
+        "rng1313969260_ep100": -5.0,
+        "rng1313969260_ep200": -5.0,
+        "rng1313969260_ep300": 0.0,
+        "rng1383116603_ep100": -2.0,
+        "rng1383116603_ep200": -4.0,
+        "rng1383116603_ep300": -5.0,
+        "rng257881232_ep100": -5.0,
+        "rng257881232_ep200": -5.0,
+        "rng257881232_ep300": -3.0
+      },
+      "root": 3291707049
+    },
+    {
+      "margins": {
+        "IL": -3.0,
+        "rng1313969260_ep100": -5.0,
+        "rng1313969260_ep200": -3.0,
+        "rng1313969260_ep300": 1.0,
+        "rng1383116603_ep100": 2.0,
+        "rng1383116603_ep200": -1.0,
+        "rng1383116603_ep300": -5.0,
+        "rng257881232_ep100": 1.0,
+        "rng257881232_ep200": 0.0,
+        "rng257881232_ep300": 2.0
+      },
+      "root": 3298475327
+    },
+    {
+      "margins": {
+        "IL": -5.0,
+        "rng1313969260_ep100": -4.0,
+        "rng1313969260_ep200": -3.0,
+        "rng1313969260_ep300": -1.0,
+        "rng1383116603_ep100": -5.0,
+        "rng1383116603_ep200": -5.0,
+        "rng1383116603_ep300": -5.0,
+        "rng257881232_ep100": -5.0,
+        "rng257881232_ep200": -5.0,
+        "rng257881232_ep300": -5.0
+      },
+      "root": 3337384266
+    },
+    {
+      "margins": {
+        "IL": 2.0,
+        "rng1313969260_ep100": -3.0,
+        "rng1313969260_ep200": -3.0,
+        "rng1313969260_ep300": 3.0,
+        "rng1383116603_ep100": 4.0,
+        "rng1383116603_ep200": 2.0,
+        "rng1383116603_ep300": -2.0,
+        "rng257881232_ep100": 5.0,
+        "rng257881232_ep200": 4.0,
+        "rng257881232_ep300": 3.0
+      },
+      "root": 2790095679
+    },
+    {
+      "margins": {
+        "IL": -2.0,
+        "rng1313969260_ep100": -5.0,
+        "rng1313969260_ep200": -2.0,
+        "rng1313969260_ep300": -2.0,
+        "rng1383116603_ep100": -3.0,
+        "rng1383116603_ep200": -1.0,
+        "rng1383116603_ep300": -5.0,
+        "rng257881232_ep100": -2.0,
+        "rng257881232_ep200": -3.0,
+        "rng257881232_ep300": -1.0
+      },
+      "root": 3115361517
+    },
+    {
+      "margins": {
+        "IL": -2.0,
+        "rng1313969260_ep100": -3.0,
+        "rng1313969260_ep200": -2.0,
+        "rng1313969260_ep300": 0.0,
+        "rng1383116603_ep100": -4.0,
+        "rng1383116603_ep200": -1.0,
+        "rng1383116603_ep300": -2.0,
+        "rng257881232_ep100": -4.0,
+        "rng257881232_ep200": -2.0,
+        "rng257881232_ep300": -1.0
+      },
+      "root": 3571959035
+    },
+    {
+      "margins": {
+        "IL": -4.0,
+        "rng1313969260_ep100": -5.0,
+        "rng1313969260_ep200": -5.0,
+        "rng1313969260_ep300": 0.0,
+        "rng1383116603_ep100": -4.0,
+        "rng1383116603_ep200": -4.0,
+        "rng1383116603_ep300": -4.0,
+        "rng257881232_ep100": -3.0,
+        "rng257881232_ep200": -2.0,
+        "rng257881232_ep300": -3.0
+      },
+      "root": 3647415428
+    },
+    {
+      "margins": {
+        "IL": -2.0,
+        "rng1313969260_ep100": -2.0,
+        "rng1313969260_ep200": 1.0,
+        "rng1313969260_ep300": 1.0,
+        "rng1383116603_ep100": -5.0,
+        "rng1383116603_ep200": -4.0,
+        "rng1383116603_ep300": -5.0,
+        "rng257881232_ep100": -5.0,
+        "rng257881232_ep200": -3.0,
+        "rng257881232_ep300": -4.0
+      },
+      "root": 3014468282
+    },
+    {
+      "margins": {
+        "IL": -3.0,
+        "rng1313969260_ep100": -5.0,
+        "rng1313969260_ep200": -5.0,
+        "rng1313969260_ep300": -5.0,
+        "rng1383116603_ep100": -4.0,
+        "rng1383116603_ep200": -5.0,
+        "rng1383116603_ep300": -5.0,
+        "rng257881232_ep100": -4.0,
+        "rng257881232_ep200": -4.0,
+        "rng257881232_ep300": -3.0
+      },
+      "root": 3647757230
+    },
+    {
+      "margins": {
+        "IL": -3.0,
+        "rng1313969260_ep100": -5.0,
+        "rng1313969260_ep200": -2.0,
+        "rng1313969260_ep300": 2.0,
+        "rng1383116603_ep100": -3.0,
+        "rng1383116603_ep200": -2.0,
+        "rng1383116603_ep300": -4.0,
+        "rng257881232_ep100": -2.0,
+        "rng257881232_ep200": -1.0,
+        "rng257881232_ep300": 1.0
+      },
+      "root": 3259281293
+    },
+    {
+      "margins": {
+        "IL": 2.0,
+        "rng1313969260_ep100": -5.0,
+        "rng1313969260_ep200": -4.0,
+        "rng1313969260_ep300": 1.0,
+        "rng1383116603_ep100": -3.0,
+        "rng1383116603_ep200": -4.0,
+        "rng1383116603_ep300": -5.0,
+        "rng257881232_ep100": -5.0,
+        "rng257881232_ep200": -5.0,
+        "rng257881232_ep300": -4.0
+      },
+      "root": 3796223620
+    },
+    {
+      "margins": {
+        "IL": -3.0,
+        "rng1313969260_ep100": -3.0,
+        "rng1313969260_ep200": -4.0,
+        "rng1313969260_ep300": -2.0,
+        "rng1383116603_ep100": -5.0,
+        "rng1383116603_ep200": -4.0,
+        "rng1383116603_ep300": -4.0,
+        "rng257881232_ep100": -5.0,
+        "rng257881232_ep200": -4.0,
+        "rng257881232_ep300": -4.0
+      },
+      "root": 3667035821
+    },
+    {
+      "margins": {
+        "IL": 0.0,
+        "rng1313969260_ep100": -1.0,
+        "rng1313969260_ep200": -1.0,
+        "rng1313969260_ep300": -1.0,
+        "rng1383116603_ep100": 0.0,
+        "rng1383116603_ep200": 0.0,
+        "rng1383116603_ep300": -1.0,
+        "rng257881232_ep100": -1.0,
+        "rng257881232_ep200": -1.0,
+        "rng257881232_ep300": -1.0
+      },
+      "root": 2582767628
+    },
+    {
+      "margins": {
+        "IL": -5.0,
+        "rng1313969260_ep100": -5.0,
+        "rng1313969260_ep200": -5.0,
+        "rng1313969260_ep300": -5.0,
+        "rng1383116603_ep100": -4.0,
+        "rng1383116603_ep200": -5.0,
+        "rng1383116603_ep300": -5.0,
+        "rng257881232_ep100": -5.0,
+        "rng257881232_ep200": -5.0,
+        "rng257881232_ep300": -5.0
+      },
+      "root": 2365828211
+    },
+    {
+      "margins": {
+        "IL": -5.0,
+        "rng1313969260_ep100": -5.0,
+        "rng1313969260_ep200": -5.0,
+        "rng1313969260_ep300": -5.0,
+        "rng1383116603_ep100": -4.0,
+        "rng1383116603_ep200": -3.0,
+        "rng1383116603_ep300": -5.0,
+        "rng257881232_ep100": -3.0,
+        "rng257881232_ep200": -4.0,
+        "rng257881232_ep300": -4.0
+      },
+      "root": 2357396176
+    },
+    {
+      "margins": {
+        "IL": -2.0,
+        "rng1313969260_ep100": -3.0,
+        "rng1313969260_ep200": -4.0,
+        "rng1313969260_ep300": -5.0,
+        "rng1383116603_ep100": -5.0,
+        "rng1383116603_ep200": -4.0,
+        "rng1383116603_ep300": -3.0,
+        "rng257881232_ep100": -5.0,
+        "rng257881232_ep200": -5.0,
+        "rng257881232_ep300": -4.0
+      },
+      "root": 2852120528
+    },
+    {
+      "margins": {
+        "IL": -1.0,
+        "rng1313969260_ep100": -2.0,
+        "rng1313969260_ep200": -2.0,
+        "rng1313969260_ep300": -1.0,
+        "rng1383116603_ep100": 0.0,
+        "rng1383116603_ep200": 0.0,
+        "rng1383116603_ep300": -1.0,
+        "rng257881232_ep100": 0.0,
+        "rng257881232_ep200": 0.0,
+        "rng257881232_ep300": 1.0
+      },
+      "root": 3953988944
+    }
+  ],
+  "mean_of_three_training_seeds": {
+    "delta300_minus100": 0.7777777777777778,
+    "interpretation": "Conditional on these three fitted training seeds. Map-cluster interval does not quantify training-seed population uncertainty.",
+    "map_bootstrap95": [
+      0.2916666666666667,
+      1.3333333333333333
+    ],
+    "map_deltas": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333,
+      -0.6666666666666666,
+      5.0,
+      0.3333333333333333,
+      0.0,
+      1.3333333333333333,
+      0.0,
+      1.0,
+      -0.6666666666666666,
+      0.6666666666666666,
+      2.6666666666666665,
+      1.6666666666666667,
+      1.3333333333333333,
+      0.0,
+      3.0,
+      1.6666666666666667,
+      1.0,
+      -0.3333333333333333,
+      -0.3333333333333333,
+      -0.6666666666666666,
+      0.3333333333333333,
+      0.3333333333333333
+    ]
+  },
+  "metric": {
+    "case_formula": "reward_controlled - reward_opponent = team_wins[side]-team_wins[1-side]",
+    "d_epoch": "mean over24 fixed map pairs",
+    "map_pair_formula": "(case_margin_side0 + case_margin_side1)/2",
+    "name": "official_terminal_reward_difference",
+    "not_big_game_wdl_points": "Big-game W/D/L is sign of this difference, a separate -1/0/1 statistic",
+    "not_team_points": "team_points resets each mini-match and is zero at task end; no cumulative resource-point margin is claimed",
+    "range": [
+      -5,
+      5
+    ]
+  },
+  "mlflow_run_id": "dc7099b733d648158361e0bbc56b4d1a",
+  "protected_seed_access": false,
+  "status": "FINISHED",
+  "training_updates": 0,
+  "wall_seconds": 8835.213947892
+}

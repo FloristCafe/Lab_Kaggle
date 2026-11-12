@@ -1,0 +1,8 @@
+# Official worker, separate Python 3.11 CPU environment.
+jax[cpu]==0.10.2
+flax==0.12.8
+chex==0.1.92
+gymnax==0.0.8
+numpy==2.4.6
+scipy==1.17.1
+tyro==1.0.16

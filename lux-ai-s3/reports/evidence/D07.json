@@ -1,0 +1,80 @@
+{
+  "all_Replan_guards_pass": true,
+  "engineering_PASS": true,
+  "fit_passes": 0,
+  "interpretation": "fixed context-only8912param residual,8epoch budget, reused4exploration maps; does not prove context useless or official reward benefit",
+  "per_fit": {
+    "3101": {
+      "all_Replan_guard": true,
+      "far_deltas": {
+        "A_final_Top1": 0.0,
+        "A_raw_Top1": 0.0,
+        "C_final_Top1": 0.0,
+        "C_raw_Top1": 0.0
+      },
+      "far_fit_pass": false
+    },
+    "3102": {
+      "all_Replan_guard": true,
+      "far_deltas": {
+        "A_final_Top1": 0.0,
+        "A_raw_Top1": 0.0,
+        "C_final_Top1": 0.0,
+        "C_raw_Top1": 0.0
+      },
+      "far_fit_pass": false
+    },
+    "3103": {
+      "all_Replan_guard": true,
+      "far_deltas": {
+        "A_final_Top1": 0.0,
+        "A_raw_Top1": 0.0,
+        "C_final_Top1": 0.0,
+        "C_raw_Top1": 0.0
+      },
+      "far_fit_pass": false
+    }
+  },
+  "per_map_direction": {
+    "20": {
+      "deltas_mean_all3fits": {
+        "CONSTANT_CONTEXT_final_Top1": 0.0,
+        "CONSTANT_CONTEXT_raw_Top1": 0.0,
+        "SHUFFLED_TEAM_CONTEXT_final_Top1": 0.0,
+        "SHUFFLED_TEAM_CONTEXT_raw_Top1": 0.0
+      },
+      "positive_all_four": false
+    },
+    "21": {
+      "deltas_mean_all3fits": {
+        "CONSTANT_CONTEXT_final_Top1": 0.0,
+        "CONSTANT_CONTEXT_raw_Top1": 0.0,
+        "SHUFFLED_TEAM_CONTEXT_final_Top1": 0.0,
+        "SHUFFLED_TEAM_CONTEXT_raw_Top1": 0.0
+      },
+      "positive_all_four": false
+    },
+    "22": {
+      "deltas_mean_all3fits": {
+        "CONSTANT_CONTEXT_final_Top1": 0.0,
+        "CONSTANT_CONTEXT_raw_Top1": 0.0,
+        "SHUFFLED_TEAM_CONTEXT_final_Top1": 0.0,
+        "SHUFFLED_TEAM_CONTEXT_raw_Top1": 0.0
+      },
+      "positive_all_four": false
+    },
+    "23": {
+      "deltas_mean_all3fits": {
+        "CONSTANT_CONTEXT_final_Top1": 0.0,
+        "CONSTANT_CONTEXT_raw_Top1": 0.0,
+        "SHUFFLED_TEAM_CONTEXT_final_Top1": 0.0,
+        "SHUFFLED_TEAM_CONTEXT_raw_Top1": 0.0
+      },
+      "positive_all_four": false
+    }
+  },
+  "positive_maps": 0,
+  "required_fit_passes": 2,
+  "required_positive_maps": 3,
+  "research_decision": "NO_RELIABLE_TEAM_CONTEXT_GAIN"
+}

@@ -1,0 +1,194 @@
+[
+  {
+    "id": "B0_learning_curve",
+    "file": "reports/evidence/B0_learning_curve.json",
+    "sha256": "7a686c472e1e203f5308cae2161793aad0f21594fd817a1cf3faf5f21a3a0a1e",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/learning_curve_dev24_20261022_E01/summary.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "G05",
+    "file": "reports/evidence/G05.json",
+    "sha256": "c8a4c9be3f9ab24ee92e37e3ccd0eeee19029071058b21601af8ed017a8856b3",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/v2_goal_adapter_confirmation_run288_20261028_E01/analysis.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "G06",
+    "file": "reports/evidence/G06.json",
+    "sha256": "57027b6a2a669c345aa7f75143042ba7ab6b1956676380c76928b5bf17e6b5f7",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/v2_goal_adapter_mode_gate_run576_20261029_G06/analysis.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "A01",
+    "file": "reports/evidence/A01.json",
+    "sha256": "8404bd93c59778a44b4c8d8da5279d81d2aabae8c3cf0fd076844817118f768b",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/goal_allocation_run96_20261103_A01/analysis.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "A02",
+    "file": "reports/evidence/A02.json",
+    "sha256": "37e0970ec7fdd8534c2672afae2f3479a637f8fd2ffc3dbe0a7df1d9df4f91f2",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/score_ablation_run96_20261104_A02/analysis.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "D03",
+    "file": "reports/evidence/D03.json",
+    "sha256": "60dfc0121536651f4fc2f39320dcec942514c099355410cd29e4009fbd874ec1",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/goal_architecture_full_20261105_D03/results.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "D07",
+    "file": "reports/evidence/D07.json",
+    "sha256": "c562a84307757eda69afd1ef48daf9137de166fa88fa4603df6c9d120b6692e6",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/team_context_ablation_20261105_D07_R02/research_decision.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "D10",
+    "file": "reports/evidence/D10.json",
+    "sha256": "5e935285d12465aaaadd55ef1819532807919e6ce48775b38f0f871161cb7f6f",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/goal_utility_optimization_budget_20261106_D10/comparison.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "D12",
+    "file": "reports/evidence/D12.json",
+    "sha256": "6c4a7327c5d907cbe1d4c9ec35b11caa6c8970a7f05a908b750bc249fa381ef0",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/public_closed_loop_run96_20261107_D12/analysis.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "PGC01",
+    "file": "reports/evidence/PGC01.json",
+    "sha256": "2898e97fe1a261374836e5edde0c4facfb537701aa42a2d4bba20ca196bd4cac",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/paired_goal_credit_run_PGC01/analysis_1794126686894320227.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "review_trigger",
+    "file": "reports/evidence/review_trigger.json",
+    "sha256": "2411ceb66e4583988ca4010b771fd761de54b0f9663608cd3920be55d6db518b",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/review_trigger_delivery_R01/run32/results.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "expert_data_audit",
+    "file": "reports/evidence/expert_data_audit.json",
+    "sha256": "bb356673ca95887b89810409ab58b4126e600edd87d03571590a51be8a579c60",
+    "source_root": "expert_assets",
+    "source_relative": "independent_data_verification01.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "expert_provenance",
+    "file": "reports/evidence/expert_provenance.json",
+    "sha256": "f3c1ef12ff12f6105f4a9da9d26e48ca83b29d3555c6ec412e2ee7add64c2b56",
+    "source_root": "expert_assets",
+    "source_relative": "data_provenance02.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "expert_protocol",
+    "file": "reports/evidence/expert_protocol.json",
+    "sha256": "93a9f7a4dd49fab270579dc4db320f8f6654339c3414927a61f27d87309ae02b",
+    "source_root": "expert_assets",
+    "source_relative": "expert_training_protocol.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "BC_dtype_fix",
+    "file": "reports/evidence/BC_dtype_fix.json",
+    "sha256": "cb347fb46bd9a0175935ecda0a04d6f5ea299f3796422975bb51774a73e8a86b",
+    "source_root": "expert_assets",
+    "source_relative": "bc_dtype_fix_20261111_R02/protocol_amendment.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "G05_protocol_R05.json",
+    "file": "reports/evidence/G05_protocol_R05.json",
+    "sha256": "92bfa3ace2d03833c1281c083e7d1c347725c70fb5b65da6dfb507d0c16526da",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/v2_goal_adapter_confirmation_registration_20261028_G05_R05/protocol_R05.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "G05_execution_order.json",
+    "file": "reports/evidence/G05_execution_order.json",
+    "sha256": "3c0ee4f7ec9ce39710bdf2318fc58ce153ec28cc45c8ab0deaa3cdb7910cd11f",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/v2_goal_adapter_confirmation_registration_20261028_G05_R05/execution_order.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "G06_protocol.json",
+    "file": "reports/evidence/G06_protocol.json",
+    "sha256": "46a4971695d465b539ce860c13530085cac70bf96dcfd554dde120b0a5800ddc",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/v2_goal_adapter_mode_gate_registration_20261029_G06/protocol.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "G06_execution_order.json",
+    "file": "reports/evidence/G06_execution_order.json",
+    "sha256": "856e21e1b20d18c50badd0ebf72387b37ce6c542abcf3a59dfeac2cf5cde2723",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/v2_goal_adapter_mode_gate_registration_20261029_G06/execution_order.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "D07_notes",
+    "file": "reports/evidence/D07_notes.md",
+    "sha256": "2c69515197060baecd64988d30d4ab742669a3829f5577a3a5819736e4f6d7d4",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/team_context_ablation_20261105_D07_R02/research_report.md",
+    "copied_unchanged": true
+  },
+  {
+    "id": "D10_notes",
+    "file": "reports/evidence/D10_notes.md",
+    "sha256": "e655ff1eb856a7fc41361bb46394dad50742ff28f75f6c5b47824540af422a62",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/goal_utility_optimization_budget_20261106_D10/research_report.md",
+    "copied_unchanged": true
+  },
+  {
+    "id": "D11_notes",
+    "file": "reports/evidence/D11_notes.md",
+    "sha256": "c06a72028c2da81bbb5035aca9b3584fbf66473d021e5bb4f2b34cf0eda092e2",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/goal_interface_attribution_20261107_D11/research_report.md",
+    "copied_unchanged": true
+  },
+  {
+    "id": "G05_manifest",
+    "file": "reports/evidence/G05_manifest.json",
+    "sha256": "4b6c3f324198046cf310e5054924416075a24e62c63997bd7abe77ed9d0aaef7",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/v2_goal_adapter_confirmation_registration_20261028_G05_R05/dev24_seed_manifest.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "G06_manifest",
+    "file": "reports/evidence/G06_manifest.json",
+    "sha256": "da8e59cf7380a1f03b07cb27d88522147a0afb182d87a05c2a3e37c4a9f1111a",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/v2_goal_adapter_mode_gate_registration_20261029_G06/dev24_seed_manifest.json",
+    "copied_unchanged": true
+  }
+]

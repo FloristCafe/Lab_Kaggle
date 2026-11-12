@@ -1,0 +1,151 @@
+{
+  "schema": "expert_bc_native_pool_E01",
+  "created_utc": "2026-11-11T06:25:17.930519+00:00",
+  "scope": "Preparation complete; formal BC and RL are user manual actions",
+  "teacher_macro": "G06_FULL_S2_B0_RMode_V2_adapted_Goal",
+  "teacher_primitive": {
+    "name": "Flat Neurons",
+    "submission_id": 43368177
+  },
+  "data": {
+    "macro_dataset01": "3f9e2f42d2763b6ef8742ab3c02ab5a455074d75af8d8a47e4977c3abe03dd44",
+    "primitive_flat02": "6ec13b0e9072cc47f334e15c5896c43da20cf8c7789b85200083c3fca868862c"
+  },
+  "data_provenance_sha256": "f3c1ef12ff12f6105f4a9da9d26e48ca83b29d3555c6ec412e2ee7add64c2b56",
+  "source_lock_sha256": "f35ec2e79dde45fcb7cde062932c2df81964ba6397f709cbfade6fe2583dc559",
+  "opponents_registry_sha256": "51cfc0667bf0943052d67b80e5ffdd24615497f42b1fff642bc20b3dd81780e6",
+  "BC": {
+    "a": {
+      "epochs": 8,
+      "batch_size": 4,
+      "lr": 0.001,
+      "weight_decay": 0.0,
+      "grad_clip": 1.0,
+      "label_contract": "explicit actual macro R/Mode/Goal only; primitive inverse sets need separate admission",
+      "checkpoint_selection": "calibration_nll_then_earliest_epoch",
+      "primitive_aux_weight": 0.1,
+      "primitive_aux": "Flat Neurons six-way action on known public encoder inputs; auxiliary head discarded at deployment"
+    },
+    "b": {
+      "epochs": 8,
+      "batch_size": 4,
+      "lr": 0.001,
+      "weight_decay": 0.0,
+      "grad_clip": 1.0,
+      "label_contract": "explicit actual macro R/Mode/Goal only; primitive inverse sets need separate admission",
+      "checkpoint_selection": "calibration_nll_then_earliest_epoch",
+      "primitive_aux_weight": 0.1,
+      "primitive_aux": "Flat Neurons six-way action on known public encoder inputs; auxiliary head discarded at deployment"
+    },
+    "c": {
+      "epochs": 8,
+      "batch_size": 4,
+      "lr": 0.001,
+      "weight_decay": 0.0,
+      "grad_clip": 1.0,
+      "label_contract": "explicit actual macro R/Mode/Goal only; primitive inverse sets need separate admission",
+      "checkpoint_selection": "calibration_nll_then_earliest_epoch",
+      "primitive_aux_weight": 0.1,
+      "primitive_aux": "Flat Neurons six-way action on known public encoder inputs; auxiliary head discarded at deployment"
+    }
+  },
+  "BC_fit_seed": 3101,
+  "RL_seed_list": [
+    1313969260,
+    1383116603,
+    257881232
+  ],
+  "RL_common": {
+    "review": {
+      "min_review_steps": 3,
+      "max_review_horizon": 8,
+      "max_goal_age": 100,
+      "blockage_steps": 8,
+      "severe_threat_steps": 3,
+      "threat_ratio": 2.0,
+      "major_score_delta": 3,
+      "major_information": 3.0,
+      "major_rank_gain": 2,
+      "gate_replan_age": 16
+    },
+    "tactical": {
+      "macro_horizon": 16,
+      "router_horizon": 10,
+      "minimum_macro_steps": 3,
+      "hysteresis_bias": 0.25,
+      "local_radius": 6,
+      "support_radius": 4,
+      "rally_power_ratio": 1.3,
+      "engage_power_ratio": 1.15,
+      "rally_timeout": 8,
+      "recharge_below": 45,
+      "recharge_target": 90,
+      "retreat_threat": 2.0,
+      "safe_energy": 15,
+      "sap_threshold": 0.25,
+      "sap_dropoff_lower_bound": 0.25,
+      "void_upper_bound": 0.375,
+      "threat_enemy_weight": 0.6,
+      "threat_sap_weight": 1.0,
+      "threat_energy_weight": 1.0,
+      "threat_collision_weight": 1.0,
+      "threat_support_weight": 0.5,
+      "escape_cost_weight": 0.2,
+      "objective_value_weight": 0.2,
+      "sap_damage_weight": 1.0,
+      "sap_kill_weight": 2.0,
+      "sap_cluster_weight": 0.25,
+      "sap_interrupt_weight": 0.5,
+      "sap_energy_weight": 0.6,
+      "sap_survival_weight": 1.0
+    },
+    "reward": "terminal_official_win_margin",
+    "ppo": {
+      "gamma": 1.0,
+      "lambda": 0.99,
+      "clip": 0.1,
+      "epochs": 3,
+      "lr": 0.0001,
+      "batch_games": 4,
+      "actor_minibatch": 8,
+      "critic_minibatch": 32,
+      "entropy_weight": 0.001,
+      "value_weight": 0.5,
+      "grad_clip": 0.5,
+      "target_joint_kl": 0.25
+    },
+    "games": 1200,
+    "fit_seeds": [
+      1313969260,
+      1383116603,
+      257881232
+    ],
+    "eval_bootstrap_seed": 3106,
+    "eval_bootstrap_draws": 10000,
+    "opponent": "accepted_native_pool"
+  },
+  "maps_sha256": "adfed29a3c12e8f3166b6929695e05bc57168ae6853a7e61d3383c2c55297f48",
+  "opponents": {
+    "schema": "accepted_native_pool_v1",
+    "registry_environment": "LUX_OPPONENT_REGISTRY",
+    "sampler": "35_percent_V2_anchor_plus_65_percent_PFSP_with_10_percent_exploration",
+    "weight": "PFSP=(1-Beta(1,1)_posterior_winrate)^2",
+    "self_play": "not enabled without same acceptance gate",
+    "v2_anchor": 0.35,
+    "pfsp_exploration": 0.1,
+    "pfsp_power": 2.0,
+    "prior_alpha": 1.0,
+    "prior_beta": 1.0
+  },
+  "not_admitted": "Unidentifiable elite primitive-to-macro labels; old Waypoint IL; Frog/Yume/K opponents without accepted weights",
+  "formal_BC_started": false,
+  "formal_RL_started": false,
+  "limits": [
+    "old400 exact seed provenance unresolved",
+    "historical replay outcome selection bias",
+    "macro teacher is G06 FULL S2, not top-agent long Goal",
+    "single BC seed per architecture",
+    "already-reused macro exploration maps; not independent generalization",
+    "dynamic PFSP can give different realized opponent distributions"
+  ]
+}

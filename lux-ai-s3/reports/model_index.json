@@ -1,0 +1,34 @@
+{
+  "asset_root_environment": "LUX_ARTIFACTS",
+  "models": {
+    "BC_a": {
+      "checkpoint": "pretrain_r02/a-3101/batch_000006/checkpoint.pt",
+      "sha256": "63beb3c5ca2717c0bb66bdbd4705bcc4f66e4525dcc23baff4ab110c147bb43f",
+      "selected_epoch": 7,
+      "source_policy": "G06 FULL S2",
+      "fit_seed": 3101
+    },
+    "BC_b": {
+      "checkpoint": "pretrain_r02/b-3101/batch_000006/checkpoint.pt",
+      "sha256": "6db53b0511a7a42c42cb096eb1b5d984be8930c8440573af492f4d4f4b886a4f",
+      "selected_epoch": 7,
+      "source_policy": "G06 FULL S2",
+      "fit_seed": 3101
+    },
+    "BC_c": {
+      "checkpoint": "pretrain_r02/c-3101/batch_000005/checkpoint.pt",
+      "sha256": "27f331cd56931c5eab95b473d5ef1b668dc0af6a761e7d6b07605500cd8b2564",
+      "selected_epoch": 6,
+      "source_policy": "G06 FULL S2",
+      "fit_seed": 3101
+    },
+    "RL_A_1313969260": {
+      "checkpoint": "formal/a-1313969260/batch_000299/checkpoint.pt",
+      "sha256": "b0fd766a999f14fd19c715d5fc0120443d4db2fab98db58395e551d31e8d3cb5",
+      "games": 1200,
+      "primitive_steps": 606000,
+      "final_development_evaluation": "NOT RUN"
+    }
+  },
+  "weights_in_Git": false
+}

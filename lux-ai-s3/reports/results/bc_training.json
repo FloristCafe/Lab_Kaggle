@@ -1,0 +1,356 @@
+{
+  "a": {
+    "epochs": [
+      {
+        "epoch": 1,
+        "train_nll": 2.496331901805405,
+        "calibration_nll": 3.320782345365889,
+        "macro_calibration_nll": 3.227032989874887,
+        "primitive_calibration_nll": 0.937493554910024,
+        "primitive_train_nll": 1.2311780440107298,
+        "grad_norm": 5.254702716039305,
+        "updates": 3542,
+        "seconds": 256.6487362810003,
+        "gpu_peak_mib": 96.0
+      },
+      {
+        "epoch": 2,
+        "train_nll": 1.9807764878322989,
+        "calibration_nll": 3.4649407427350414,
+        "macro_calibration_nll": 3.3727204462726643,
+        "primitive_calibration_nll": 0.9222029646237692,
+        "primitive_train_nll": 1.1213102961061097,
+        "grad_norm": 4.172500973254998,
+        "updates": 7084,
+        "seconds": 254.365428866,
+        "gpu_peak_mib": 96.0
+      },
+      {
+        "epoch": 3,
+        "train_nll": 1.8183285307322163,
+        "calibration_nll": 3.035580199011771,
+        "macro_calibration_nll": 2.952439580242443,
+        "primitive_calibration_nll": 0.831406187693278,
+        "primitive_train_nll": 1.0611212562279537,
+        "grad_norm": 3.7049291415412435,
+        "updates": 10626,
+        "seconds": 253.7631298969991,
+        "gpu_peak_mib": 96.0
+      },
+      {
+        "epoch": 4,
+        "train_nll": 1.705523408099563,
+        "calibration_nll": 3.3128548019886765,
+        "macro_calibration_nll": 3.230556377061283,
+        "primitive_calibration_nll": 0.822984249273936,
+        "primitive_train_nll": 1.0148926928917072,
+        "grad_norm": 3.529470924752907,
+        "updates": 14168,
+        "seconds": 255.9345838570007,
+        "gpu_peak_mib": 96.0
+      },
+      {
+        "epoch": 5,
+        "train_nll": 1.6508997877537026,
+        "calibration_nll": 2.980143419989729,
+        "macro_calibration_nll": 2.898163329149072,
+        "primitive_calibration_nll": 0.8198009084065755,
+        "primitive_train_nll": 0.9950045601400126,
+        "grad_norm": 3.527819117336607,
+        "updates": 17710,
+        "seconds": 255.305859737,
+        "gpu_peak_mib": 96.0
+      },
+      {
+        "epoch": 6,
+        "train_nll": 1.5777987372918967,
+        "calibration_nll": 3.10594475503351,
+        "macro_calibration_nll": 3.02446733441736,
+        "primitive_calibration_nll": 0.814774206161499,
+        "primitive_train_nll": 0.9830058082340801,
+        "grad_norm": 3.422743334028426,
+        "updates": 21252,
+        "seconds": 255.0529067839998,
+        "gpu_peak_mib": 96.0
+      },
+      {
+        "epoch": 7,
+        "train_nll": 1.524127535576675,
+        "calibration_nll": 2.874137218228888,
+        "macro_calibration_nll": 2.796403229832561,
+        "primitive_calibration_nll": 0.777339883963267,
+        "primitive_train_nll": 0.9635885918648616,
+        "grad_norm": 3.3985549829004174,
+        "updates": 24794,
+        "seconds": 256.3558059700008,
+        "gpu_peak_mib": 96.0
+      },
+      {
+        "epoch": 8,
+        "train_nll": 1.4934982693002663,
+        "calibration_nll": 3.058949227927164,
+        "macro_calibration_nll": 2.9819749946972087,
+        "primitive_calibration_nll": 0.7697423322995504,
+        "primitive_train_nll": 0.9559343133536118,
+        "grad_norm": 3.4303967046879027,
+        "updates": 28336,
+        "seconds": 255.30309091199888,
+        "gpu_peak_mib": 96.0
+      }
+    ],
+    "selection": {
+      "checkpoint": "/home/issue/ml-workspace/artifacts/lux-s3-expert-preparation-20261111/pretrain_r02/a-3101/batch_000006/checkpoint.pt",
+      "sha256": "63beb3c5ca2717c0bb66bdbd4705bcc4f66e4525dcc23baff4ab110c147bb43f",
+      "selected_epoch": 7,
+      "criterion": "calibration_nll_then_earliest_epoch",
+      "calibration_objective": "macro_conditional_nll_plus_fixed_primitive_aux",
+      "model": "a",
+      "teacher": "G06_FULL_S2_B0_RMode_V2_adapted_Goal",
+      "smoke": false,
+      "dataset_sha256": "3f9e2f42d2763b6ef8742ab3c02ab5a455074d75af8d8a47e4977c3abe03dd44"
+    },
+    "exploration": {
+      "selected_sha256": "15497432c1ee624f013195a277b3bb0657eeb9f9799ea73436e22a37e54f2c4e",
+      "macro_nll": 3.1271175020880193,
+      "primitive_nll": 0.9113096041679383,
+      "selection_already_frozen": true
+    },
+    "limitations": "single BC fit per architecture; reused macro maps; imitation NLL is not official reward"
+  },
+  "b": {
+    "epochs": [
+      {
+        "epoch": 1,
+        "train_nll": 2.3701584307336994,
+        "calibration_nll": 3.244973515337447,
+        "macro_calibration_nll": 3.153354103185474,
+        "primitive_calibration_nll": 0.9161941215197246,
+        "primitive_train_nll": 1.228896435962297,
+        "grad_norm": 4.958682818711646,
+        "updates": 3542,
+        "seconds": 263.76197171700005,
+        "gpu_peak_mib": 120.0
+      },
+      {
+        "epoch": 2,
+        "train_nll": 1.895981281930565,
+        "calibration_nll": 3.4014035077275944,
+        "macro_calibration_nll": 3.313474299131047,
+        "primitive_calibration_nll": 0.8792920859654745,
+        "primitive_train_nll": 1.1072959317149986,
+        "grad_norm": 4.011309591442229,
+        "updates": 7084,
+        "seconds": 263.42382437800006,
+        "gpu_peak_mib": 120.0
+      },
+      {
+        "epoch": 3,
+        "train_nll": 1.7503126936358357,
+        "calibration_nll": 2.996958131303315,
+        "macro_calibration_nll": 2.91569700386318,
+        "primitive_calibration_nll": 0.8126112744013468,
+        "primitive_train_nll": 1.0392398236078573,
+        "grad_norm": 3.6562117233005775,
+        "updates": 10626,
+        "seconds": 263.6261600859998,
+        "gpu_peak_mib": 120.0
+      },
+      {
+        "epoch": 4,
+        "train_nll": 1.6598244580355557,
+        "calibration_nll": 3.2936566764419237,
+        "macro_calibration_nll": 3.213810497910277,
+        "primitive_calibration_nll": 0.7984617853164673,
+        "primitive_train_nll": 0.9934640816212508,
+        "grad_norm": 3.4802389660506248,
+        "updates": 14168,
+        "seconds": 263.4485664240001,
+        "gpu_peak_mib": 120.0
+      },
+      {
+        "epoch": 5,
+        "train_nll": 1.6166724542956241,
+        "calibration_nll": 2.9088960154596273,
+        "macro_calibration_nll": 2.8293899471663737,
+        "primitive_calibration_nll": 0.7950606829325358,
+        "primitive_train_nll": 0.9743589219284354,
+        "grad_norm": 3.485660542461039,
+        "updates": 17710,
+        "seconds": 259.80925105799906,
+        "gpu_peak_mib": 120.0
+      },
+      {
+        "epoch": 6,
+        "train_nll": 1.5462629918759991,
+        "calibration_nll": 3.0526931431497175,
+        "macro_calibration_nll": 2.975108743099872,
+        "primitive_calibration_nll": 0.7758440004984538,
+        "primitive_train_nll": 0.9570779435921362,
+        "grad_norm": 3.419561075750278,
+        "updates": 21252,
+        "seconds": 262.64897695499894,
+        "gpu_peak_mib": 120.0
+      },
+      {
+        "epoch": 7,
+        "train_nll": 1.500131243323452,
+        "calibration_nll": 2.882719250880669,
+        "macro_calibration_nll": 2.8054980271448597,
+        "primitive_calibration_nll": 0.7722122373580933,
+        "primitive_train_nll": 0.9413795192941039,
+        "grad_norm": 3.384276522452854,
+        "updates": 24794,
+        "seconds": 266.2443091490004,
+        "gpu_peak_mib": 120.0
+      },
+      {
+        "epoch": 8,
+        "train_nll": 1.472620999948545,
+        "calibration_nll": 2.944762796452903,
+        "macro_calibration_nll": 2.868673460375531,
+        "primitive_calibration_nll": 0.7608933607737224,
+        "primitive_train_nll": 0.9334829010696212,
+        "grad_norm": 3.4307225115853877,
+        "updates": 28336,
+        "seconds": 262.4720692160008,
+        "gpu_peak_mib": 120.0
+      }
+    ],
+    "selection": {
+      "checkpoint": "/home/issue/ml-workspace/artifacts/lux-s3-expert-preparation-20261111/pretrain_r02/b-3101/batch_000006/checkpoint.pt",
+      "sha256": "6db53b0511a7a42c42cb096eb1b5d984be8930c8440573af492f4d4f4b886a4f",
+      "selected_epoch": 7,
+      "criterion": "calibration_nll_then_earliest_epoch",
+      "calibration_objective": "macro_conditional_nll_plus_fixed_primitive_aux",
+      "model": "b",
+      "teacher": "G06_FULL_S2_B0_RMode_V2_adapted_Goal",
+      "smoke": false,
+      "dataset_sha256": "3f9e2f42d2763b6ef8742ab3c02ab5a455074d75af8d8a47e4977c3abe03dd44"
+    },
+    "exploration": {
+      "selected_sha256": "5e306d207692d705fc6f41087f48a2ee4152bafdc7109a989db05f358bea4d99",
+      "macro_nll": 3.2604512264954733,
+      "primitive_nll": 0.891893250465393,
+      "selection_already_frozen": true
+    },
+    "limitations": "single BC fit per architecture; reused macro maps; imitation NLL is not official reward"
+  },
+  "c": {
+    "epochs": [
+      {
+        "epoch": 1,
+        "train_nll": 2.116793600980136,
+        "calibration_nll": 2.8325018371176647,
+        "macro_calibration_nll": 2.7400808609239187,
+        "primitive_calibration_nll": 0.9242097619374593,
+        "primitive_train_nll": 1.2140019788521956,
+        "grad_norm": 4.812804473819604,
+        "updates": 3542,
+        "seconds": 363.15674312100055,
+        "gpu_peak_mib": 96.0
+      },
+      {
+        "epoch": 2,
+        "train_nll": 1.7128125601997657,
+        "calibration_nll": 3.02875869127683,
+        "macro_calibration_nll": 2.942059695162099,
+        "primitive_calibration_nll": 0.8669899611473083,
+        "primitive_train_nll": 1.1050713709489832,
+        "grad_norm": 3.8095919549431523,
+        "updates": 7084,
+        "seconds": 329.179058619,
+        "gpu_peak_mib": 96.0
+      },
+      {
+        "epoch": 3,
+        "train_nll": 1.6155492530148088,
+        "calibration_nll": 2.742795002667259,
+        "macro_calibration_nll": 2.659382300154518,
+        "primitive_calibration_nll": 0.8341270251274109,
+        "primitive_train_nll": 1.0409601069250596,
+        "grad_norm": 3.484689214214775,
+        "updates": 10626,
+        "seconds": 331.50876565900035,
+        "gpu_peak_mib": 96.0
+      },
+      {
+        "epoch": 4,
+        "train_nll": 1.5346015104166806,
+        "calibration_nll": 2.826500412921334,
+        "macro_calibration_nll": 2.744990680595462,
+        "primitive_calibration_nll": 0.8150973232587179,
+        "primitive_train_nll": 0.998885809298224,
+        "grad_norm": 3.2916536386877313,
+        "updates": 14168,
+        "seconds": 365.52582892399914,
+        "gpu_peak_mib": 96.0
+      },
+      {
+        "epoch": 5,
+        "train_nll": 1.496404176572667,
+        "calibration_nll": 2.6824667344471873,
+        "macro_calibration_nll": 2.598652175098763,
+        "primitive_calibration_nll": 0.8381455934842428,
+        "primitive_train_nll": 0.9790019101254487,
+        "grad_norm": 3.29098813667397,
+        "updates": 17710,
+        "seconds": 367.61976639099885,
+        "gpu_peak_mib": 96.0
+      },
+      {
+        "epoch": 6,
+        "train_nll": 1.4415204667274324,
+        "calibration_nll": 2.6468601310752007,
+        "macro_calibration_nll": 2.569501740314779,
+        "primitive_calibration_nll": 0.7735839076042176,
+        "primitive_train_nll": 0.9663169701714626,
+        "grad_norm": 3.2279141037091232,
+        "updates": 21252,
+        "seconds": 364.0755881920013,
+        "gpu_peak_mib": 96.0
+      },
+      {
+        "epoch": 7,
+        "train_nll": 1.4055041210891028,
+        "calibration_nll": 2.67432211536595,
+        "macro_calibration_nll": 2.5959490516268096,
+        "primitive_calibration_nll": 0.7837306373914082,
+        "primitive_train_nll": 0.9502425484531751,
+        "grad_norm": 3.1870476690003726,
+        "updates": 24794,
+        "seconds": 368.4892436250011,
+        "gpu_peak_mib": 96.0
+      },
+      {
+        "epoch": 8,
+        "train_nll": 1.373936903219668,
+        "calibration_nll": 2.8128823204169677,
+        "macro_calibration_nll": 2.734841188014548,
+        "primitive_calibration_nll": 0.7804113240242004,
+        "primitive_train_nll": 0.9469223766677599,
+        "grad_norm": 3.1824779711087365,
+        "updates": 28336,
+        "seconds": 365.5789780369996,
+        "gpu_peak_mib": 96.0
+      }
+    ],
+    "selection": {
+      "checkpoint": "/home/issue/ml-workspace/artifacts/lux-s3-expert-preparation-20261111/pretrain_r02/c-3101/batch_000005/checkpoint.pt",
+      "sha256": "27f331cd56931c5eab95b473d5ef1b668dc0af6a761e7d6b07605500cd8b2564",
+      "selected_epoch": 6,
+      "criterion": "calibration_nll_then_earliest_epoch",
+      "calibration_objective": "macro_conditional_nll_plus_fixed_primitive_aux",
+      "model": "c",
+      "teacher": "G06_FULL_S2_B0_RMode_V2_adapted_Goal",
+      "smoke": false,
+      "dataset_sha256": "3f9e2f42d2763b6ef8742ab3c02ab5a455074d75af8d8a47e4977c3abe03dd44"
+    },
+    "exploration": {
+      "selected_sha256": "145e3417c47a7b9bf531f99018fb6dd82ee635123763798eb8c367b93172e078",
+      "macro_nll": 2.9292206938644645,
+      "primitive_nll": 0.9182651300430298,
+      "selection_already_frozen": true
+    },
+    "limitations": "single BC fit per architecture; reused macro maps; imitation NLL is not official reward"
+  }
+}

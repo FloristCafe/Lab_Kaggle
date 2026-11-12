@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "macro_manifest_sha256": "3f9e2f42d2763b6ef8742ab3c02ab5a455074d75af8d8a47e4977c3abe03dd44",
+  "primitive_manifest_sha256": "6ec13b0e9072cc47f334e15c5896c43da20cf8c7789b85200083c3fca868862c",
+  "macro_team_decisions": 21042,
+  "macro_counts": {
+    "train": 14165,
+    "calibration": 3388,
+    "exploration": 3489
+  },
+  "macro_maps": 24,
+  "macro_uid_replan": 191382,
+  "macro_uid_continue": 2110,
+  "macro_modes": {
+    "1": 13034,
+    "3": 44174,
+    "2": 129924,
+    "0": 4250
+  },
+  "primitive_teacher": "Flat Neurons",
+  "primitive_submission_id": 43368177,
+  "primitive_counts": {
+    "train": 3250,
+    "exploration": 250,
+    "calibration": 375
+  },
+  "primitive_games": 31,
+  "primitive_maps": 31,
+  "cross_dataset_root_intersection": 0,
+  "BC_train_root_and_derived_vs_RL_training_intersection": 0,
+  "BC_maps_vs_evaluation_map_intersection": 0,
+  "labels": "actual G06 R/Mode/Manager Goal, plus separately identified elite primitive auxiliary",
+  "elite_long_goal_admission": false,
+  "old400_provenance": "unresolved"
+}

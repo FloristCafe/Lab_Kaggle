@@ -1,0 +1,183 @@
+{
+  "purpose": "Frozen B0 policy/learner/runtime and FULL adapter source dependency closure for historical inspection; no retired experiment launchers",
+  "original_archive": "legacy_project",
+  "files": [
+    {
+      "file": "agents/goal_review/__init__.py",
+      "sha256": "d6f56004e9607f3f8787c31dcec6fde342b1ae914524ffc8e4fdd25ec6f26a6f",
+      "bytes": 77
+    },
+    {
+      "file": "agents/goal_review/environment.py",
+      "sha256": "a73f62d15c44d509ba0731ca1ddd584dd6d554ffc83f535acb88b503daf93a15",
+      "bytes": 7898
+    },
+    {
+      "file": "agents/goal_review/memory.py",
+      "sha256": "af2d37b0aabc8f0929f1018421137c1aeec97295f22a5237a5e5ea9bcc085f5a",
+      "bytes": 6841
+    },
+    {
+      "file": "agents/goal_review/model.py",
+      "sha256": "94815a8d9dc2e2cd27374e38f6642271588c87a814859f0e4840d5ef3d5895d9",
+      "bytes": 6711
+    },
+    {
+      "file": "agents/goal_review/runtime.py",
+      "sha256": "cc4e3e48a531d3627d738060599e7fbda3ac9573ff6bbc4d9889f938d2608d0b",
+      "bytes": 1795
+    },
+    {
+      "file": "agents/mappo_v5/__init__.py",
+      "sha256": "00c7e1240b13ab24be9cd44dc0aec703a7085f8f7f6285a9db9e7842770c14bd",
+      "bytes": 75
+    },
+    {
+      "file": "agents/mappo_v5/environment.py",
+      "sha256": "2d51c9585d8230224c1e6bac5ab4a7e512201be7f46e77365b7f007507be3f8a",
+      "bytes": 16287
+    },
+    {
+      "file": "agents/mappo_v5/learning.py",
+      "sha256": "97875ff6d9f5ee1b518f72dfd17bd367948402e4014d8bb6d531c16c66a65e5c",
+      "bytes": 10202
+    },
+    {
+      "file": "agents/mappo_v5/policy.py",
+      "sha256": "76730b5a588cd8fb4d427f0077bdc7f984515f82737c97d4fff4dfeedcd13b42",
+      "bytes": 7572
+    },
+    {
+      "file": "agents/strategic/__init__.py",
+      "sha256": "e51135a487025da952f5b3464c0da55c5b4719d5f7d1b2981bdffd59127e16f0",
+      "bytes": 73
+    },
+    {
+      "file": "agents/strategic/control.py",
+      "sha256": "31141561221a910be6ada94ebefa7f889da7729db51e8bf83ac23d8cb132dd3d",
+      "bytes": 11858
+    },
+    {
+      "file": "agents/strategic/data.py",
+      "sha256": "a2b17f969cc5653fa045a15a859cf5066ecb373d3dba2aa6b5fece5c136b0fb9",
+      "bytes": 3551
+    },
+    {
+      "file": "agents/strategic/environment.py",
+      "sha256": "9ad027468ac3580072d0290920064c03b38c49228378a8f2dcf2f8554c49ca8c",
+      "bytes": 12027
+    },
+    {
+      "file": "agents/strategic/experiment.py",
+      "sha256": "a5f664318a19bd253997de956a5fc1b0d9264875e786de65fe0e7d6a6723d538",
+      "bytes": 1716
+    },
+    {
+      "file": "agents/strategic/features.py",
+      "sha256": "9d66308fc6c4615748c7d7bb2aa8a8ba4523556d454c2c00c4e5a6aec4dd43bd",
+      "bytes": 5287
+    },
+    {
+      "file": "agents/strategic/model.py",
+      "sha256": "1631f7f3448b02b363cd7b562302f596cedb6b6192108eb95dacbf86063beb5c",
+      "bytes": 9001
+    },
+    {
+      "file": "agents/strategic/semimdp.py",
+      "sha256": "7da0add616ddec53a2c73f7bf7861c4aeb66c5bfb860e2617d6b7713223c1db1",
+      "bytes": 1996
+    },
+    {
+      "file": "agents/v2/agent.py",
+      "sha256": "b15cde2345bb7c22809a231c69524b5b68eff6c438ee85c4c40e83ccf684eb9f",
+      "bytes": 4886
+    },
+    {
+      "file": "agents/v2/dispatcher.py",
+      "sha256": "56fabec0f3f9e3ae738c671febea99c86f7d03cf1669b2b46000b726cf6e771e",
+      "bytes": 4703
+    },
+    {
+      "file": "agents/v2/equation_solver.py",
+      "sha256": "08abd88f3593f3cc6108cdc1434e866e71f0e2b3d9494add6f7f547d8f2e2174",
+      "bytes": 8447
+    },
+    {
+      "file": "agents/v2/main.py",
+      "sha256": "1b3135fc1b6bcebaee3fa13cc6ef7e2995593e5fefc977c76aa139ba3dc59fe1",
+      "bytes": 1286
+    },
+    {
+      "file": "agents/v2/obs_parser.py",
+      "sha256": "ebd4a6572e125401cd3fe3ee7bbf59a715f6c2bcaa5015ede94ed4568209a478",
+      "bytes": 3107
+    },
+    {
+      "file": "agents/v2/router.py",
+      "sha256": "3bbdbb1882b0416474874c42f879846a554acd870195ac80c684e242aea2b5ad",
+      "bytes": 4016
+    },
+    {
+      "file": "agents/v3/dataset.py",
+      "sha256": "c24afd67b98ed51dc2cb62d2191494ac32dd2c37fc4710450294b0ac6a535507",
+      "bytes": 13475
+    },
+    {
+      "file": "research/mappo_v5_2/__init__.py",
+      "sha256": "d41e7690584d1cdc8c3d5aaacfc5ce48a85c35bce1302fb99d28668606c35e02",
+      "bytes": 75
+    },
+    {
+      "file": "research/mappo_v5_2/policy.py",
+      "sha256": "18068ae62e8559389380d28174ec2f73eed9d5dd44b931b50b5960157437a66e",
+      "bytes": 5551
+    },
+    {
+      "file": "research/mappo_v5_2_goal_adapter/__init__.py",
+      "sha256": "af34a7f02005e988ed5bcc2f514ad6b00bb171a6e665ee2ecfb6ff698252c8e4",
+      "bytes": 80
+    },
+    {
+      "file": "research/mappo_v5_2_goal_adapter/adapter.py",
+      "sha256": "31a73946ae143b6c9e00ba1fd405dd93e372bb2b73a6a4c3ce8de1302b649bb6",
+      "bytes": 9721
+    },
+    {
+      "file": "research/mappo_v5_2_goal_adapter/provenance.py",
+      "sha256": "fffabdd4b4e47f3fd446741c03814ce0e7186df522f4372c6ef00581cb589ddc",
+      "bytes": 1396
+    },
+    {
+      "file": "research/mappo_v5_2_goal_adapter/shadow.py",
+      "sha256": "217886a4ec811b09a2f24a8a1340465a0c46aa069fa1c5c4b12604efae34ce51",
+      "bytes": 11769
+    },
+    {
+      "file": "research/mappo_v5_2_learning_curve/__init__.py",
+      "sha256": "e8e7d803c263da2a72dc2475c85559e449abf758d2c427a1fef73cd5043c3e77",
+      "bytes": 336
+    },
+    {
+      "file": "research/mappo_v5_2_learning_curve/store.py",
+      "sha256": "c649ca1a75c9d6f12f8d7489e9d52a93796bf7f139e997f9cb88c0c1fd1b0e2a",
+      "bytes": 6976
+    },
+    {
+      "file": "scripts/replay_parser.py",
+      "sha256": "ce209486b9d722fb605c193088e1459b447fa23238ac793b5e17d40be4de82f0",
+      "bytes": 29553
+    },
+    {
+      "file": "research/mappo_v5_2_goal_adapter/integration.py",
+      "sha256": "16b5d6651cebbaeb0eded56a145bad7bb3c799c2891bc7a2bb8dba0a36ba141f",
+      "bytes": 4011
+    },
+    {
+      "file": "research/mappo_v5_2_goal_adapter/diagnostics.py",
+      "sha256": "4166dca6e1a11608bed1f63be5f620b73443af30723812c13f5fa6089e4f2268",
+      "bytes": 8691
+    }
+  ],
+  "algorithm_modified": false,
+  "historical_path_guards_retained": true
+}

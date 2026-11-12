@@ -1,0 +1,32 @@
+{
+  "schema": "BC_dtype_fix_R02",
+  "created_utc": "2026-11-11T07:46:12.992752+00:00",
+  "parent_protocol_sha256": "93a9f7a4dd49fab270579dc4db320f8f6654339c3414927a61f27d87309ae02b",
+  "parent_git_commit": "74f20d586434794252257efe97af853c7bdb5542",
+  "changed_training_source": [
+    "training/pretrain.py"
+  ],
+  "new_source_lock_sha256": "77de6193c1ddfc246e0d74061f90b3b7d6795842a8dc794fd13f75977c8d3e4a",
+  "change": "class-index cast to torch.long at CE boundary only",
+  "data_unchanged": {
+    "macro_dataset01": "3f9e2f42d2763b6ef8742ab3c02ab5a455074d75af8d8a47e4977c3abe03dd44",
+    "primitive_flat02": "6ec13b0e9072cc47f334e15c5896c43da20cf8c7789b85200083c3fca868862c"
+  },
+  "failed_run": "/home/issue/ml-workspace/artifacts/lux-s3-expert-preparation-20261111/pretrain/a-3101",
+  "failed_run_committed_checkpoints": 0,
+  "restart_parent": "/home/issue/ml-workspace/artifacts/lux-s3-expert-preparation-20261111/pretrain_r02",
+  "fit_seed": 3101,
+  "formal_epochs": 8,
+  "train_config_unchanged": true,
+  "formal_training_started_by_agent": false,
+  "tests": {
+    "unit": 39,
+    "models_smoke": [
+      "a",
+      "b",
+      "c"
+    ],
+    "actual_int32_cuda": "PASS"
+  },
+  "no_environment_started": true
+}
