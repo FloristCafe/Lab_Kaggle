@@ -13,6 +13,14 @@
 3. [数据与教师监督边界](docs/data_and_teachers.md)：合法历史信息、长期Goal标签与primitive动作标签的区别。
 4. [复现与资产说明](docs/reproduction.md)：无环境核验、原始资产位置、历史CLI和严格的复现边界。
 
+## 补充的两块科研材料
+
+- [板块一：表示、可拟合性与优化预算](research/representation_diagnostics/README.md)：核心Head、LP诊断、RAW/ENC候选排序与D10历史曲线。
+- [板块二：公开前缀与配对Goal信用](research/paired_goal_credit/README.md)：固定A/B、决策身份随机流、阴性对照和地图统计。
+- [导师汇报提纲](docs/mentor_research_brief.md)：约十分钟的讲述顺序、关键图表、负结果与证据边界。
+
+两个模块提供离线核验和精选历史证据，不重新开启已关闭路线。
+
 ## 代码结构
 
 ```text
@@ -23,6 +31,7 @@ lux-ai-s3/
 ├── training/                 # 数据构建、BC、PPO、checkpoint与统一评估
 ├── scripts/                  # 官方CPU环境及外部专家IPC worker
 ├── baselines/frozen_v5_2/    # 冻结B0/FULL核心依赖快照，不恢复失败实验入口
+├── research/                # 两个精选离线诊断模块及源码来源
 ├── tests/                    # 无环境单测
 ├── tools/                    # 预检、数据/结果核验、本地路径登记
 ├── docs/                     # 科研说明与复现说明

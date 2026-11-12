@@ -1,0 +1,37 @@
+{
+  "PPO_updates": 0,
+  "batch_nodes": 64,
+  "diagnostic_input": "same frozen spatial/query, original Mode, position-derived distances and movement cost; no new state feature",
+  "environment_starts": 0,
+  "fit_stop": "evaluated every100; Top1=1 and NLL<=0.02; otherwise fixed3000 budget",
+  "fitting_seeds": [
+    2101,
+    2102
+  ],
+  "grad_clip": 10,
+  "id": "GOAL-FIT-DIAGNOSTIC-D02",
+  "important_limits": [
+    "training-set fit only",
+    "balanced Mode sampling not deployment distribution",
+    "new decoder not approved for deployment",
+    "nonlinear finite-data memorization cannot prove historical-information sufficiency"
+  ],
+  "linear_oracle": "per-node free weight33 over frozen spatial32 plus distance; normalized max margin LP; diagnostic upper bound, NOT a policy",
+  "lr": 0.001,
+  "max_updates": 3000,
+  "models": [
+    "original6831",
+    "nonlinear32688"
+  ],
+  "no_hyperparameter_search": true,
+  "nonlinear": "original trainable head plus residual71->128->128->1; last layer zero so initial logits identical",
+  "old_plan_sha256": "f8b3fddd2d3ec31d23f5ef525fde36aca0e35e5a34dc03ae8bbdfeed340caeb6",
+  "old_source_lock_sha256": "b08c035e9d0d083fdfbffefbde930d4a5ce7c4a9a2906eb8a746a857736cbda9",
+  "sample_sizes": [
+    64,
+    512
+  ],
+  "selected_nodes_sha256": "7f5d56036a602bfd12308cd3e4a1fb7c5294eea7b7f733978ed19b54dc937008",
+  "selection": "128 actual changed nodes per each observed Mode; nested first16 per Mode form64; training ranks0..15 only",
+  "weight_decay": 0
+}

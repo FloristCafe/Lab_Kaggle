@@ -1,0 +1,230 @@
+{
+  "D02_train_subset": [
+    {
+      "method": "nonlinear32688",
+      "nodes": 64,
+      "fit_top1": 1.0,
+      "seeds": 2
+    },
+    {
+      "method": "nonlinear32688",
+      "nodes": 512,
+      "fit_top1": 0.58984375,
+      "seeds": 2
+    },
+    {
+      "method": "original6831",
+      "nodes": 64,
+      "fit_top1": 0.953125,
+      "seeds": 2
+    },
+    {
+      "method": "original6831",
+      "nodes": 512,
+      "fit_top1": 0.1630859375,
+      "seeds": 2
+    },
+    {
+      "method": "same_class_effective_LBFGS",
+      "nodes": 64,
+      "fit_top1": 1.0,
+      "seeds": 1
+    },
+    {
+      "method": "same_class_effective_LBFGS",
+      "nodes": 512,
+      "fit_top1": 0.35546875,
+      "seeds": 1
+    }
+  ],
+  "D02_oracle": {
+    "512": {
+      "ambiguous": 0,
+      "near_zero_margin": 0,
+      "nodes": 512,
+      "positive_margin": 512
+    },
+    "64": {
+      "ambiguous": 0,
+      "near_zero_margin": 0,
+      "nodes": 64,
+      "positive_margin": 64
+    }
+  },
+  "D02_exact_collisions": {
+    "different_labels_on_identical_full_student_input": 0,
+    "exact_conflict_examples": [],
+    "identical_full_student_input_repeats": 41,
+    "limitation": "absence of exact collisions is not proof that compressed representation is sufficient; previous raw-input audit used larger context",
+    "mutually_legal_opposite_preferences": 0,
+    "opposite_preferences_examples": [],
+    "same_premask_input_repeats": 42,
+    "signature": "all frozen spatial bytes, this unit query, position, cost, Mode, exact support; NO UID/map/case ID",
+    "training_nodes": 266341
+  },
+  "D08_exploration": {
+    "3101": {
+      "ENC_criterion_maps": 0,
+      "ENC_exploration": {
+        "best_hit": 0.3431170266781073,
+        "choice_weak_target_rank": 67.60360411915534,
+        "model_top10_bestset": 0.6380303018044924,
+        "model_top5_bestset": 0.5639093988895073,
+        "pair_acc": 0.739857785321524,
+        "pair_acc_epsilon": 0.739857785321524,
+        "regret": 0.30641290501397006
+      },
+      "ENC_recoverable": false,
+      "RAW_exploration": {
+        "best_hit": 0.5603943256194457,
+        "choice_weak_target_rank": 26.436693574168068,
+        "model_top10_bestset": 0.8266018211521781,
+        "model_top5_bestset": 0.7279462175653763,
+        "pair_acc": 0.8470015531319204,
+        "pair_acc_epsilon": 0.8470015531319204,
+        "regret": 0.1687772973691413
+      },
+      "RAW_positive_control": false,
+      "access_gap": false,
+      "gap_criterion_maps": 4
+    },
+    "3102": {
+      "ENC_criterion_maps": 0,
+      "ENC_exploration": {
+        "best_hit": 0.36694349429483586,
+        "choice_weak_target_rank": 75.00558195994063,
+        "model_top10_bestset": 0.6949195261794209,
+        "model_top5_bestset": 0.6083702159178638,
+        "pair_acc": 0.7363411527935402,
+        "pair_acc_epsilon": 0.7363411527935402,
+        "regret": 0.29691004228116946
+      },
+      "ENC_recoverable": false,
+      "RAW_exploration": {
+        "best_hit": 0.5376975938355115,
+        "choice_weak_target_rank": 21.031153420113988,
+        "model_top10_bestset": 0.8250865707042692,
+        "model_top5_bestset": 0.7523533135503773,
+        "pair_acc": 0.8417073582922336,
+        "pair_acc_epsilon": 0.8417073582922336,
+        "regret": 0.15963198160231137
+      },
+      "RAW_positive_control": false,
+      "access_gap": false,
+      "gap_criterion_maps": 4
+    },
+    "3103": {
+      "ENC_criterion_maps": 0,
+      "ENC_exploration": {
+        "best_hit": 0.3321637018585546,
+        "choice_weak_target_rank": 82.35383707136644,
+        "model_top10_bestset": 0.6585275269995388,
+        "model_top5_bestset": 0.574906239718088,
+        "pair_acc": 0.7399790409540985,
+        "pair_acc_epsilon": 0.7399790409540985,
+        "regret": 0.33460378978255667
+      },
+      "ENC_recoverable": false,
+      "RAW_exploration": {
+        "best_hit": 0.538524833703159,
+        "choice_weak_target_rank": 20.300478471716545,
+        "model_top10_bestset": 0.7883130473202397,
+        "model_top5_bestset": 0.7155407399328167,
+        "pair_acc": 0.8508798547585223,
+        "pair_acc_epsilon": 0.8508798547585223,
+        "regret": 0.17472130888439524
+      },
+      "RAW_positive_control": false,
+      "access_gap": false,
+      "gap_criterion_maps": 4
+    }
+  },
+  "D10_calibration_selection": [
+    {
+      "NLL": {
+        "16": 0.1507419613190819,
+        "24": 0.12752953311748386,
+        "32": 0.12406312197620023,
+        "8": 0.19966060335236624
+      },
+      "checkpoint": "fits/RAW_CAUSAL32_RANKER_rng3101/attempt_001/epoch_32.pth",
+      "epoch": 32,
+      "seed": 3101,
+      "sha256": "e06f03945ab0c83e2bcb3e01fc096527b3f1bfca4a5c59d00fc499912171da12"
+    },
+    {
+      "NLL": {
+        "16": 0.15689676459015645,
+        "24": 0.1368587807392213,
+        "32": 0.12407342027193077,
+        "8": 0.21396748031627455
+      },
+      "checkpoint": "fits/RAW_CAUSAL32_RANKER_rng3102/attempt_001/epoch_32.pth",
+      "epoch": 32,
+      "seed": 3102,
+      "sha256": "9543564a0cd2e900136340f0c18b27d8e5c57c1ec5ee0cda19b8b5e89904cdbd"
+    },
+    {
+      "NLL": {
+        "16": 0.16221659995779295,
+        "24": 0.13401064705661617,
+        "32": 0.12661325951590918,
+        "8": 0.20301135080651678
+      },
+      "checkpoint": "fits/RAW_CAUSAL32_RANKER_rng3103/attempt_001/epoch_32.pth",
+      "epoch": 32,
+      "seed": 3103,
+      "sha256": "66ed16ea29bfed26444d4557b9f8b9b15b3a60525ab2ef1ae3e90bca2d9588ec"
+    }
+  ],
+  "D10_verdict": {
+    "3101": {
+      "A": true,
+      "B": false,
+      "C": false,
+      "D": true,
+      "calibration_improved": true,
+      "distance_only_improved": true,
+      "exploration_accuracy_and_regret_improved": true,
+      "exploration_both_better_maps": 3,
+      "exploration_consistent": true,
+      "failed_epoch32_positive_control": true,
+      "high_cancellation_improved": true,
+      "selected_epoch": 32,
+      "train_improved": true
+    },
+    "3102": {
+      "A": true,
+      "B": false,
+      "C": false,
+      "D": true,
+      "calibration_improved": true,
+      "distance_only_improved": true,
+      "exploration_accuracy_and_regret_improved": true,
+      "exploration_both_better_maps": 3,
+      "exploration_consistent": true,
+      "failed_epoch32_positive_control": true,
+      "high_cancellation_improved": true,
+      "selected_epoch": 32,
+      "train_improved": true
+    },
+    "3103": {
+      "A": true,
+      "B": false,
+      "C": false,
+      "D": true,
+      "calibration_improved": true,
+      "distance_only_improved": true,
+      "exploration_accuracy_and_regret_improved": true,
+      "exploration_both_better_maps": 4,
+      "exploration_consistent": true,
+      "failed_epoch32_positive_control": true,
+      "high_cancellation_improved": true,
+      "selected_epoch": 32,
+      "train_improved": true
+    }
+  },
+  "scope": "Historical training-subset fit and reused-map diagnostics, not official reward or independent generalization",
+  "new_fits": 0,
+  "environment_starts": 0
+}

@@ -1,0 +1,32 @@
+{
+  "actual_normalized_input_inverse_PUBLIC_maxabs": 0.0,
+  "all_pairs": 518144873,
+  "candidate_rows": 1901626,
+  "component_sum_maxabs": 8.881784197001252e-16,
+  "elapsed_seconds": 8.498358661000111,
+  "exact_duplicate_hash_inputs_same_label": 0,
+  "hash_collisions_different_raw_inputs": 0,
+  "identical_RAW_different_PUBLIC": 0,
+  "maps": 24,
+  "neighbor_summary": "PUBLIC only needs number of unseen cells; count exactly recovered by rounded(mean*clipped area). Arrangement may matter for other tasks, not this fixed formula.",
+  "nodes": 3492,
+  "normalization_note": "binary flags/semantic integer rounding recover actual variables exactly after float32 normalization; naive continuous inverse may have rounding errors",
+  "normalized_descriptor_hashes": 1901626,
+  "raw_PUBLIC_maxabs": 0.0,
+  "raw_probability_values": [
+    0.0,
+    0.5,
+    1.0
+  ],
+  "status": "VERIFIED",
+  "strict_pairs": 511700524,
+  "variables": {
+    "N": "neighborhood mean unseen33 times clipped area160 and sensor164",
+    "T": "100-round(match_step163*100)",
+    "d": "geometry159*46 integer",
+    "p": "current8 plus knownzero16/knownone17; effective unknown p uses current relic support7",
+    "position": "unit vector and candidate geometry",
+    "support": "current7>0.5",
+    "uncertainty": "4*p*(1-p),D=1; no native decay input"
+  }
+}

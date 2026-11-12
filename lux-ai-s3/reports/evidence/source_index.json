@@ -190,5 +190,126 @@
     "source_root": "legacy_archive",
     "source_relative": "outputs/mappo_v5_2/v2_goal_adapter_mode_gate_registration_20261029_G06/dev24_seed_manifest.json",
     "copied_unchanged": true
+  },
+  {
+    "id": "D02_results.json",
+    "file": "reports/evidence/D02_results.json",
+    "sha256": "234705ee76206e47a2123795edbbcb032bd1c30dfb09cb62228796b082c56c7b",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/goal_representation_diagnostic_20261105_D02_R02/results.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "D02_plan.json",
+    "file": "reports/evidence/D02_plan.json",
+    "sha256": "32986c70d0c9da03a73910e7762a4b499702fe6a54f4a621ff198ef0d72129ec",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/goal_representation_diagnostic_20261105_D02_R02/plan.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "D08_protocol.json",
+    "file": "reports/evidence/D08_protocol.json",
+    "sha256": "9fc041067e3b709aa90ae7082c87b463ff5d212516fa1b944af9fae7b973f9cd",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/goal_utility_representation_dataset_20261106_D08_E02/protocol_final.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "D08_feature_schema.json",
+    "file": "reports/evidence/D08_feature_schema.json",
+    "sha256": "dac91ebcb2064174c5e9ebf897faace3c7aafb9e8dfa2e3aac96d55c3a049657",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/goal_utility_representation_dataset_20261106_D08_E02/feature_schema.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "D08_baseline.json",
+    "file": "reports/evidence/D08_baseline.json",
+    "sha256": "b630203569c96d47c27c571fd56ae87956ad036790ffb9df9e734ba06e6569c9",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/goal_utility_representation_dataset_20261106_D08_E02/baseline_summary.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "D08_support_counts.json",
+    "file": "reports/evidence/D08_support_counts.json",
+    "sha256": "549a1c574a120c696c5184b056162896788d7d604c820bf0a8d3c4b4de359798",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/goal_utility_representation_dataset_20261106_D08_E02/support_and_pair_counts.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "D08_fit_decision.json",
+    "file": "reports/evidence/D08_fit_decision.json",
+    "sha256": "156e66ba10792c52f686442cd1da550b54c645ceb37687757d69094b5347c7e7",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/goal_utility_representation_fit_20261106_D08_F02/evaluation_attempt_001/research_decision.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "D09_feature_recoverability.json",
+    "file": "reports/evidence/D09_feature_recoverability.json",
+    "sha256": "2c6eed196abba5121272c329db900930e698ce397668b15ffd7895dd2dcf676c",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/goal_utility_error_audit_20261106_D09/feature_recoverability.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "D10_selection.json",
+    "file": "reports/evidence/D10_selection.json",
+    "sha256": "646a607c1360c3b8c3eda247fac6af39bf0a4e2834729e1a6d94ce6cc5b97868",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/goal_utility_optimization_budget_20261106_D10/checkpoint_selection.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "PGC01_protocol.json",
+    "file": "reports/evidence/PGC01_protocol.json",
+    "sha256": "a23a7de5ba2c6c638f2e1d04e67b1113ec5fb4f256eadd8e89ad89521e9bb766",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/paired_goal_credit_protocol_PGC01/protocol.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "PGC01_manifest.json",
+    "file": "reports/evidence/PGC01_manifest.json",
+    "sha256": "aaacaa3b8efdc2c9bfd5fe36d4e872053ed04434089c8fb6f60b9c9e5b2912cd",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/paired_goal_credit_protocol_PGC01/manifest.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "PGC01_execution_order.json",
+    "file": "reports/evidence/PGC01_execution_order.json",
+    "sha256": "9176ef88dac58839a2a094bd730a2832c0199cf664cf0479bf007dbdafd2b92d",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/paired_goal_credit_protocol_PGC01/execution_order.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "PGC01_complete.json",
+    "file": "reports/evidence/PGC01_complete.json",
+    "sha256": "64aa0d9f3f00ae29eddb7f2689294ec60d77c84999dd98f0e95e52926201fb1b",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/paired_goal_credit_run_PGC01/run_complete.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "PGC01_memory_audit.json",
+    "file": "reports/evidence/PGC01_memory_audit.json",
+    "sha256": "8f3f8905fee6c2e1879930a6e536f58ec0e644acc6efb9991b0f346681e42898",
+    "source_root": "legacy_archive",
+    "source_relative": "outputs/mappo_v5_2/paired_goal_credit_preparation_PGC01/engineering_1794126099546567241/independent_memory_replay.json",
+    "copied_unchanged": true
+  },
+  {
+    "id": "PGC01_receipt_audit",
+    "file": "reports/evidence/PGC01_receipt_audit.json",
+    "sha256": "7f8c3a36947a23129c9ca98f073154bd720cbf2ada1d12557f7666978f419386",
+    "source_root": "generated_offline_review",
+    "source_relative": "research/paired_goal_credit/audit.py",
+    "copied_unchanged": false,
+    "scope": "248 result receipts + four existing negative-control trace pairs, not new rollouts"
   }
 ]

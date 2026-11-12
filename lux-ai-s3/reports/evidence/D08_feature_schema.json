@@ -1,0 +1,101 @@
+{
+  "ENC32": "frozen S2 Actor Encoder32D spatial output, no D03 Goal Head or trainable Encoder",
+  "Mask_boundary": "model primary task uses original Actor conditional mask only; native/shared Mask used solely for separately reported FULL audit; native passability is not silently given to the model; corrected diagnostic cannot reconstruct 217nodes' native enemy blocks from Actor tensor because negative-energy enemy counts were dropped upstream; full public obs can explain all19 affected frames",
+  "RAW32": {
+    "current": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "past_channel_names": [
+      "visible",
+      "visible_empty",
+      "visible_nebula",
+      "visible_asteroid",
+      "visible_energy",
+      "own_count",
+      "own_energy"
+    ],
+    "previous1": [
+      0,
+      3,
+      4,
+      5,
+      6,
+      10,
+      11
+    ],
+    "previous2": [
+      0,
+      3,
+      4,
+      5,
+      6,
+      10,
+      11
+    ],
+    "reason": "all current18 causal Actor channels retain exact p/unseen/relic support; past7 retain terrain and own-unit context; no model-input tensor changed"
+  },
+  "common37": {
+    "frozen_B0_Mode_onehot": 5,
+    "geometry": [
+      "gx/23",
+      "gy/23",
+      "dx/46",
+      "dy/46",
+      "Manhattan/46",
+      "clipped_sensor_box_area/(2r+1)^2",
+      "is_own_position"
+    ],
+    "public_time_config": [
+      "primitive_step/505",
+      "match_step/100",
+      "unit_sensor_range/24"
+    ],
+    "unit_vector": 22
+  },
+  "dimension": 165,
+  "fairness": [
+    "same public source tensor/time, view positions, neighborhood radius, boundary geometry and scalar inputs",
+    "no zero padding or extra dead parameter blocks",
+    "both165->32 SiLU->1,5345 nominal parameters",
+    "same rows, Actor mask, pair slots, optimizer, initialization and future sample order"
+  ],
+  "id": "D08-FEATURES-165-NOPAD",
+  "limits": [
+    "same views are not same receptive fields: Encoder already mixes global raw information",
+    "RAW32 is a fixed sufficient PUBLIC descriptor, not every54 raw history channel",
+    "comparison tests lightweight accessible ranking, not information-theoretic sufficiency"
+  ],
+  "normalization": "train16 only; per-arm same mean/std algorithm; std<1e-6 becomes1; common37 same statistics",
+  "prohibited": [
+    "native V2 probability/decay/unseen/support as model inputs",
+    "current/future teacher Goals",
+    "post-assignment labels",
+    "future public state or result",
+    "map/root/trajectory/UID identity as numeric predictor"
+  ],
+  "spatial_views": 4,
+  "view_width": 32,
+  "views": [
+    "candidate cell",
+    "mean within clipped public sensor-square around candidate",
+    "target unit position",
+    "global mean"
+  ]
+}

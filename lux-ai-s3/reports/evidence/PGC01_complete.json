@@ -1,0 +1,8 @@
+{
+  "analysis": "analysis_1794126686894320227.json",
+  "analysis_sha256": "2898e97fe1a261374836e5edde0c4facfb537701aa42a2d4bba20ca196bd4cac",
+  "independent_sha256": "546f6d8ca1954acffb76185eb2c918c642706ceebd22729085907e51dfe6bf84",
+  "mlflow_run_id": "9009326371c747f49bf33c04b7d17435",
+  "protocol": "a23a7de5ba2c6c638f2e1d04e67b1113ec5fb4f256eadd8e89ad89521e9bb766",
+  "status": "STOP_SIGNAL_NOT_ESTABLISHED"
+}

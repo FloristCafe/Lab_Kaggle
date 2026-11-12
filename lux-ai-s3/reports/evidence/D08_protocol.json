@@ -1,0 +1,185 @@
+{
+  "D07": "CLOSED; no team residual capacity/budget extension",
+  "cost": {
+    "MLflow": "initialize before future fits, no model run here",
+    "candidate_input_per_batch_MiB": 11.6015625,
+    "estimated_GPU_GiB": "<2, guard6",
+    "offline_fits_estimate_minutes": "5-15 unmeasured",
+    "optimizer_steps_max_if_all_nodes_used": 3744,
+    "training_nodes": 2489
+  },
+  "created_Asia_Shanghai": "2026-11-06T17:29:06.338552+08:00",
+  "data_manifest_sha256": "49f4f8258a4c0096db7af9760ea14c94bf5a7577e6112d14df060885cb227724",
+  "dataset": {
+    "frames": 384,
+    "maps": 24,
+    "nodes": 3492,
+    "sampling": "frozen prior rule:8 chronological evenly spaced original Replan frames/case, all eligible UIDs; no far/disagreement/label/outcome filtering",
+    "split": {
+      "calibration": {
+        "maps": 4,
+        "nodes": 496
+      },
+      "exploration": {
+        "maps": 4,
+        "nodes": 507
+      },
+      "train": {
+        "maps": 16,
+        "nodes": 2489
+      }
+    },
+    "trajectories": 48
+  },
+  "evaluation": {
+    "baselines": [
+      "ANALYTIC public formula",
+      "GEOMETRY nearest legal candidate",
+      "FULL oracle label pipeline check only"
+    ],
+    "exploration_boundary": "only selected checkpoints after all6fits and model index frozen; never refit or select by exploration metrics",
+    "metrics": [
+      "exhaustive strict target-pair accuracy; predicted ties half credit",
+      "exact target-best tie-set hit; lowest flattened index for predicted-score ties",
+      "normalized regret=(max target-targetchosen)/(max target-min target), all-tied row regret0 and ranking accuracy undefined",
+      "near-tie epsilon sensitivity",
+      "top5/top10 and Mode/candidate-distance/side/map breakdown"
+    ],
+    "primary_target": "U_PUBLIC on original Actor support",
+    "secondary_target": "U_FULL on common support",
+    "uncertainty": {
+      "bootstrap": 10000,
+      "limits": "4 reused exploration maps descriptive only; fits are not independent source policies",
+      "same_indices_across_arms_seeds": true,
+      "seed": 202611058,
+      "unit": "map"
+    },
+    "weighting": "mean UID nodes within trajectory, mean two sides within map, mean maps; nodes/pairs not independent evidence"
+  },
+  "execution_status": {
+    "environment_starts": 0,
+    "fitting": "NOT RUN",
+    "new_maps": 0,
+    "protected_access": false
+  },
+  "feature_schema_sha256": "dac91ebcb2064174c5e9ebf897faace3c7aafb9e8dfa2e3aac96d55c3a049657",
+  "final_contract_revision": {
+    "before_any_fit": true,
+    "core_refinements_unchanged": [
+      "PUBLIC observable primary, FULL secondary",
+      "original Actor Mask training",
+      "no zero-padding equal5345param rankers",
+      "same8epochs and3fit seeds",
+      "same thresholds",
+      "no new maps or training"
+    ],
+    "nodes": 3492,
+    "overlap_nodes": 4,
+    "overlap_slots": 4,
+    "pair_slots": 111744,
+    "previous_protocol_sha256": "7d32f33d19d4b82ded0373753450c94d4ef4467b75ba52028a857c0d7f3dcaf0",
+    "reason": "Clarify overlapping uniform/top pair strata; no tensor, label, sample order, pair ID or numerical loss changed",
+    "valid_pair_slots": 111744
+  },
+  "fit_plan": {
+    "batch_UID_nodes": 32,
+    "checkpoint_choice": "lowest calibration4-map equal-side, equal-map fixed-pair loss, init+8epochs, earliest tie; no early stop by performance",
+    "epochs": 8,
+    "global_grad_clip": 10.0,
+    "loss": "softplus(-sign(PUBLIC_a-PUBLIC_b)*(MODEL_a-MODEL_b)); no softmax(U) teacher probabilities",
+    "lr": 0.001,
+    "node_weight": "mean valid pair loss within each node, then equal-node batch mean; uninformative nodes contribute zero and remain counted; no distance/Mode/utility weighting",
+    "normalization": "frozen train16 statistics only",
+    "optimizer": "AdamW",
+    "sample_order": "same full node permutation per seed/epoch across two arms; every Train node once per epoch, no replacement",
+    "strict_pair_tolerance": "abs(delta_PUBLIC)>1e-9*max(1,maxabs_PUBLIC_row); exact and epsilon diagnostics both retained",
+    "supervision": "PUBLIC on original Actor Mask;32 fixed pair slots/node:16 uniformly sampled strict pairs +16 top5-vs-other strict pairs. Each stratum samples without replacement when its pool>=16, otherwise with replacement. The two strata can overlap. Repeated slots are retained, never treated as extra nodes; actual frozen dataset has4 overlapping slots in4nodes.",
+    "tracking": "future MLflow LuxS3_GoalUtilityRepresentation_D08; model/input/source/hash/actual updates/time/memory logged; not started",
+    "weight_decay": 0.0
+  },
+  "id": "LUXS3-D08-FROZEN-REPRESENTATION-RANKING-OFFLINE",
+  "limits": [
+    "V2 utility is heuristic, not official long-term value",
+    "perfect row ordering does not guarantee final team Goal reproduction",
+    "24 maps reused, no independent generalization",
+    "old400 IL root seeds unavailable"
+  ],
+  "models": {
+    "architecture": "Linear165x32,SiLU,Linear32x1",
+    "arms": [
+      "RAW_CAUSAL32_RANKER",
+      "FROZEN_ENCODER32_RANKER"
+    ],
+    "fits": 6,
+    "fitting_seeds": [
+      3101,
+      3102,
+      3103
+    ],
+    "frozen": [
+      "S2 Actor Encoder",
+      "S2 R/Mode",
+      "D03 Heads",
+      "B0/V2/Adapter/Manager/environment"
+    ],
+    "initialization": "same fitting seed, exact same initial tensors across arms; no base Head updates; verify empty AdamW state",
+    "trainable_parameters": 5345
+  },
+  "normalization_sha256": "a847dbe2f2763d7507b7b1cc9dcdd08f066d1ac7bc079ab02a52eea99c396f65",
+  "pair_indices_sha256": "2fa9aad84f92923da4a4c2a8a0669aa173027b1cabebd0050e07cc0f76a1b25b",
+  "pair_valid_sha256": "d7f991de22f7f85738521edd79e2db16a74c6a44b177aabac91a1469c0bec55f",
+  "protocol_refinements": {
+    "FULL_secondary": "shared native/Actor support for conditional ranking + native-best coverage and student-only choices separately; never use -1e6 sentinels as ordinary preference training targets",
+    "RAW_ENC_fairness": "replace old padded199D candidate-local-only draft by same four32D views and common37 =165; same5345 parameters; original draft preserved",
+    "primary_support": "unchanged original Actor Mode-conditional Mask, no native Mask sidechannel",
+    "receptive_field_limit": "ENC already integrates global context, RAW views are specified causal summaries; do not claim full information-theoretic equivalence",
+    "why_primary_PUBLIC": "FULL may depend on legal teacher history absent from fixed Actor tensors; using FULL as sole fit target would confound representation loss with missing information"
+  },
+  "question": "Can lightweight equal-budget RAW/ENC rankers reconstruct V2's observable preassignment utility component, and how much of native FULL ordering is recoverable without private memory?",
+  "revision_E02": {
+    "E01_protocol_sha256": "9718a07c690db01e323f02eb67be7fe07ecd6b8c8e00dc7fe97901a8da6a4bfa",
+    "mask_sidechannel_prevention": "PUBLIC target/Actor Mask primary; FULL/common-mask diagnostic cannot support standalone deployability or Encoder-loss claim",
+    "original_E01_evidence_retained": true,
+    "pre_fit_revision": true,
+    "reason": "passability diagnostic misindexed own_count as enemy_count and used union of stale asteroid observations; corrected using authoritative enemy index12 and latest visible tile overwrite",
+    "residual_observability_limit": "19frames/217nodes differ because native V2 keeps masked negative-energy enemy blockers while Actor feature extraction removes them; verified from actual public observations",
+    "unchanged": [
+      "RAW/ENC feature tensors",
+      "U_FULL/U_PUBLIC matrices",
+      "sampling selection",
+      "node counts",
+      "training pairs",
+      "normalization",
+      "sixfit budget",
+      "main learning metrics/thresholds"
+    ]
+  },
+  "scores": {
+    "U_FULL": "native assign_macro solver input, before JOINT/yield/Adapter; teacher-only p/decay/history allowed solely for label reconstruction",
+    "U_MODEL": "future RAW/ENC output scalar per candidate; NOT RUN",
+    "U_PUBLIC": "same scoring formula, but Actor-causal p/unseen/relic support, decay1, exact public geometry/time/config, no teacher memory"
+  },
+  "selection_sha256": "2941b5223fb45c6706ead0dcb16c537c637fcba71b81db0c9d4b256f09692ebe",
+  "source_policy": {
+    "checkpoint": "outputs/mappo_v5_2/learning_curve_300/B0_rng1383116603/checkpoints/episode_0300.pth",
+    "sha256": "7a78c607e603f6d7a3f016fe1d3d23e2cccb0c66b137110ced1594997579d313",
+    "training_rng": 1383116603
+  },
+  "status": "FROZEN_BEFORE_ANY_FIT",
+  "stop": [
+    "source/checkpoint/selection drift",
+    "public prefix/memory/RNG/UID/Mask timing mismatch",
+    "nonfinite data/loss/gradient",
+    "RAW descriptors cannot reproduce PUBLIC within1e-6",
+    "student reads teacher fields or future info",
+    "train/cal/expl map mixing",
+    "GPU allocation>6GiB"
+  ],
+  "success_rules": {
+    "Encoder_access_gap": "RAW control passes; RAW-ENC PUBLIC pair accuracy>=0.05 AND ENC-RAW regret>=0.05, >=2/3 fits and>=3/4 exploration maps -> support restricted lightweight representation access gap, not proof information discarded",
+    "FULL_limit": "FULL-PUBLIC residual/coverage reported as information/Mask limits, never automatically attributed to Encoder; no official reward claim",
+    "RAW_positive_control": "Train+Calibration: RAW vsANALYTIC PUBLIC pair accuracy deficit<=0.02 AND normalized regret<=0.02; otherwise scoring/optimization/input-access INCONCLUSIVE, do not blame Encoder",
+    "approximate_public_recoverability": "ENC PUBLIC pair accuracy>=0.98 AND regret<=0.02, >=2/3 fits and>=3/4 exploration maps; descriptive practical criterion, not statistical equivalence",
+    "no_reliable_gain": "train-only improvements, unstable map/seed directions, RAW fails control or evidence does not distinguish hypotheses -> no promotion, no capacity or budget search"
+  }
+}

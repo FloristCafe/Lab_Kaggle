@@ -1,0 +1,18 @@
+{
+  "candidate_actor": 1901626,
+  "candidate_common": 1896970,
+  "candidate_native": 1958252,
+  "decay_nontrivial_rows": 1247,
+  "native_only": 61282,
+  "native_optimum_excluded_rows": 1631,
+  "p_native_actor_diff_rows": 55,
+  "public_actor_choice_outside_native": 5,
+  "public_optimum_non_native_rows": 5,
+  "public_passability_mismatch_rows": 217,
+  "relic_support_diff_rows": 0,
+  "rows": 3492,
+  "student_only": 4656,
+  "training_pair_slots": 111744,
+  "unseen_diff_rows": 0,
+  "valid_training_pairs": 111744
+}

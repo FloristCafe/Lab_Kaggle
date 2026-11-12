@@ -1,0 +1,151 @@
+{
+  "purpose": "two small offline research packages; not restored training or rollout runners",
+  "original_archive_label": "legacy_project",
+  "extractions": [
+    {
+      "source": "research/mappo_v5_2_goal_distill/model.py",
+      "sha256": "3eaa61f937bc27c377aae2497138022dca7017f73007382a3ae023a31b35257c",
+      "symbols": [
+        {
+          "symbol": "GoalHead",
+          "line_start": 9,
+          "line_end": 29
+        }
+      ]
+    },
+    {
+      "source": "research/mappo_v5_2_goal_architecture/models.py",
+      "sha256": "d0abba660d8afa7b891213b0908091189979c9ef61f2dd45f61974156df61fa6",
+      "symbols": [
+        {
+          "symbol": "candidate_features",
+          "line_start": 45,
+          "line_end": 52
+        },
+        {
+          "symbol": "Nonlinear",
+          "line_start": 54,
+          "line_end": 66
+        }
+      ]
+    },
+    {
+      "source": "research/mappo_v5_2_goal_fit_diagnostic/convex.py",
+      "sha256": "55d9920120348a97bcf2d99ce25d5158a968c915e92f5db95fd70bddba9dc5b7",
+      "symbols": [
+        {
+          "symbol": "Effective",
+          "line_start": 11,
+          "line_end": 31
+        }
+      ]
+    },
+    {
+      "source": "research/mappo_v5_2_goal_utility_dataset_D08/features.py",
+      "sha256": "d7bf749e3538e54fc5385610c51f89d489d5b59f4313a2a6eb6237c784a733d7",
+      "copied_unchanged": true
+    },
+    {
+      "source": "research/mappo_v5_2_goal_utility_fit_D08/model.py",
+      "sha256": "1c388e4a8b6f5f1ef86897dbd9fba5b49402bede95685c41e136c4bc49db8ec0",
+      "symbols": [
+        {
+          "symbol": "Ranker",
+          "line_start": 4,
+          "line_end": 7
+        },
+        {
+          "symbol": "node_loss",
+          "line_start": 13,
+          "line_end": 16
+        }
+      ]
+    },
+    {
+      "source": "research/mappo_v5_2_goal_utility_dataset_D08/independent.py",
+      "sha256": "e13309115b871fd0990c82a01e439338942194bb9ba3e62e2f1b7f504f5f16d6",
+      "symbols": [
+        {
+          "symbol": "ranking",
+          "line_start": 18,
+          "line_end": 29
+        }
+      ]
+    },
+    {
+      "source": "research/mappo_v5_2_goal_fit_diagnostic/oracle.py",
+      "sha256": "c8c414b3bdbb4a5edb283d8a1a927e404cfd6e2ba27fdaa157eacd39c4439c48",
+      "symbols": [
+        {
+          "symbol": "solve",
+          "line_start": 7,
+          "line_end": 24
+        }
+      ]
+    },
+    {
+      "source": "research/mappo_v5_2_paired_goal_credit/state.py",
+      "sha256": "90b91ca529a33995c631f01538fc335fa0b8389cb26c174b73e764a6cc4b3af3",
+      "copied_unchanged": true
+    },
+    {
+      "source": "research/mappo_v5_2_paired_goal_credit/sampler.py",
+      "sha256": "6a07e5d0079a40cd50e542632be5adbab188e0e8c80a824d51c229324c4fbb60",
+      "symbols": [
+        {
+          "symbol": "uniform",
+          "line_start": 16,
+          "line_end": 19
+        },
+        {
+          "symbol": "inverse",
+          "line_start": 22,
+          "line_end": 30
+        }
+      ]
+    },
+    {
+      "source": "research/mappo_v5_2_paired_goal_credit/execution.py",
+      "sha256": "a4edfe50076decac29f7a8961c30666f167c47032b81dccc58c9214e19814b4e",
+      "symbols": [
+        {
+          "symbol": "require",
+          "line_start": 23,
+          "line_end": 25
+        },
+        {
+          "symbol": "Journal",
+          "line_start": 28,
+          "line_end": 45
+        }
+      ]
+    }
+  ],
+  "adaptations": [
+    "Removed module imports to historical data/cache/launcher globals.",
+    "Nonlinear residual uses caller device instead of unconditional CUDA; dimensions and score formula unchanged.",
+    "Additional pairing, public-tape and row-statistics adapters are explicitly reimplementations for offline review.",
+    "Read-only report/receipt-audit CLIs and synthetic tests are new; no historical launcher or training loop restored.",
+    "Cross-batch-shape FP32 equivalence uses measured numerical tolerance, not bitwise equality; original same-shape nested initialization remains bitwise tested."
+  ],
+  "formal_training": false,
+  "environment_starts": 0,
+  "restored_python_sha256": {
+    "research/__init__.py": "09fdd2e61bdd8b913e518c58860f522695c609b1c3cc7eb5aa4dfc9a60691e6a",
+    "research/evidence.py": "7ce560a8b9badde9be52858f095882963e6a7c33466162b312a87c89c8eb287f",
+    "research/paired_goal_credit/__init__.py": "5f24b8019ee44bb1e01a9ff7b9150fae939131fd67bb02f4e6e41553bd901b96",
+    "research/paired_goal_credit/audit.py": "41658998b67b057892dedfa68df73e233e4dd2e051332b2e185853ac22fcf295",
+    "research/paired_goal_credit/public_replay.py": "167e077a0e6846d15260b83f124fac2d8f3abd35c00867f50427dc68e3c66f06",
+    "research/paired_goal_credit/report.py": "06ed38cb12cfe640c3bfac45d93abc3ec723b9e87267c1b90601d94aef61e090",
+    "research/paired_goal_credit/state.py": "90b91ca529a33995c631f01538fc335fa0b8389cb26c174b73e764a6cc4b3af3",
+    "research/paired_goal_credit/statistics.py": "3965df12bcab33d527bf4db32b4baa6033b8ef2fe15bfcc860e670b99359f0eb",
+    "research/paired_goal_credit/streams.py": "577f51b13a2613c8886332aefd9a16c9b8903e7f411670e9907936ca2b7fd786",
+    "research/representation_diagnostics/__init__.py": "5f24b8019ee44bb1e01a9ff7b9150fae939131fd67bb02f4e6e41553bd901b96",
+    "research/representation_diagnostics/goal_heads.py": "8b5091dba09b29389bde3ee6af693353cb97709add61e260700aeb885eb75d4f",
+    "research/representation_diagnostics/metrics.py": "274a99fa02ff0d057b407f5d439da1b86697ac7e9a627c75541753bd69a5cc38",
+    "research/representation_diagnostics/oracle.py": "82c0106e3c32f7bb3fbbfb869acd03301e057861ad5c6a55126e0414bfd85ac2",
+    "research/representation_diagnostics/ranker.py": "be36946e99a960cc9cfbed1443182a042503512bf8b81c9bf779596a4073bc6a",
+    "research/representation_diagnostics/report.py": "7fc6fb557d996c25225fd7ec39b21b72633928929ab024c5799bb60162227465",
+    "research/representation_diagnostics/utility_features.py": "d7bf749e3538e54fc5385610c51f89d489d5b59f4313a2a6eb6237c784a733d7"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "status": "PASS_WITH_SCOPE",
+  "created_utc": "2026-11-12T14:29:49.426961+00:00",
+  "scope": "Restore two selected offline research sections for explanation and evidence review; no historical train/rollout launchers restored.",
+  "tests": {
+    "passed": 73,
+    "existing": 46,
+    "new_offline": 27,
+    "log_sha256": "9e375c376a76002837443d78c29e2acf521b647c6a2b41cc3a64b725f404b02e"
+  },
+  "critical_lint": "PASS_E9_F",
+  "frozen_core_hashes_unchanged": 70,
+  "original_AST_symbols_checked": 12,
+  "evidence_hashes_verified": 39,
+  "document_links_checked": 21,
+  "figures_reviewed": 2,
+  "PGC_receipts": {
+    "checked": 248,
+    "terminal_branch_rewards_independently_rebuilt": 192,
+    "negative_control_pairs_byte_equal": 4,
+    "decompressed_lines_compared": 9482,
+    "formal_branch_trace_bodies_fully_replayed": false
+  },
+  "preserved_failure": {
+    "path": "external audit/tests_attempt01.log",
+    "cause": "Cross-batch-shape FP32 arithmetic was incorrectly tested for bitwise equality. Measured max discrepancy <=4.77e-7 across five probe seeds; test now uses numerical equivalence. No historical formula changed.",
+    "modified_original_assets": false
+  },
+  "sources": {
+    "extraction_manifest": "research/source_manifest.json",
+    "evidence_index": "reports/evidence/source_index.json"
+  },
+  "limits": [
+    "Reused development maps; no independent generalization claim.",
+    "Original arrays, checkpoints, full journals and original launchers remain external.",
+    "PGC executed frozen protocol used 20,000 bootstrap draws versus earlier prose 10,000; preserved explicitly.",
+    "No source-information-sufficiency or official-reward improvement claim from offline fitting."
+  ],
+  "external_audit_label": "lux-s3-research-sections-20261112_R01",
+  "new_training_runs": 0,
+  "new_environment_starts": 0,
+  "protected_set_access": false,
+  "git_export_note": "Initial diff check rejected Matplotlib SVG line-end whitespace. Original exports and check log retained externally; generation now strips exporter-only whitespace. SVG XML rechecked."
+}

@@ -50,3 +50,7 @@ JOINT与UID_GREEDY共享分配前效用；A02仅移除一个评分项；D12用PU
 不能讲：已经完整实现原先高上限三架构、已经学到V2长期战略、已经稳定战胜V2、地图区间代表全部训练种子总体。
 
 本次整理仅恢复必要科研材料；所有关闭路线仍关闭，没有据此追加实验。
+
+## 精选研究细节
+
+补充的[表示与优化诊断](../research/representation_diagnostics/README.md)和[公开前缀/配对Goal信用](../research/paired_goal_credit/README.md)保留关键方法、测试和两张结果图。面对导师可按[十分钟汇报提纲](mentor_research_brief.md)讲述；不把全部旧Runner重新加入主工程。

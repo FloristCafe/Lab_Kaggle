@@ -1,0 +1,486 @@
+{
+  "contexts": [
+    {
+      "context": "map00-side0",
+      "rank": 0,
+      "root": 2893186689,
+      "side": 0,
+      "window": [
+        32,
+        143
+      ]
+    },
+    {
+      "context": "map00-side1",
+      "rank": 0,
+      "root": 2893186689,
+      "side": 1,
+      "window": [
+        32,
+        143
+      ]
+    },
+    {
+      "context": "map01-side0",
+      "rank": 1,
+      "root": 4119674628,
+      "side": 0,
+      "window": [
+        168,
+        279
+      ]
+    },
+    {
+      "context": "map01-side1",
+      "rank": 1,
+      "root": 4119674628,
+      "side": 1,
+      "window": [
+        168,
+        279
+      ]
+    },
+    {
+      "context": "map02-side0",
+      "rank": 2,
+      "root": 3403761857,
+      "side": 0,
+      "window": [
+        304,
+        415
+      ]
+    },
+    {
+      "context": "map02-side1",
+      "rank": 2,
+      "root": 3403761857,
+      "side": 1,
+      "window": [
+        304,
+        415
+      ]
+    },
+    {
+      "context": "map03-side0",
+      "rank": 3,
+      "root": 3574175701,
+      "side": 0,
+      "window": [
+        32,
+        143
+      ]
+    },
+    {
+      "context": "map03-side1",
+      "rank": 3,
+      "root": 3574175701,
+      "side": 1,
+      "window": [
+        32,
+        143
+      ]
+    },
+    {
+      "context": "map04-side0",
+      "rank": 4,
+      "root": 2181169562,
+      "side": 0,
+      "window": [
+        168,
+        279
+      ]
+    },
+    {
+      "context": "map04-side1",
+      "rank": 4,
+      "root": 2181169562,
+      "side": 1,
+      "window": [
+        168,
+        279
+      ]
+    },
+    {
+      "context": "map05-side0",
+      "rank": 5,
+      "root": 3337603987,
+      "side": 0,
+      "window": [
+        304,
+        415
+      ]
+    },
+    {
+      "context": "map05-side1",
+      "rank": 5,
+      "root": 3337603987,
+      "side": 1,
+      "window": [
+        304,
+        415
+      ]
+    },
+    {
+      "context": "map06-side0",
+      "rank": 6,
+      "root": 3245714684,
+      "side": 0,
+      "window": [
+        32,
+        143
+      ]
+    },
+    {
+      "context": "map06-side1",
+      "rank": 6,
+      "root": 3245714684,
+      "side": 1,
+      "window": [
+        32,
+        143
+      ]
+    },
+    {
+      "context": "map07-side0",
+      "rank": 7,
+      "root": 3291707049,
+      "side": 0,
+      "window": [
+        168,
+        279
+      ]
+    },
+    {
+      "context": "map07-side1",
+      "rank": 7,
+      "root": 3291707049,
+      "side": 1,
+      "window": [
+        168,
+        279
+      ]
+    },
+    {
+      "context": "map08-side0",
+      "rank": 8,
+      "root": 3298475327,
+      "side": 0,
+      "window": [
+        304,
+        415
+      ]
+    },
+    {
+      "context": "map08-side1",
+      "rank": 8,
+      "root": 3298475327,
+      "side": 1,
+      "window": [
+        304,
+        415
+      ]
+    },
+    {
+      "context": "map09-side0",
+      "rank": 9,
+      "root": 3337384266,
+      "side": 0,
+      "window": [
+        32,
+        143
+      ]
+    },
+    {
+      "context": "map09-side1",
+      "rank": 9,
+      "root": 3337384266,
+      "side": 1,
+      "window": [
+        32,
+        143
+      ]
+    },
+    {
+      "context": "map10-side0",
+      "rank": 10,
+      "root": 2790095679,
+      "side": 0,
+      "window": [
+        168,
+        279
+      ]
+    },
+    {
+      "context": "map10-side1",
+      "rank": 10,
+      "root": 2790095679,
+      "side": 1,
+      "window": [
+        168,
+        279
+      ]
+    },
+    {
+      "context": "map11-side0",
+      "rank": 11,
+      "root": 3115361517,
+      "side": 0,
+      "window": [
+        304,
+        415
+      ]
+    },
+    {
+      "context": "map11-side1",
+      "rank": 11,
+      "root": 3115361517,
+      "side": 1,
+      "window": [
+        304,
+        415
+      ]
+    },
+    {
+      "context": "map12-side0",
+      "rank": 12,
+      "root": 3571959035,
+      "side": 0,
+      "window": [
+        32,
+        143
+      ]
+    },
+    {
+      "context": "map12-side1",
+      "rank": 12,
+      "root": 3571959035,
+      "side": 1,
+      "window": [
+        32,
+        143
+      ]
+    },
+    {
+      "context": "map13-side0",
+      "rank": 13,
+      "root": 3647415428,
+      "side": 0,
+      "window": [
+        168,
+        279
+      ]
+    },
+    {
+      "context": "map13-side1",
+      "rank": 13,
+      "root": 3647415428,
+      "side": 1,
+      "window": [
+        168,
+        279
+      ]
+    },
+    {
+      "context": "map14-side0",
+      "rank": 14,
+      "root": 3014468282,
+      "side": 0,
+      "window": [
+        304,
+        415
+      ]
+    },
+    {
+      "context": "map14-side1",
+      "rank": 14,
+      "root": 3014468282,
+      "side": 1,
+      "window": [
+        304,
+        415
+      ]
+    },
+    {
+      "context": "map15-side0",
+      "rank": 15,
+      "root": 3647757230,
+      "side": 0,
+      "window": [
+        32,
+        143
+      ]
+    },
+    {
+      "context": "map15-side1",
+      "rank": 15,
+      "root": 3647757230,
+      "side": 1,
+      "window": [
+        32,
+        143
+      ]
+    },
+    {
+      "context": "map16-side0",
+      "rank": 16,
+      "root": 3259281293,
+      "side": 0,
+      "window": [
+        168,
+        279
+      ]
+    },
+    {
+      "context": "map16-side1",
+      "rank": 16,
+      "root": 3259281293,
+      "side": 1,
+      "window": [
+        168,
+        279
+      ]
+    },
+    {
+      "context": "map17-side0",
+      "rank": 17,
+      "root": 3796223620,
+      "side": 0,
+      "window": [
+        304,
+        415
+      ]
+    },
+    {
+      "context": "map17-side1",
+      "rank": 17,
+      "root": 3796223620,
+      "side": 1,
+      "window": [
+        304,
+        415
+      ]
+    },
+    {
+      "context": "map18-side0",
+      "rank": 18,
+      "root": 3667035821,
+      "side": 0,
+      "window": [
+        32,
+        143
+      ]
+    },
+    {
+      "context": "map18-side1",
+      "rank": 18,
+      "root": 3667035821,
+      "side": 1,
+      "window": [
+        32,
+        143
+      ]
+    },
+    {
+      "context": "map19-side0",
+      "rank": 19,
+      "root": 2582767628,
+      "side": 0,
+      "window": [
+        168,
+        279
+      ]
+    },
+    {
+      "context": "map19-side1",
+      "rank": 19,
+      "root": 2582767628,
+      "side": 1,
+      "window": [
+        168,
+        279
+      ]
+    },
+    {
+      "context": "map20-side0",
+      "rank": 20,
+      "root": 2365828211,
+      "side": 0,
+      "window": [
+        304,
+        415
+      ]
+    },
+    {
+      "context": "map20-side1",
+      "rank": 20,
+      "root": 2365828211,
+      "side": 1,
+      "window": [
+        304,
+        415
+      ]
+    },
+    {
+      "context": "map21-side0",
+      "rank": 21,
+      "root": 2357396176,
+      "side": 0,
+      "window": [
+        32,
+        143
+      ]
+    },
+    {
+      "context": "map21-side1",
+      "rank": 21,
+      "root": 2357396176,
+      "side": 1,
+      "window": [
+        32,
+        143
+      ]
+    },
+    {
+      "context": "map22-side0",
+      "rank": 22,
+      "root": 2852120528,
+      "side": 0,
+      "window": [
+        168,
+        279
+      ]
+    },
+    {
+      "context": "map22-side1",
+      "rank": 22,
+      "root": 2852120528,
+      "side": 1,
+      "window": [
+        168,
+        279
+      ]
+    },
+    {
+      "context": "map23-side0",
+      "rank": 23,
+      "root": 3953988944,
+      "side": 0,
+      "window": [
+        304,
+        415
+      ]
+    },
+    {
+      "context": "map23-side1",
+      "rank": 23,
+      "root": 3953988944,
+      "side": 1,
+      "window": [
+        304,
+        415
+      ]
+    }
+  ],
+  "source": "outputs/mappo_v5_2/learning_curve_registration_20261021_D02/seed_manifest.json",
+  "source_sha256": "60175df16577f73c291eaf65cccf2d8ea4f557191c517963ebcf7f1796643d38"
+}

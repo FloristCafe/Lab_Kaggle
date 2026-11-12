@@ -1,0 +1,14 @@
+{
+  "sides": {
+    "0": {
+      "digest": "13313cfb54719ccd3115e7a7bf0b502c023b9a5ed2f6aa78de487b8ba712fbe4",
+      "snapshots_including_terminal": 506
+    },
+    "1": {
+      "digest": "153a83c4662ba204e5631a7b1d9a22eeb880856ad13088e1bd3d4f14406fa876",
+      "snapshots_including_terminal": 506
+    }
+  },
+  "status": "PASS",
+  "worker_starts": 0
+}

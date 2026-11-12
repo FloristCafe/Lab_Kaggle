@@ -1,0 +1,84 @@
+{
+  "decision": "INCONCLUSIVE_NO_RELIABLE_RANKING_GAIN",
+  "interpretation": "practical descriptive thresholds, not equivalence or proof Encoder discarded information",
+  "official_reward_evidence": false,
+  "per_fit_seed": {
+    "3101": {
+      "ENC_criterion_maps": 0,
+      "ENC_exploration": {
+        "best_hit": 0.3431170266781073,
+        "choice_weak_target_rank": 67.60360411915534,
+        "model_top10_bestset": 0.6380303018044924,
+        "model_top5_bestset": 0.5639093988895073,
+        "pair_acc": 0.739857785321524,
+        "pair_acc_epsilon": 0.739857785321524,
+        "regret": 0.30641290501397006
+      },
+      "ENC_recoverable": false,
+      "RAW_exploration": {
+        "best_hit": 0.5603943256194457,
+        "choice_weak_target_rank": 26.436693574168068,
+        "model_top10_bestset": 0.8266018211521781,
+        "model_top5_bestset": 0.7279462175653763,
+        "pair_acc": 0.8470015531319204,
+        "pair_acc_epsilon": 0.8470015531319204,
+        "regret": 0.1687772973691413
+      },
+      "RAW_positive_control": false,
+      "access_gap": false,
+      "gap_criterion_maps": 4
+    },
+    "3102": {
+      "ENC_criterion_maps": 0,
+      "ENC_exploration": {
+        "best_hit": 0.36694349429483586,
+        "choice_weak_target_rank": 75.00558195994063,
+        "model_top10_bestset": 0.6949195261794209,
+        "model_top5_bestset": 0.6083702159178638,
+        "pair_acc": 0.7363411527935402,
+        "pair_acc_epsilon": 0.7363411527935402,
+        "regret": 0.29691004228116946
+      },
+      "ENC_recoverable": false,
+      "RAW_exploration": {
+        "best_hit": 0.5376975938355115,
+        "choice_weak_target_rank": 21.031153420113988,
+        "model_top10_bestset": 0.8250865707042692,
+        "model_top5_bestset": 0.7523533135503773,
+        "pair_acc": 0.8417073582922336,
+        "pair_acc_epsilon": 0.8417073582922336,
+        "regret": 0.15963198160231137
+      },
+      "RAW_positive_control": false,
+      "access_gap": false,
+      "gap_criterion_maps": 4
+    },
+    "3103": {
+      "ENC_criterion_maps": 0,
+      "ENC_exploration": {
+        "best_hit": 0.3321637018585546,
+        "choice_weak_target_rank": 82.35383707136644,
+        "model_top10_bestset": 0.6585275269995388,
+        "model_top5_bestset": 0.574906239718088,
+        "pair_acc": 0.7399790409540985,
+        "pair_acc_epsilon": 0.7399790409540985,
+        "regret": 0.33460378978255667
+      },
+      "ENC_recoverable": false,
+      "RAW_exploration": {
+        "best_hit": 0.538524833703159,
+        "choice_weak_target_rank": 20.300478471716545,
+        "model_top10_bestset": 0.7883130473202397,
+        "model_top5_bestset": 0.7155407399328167,
+        "pair_acc": 0.8508798547585223,
+        "pair_acc_epsilon": 0.8508798547585223,
+        "regret": 0.17472130888439524
+      },
+      "RAW_positive_control": false,
+      "access_gap": false,
+      "gap_criterion_maps": 4
+    }
+  },
+  "reused_exploration_maps": 4,
+  "source_policy_count": 1
+}

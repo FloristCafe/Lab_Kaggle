@@ -1,0 +1,43 @@
+{
+  "choices": [
+    {
+      "NLL": {
+        "16": 0.1507419613190819,
+        "24": 0.12752953311748386,
+        "32": 0.12406312197620023,
+        "8": 0.19966060335236624
+      },
+      "checkpoint": "fits/RAW_CAUSAL32_RANKER_rng3101/attempt_001/epoch_32.pth",
+      "epoch": 32,
+      "seed": 3101,
+      "sha256": "e06f03945ab0c83e2bcb3e01fc096527b3f1bfca4a5c59d00fc499912171da12"
+    },
+    {
+      "NLL": {
+        "16": 0.15689676459015645,
+        "24": 0.1368587807392213,
+        "32": 0.12407342027193077,
+        "8": 0.21396748031627455
+      },
+      "checkpoint": "fits/RAW_CAUSAL32_RANKER_rng3102/attempt_001/epoch_32.pth",
+      "epoch": 32,
+      "seed": 3102,
+      "sha256": "9543564a0cd2e900136340f0c18b27d8e5c57c1ec5ee0cda19b8b5e89904cdbd"
+    },
+    {
+      "NLL": {
+        "16": 0.16221659995779295,
+        "24": 0.13401064705661617,
+        "32": 0.12661325951590918,
+        "8": 0.20301135080651678
+      },
+      "checkpoint": "fits/RAW_CAUSAL32_RANKER_rng3103/attempt_001/epoch_32.pth",
+      "epoch": 32,
+      "seed": 3103,
+      "sha256": "66ed16ea29bfed26444d4557b9f8b9b15b3a60525ab2ef1ae3e90bca2d9588ec"
+    }
+  ],
+  "exploration_opened_for_selection": false,
+  "model_index_sha256": "b662f3a0b90d22ddd89111ea643bffcfbf6829df2df74d2498414aee78aa99df",
+  "rule": "Minimum D08 equal-map calibration binary pair NLL (softplus); exact tie earlier epoch"
+}
